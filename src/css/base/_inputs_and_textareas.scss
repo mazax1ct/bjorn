@@ -1,0 +1,494 @@
+.input-group {
+    @include hover {
+        .input-group__input {
+            &:not(:disabled) {
+                border-color: var(--blue_6);
+
+                & ~ .input-group__calendar-icon {
+                    fill: var(--blue_1);
+                }
+            }
+        }
+
+        .input-group__textarea {
+            &:not(:disabled) {
+                border-color: var(--blue_6);
+            }
+        }
+    }
+
+    &.is-filled {
+        .input-group__clear {
+            display: block;
+        }
+
+        &.input-group--simple {
+            .input-group__label {
+                color: var(--blue_4);
+                font-size: 12px;
+                top: 8px;
+            }
+        }
+
+        &.input-group--textarea {
+            .input-group__label {
+                color: var(--blue_4);
+                font-size: 12px;
+            }
+        }
+
+        &:not(.is-disabled) {
+            &.input-group--datepicker {
+                .input-group__input {
+                    &:focus {
+                        border-radius: 7px 7px 0 0;
+                    }
+                }
+            }
+        }
+
+        &.is-disabled {
+            .input-group__label {
+                color: var(--grey_7);
+
+                .req,
+                .required {
+                    color: var(--grey_7);
+                }
+            }
+        }
+    }
+
+    &.error {
+        .input-group__input {
+            border-color: var(--red_1);
+
+            &:focus {
+                border-color: var(--red_1) !important;
+            }
+        }
+
+        .input-group__pseudo-textarea {
+            border-color: var(--red_1) !important;
+        }
+        @include hover {
+            .input-group__input {
+                &:not(:disabled) {
+                    border-color: var(--red_1);
+                }
+            }
+        }
+    }
+
+    &.is-disabled {
+        .input-group__clear {
+            display: none;
+        }
+
+        .input-group__label {
+            color: var(--grey_7);
+
+            .req,
+            .required {
+                color: var(--grey_7);
+            }
+        }
+
+        .input-group__calendar-icon {
+            fill: var(--grey_7);
+        }
+
+        .input-group__pseudo-textarea {
+            border-color: var(--grey_7) !important;
+            background-color: var(--grey_1);
+        }
+    }
+
+    &--simple {
+        .input-group__input {
+            padding: 25px 16px 10px;
+
+            &:focus {
+                & + .input-group__label {
+                    color: var(--blue_4);
+                    font-size: 12px;
+                    top: 8px;
+                }
+            }
+        }
+    }
+
+    &--phone {
+        .input-group__input {
+            padding: 18px 16px 18px 150px;
+
+            &::-webkit-input-placeholder {
+                color: var(--blue_3);
+                opacity: 1;
+            }
+
+            &::-moz-placeholder {
+                color: var(--blue_3);
+                opacity: 1;
+            }
+
+            &:-ms-input-placeholder {
+                color: var(--blue_3);
+                opacity: 1;
+            }
+
+            &:focus::-webkit-input-placeholder {
+                color: var(--grey_6);
+                opacity: 1;
+            }
+
+            &:focus::-moz-placeholder {
+                color: var(--grey_6);
+                opacity: 1;
+            }
+
+            &:focus::-ms-input-placeholder {
+                color: var(--grey_6);
+                opacity: 1;
+            }
+
+            &:disabled {
+                &::-webkit-input-placeholder {
+                    color: var(--grey_7);
+                    opacity: 1;
+                }
+
+                &::-moz-placeholder {
+                    color: var(--grey_7);
+                    opacity: 1;
+                }
+
+                &:-ms-input-placeholder {
+                    color: var(--grey_7);
+                    opacity: 1;
+                }
+            }
+        }
+
+        .input-group__label {
+            align-items: center;
+            display: flex;
+
+            .flag {
+                background-position: 50% 50%;
+                background-size: 100% 100%;
+                background-color: transparent;
+                background-repeat: no-repeat;
+                height: 13px;
+                margin-left: 12px;
+                margin-right: 10px;
+                min-width: 13px;
+                width: 13px;
+
+                &--ru {
+                    background-image: url("../images/icons/ru.png");
+                }
+            }
+        }
+    }
+
+    &--datepicker {
+        &.is-open {
+            .input-group__input {
+                border-radius: 7px 7px 0 0;
+            }
+
+            .input-group__label {
+                color: var(--blue_4);
+                font-size: 12px;
+                top: 8px;
+            }
+        }
+
+        .input-group__input {
+            &:focus ~ .input-group__calendar-icon {
+                fill: var(--blue_1);
+            }
+
+            &:focus {
+                border-radius: 7px 7px 0 0;
+            }
+        }
+
+        .input-group__calendar-icon {
+            fill: var(--blue_3);
+            height: 16px;
+            left: auto;
+            pointer-events: none;
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+        }
+
+        .input-group__clear {
+            right: 42px;
+        }
+    }
+
+    &--textarea {
+        .input-group__textarea {
+            &:focus {
+                & + .input-group__label {
+                    color: var(--blue_4);
+                    font-size: 12px;
+                }
+
+                & + .input-group__pseudo-textarea {
+                    border-color: var(--blue_1);
+                }
+            }
+        }
+
+        .input-group__clear {
+            top: 22px;
+            transform: none;
+        }
+
+        .input-group__label {
+            pointer-events: auto;
+            padding-top: 16px;
+            top: 0;
+        }
+        @include hover {
+            .input-group__pseudo-textarea {
+                border-color: var(--blue_6);
+            }
+        }
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__input-container {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__input {
+        border-radius: 7px;
+        border: 1px solid transparent;
+        background-color: var(--light_blue_1);
+        color: inherit;
+        font-size: 16px;
+        font-weight: 400;
+        height: 56px;
+        transition: background-color 0.3s, border-color 0.3s;
+        width: 100%;
+
+        &::-webkit-input-placeholder {
+            color: var(--grey_6);
+            opacity: 0;
+        }
+
+        &::-moz-placeholder {
+            color: var(--grey_6);
+            opacity: 0;
+        }
+
+        &:-ms-input-placeholder {
+            color: var(--grey_6);
+            opacity: 0;
+        }
+
+        &:focus {
+            border-color: var(--blue_1) !important;
+
+            &::-webkit-input-placeholder {
+                opacity: 1;
+            }
+
+            &::-moz-placeholder {
+                opacity: 1;
+            }
+
+            &:-ms-input-placeholder {
+                opacity: 1;
+            }
+        }
+
+        &:disabled {
+            background-color: var(--grey_1);
+            border-color: var(--grey_7);
+            color: var(--grey_7);
+
+            &::-webkit-input-placeholder {
+                opacity: 0;
+            }
+
+            &::-moz-placeholder {
+                opacity: 0;
+            }
+
+            &:-ms-input-placeholder {
+                opacity: 0;
+            }
+
+            & + .input-group__label {
+                color: var(--grey_7);
+
+                .req,
+                .required {
+                    color: var(--grey_7);
+                }
+            }
+        }
+    }
+
+    &__pseudo-textarea {
+        border-radius: 7px;
+        border: 1px solid transparent;
+        background-color: var(--light_blue_1);
+        color: inherit;
+        font-size: 16px;
+        font-weight: 400;
+        height: 150px;
+        transition: background-color 0.3s, border-color 0.3s;
+        width: 100%;
+    }
+
+    &__textarea {
+        @include scrollbar;
+        background: none;
+        border: none;
+        border-radius: 0 0 7px 7px;
+        height: 118px;
+        left: 0;
+        margin: 0;
+        padding: 0 16px 16px;
+        position: absolute;
+        resize: none;
+        top: 32px;
+        width: 100%;
+
+        &::-webkit-input-placeholder {
+            color: var(--grey_6);
+            opacity: 0;
+        }
+
+        &::-moz-placeholder {
+            color: var(--grey_6);
+            opacity: 0;
+        }
+
+        &:-ms-input-placeholder {
+            color: var(--grey_6);
+            opacity: 0;
+        }
+
+        &:focus {
+            border-color: var(--blue_1) !important;
+
+            &::-webkit-input-placeholder {
+                opacity: 1;
+            }
+
+            &::-moz-placeholder {
+                opacity: 1;
+            }
+
+            &:-ms-input-placeholder {
+                opacity: 1;
+            }
+
+            & ~ .input-group__label {
+                font-size: 12px;
+            }
+        }
+
+        &:disabled {
+            /*background-color: var(--grey_1);
+            border-color: var(--grey_7);*/
+            color: var(--grey_7);
+
+            &::-webkit-input-placeholder {
+                opacity: 0;
+            }
+
+            &::-moz-placeholder {
+                opacity: 0;
+            }
+
+            &:-ms-input-placeholder {
+                opacity: 0;
+            }
+
+            & ~ .input-group__label {
+                color: var(--grey_7);
+
+                .req,
+                .required {
+                    color: var(--grey_7);
+                }
+            }
+        }
+    }
+
+    &__label {
+        font-size: 16px;
+        left: 0;
+        line-height: 1.25;
+        overflow: hidden;
+        padding-left: 16px;
+        padding-right: 16px;
+        position: absolute;
+        pointer-events: none;
+        transition: all 0.3s;
+        text-overflow: ellipsis;
+        top: 18px;
+        white-space: nowrap;
+        width: 100%;
+    }
+
+    &__clear {
+        @include button-reset;
+        @include active-area;
+        display: none;
+        height: 16px;
+        left: auto;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        z-index: 2;
+        @include hover {
+            svg {
+                fill: var(--blue_1);
+            }
+        }
+
+        svg {
+            fill: var(--blue_4);
+            display: block;
+            height: 16px;
+            width: 16px;
+        }
+    }
+}
+
+.error-text {
+    color: var(--red_1);
+    font-size: 13px;
+    line-height: 1.23076;
+    margin-bottom: 8px;
+}
+
+textarea {
+    resize: none;
+}
+
+input,
+textarea {
+    &:focus {
+        outline: 0;
+    }
+}

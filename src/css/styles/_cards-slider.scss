@@ -1,0 +1,36 @@
+.cards-slider {
+    &__title {
+        align-items: center;
+        display: flex;
+        gap: 12px;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        @media(min-width: $fhd) {
+            margin-bottom: 24px;
+        }
+
+        .h2,
+        h2 {
+            margin-bottom: 0;
+        }
+    }
+
+    &__arrows {
+        display: flex;
+        gap: 16px;
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            left: auto;
+            right: auto;
+        }
+    }
+
+    &__slider {
+        padding-bottom: 1px;
+        @media(max-width: $sm - 0.01px) {
+            margin-left: calc(0.01px - var(--container_padding));
+            margin-right: calc(0.01px - var(--container_padding));
+        }
+    }
+}

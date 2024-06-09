@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>UI</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    
+
+    <link rel="preload" href="fonts/subset-Inter-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/subset-Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/subset-WixMadeforDisplay-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="plugins_css/swiper-bundle.min.css" />
+    
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="page">
+    <div id="app">
+        <header class="header header--white">
+            <div class="header__inner container">
+                <div class="header__menu-block">
+                    <button class="js-main-menu-opener header__button" type="button" title="Открыть меню">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#burger_icon" />
+                        </svg>
+                    </button>
+        
+                    <div class="header__short-menu">
+                        <a href="#">МУЖЧИНАМ</a>
+        
+                        <a href="#">ЖЕНЩИНАМ</a>
+                    </div>
+                </div>
+        
+                <button class="js-search-opener header__button header__button--search" type="button" title="Открыть поиск">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#search_icon" />
+                    </svg>
+                </button>
+        
+                <a class="header__logo header-logo" href="#" title="На главную">
+                    <svg class="header-logo__icon" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#logo_icon" />
+                    </svg>
+                    <svg class="header-logo__text" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#logo_text" />
+                    </svg>
+                </a>
+        
+                <a class="header__button header__button--personal" href="#" title="Личный кабинет">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#personal_icon" />
+                    </svg>
+                </a>
+        
+                <a class="header__button header__button--fav" href="#" title="Избранное">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#fav_icon" />
+                    </svg>
+                </a>
+        
+                <button class="header__button header__button--cart" type="button" title="Показать корзину">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#cart_icon" />
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <div class="page__content">
+            <div class="container">
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__logo">
+                    <picture>
+                        <source srcset="images/logo_footer.svg" media="(min-width: 768px)">
+                        <img src="images/logo_footer_mob.svg" alt="BJORN LARSEN">
+                    </picture>
+                </div>
+        
+                <div class="footer__catalog">
+                    <a href="#">МУЖЧИНАМ</a>
+        
+                    <a href="#">ЖЕНЩИНАМ</a>
+        
+                    <a href="#">НОВИНКИ</a>
+        
+                    <a href="#">БЕСТСЕЛЛЕРЫ</a>
+        
+                    <a href="#">РАСПРОДАЖА</a>
+                </div>
+        
+                <div class="footer__middle">
+                    <div class="footer__middle-block">
+                        <div class="footer__middle-title">ПОКУПАТЕЛЯМ</div>
+        
+                        <a href="#">ОПТОВЫМ ПОКУПАТЕЛЯМ</a>
+        
+                        <a href="#">ДОСТАВКА И ОПЛАТА</a>
+        
+                        <a href="#">ОБМЕН И ВОЗВРАТ</a>
+        
+                        <a href="#">УХОД ЗА ИЗДЕЛИЕМ</a>
+        
+                        <a href="#">ТЕХНОЛОГИЯ ПРОИЗВОДСТВА</a>
+                    </div>
+        
+                    <div class="footer__middle-block">
+                        <div class="footer__middle-title">КОМПАНИЯ</div>
+        
+                        <a href="#">О БРЕНДЕ</a>
+        
+                        <a href="#">БЛОГ</a>
+        
+                        <a href="#">КОНТАКТЫ</a>
+                    </div>
+        
+                    <div class="footer__middle-block">
+                        <div class="footer__middle-title">КОНТАКТЫ</div>
+        
+                        <a href="mailto:info@larsenbjorn.ru">INFO@LARSENBJORN.RU</a>
+        
+                        <a href="tel:+78003007828">+7 (800) 300-78-28</a>
+                    </div>
+        
+                    <div class="footer__middle-block">
+                        <div class="footer__middle-title">СОЦИАЛЬНЫЕ СЕТИ</div>
+        
+                        <a href="#" rel="nofollow noopener noreferrer">ВКОНТАКТЕ</a>
+        
+                        <a href="#" rel="nofollow noopener noreferrer">YOUTUBE</a>
+                    </div>
+                </div>
+        
+                <div class="footer__bottom">
+                    <div class="footer__bottom-block">© 2024, BJORN LARSEN</div>
+        
+                    <div class="footer__bottom-block">
+                        <a href="#">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+                    </div>
+        
+                    <div class="footer__bottom-block">
+                        СДЕЛАНО В <a href="#" rel="nofollow noreferrer noopener">AVA DIGITAL</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="page__shade"></div>
+    </div>
+
+    <script src="js/swiper-bundle.min.js"></script>
+    
+    <script src="js/utility.js"></script>
+    
+    <script src="js/header.js"></script>
+    
+    <script src="js/cards-slider.js"></script>
+    
+    <script src="js/card.js"></script>
+    
+    <script src="js/main.js"></script>
+</body>
+
+</html>

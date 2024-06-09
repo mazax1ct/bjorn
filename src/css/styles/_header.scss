@@ -1,0 +1,207 @@
+.header {
+    left: 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    @media(min-width: $sm) {
+        min-height: 58px;
+    }
+    @media(min-width: $fhd) {
+        min-height: 66px;
+    }
+
+    &--white {
+        border-bottom: 1px solid rgba(#000, 0.08);
+        background-color: #fff;
+        color: var(--black_dark);
+    }
+
+    &--transparent {
+        border-bottom: 1px solid rgba(#fff, 0.08);
+        color: #fff;
+        mix-blend-mode: difference;
+
+        a {
+            transition: none;
+            @include hover {
+                color: #fff;
+            }
+        }
+    }
+
+    &--menu-is-open {
+        background-color: #fff;
+        border-bottom: 1px solid rgba(#000, 0.08);
+        color: var(--black_dark);
+        mix-blend-mode: normal;
+        @media(max-width: $lg - 0.01px) {
+            z-index: 8;
+        }
+    }
+
+    &--color-transition {
+        a {
+            transition: color 0.3s;
+            @include hover {
+                color: var(--ocher);
+            }
+        }
+
+        .header__button {
+            transition: color 0.3s;
+            @include hover {
+                color: var(--ocher);
+            }
+        }
+    }
+
+    &.is-out {
+        //transform: translateY(-100%);
+    }
+
+    &__inner {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        @media(max-width: $sm - 0.01px) {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+        @media(min-width: $sm) {
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+    }
+
+    &__menu-block {
+        align-items: center;
+        display: flex;
+        gap: 16px;
+        @media(min-width: $sm) {
+            order: 1;
+            min-width: 168px;
+        }
+    }
+
+    &__short-menu {
+        align-items: center;
+        display: flex;
+        font-size: 12px;
+        gap: 16px;
+        @media(max-width: $lg - 0.01px) {
+            display: none;
+        }
+
+        a {
+            @include active-area;
+            color: inherit;
+            position: relative;
+            text-decoration: none;
+            z-index: 1;
+        }
+    }
+
+    &__logo {
+        color: inherit;
+        margin-left: auto;
+        margin-right: auto;
+        @media(min-width: $sm) {
+            order: 2;
+        }
+    }
+
+    &__button {
+        @include button-reset;
+        @include active-area;
+        color: inherit;
+        height: 24px;
+        position: relative;
+        width: 24px;
+        z-index: 1;
+
+        &--personal {
+            @media(max-width: $sm - 0.01px) {
+                display: none;
+            }
+            @media(min-width: $sm) {
+                order: 3;
+            }
+        }
+
+        &--search {
+            @media(min-width: $sm) {
+                order: 4;
+            }
+        }
+
+        &--fav {
+            @media(min-width: $sm) {
+                order: 5;
+            }
+        }
+
+        &--cart {
+            @media(min-width: $sm) {
+                order: 6;
+            }
+        }
+
+        svg {
+            fill: currentColor;
+            height: 24px;
+            width: 24px;
+        }
+    }
+}
+
+.header-logo {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 116px;
+    @media(min-width: $sm) {
+        flex-direction: row;
+        gap: 11px;
+        width: 189px;
+    }
+    @media(min-width: $fhd) {
+        gap: 14px;
+        width: 234px;
+    }
+
+    &__icon,
+    &__text {
+        fill: currentColor;
+    }
+
+    &__icon {
+        height: 20px;
+        width: 20px;
+        @media(min-width: $sm) {
+            height: 26px;
+            width: 26px;
+        }
+        @media(min-width: $fhd) {
+            height: 32px;
+            width: 32px;
+        }
+    }
+
+    &__text {
+        height: 12px;
+        width: 116px;
+        @media(min-width: $sm) {
+            height: 15px;
+            width: 152px;
+        }
+        @media(min-width: $fhd) {
+            height: 20px;
+            width: 188px;
+        }
+    }
+}

@@ -1,0 +1,288 @@
+.card {
+    @include hover {
+        .card__buy {
+            opacity: 1;
+        }
+    }
+
+    &__top {
+        margin-bottom: 8px;
+        position: relative;
+        z-index: 1;
+        @media(min-width: $fhd) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__image {
+        border-radius: 4px;
+        display: block;
+        margin-bottom: 8px;
+        overflow: hidden;
+        @media(min-width: $fhd) {
+            margin-bottom: 16px;
+        }
+        @include hover {
+            img {
+                transform: scale(1.02);
+            }
+        }
+
+        img {
+            display: block;
+            transform: scale(1);
+            transition: transform 0.3s;
+            width: 100%;
+        }
+    }
+
+    &__images {
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__image-item {
+        background-color: var(--gray_white);
+        opacity: 0;
+        transition: opacity 0.3s;
+
+        &:not(:first-child) {
+            left: 0;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: -1;
+        }
+
+        &.is-active {
+            opacity: 1;
+            z-index: 1;
+        }
+    }
+
+    &__images-pagination {
+        align-items: center;
+        bottom: 8px;
+        display: none;
+        gap: 3px;
+        left: 8px;
+        min-height: 4px;
+        position: absolute;
+        top: auto;
+        z-index: 1;
+        @media (any-hover: hover) {
+            display: flex;
+        }
+        @media(min-width: $lg) {
+            bottom: 12px;
+            gap: 4px;
+            left: 12px;
+            min-height: 6px;
+        }
+
+        span {
+            border-radius: 50%;
+            background-color: var(--black_dark);
+            height: 2px;
+            opacity: 0.3;
+            transition: opacity 0.3s;
+            width: 2px;
+            @media(min-width: $lg) {
+                height: 4px;
+                width: 4px;
+            }
+
+            &.is-active {
+                height: 4px;
+                opacity: 1;
+                width: 4px;
+                @media(min-width: $lg) {
+                    height: 6px;
+                    width: 6px;
+                }
+            }
+        }
+    }
+
+    &__images-handlers {
+        display: flex;
+        left: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+
+    &__image-handler {
+        flex-grow: 1;
+    }
+
+    &__badge {
+        background-color: var(--black_dark_rgba_10);
+        backdrop-filter: blur(8px);
+        border-radius: 2px;
+        font-size: 9px;
+        line-height: 1.2;
+        min-height: 13px;
+        left: 4px;
+        padding: 1px 3px;
+        position: absolute;
+        top: 4px;
+        text-transform: uppercase;
+        z-index: 3;
+        @media(min-width: $sm) {
+            font-size: 10px;
+            left: 6px;
+            padding: 3px 5px;
+            top: 6px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 11px;
+            left: 12px;
+            padding: 4px 6px;
+            top: 12px;
+        }
+    }
+
+    &__buy,
+    &__fav {
+        @include button-reset;
+        color: #fff;
+        height: 18px;
+        left: auto;
+        mix-blend-mode: difference;
+        position: absolute;
+        right: 6px;
+        top: 6px;
+        width: 18px;
+        z-index: 3;
+        @media(min-width: $sm) {
+            height: 20px;
+            width: 20px;
+        }
+        @media(min-width: $fhd) {
+            height: 24px;
+            right: 12px;
+            width: 24px;
+        }
+
+        svg {
+            fill: currentColor;
+            height: 18px;
+            width: 18px;
+            @media(min-width: $sm) {
+                height: 20px;
+                width: 20px;
+            }
+            @media(min-width: $fhd) {
+                height: 24px;
+                width: 24px;
+            }
+        }
+    }
+
+    &__fav {
+        top: 6px;
+        @media(min-width: $fhd) {
+            top: 12px;
+        }
+    }
+
+    &__buy {
+        bottom: 6px;
+        opacity: 0;
+        top: auto;
+        transition: opacity 0.3s;
+        z-index: 3;
+        @media(min-width: $fhd) {
+            bottom: 12px;
+        }
+        @media(max-width: $lg - 0.01px) {
+            display: none;
+        }
+        @include hover {
+            color: #fff;
+        }
+    }
+
+    &__bottom {
+        @media(max-width: $sm - 0.01px) {
+            padding-left: var(--container_padding);
+            padding-right: var(--container_padding);
+        }
+    }
+
+    &__title {
+        font-size: 11px;
+        margin-bottom: 4px;
+        @media(min-width: $sm) {
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+    }
+
+    &__price-block {
+        align-items: center;
+        font-size: 11px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        white-space: nowrap;
+        @media(min-width: $sm) {
+            font-size: 12px;
+            gap: 8px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 14px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 6px;
+            @media(min-width: $fhd) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &__price {
+        font-weight: 600;
+    }
+
+    &__old-price {
+        color: var(--gray_black);
+        text-decoration: line-through;
+    }
+
+    &__discount {
+        background-color: var(--pink);
+        border-radius: 2px;
+        font-size: 9px;
+        font-weight: 600;
+        line-height: 1.22222;
+        padding: 2px;
+        @media(min-width: $sm) {
+            font-size: 11px;
+            padding: 2px 3px;
+        }
+    }
+
+    &__colors {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    &__color {
+        border-radius: 50%;
+        display: block;
+        height: 12px;
+        width: 12px;
+    }
+}

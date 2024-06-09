@@ -1,0 +1,31 @@
+$xs: 480px;
+$sm: 768px;
+$md: 1024px;
+$hd: 1280px;
+$lg: 1300px;
+$fhd: 1600px;
+
+:root {
+    --main-font: 'Inter', Arial, sans-serif;
+    --titles-font: 'Wix Madefor Display', Arial, sans-serif;
+    --black_dark: #101010;
+    --black_dark_rgba_10: rgba(16, 16, 16, 0.1);
+    --black_dark_rgba_40: rgba(16, 16, 16, 0.4);
+    --black_dark_rgba_80: rgba(16, 16, 16, 0.8);
+    --black: #4C4C4C;
+    --black_gray: #6F6F6F;
+    --gray_black: #A4A4A4;
+    --gray: #D6D6D6;
+    --gray_white: #F3F3F3;
+    --black_blue: #334A55;
+    --white_blue: #66787D;
+    --ocher: #C38648;
+    --pink: #FFD1D1;
+    --container_padding: 8px;
+    @media(min-width: $sm) {
+        --container_padding: 24px;
+    }
+    @media(min-width: $lg) {
+        --container_padding: 40px;
+    }
+}
