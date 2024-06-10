@@ -120,29 +120,17 @@
         flex-grow: 1;
     }
 
-    &__badge {
-        background-color: var(--black_dark_rgba_10);
-        backdrop-filter: blur(8px);
-        border-radius: 2px;
-        font-size: 9px;
-        line-height: 1.2;
-        min-height: 13px;
+    &__badges {
         left: 4px;
-        padding: 1px 3px;
         position: absolute;
         top: 4px;
-        text-transform: uppercase;
         z-index: 3;
         @media(min-width: $sm) {
-            font-size: 10px;
             left: 6px;
-            padding: 3px 5px;
             top: 6px;
         }
         @media(min-width: $fhd) {
-            font-size: 11px;
             left: 12px;
-            padding: 4px 6px;
             top: 12px;
         }
     }
@@ -283,6 +271,7 @@
         border-radius: 50%;
         display: block;
         height: 12px;
+        min-width: 12px;
         width: 12px;
     }
 }

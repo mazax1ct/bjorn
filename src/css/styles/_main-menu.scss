@@ -6,7 +6,7 @@
     position: fixed;
     padding: 16px 24px;
     top: 0;
-    transition: transform 0.3s;
+    transition: transform 0.5s;
     transform: translateX(-100%);
     width: 100%;
     z-index: 10;
@@ -18,7 +18,7 @@
     @media(min-width: $lg) {
         height: auto;
         padding: 40px;
-        transition: transform 0.3s, top 0.3s;
+        transition: transform 0.5s, top 0.5s;
         transform: translateY(-100%);
         width: 100%;
         z-index: 9;

@@ -1,4 +1,5 @@
 .breadcrumbs {
+    @include list-reset;
     color: var(--gray_black);
     display: flex;
     font-size: 11px;

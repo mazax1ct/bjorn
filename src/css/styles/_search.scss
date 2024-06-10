@@ -5,7 +5,7 @@
     overflow-y: auto;
     position: fixed;
     top: 0;
-    transition: transform 0.3s;
+    transition: transform 0.5s;
     transform: translateX(-100%);
     width: 100%;
     z-index: 10;
@@ -141,22 +141,6 @@
         }
     }
 
-    &__closer,
-    &__submit {
-        @media(min-width: $sm) {
-            min-height: 38px;
-            padding: 11px 16px;
-        }
-        @media(min-width: $lg) {
-            min-height: 38px;
-            padding: 11px 16px;
-        }
-        @media(min-width: $fhd) {
-            min-height: 42px;
-            padding: 11px 24px;
-        }
-    }
-
     &__closer {
         align-items: center;
         display: flex;
@@ -176,7 +160,10 @@
             margin-left: 4px;
         }
         @include hover {
-            color: var(--ocher);
+            @media(max-width: $sm - 0.01px) {
+                background-color: #fff !important;
+                color: var(--ocher) !important;
+            }
         }
 
         svg {

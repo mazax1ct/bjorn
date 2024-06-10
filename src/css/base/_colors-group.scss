@@ -1,0 +1,46 @@
+.colors-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.color-radio {
+    display: block;
+    position: relative;
+    z-index: 1;
+
+    input {
+        position: absolute;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        width: 1px;
+
+        &:checked ~ .color-radio__color {
+            outline-color: var(--black_dark);
+        }
+
+        &:not(:checked) ~ .color-radio__color {
+            @include hover {
+                outline-color: var(--gray);
+            }
+        }
+    }
+
+    &__color {
+        border-radius: 50%;
+        border: 3px solid #fff;
+        cursor: pointer;
+        display: block;
+        height: 34px;
+        min-width: 34px;
+        outline: 1px solid #fff;
+        transition: outline-color 0.3s;
+        width: 34px;
+        @media(min-width: $fhd) {
+            height: 36px;
+            min-width: 36px;
+            width: 36px;
+        }
+    }
+}

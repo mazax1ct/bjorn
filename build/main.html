@@ -66,7 +66,7 @@
                     </svg>
                 </a>
         
-                <button class="header__button header__button--cart" type="button" title="Показать корзину">
+                <button class="js-popup-open header__button header__button--cart" type="button" data-popup="cart_popup" title="Показать корзину">
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#cart_icon" />
                     </svg>
@@ -128,7 +128,7 @@
                     </ul>
                 </nav>
         
-                <a class="main-menu__auth button button--primary" href="#">
+                <a class="main-menu__auth button button--primary button--m" href="#">
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#personal_icon" />
                     </svg>
@@ -153,9 +153,9 @@
                             </button>
                         </div>
         
-                        <button class="search__submit button button--primary" type="submit">НАЙТИ</button>
+                        <button class="search__submit button button--primary button--s" type="submit">НАЙТИ</button>
         
-                        <button class="js-search-closer search__closer button button--transparent" type="button" title="Закрыть поиск">
+                        <button class="js-search-closer search__closer button button--white button--s" type="button" title="Закрыть поиск">
                             <span>ЗАКРЫТЬ</span>
         
                             <svg aria-hidden="true">
@@ -233,7 +233,9 @@
                                                 </span>
                                             </a>
         
-                                            <div class="card__badge">мембрана</div>
+                                            <div class="card__badges badges">
+                                                <div class="badge">мембрана</div>
+                                            </div>
         
                                             <button class="card__fav" type="button" title="Добавить в избранное">
                                                 <svg aria-hidden="true">
@@ -296,7 +298,9 @@
                                                 </span>
                                             </a>
         
-                                            <div class="card__badge">натуральный пух</div>
+                                            <div class="card__badges badges">
+                                                <div class="badge">натуральный пух</div>
+                                            </div>
         
                                             <button class="card__fav" type="button" title="Убрать из избранного">
                                                 <svg aria-hidden="true">
@@ -349,7 +353,9 @@
                                                 </span>
                                             </a>
         
-                                            <div class="card__badge">мембрана</div>
+                                            <div class="card__badges badges">
+                                                <div class="badge">мембрана</div>
+                                            </div>
         
                                             <button class="card__fav" type="button" title="Добавить в избранное">
                                                 <svg aria-hidden="true">
@@ -412,7 +418,9 @@
                                                 </span>
                                             </a>
         
-                                            <div class="card__badge">мембрана</div>
+                                            <div class="card__badges badges">
+                                                <div class="badge">натуральный пух</div>
+                                            </div>
         
                                             <button class="card__fav" type="button" title="Убрать из избранного">
                                                 <svg aria-hidden="true">
@@ -465,7 +473,9 @@
                                                 </span>
                                             </a>
         
-                                            <div class="card__badge">натуральный пух</div>
+                                            <div class="card__badges badges">
+                                                <div class="badge">натуральный пух</div>
+                                            </div>
         
                                             <button class="card__fav" type="button" title="Добавить в избранное">
                                                 <svg aria-hidden="true">
@@ -528,7 +538,9 @@
                                                 </span>
                                             </a>
         
-                                            <div class="card__badge">мембрана</div>
+                                            <div class="card__badges badges">
+                                                <div class="badge">мембрана</div>
+                                            </div>
         
                                             <button class="card__fav" type="button" title="Убрать из избранного">
                                                 <svg aria-hidden="true">
@@ -589,7 +601,9 @@
                                     </span>
                                 </a>
         
-                                <div class="card__badge">натуральный пух</div>
+                                <div class="card__badges badges">
+                                    <div class="badge">натуральный пух</div>
+                                </div>
         
                                 <button class="card__fav" type="button" title="Добавить в избранное">
                                     <svg aria-hidden="true">
@@ -651,7 +665,9 @@
                                     </span>
                                 </a>
         
-                                <div class="card__badge">мембрана</div>
+                                <div class="card__badges badges">
+                                    <div class="badge">натуральный пух</div>
+                                </div>
         
                                 <button class="card__fav" type="button" title="Убрать из избранного">
                                     <svg aria-hidden="true">
@@ -703,7 +719,9 @@
                                     </span>
                                 </a>
         
-                                <div class="card__badge">мембрана</div>
+                                <div class="card__badges badges">
+                                    <div class="badge">мембрана</div>
+                                </div>
         
                                 <button class="card__fav" type="button" title="Добавить в избранное">
                                     <svg aria-hidden="true">
@@ -765,7 +783,9 @@
                                     </span>
                                 </a>
         
-                                <div class="card__badge">мембрана</div>
+                                <div class="card__badges badges">
+                                    <div class="badge">мембрана</div>
+                                </div>
         
                                 <button class="card__fav" type="button" title="Убрать из избранного">
                                     <svg aria-hidden="true">
@@ -817,7 +837,9 @@
                                     </span>
                                 </a>
         
-                                <div class="card__badge">мембрана</div>
+                                <div class="card__badges badges">
+                                    <div class="badge">мембрана</div>
+                                </div>
         
                                 <button class="card__fav" type="button" title="Добавить в избранное">
                                     <svg aria-hidden="true">
@@ -852,7 +874,7 @@
                         </div>
                     </div>
         
-                    <a class="search__result-all button button--primary" href="#">Перейти в каталог</a>
+                    <a class="search__result-all button button--primary button--m" href="#">Перейти в каталог</a>
                 </div>
         
                 <div class="js-search-result-empty search__result" style="display: none">
@@ -900,41 +922,49 @@
                     <div class="footer__middle-block">
                         <div class="footer__middle-title">ПОКУПАТЕЛЯМ</div>
         
-                        <a href="#">ОПТОВЫМ ПОКУПАТЕЛЯМ</a>
+                        <ul class="footer__middle-menu">
+                            <li><a href="#">ОПТОВЫМ ПОКУПАТЕЛЯМ</a></li>
         
-                        <a href="#">ДОСТАВКА И ОПЛАТА</a>
+                            <li><a href="#">ДОСТАВКА И ОПЛАТА</a></li>
         
-                        <a href="#">ОБМЕН И ВОЗВРАТ</a>
+                            <li><a href="#">ОБМЕН И ВОЗВРАТ</a></li>
         
-                        <a href="#">УХОД ЗА ИЗДЕЛИЕМ</a>
+                            <li><a href="#">УХОД ЗА ИЗДЕЛИЕМ</a></li>
         
-                        <a href="#">ТЕХНОЛОГИЯ ПРОИЗВОДСТВА</a>
+                            <li><a href="#">ТЕХНОЛОГИЯ ПРОИЗВОДСТВА</a></li>
+                        </ul>
                     </div>
         
                     <div class="footer__middle-block">
                         <div class="footer__middle-title">КОМПАНИЯ</div>
         
-                        <a href="#">О БРЕНДЕ</a>
+                        <ul class="footer__middle-menu">
+                            <li><a href="#">О БРЕНДЕ</a></li>
         
-                        <a href="#">БЛОГ</a>
+                            <li><a href="#">БЛОГ</a></li>
         
-                        <a href="#">КОНТАКТЫ</a>
+                            <li><a href="#">КОНТАКТЫ</a></li>
+                        </ul>
                     </div>
         
                     <div class="footer__middle-block">
                         <div class="footer__middle-title">КОНТАКТЫ</div>
         
-                        <a href="mailto:info@larsenbjorn.ru">INFO@LARSENBJORN.RU</a>
+                        <ul class="footer__middle-menu">
+                            <li><a href="mailto:info@larsenbjorn.ru">INFO@LARSENBJORN.RU</a></li>
         
-                        <a href="tel:+78003007828">+7 (800) 300-78-28</a>
+                            <li><a href="tel:+78003007828">+7 (800) 300-78-28</a></li>
+                        </ul>
                     </div>
         
                     <div class="footer__middle-block">
                         <div class="footer__middle-title">СОЦИАЛЬНЫЕ СЕТИ</div>
         
-                        <a href="#" rel="nofollow noopener noreferrer">ВКОНТАКТЕ</a>
+                        <ul class="footer__middle-menu">
+                            <li><a href="#" rel="nofollow noopener noreferrer">ВКОНТАКТЕ</a></li>
         
-                        <a href="#" rel="nofollow noopener noreferrer">YOUTUBE</a>
+                            <li><a href="#" rel="nofollow noopener noreferrer">YOUTUBE</a></li>
+                        </ul>
                     </div>
                 </div>
         
@@ -952,6 +982,16 @@
             </div>
         </footer>
 
+        <div id="cart_popup" class="popup popup--width_type_1 popup--right_to_left">
+            <button class="js-popup-close popup__closer" type="button" data-popup="cart_popup" title="Закрыть коризну">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#close_icon" />
+                </svg>
+            </button>
+        
+            <div class="popup__title h2">Корзина</div>
+        </div>
+
         <div class="page__shade"></div>
     </div>
 
@@ -964,6 +1004,10 @@
     <script src="js/cards-slider.js"></script>
     
     <script src="js/card.js"></script>
+    
+    <script src="js/inputs.js"></script>
+    
+    <script src="js/popups.js"></script>
     
     <script src="js/main.js"></script>
 </body>

@@ -66,7 +66,7 @@
                     </svg>
                 </a>
         
-                <button class="header__button header__button--cart" type="button" title="Показать корзину">
+                <button class="js-popup-open header__button header__button--cart" type="button" data-popup="cart_popup" title="Показать корзину">
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#cart_icon" />
                     </svg>
@@ -74,9 +74,1187 @@
             </div>
         </header>
 
+        <div class="main-menu">
+            <div class="main-menu__inner">
+                <button class="js-main-menu-closer main-menu__closer" type="button" title="Закрыть меню">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#close_icon" />
+                    </svg>
+                </button>
+        
+                <nav class="main-menu__nav">
+                    <ul class="main-menu__links main-menu__links--type_1">
+                        <li><a href="#">МУЖЧИНАМ</a></li>
+                        <li><a href="#">ЖЕНЩИНАМ</a></li>
+                        <li><a href="#">НØВИНКИ</a></li>
+                        <li><a href="#">БЕСТСЕЛЛЕРЫ</a></li>
+                        <li><a href="#">РАСПРØДАЖА</a></li>
+                    </ul>
+        
+                    <ul class="main-menu__links main-menu__links--type_2">
+                        <li class="big"><a href="#">ПØКУПАТЕЛЯМ</a></li>
+                        <li><a href="#">ОПТОВЫМ ПОКУПАТЕЛЯМ</a></li>
+                        <li><a href="#">ДОСТАВКА И ОПЛАТА</a></li>
+                        <li><a href="#">ОБМЕН И ВОЗВРАТ</a></li>
+                        <li><a href="#">УХОД ЗА ИЗДЕЛИЕМ</a></li>
+                        <li><a href="#">ТЕХНОЛОГИЯ ПРОИЗВОДСТВА</a></li>
+                    </ul>
+        
+                    <ul class="main-menu__links main-menu__links--type_3">
+                        <li>
+                            <a class="imaged-link" href="#">
+                                <span class="imaged-link__image">
+                                    <img src="images/content/menu/img_1.jpg" srcset="images/content/menu/img_1@2x.jpg 2x" alt="Ø БРЕНДЕ">
+                                </span>
+                                <span class="imaged-link__title">Ø БРЕНДЕ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="imaged-link" href="#">
+                                <span class="imaged-link__image">
+                                    <img src="images/content/menu/img_2.jpg" srcset="images/content/menu/img_2@2x.jpg 2x" alt="БЛØГ">
+                                </span>
+                                <span class="imaged-link__title">БЛØГ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="imaged-link" href="#">
+                                <span class="imaged-link__image">
+                                    <img src="images/content/menu/img_3.jpg" srcset="images/content/menu/img_3@2x.jpg 2x" alt="КØНТАКТЫ">
+                                </span>
+                                <span class="imaged-link__title">КØНТАКТЫ</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+        
+                <a class="main-menu__auth button button--primary button--m" href="#">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#personal_icon" />
+                    </svg>
+                    ВОЙТИ ИЛИ ЗАРЕГИСТРИРОВАТЬСЯ
+                </a>
+            </div>
+        </div>
+
+        <div class="search">
+            <div class="search__top">
+                <div class="search__title">ПОИСК</div>
+        
+                <div class="search__form-block">
+                    <form class="search__form" action="">
+                        <div class="search__input-container">
+                            <input class="js-search-input search__input" type="text" name="q" placeholder="НАЙТИ ТОВАР" autocomplete="off">
+        
+                            <button class="js-search-input-cleaner search__input-cleaner" type="button" title="Очистить">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#close_icon" />
+                                </svg>
+                            </button>
+                        </div>
+        
+                        <button class="search__submit button button--primary button--s" type="submit">НАЙТИ</button>
+        
+                        <button class="js-search-closer search__closer button button--white button--s" type="button" title="Закрыть поиск">
+                            <span>ЗАКРЫТЬ</span>
+        
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#close_icon" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        
+            <div class="search__body">
+                <div class="search__tags">
+                    <div class="h2">ЧАСТØ ИЩУТ</div>
+        
+                    <div class="search__tags-list">
+                        <button class="js-search-tag search__tag" type="button">Куртка на каждый день</button>
+                        <button class="js-search-tag search__tag" type="button">Аляски</button>
+                        <button class="js-search-tag search__tag" type="button">парки</button>
+                        <button class="js-search-tag search__tag" type="button">бомберы</button>
+                        <button class="js-search-tag search__tag" type="button">пуховики</button>
+                        <button class="js-search-tag search__tag" type="button">зимние куртки</button>
+                        <button class="js-search-tag search__tag" type="button">демисезонные</button>
+                        <button class="js-search-tag search__tag" type="button">кожаные куртки</button>
+                    </div>
+                </div>
+        
+                <div class="search__popular">
+                    <div class="cards-slider">
+                        <div class="cards-slider__title">
+                            <div class="h2">ПØПУЛЯРНЫЕ ТØВАРЫ</div>
+        
+                            <div class="cards-slider__arrows">
+                                <button class="swiper-button-prev" type="button" title="Назад" data-arrows="arrows_1">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#chevron_left" />
+                                    </svg>
+                                </button>
+        
+                                <button class="swiper-button-next" type="button" title="Вперёд" data-arrows="arrows_1">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#chevron_right" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+        
+                        <div class="js-cards-slider cards-slider__slider swiper" data-s-qnt="2" data-sm-qnt="3" data-lg-qnt="5" data-fhd-qnt="5" data-arrows="arrows_1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card__top">
+                                            <a class="js-card-images card__image" href="#">
+                                                <span class="card__images">
+                                                    <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
+                                                </span>
+        
+                                                <span class="card__images-pagination">
+                                                    <span class="js-card-image-num is-active"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                </span>
+        
+                                                <span class="card__images-handlers">
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                </span>
+                                            </a>
+        
+                                            <div class="card__badges badges">
+                                                <div class="badge">мембрана</div>
+                                            </div>
+        
+                                            <button class="card__fav" type="button" title="Добавить в избранное">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#fav_icon" />
+                                                </svg>
+                                            </button>
+        
+                                            <a class="card__buy" href="#" title="Добавить в корзину">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#cart_icon" />
+                                                </svg>
+                                            </a>
+                                        </div>
+        
+                                        <div class="card__bottom">
+                                            <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
+        
+                                            <div class="card__price-block">
+                                                <div class="card__price">34 900 ₽</div>
+                                                <div class="card__old-price">54 900 ₽</div>
+                                                <div class="card__discount">-15%</div>
+                                            </div>
+        
+                                            <div class="card__colors">
+                                                <div class="card__color" style="background-color: #5A785A" title="Зелёный"></div>
+                                                <div class="card__color" style="background-color: #00487D" title="Синий"></div>
+                                                <div class="card__color" style="background-color: #B52626" title="Красный"></div>
+                                                <div class="card__color" style="background-color: #B59B8A" title="Бежевый"></div>
+                                                <div class="card__color" style="background-color: #4A4A4D" title="Тёмно-серый"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card__top">
+                                            <a class="js-card-images card__image" href="#">
+                                                <span class="card__images">
+                                                    <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
+                                                </span>
+        
+                                                <span class="card__images-pagination">
+                                                    <span class="js-card-image-num is-active"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                </span>
+        
+                                                <span class="card__images-handlers">
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                </span>
+                                            </a>
+        
+                                            <div class="card__badges badges">
+                                                <div class="badge">натуральный пух</div>
+                                            </div>
+        
+                                            <button class="card__fav" type="button" title="Убрать из избранного">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#fav_filled_icon" />
+                                                </svg>
+                                            </button>
+        
+                                            <a class="card__buy" href="#" title="Добавить в корзину">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#cart_icon" />
+                                                </svg>
+                                            </a>
+                                        </div>
+        
+                                        <div class="card__bottom">
+                                            <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
+        
+                                            <div class="card__price-block">
+                                                <div class="card__price">34 900 ₽</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card__top">
+                                            <a class="js-card-images card__image" href="#">
+                                                <span class="card__images">
+                                                    <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
+                                                </span>
+        
+                                                <span class="card__images-pagination">
+                                                    <span class="js-card-image-num is-active"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                </span>
+        
+                                                <span class="card__images-handlers">
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                </span>
+                                            </a>
+        
+                                            <div class="card__badges badges">
+                                                <div class="badge">мембрана</div>
+                                            </div>
+        
+                                            <button class="card__fav" type="button" title="Добавить в избранное">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#fav_icon" />
+                                                </svg>
+                                            </button>
+        
+                                            <a class="card__buy" href="#" title="Добавить в корзину">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#cart_icon" />
+                                                </svg>
+                                            </a>
+                                        </div>
+        
+                                        <div class="card__bottom">
+                                            <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
+        
+                                            <div class="card__price-block">
+                                                <div class="card__price">34 900 ₽</div>
+                                                <div class="card__old-price">54 900 ₽</div>
+                                                <div class="card__discount">-15%</div>
+                                            </div>
+        
+                                            <div class="card__colors">
+                                                <div class="card__color" style="background-color: #5A785A" title="Зелёный"></div>
+                                                <div class="card__color" style="background-color: #00487D" title="Синий"></div>
+                                                <div class="card__color" style="background-color: #B52626" title="Красный"></div>
+                                                <div class="card__color" style="background-color: #B59B8A" title="Бежевый"></div>
+                                                <div class="card__color" style="background-color: #4A4A4D" title="Тёмно-серый"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card__top">
+                                            <a class="js-card-images card__image" href="#">
+                                                <span class="card__images">
+                                                    <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
+                                                </span>
+        
+                                                <span class="card__images-pagination">
+                                                    <span class="js-card-image-num is-active"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                </span>
+        
+                                                <span class="card__images-handlers">
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                </span>
+                                            </a>
+        
+                                            <div class="card__badges badges">
+                                                <div class="badge">натуральный пух</div>
+                                            </div>
+        
+                                            <button class="card__fav" type="button" title="Убрать из избранного">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#fav_filled_icon" />
+                                                </svg>
+                                            </button>
+        
+                                            <a class="card__buy" href="#" title="Добавить в корзину">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#cart_icon" />
+                                                </svg>
+                                            </a>
+                                        </div>
+        
+                                        <div class="card__bottom">
+                                            <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
+        
+                                            <div class="card__price-block">
+                                                <div class="card__price">34 900 ₽</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card__top">
+                                            <a class="js-card-images card__image" href="#">
+                                                <span class="card__images">
+                                                    <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
+                                                </span>
+        
+                                                <span class="card__images-pagination">
+                                                    <span class="js-card-image-num is-active"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                </span>
+        
+                                                <span class="card__images-handlers">
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                </span>
+                                            </a>
+        
+                                            <div class="card__badges badges">
+                                                <div class="badge">натуральный пух</div>
+                                            </div>
+        
+                                            <button class="card__fav" type="button" title="Добавить в избранное">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#fav_icon" />
+                                                </svg>
+                                            </button>
+        
+                                            <a class="card__buy" href="#" title="Добавить в корзину">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#cart_icon" />
+                                                </svg>
+                                            </a>
+                                        </div>
+        
+                                        <div class="card__bottom">
+                                            <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
+        
+                                            <div class="card__price-block">
+                                                <div class="card__price">34 900 ₽</div>
+                                                <div class="card__old-price">54 900 ₽</div>
+                                                <div class="card__discount">-15%</div>
+                                            </div>
+        
+                                            <div class="card__colors">
+                                                <div class="card__color" style="background-color: #5A785A" title="Зелёный"></div>
+                                                <div class="card__color" style="background-color: #00487D" title="Синий"></div>
+                                                <div class="card__color" style="background-color: #B52626" title="Красный"></div>
+                                                <div class="card__color" style="background-color: #B59B8A" title="Бежевый"></div>
+                                                <div class="card__color" style="background-color: #4A4A4D" title="Тёмно-серый"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card__top">
+                                            <a class="js-card-images card__image" href="#">
+                                                <span class="card__images">
+                                                    <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
+                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
+                                                </span>
+        
+                                                <span class="card__images-pagination">
+                                                    <span class="js-card-image-num is-active"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                    <span class="js-card-image-num"></span>
+                                                </span>
+        
+                                                <span class="card__images-handlers">
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                    <span class="js-card-image-handler card__image-handler"></span>
+                                                </span>
+                                            </a>
+        
+                                            <div class="card__badges badges">
+                                                <div class="badge">мембрана</div>
+                                            </div>
+        
+                                            <button class="card__fav" type="button" title="Убрать из избранного">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#fav_filled_icon" />
+                                                </svg>
+                                            </button>
+        
+                                            <a class="card__buy" href="#" title="Добавить в корзину">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#cart_icon" />
+                                                </svg>
+                                            </a>
+                                        </div>
+        
+                                        <div class="card__bottom">
+                                            <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
+        
+                                            <div class="card__price-block">
+                                                <div class="card__price">34 900 ₽</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="js-search-result search__result" style="display: none">
+                    <div class="h2">ВØТ, ЧТØ МЫ НАШЛИ</div>
+        
+                    <div class="search__result-list">
+                        <div class="card">
+                            <div class="card__top">
+                                <a class="js-card-images card__image" href="#">
+                                    <span class="card__images">
+                                        <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
+                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
+                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
+                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
+                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
+                                    </span>
+        
+                                    <span class="card__images-pagination">
+                                        <span class="js-card-image-num is-active"></span>
+                                        <span class="js-card-image-num"></span>
+                                        <span class="js-card-image-num"></span>
+                                        <span class="js-card-image-num"></span>
+                                        <span class="js-card-image-num"></span>
+                                    </span>
+        
+                                    <span class="card__images-handlers">
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                    </span>
+                                </a>
+        
+                                <div class="card__badges badges">
+                                    <div class="badge">натуральный пух</div>
+                                </div>
+        
+                                <button class="card__fav" type="button" title="Добавить в избранное">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#fav_icon" />
+                                    </svg>
+                                </button>
+        
+                                <a class="card__buy" href="#" title="Добавить в корзину">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#cart_icon" />
+                                    </svg>
+                                </a>
+                            </div>
+        
+                            <div class="card__bottom">
+                                <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
+        
+                                <div class="card__price-block">
+                                    <div class="card__price">34 900 ₽</div>
+                                    <div class="card__old-price">54 900 ₽</div>
+                                    <div class="card__discount">-15%</div>
+                                </div>
+        
+                                <div class="card__colors">
+                                    <div class="card__color" style="background-color: #5A785A" title="Зелёный"></div>
+                                    <div class="card__color" style="background-color: #00487D" title="Синий"></div>
+                                    <div class="card__color" style="background-color: #B52626" title="Красный"></div>
+                                    <div class="card__color" style="background-color: #B59B8A" title="Бежевый"></div>
+                                    <div class="card__color" style="background-color: #4A4A4D" title="Тёмно-серый"></div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="card">
+                            <div class="card__top">
+                                <a class="js-card-images card__image" href="#">
+                                    <span class="card__images">
+                                        <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
+                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
+                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
+                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
+                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
+                                    </span>
+        
+                                    <span class="card__images-pagination">
+                                        <span class="js-card-image-num is-active"></span>
+                                        <span class="js-card-image-num"></span>
+                                        <span class="js-card-image-num"></span>
+                                        <span class="js-card-image-num"></span>
+                                        <span class="js-card-image-num"></span>
+                                    </span>
+        
+                                    <span class="card__images-handlers">
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                    </span>
+                                </a>
+        
+                                <div class="card__badges badges">
+                                    <div class="badge">натуральный пух</div>
+                                </div>
+        
+                                <button class="card__fav" type="button" title="Убрать из избранного">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#fav_filled_icon" />
+                                    </svg>
+                                </button>
+        
+                                <a class="card__buy" href="#" title="Добавить в корзину">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#cart_icon" />
+                                    </svg>
+                                </a>
+                            </div>
+        
+                            <div class="card__bottom">
+                                <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
+        
+                                <div class="card__price-block">
+                                    <div class="card__price">34 900 ₽</div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="card">
+                            <div class="card__top">
+                                <a class="js-card-images card__image" href="#">
+                                    <span class="card__images">
+                                        <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
+                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
+                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
+                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
+                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
+                                    </span>
+        
+                                    <span class="card__images-pagination">
+                                        <span class="js-card-image-num is-active"></span>
+                                        <span class="js-card-image-num"></span>
+                                        <span class="js-card-image-num"></span>
+                                        <span class="js-card-image-num"></span>
+                                        <span class="js-card-image-num"></span>
+                                    </span>
+        
+                                    <span class="card__images-handlers">
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                    </span>
+                                </a>
+        
+                                <div class="card__badges badges">
+                                    <div class="badge">мембрана</div>
+                                </div>
+        
+                                <button class="card__fav" type="button" title="Добавить в избранное">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#fav_icon" />
+                                    </svg>
+                                </button>
+        
+                                <a class="card__buy" href="#" title="Добавить в корзину">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#cart_icon" />
+                                    </svg>
+                                </a>
+                            </div>
+        
+                            <div class="card__bottom">
+                                <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
+        
+                                <div class="card__price-block">
+                                    <div class="card__price">34 900 ₽</div>
+                                    <div class="card__old-price">54 900 ₽</div>
+                                    <div class="card__discount">-15%</div>
+                                </div>
+        
+                                <div class="card__colors">
+                                    <div class="card__color" style="background-color: #5A785A" title="Зелёный"></div>
+                                    <div class="card__color" style="background-color: #00487D" title="Синий"></div>
+                                    <div class="card__color" style="background-color: #B52626" title="Красный"></div>
+                                    <div class="card__color" style="background-color: #B59B8A" title="Бежевый"></div>
+                                    <div class="card__color" style="background-color: #4A4A4D" title="Тёмно-серый"></div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="card">
+                            <div class="card__top">
+                                <a class="js-card-images card__image" href="#">
+                                    <span class="card__images">
+                                        <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
+                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
+                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
+                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
+                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
+                                    </span>
+        
+                                    <span class="card__images-pagination">
+                                        <span class="js-card-image-num is-active"></span>
+                                        <span class="js-card-image-num"></span>
+                                        <span class="js-card-image-num"></span>
+                                        <span class="js-card-image-num"></span>
+                                        <span class="js-card-image-num"></span>
+                                    </span>
+        
+                                    <span class="card__images-handlers">
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                    </span>
+                                </a>
+        
+                                <div class="card__badges badges">
+                                    <div class="badge">мембрана</div>
+                                </div>
+        
+                                <button class="card__fav" type="button" title="Убрать из избранного">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#fav_filled_icon" />
+                                    </svg>
+                                </button>
+        
+                                <a class="card__buy" href="#" title="Добавить в корзину">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#cart_icon" />
+                                    </svg>
+                                </a>
+                            </div>
+        
+                            <div class="card__bottom">
+                                <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
+        
+                                <div class="card__price-block">
+                                    <div class="card__price">34 900 ₽</div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="card">
+                            <div class="card__top">
+                                <a class="js-card-images card__image" href="#">
+                                    <span class="card__images">
+                                        <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
+                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
+                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
+                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
+                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
+                                    </span>
+        
+                                    <span class="card__images-pagination">
+                                        <span class="js-card-image-num is-active"></span>
+                                        <span class="js-card-image-num"></span>
+                                        <span class="js-card-image-num"></span>
+                                        <span class="js-card-image-num"></span>
+                                        <span class="js-card-image-num"></span>
+                                    </span>
+        
+                                    <span class="card__images-handlers">
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                        <span class="js-card-image-handler card__image-handler"></span>
+                                    </span>
+                                </a>
+        
+                                <div class="card__badges badges">
+                                    <div class="badge">мембрана</div>
+                                </div>
+        
+                                <button class="card__fav" type="button" title="Добавить в избранное">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#fav_icon" />
+                                    </svg>
+                                </button>
+        
+                                <a class="card__buy" href="#" title="Добавить в корзину">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#cart_icon" />
+                                    </svg>
+                                </a>
+                            </div>
+        
+                            <div class="card__bottom">
+                                <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
+        
+                                <div class="card__price-block">
+                                    <div class="card__price">34 900 ₽</div>
+                                    <div class="card__old-price">54 900 ₽</div>
+                                    <div class="card__discount">-15%</div>
+                                </div>
+        
+                                <div class="card__colors">
+                                    <div class="card__color" style="background-color: #5A785A" title="Зелёный"></div>
+                                    <div class="card__color" style="background-color: #00487D" title="Синий"></div>
+                                    <div class="card__color" style="background-color: #B52626" title="Красный"></div>
+                                    <div class="card__color" style="background-color: #B59B8A" title="Бежевый"></div>
+                                    <div class="card__color" style="background-color: #4A4A4D" title="Тёмно-серый"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <a class="search__result-all button button--primary button--m" href="#">Перейти в каталог</a>
+                </div>
+        
+                <div class="js-search-result-empty search__result" style="display: none">
+                    <div class="h2">ПО ЗАПРОСУ «ФУТБОЛКА ДЛЯ ЧУВАКА» ТОВАРОВ НЕ НАЙДЕНО.<br> ПОПРОБУЙТЕ ИЗМЕНИТЬ ВАШ ЗАПРОС</div>
+                </div>
+        
+                <div class="js-search-loader loader" style="display: none">
+                    <div class="loader__logo">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#logo_icon" />
+                        </svg>
+        
+                        <div class="loader__logo-shade"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="page__content">
             <div class="container">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Профиль</a></li>
+                    <li class="breadcrumbs__item">Мои данные</li>
+                </ul>
 
+                <div class="title-block title-block--text_centered">
+                    <h1>øптøвым пøкупателям</h1>
+                
+                    <p class="h2">Мы контролируем весь производственный процесс, поддерживая качество и сокращая издержки.</p>
+                
+                    <a class="button button--primary button--m" href="#">получить прайс-лист</a>
+                </div>
+
+                <div style="margin-bottom: 60px;">
+                    <h2>Чекбоксы</h2>
+                
+                    <label class="checkbox">
+                        <input type="checkbox" name="cb_1">
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__text">ВЫБРАТЬ МАТЕРИАЛ <span class="qnt">3</span></span>
+                    </label>
+                
+                    <label class="checkbox">
+                        <input type="checkbox" name="cb_2" checked>
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__text">ВЫБРАТЬ МАТЕРИАЛ <span class="qnt">3</span></span>
+                    </label>
+                
+                    <label class="checkbox">
+                        <input type="checkbox" name="cb_3" disabled>
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__text">ВЫБРАТЬ МАТЕРИАЛ <span class="qnt">3</span></span>
+                    </label>
+                
+                    <label class="checkbox">
+                        <input type="checkbox" name="cb_4" disabled checked>
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__text">ВЫБРАТЬ МАТЕРИАЛ <span class="qnt">3</span></span>
+                    </label>
+                
+                    <label class="checkbox checkbox--color">
+                        <input type="checkbox" name="cb_5">
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__text"><span class="color"><span class="color__icon" style="background-color: #00487D"></span>Синий</span> <span class="qnt">3</span></span>
+                    </label>
+                
+                    <label class="checkbox checkbox--color">
+                        <input type="checkbox" name="cb_6" checked>
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__text"><span class="color"><span class="color__icon" style="background-color: #00487D"></span>Синий</span> <span class="qnt">3</span></span>
+                    </label>
+                
+                    <label class="checkbox checkbox--color">
+                        <input type="checkbox" name="cb_7" disabled>
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__text"><span class="color"><span class="color__icon" style="background-color: #00487D"></span>Синий</span> <span class="qnt">3</span></span>
+                    </label>
+                
+                    <label class="checkbox checkbox--color">
+                        <input type="checkbox" name="cb_8" checked disabled>
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__text"><span class="color"><span class="color__icon" style="background-color: #00487D"></span>Синий</span> <span class="qnt">3</span></span>
+                    </label>
+                </div>
+
+                <div style="margin-bottom: 60px;">
+                    <h2>Радио-кнопки</h2>
+                
+                    <label class="radio">
+                        <input type="radio" name="r" value="1">
+                        <span class="radio__icon"></span>
+                        <span class="radio__text">По умолчанию</span>
+                    </label>
+                
+                    <label class="radio">
+                        <input type="radio" name="r" value="2" checked>
+                        <span class="radio__icon"></span>
+                        <span class="radio__text">По популярности</span>
+                    </label>
+                
+                    <label class="radio">
+                        <input type="radio" name="r" value="3" disabled>
+                        <span class="radio__icon"></span>
+                        <span class="radio__text">По возрастанию цены</span>
+                    </label>
+                
+                    <label class="radio">
+                        <input type="radio" name="r" value="5">
+                        <span class="radio__icon"></span>
+                        <span class="radio__text">По новизне</span>
+                    </label>
+                </div>
+
+                <div style="margin-bottom: 60px;">
+                    <h2>Кнопки</h2>
+                
+                    <button class="button button--primary button--s" type="button">ОСНОВНАЯ КНОПКА</button>
+                
+                    <button class="button button--white button--s" type="button">БЕЛАЯ КНОПКА</button>
+                
+                    <br><br>
+                
+                    <button class="button button--primary button--m" type="button">ОСНОВНАЯ КНОПКА</button>
+                
+                    <button class="button button--white button--m" type="button">БЕЛАЯ КНОПКА</button>
+                
+                    <br><br>
+                
+                    <h2>Кнопки - ссылки</h2>
+                
+                    <a class="button button--primary button--s" href="#">ОСНОВНАЯ КНОПКА</a>
+                
+                    <a class="button button--white button--s" href="#">БЕЛАЯ КНОПКА</a>
+                
+                    <br><br>
+                
+                    <a class="button button--primary button--m" href="#">ОСНОВНАЯ КНОПКА</a>
+                
+                    <a class="button button--white button--m" href="#">БЕЛАЯ КНОПКА</a>
+                </div>
+
+                <div style="margin-bottom: 60px;">
+                    <h2>Поля ввода</h2>
+                
+                    <div class="input-group">
+                        <input id="inp_1" class="input-group__input" type="text" name="" value="">
+                        <label class="input-group__label" for="inp_1">Ваше имя</label>
+                    </div>
+                
+                    <div class="input-group">
+                        <input id="inp_2" class="input-group__input is-filled" type="text" name="" value="Кригер Игорь">
+                        <label class="input-group__label" for="inp_2">Ваше имя</label>
+                    </div>
+                
+                    <div class="input-group">
+                        <input id="inp_3" class="input-group__input is-filled invalid" type="text" name="" value="Кригер Игорь">
+                        <label class="input-group__label" for="inp_3">Ваше имя</label>
+                    </div>
+                
+                    <div class="input-group">
+                        <input id="inp_4" class="input-group__input invalid" type="text" name="" value="">
+                        <label class="input-group__label" for="inp_4">Введите ваше имя</label>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 60px;">
+                    <h2>Радио-кнопки размеров</h2>
+                
+                    <div class="sizes-group">
+                        <label class="size-radio">
+                            <input type="radio" name="size" value="48" checked>
+                            <span class="size-radio__text">48</span>
+                        </label>
+                
+                        <label class="size-radio">
+                            <input type="radio" name="size" value="50">
+                            <span class="size-radio__text">50</span>
+                        </label>
+                
+                        <label class="size-radio">
+                            <input type="radio" name="size" value="52">
+                            <span class="size-radio__text">52</span>
+                        </label>
+                
+                        <label class="size-radio">
+                            <input type="radio" name="size" value="54">
+                            <span class="size-radio__text">54</span>
+                        </label>
+                
+                        <label class="size-radio">
+                            <input type="radio" name="size" value="56">
+                            <span class="size-radio__text">56</span>
+                        </label>
+                
+                        <label class="size-radio">
+                            <input type="radio" name="size" value="58">
+                            <span class="size-radio__text">58</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 60px;">
+                    <h2>Радио-кнопки размеров</h2>
+                
+                    <div class="colors-group">
+                        <label class="color-radio">
+                            <input type="radio" name="color" value="Синий" checked>
+                            <span class="color-radio__color" title="Синий" style="background-color:#00487D"></span>
+                        </label>
+                
+                        <label class="color-radio">
+                            <input type="radio" name="color" value="Зелёный">
+                            <span class="color-radio__color" title="Зелёный" style="background-color:#5A785A"></span>
+                        </label>
+                
+                        <label class="color-radio">
+                            <input type="radio" name="color" value="Красный">
+                            <span class="color-radio__color" title="Красный" style="background-color:#B52626"></span>
+                        </label>
+                
+                        <label class="color-radio">
+                            <input type="radio" name="color" value="Бежевый">
+                            <span class="color-radio__color" title="Бежевый" style="background-color:#B59B8A"></span>
+                        </label>
+                
+                        <label class="color-radio">
+                            <input type="radio" name="color" value="Тёмно-серый">
+                            <span class="color-radio__color" title="Тёмно-серый" style="background-color:#4A4A4D"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 60px;">
+                    <h2>Бейджи</h2>
+                
+                    <div class="badges">
+                        <div class="badge">Новинка</div>
+                        <div class="badge">Натуральный пух</div>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h1>Заголовок первого уровня</h1>
+                
+                    <h2>Заголовок второго уровня</h2>
+                
+                    <h3>Заголовок третьего уровня</h3>
+                
+                    <h4>Заголовок четвёртого уровня</h4>
+                
+                    <h4>Маркированный список</h4>
+                
+                    <ul>
+                        <li>Laudantium illo quasi, temporibus cum alias, sed adipisci rem.</li>
+                
+                        <li>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?
+                            <ul>
+                                <li>Laudantium illo quasi, temporibus cum alias, sed adipisci rem.</li>
+                
+                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?</li>
+                
+                                <li>Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?</li>
+                            </ul>
+                        </li>
+                
+                        <li>Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?</li>
+                    </ul>
+                
+                    <h4>Нумерованный список</h4>
+                
+                    <ol>
+                        <li>Laudantium illo quasi, temporibus cum alias, sed adipisci rem.</li>
+                
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?</li>
+                
+                        <li>
+                            Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?
+                
+                            <ol>
+                                <li>Laudantium illo quasi, temporibus cum alias, sed adipisci rem.</li>
+                
+                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?
+                
+                                    <ol>
+                                        <li>Laudantium illo quasi, temporibus cum alias, sed adipisci rem.</li>
+                
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?</li>
+                
+                                        <li>Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?</li>
+                                    </ol>
+                                </li>
+                
+                                <li>Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?</li>
+                            </ol>
+                        </li>
+                
+                        <li>Laudantium illo quasi, temporibus cum alias, sed adipisci rem.</li>
+                
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?</li>
+                    </ol>
+                
+                    <h4>Таблица</h4>
+                
+                    <table>
+                        <tr>
+                            <th>INT</th>
+                            <th>RU</th>
+                            <th>Обхват груди</th>
+                            <th>Обхват талии</th>
+                            <th>Обхват бедер</th>
+                            <th>Рост</th>
+                        </tr>
+                        <tr>
+                            <td>S</td>
+                            <td>46</td>
+                            <td>92</td>
+                            <td>76</td>
+                            <td>96</td>
+                            <td>170-176</td>
+                        </tr>
+                        <tr>
+                            <td>M</td>
+                            <td>48</td>
+                            <td>96</td>
+                            <td>82</td>
+                            <td>100</td>
+                            <td>170-176</td>
+                        </tr>
+                        <tr>
+                            <td>L</td>
+                            <td>50</td>
+                            <td>100</td>
+                            <td>86</td>
+                            <td>104</td>
+                            <td>170-176</td>
+                        </tr>
+                        <tr>
+                            <td>XL</td>
+                            <td>52</td>
+                            <td>104</td>
+                            <td>90</td>
+                            <td>108</td>
+                            <td>176-182</td>
+                        </tr>
+                        <tr>
+                            <td>2XL</td>
+                            <td>54</td>
+                            <td>108</td>
+                            <td>94</td>
+                            <td>112</td>
+                            <td>176-182</td>
+                        </tr>
+                        <tr>
+                            <td>3XL</td>
+                            <td>56</td>
+                            <td>112</td>
+                            <td>98</td>
+                            <td>116</td>
+                            <td>176-182</td>
+                        </tr>
+                        <tr>
+                            <td>4XL</td>
+                            <td>58</td>
+                            <td>116</td>
+                            <td>102</td>
+                            <td>120</td>
+                            <td>176-182</td>
+                        </tr>
+                        <tr>
+                            <td>5XL</td>
+                            <td>60</td>
+                            <td>120</td>
+                            <td>104</td>
+                            <td>124</td>
+                            <td>176-182</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
 
@@ -105,41 +1283,49 @@
                     <div class="footer__middle-block">
                         <div class="footer__middle-title">ПОКУПАТЕЛЯМ</div>
         
-                        <a href="#">ОПТОВЫМ ПОКУПАТЕЛЯМ</a>
+                        <ul class="footer__middle-menu">
+                            <li><a href="#">ОПТОВЫМ ПОКУПАТЕЛЯМ</a></li>
         
-                        <a href="#">ДОСТАВКА И ОПЛАТА</a>
+                            <li><a href="#">ДОСТАВКА И ОПЛАТА</a></li>
         
-                        <a href="#">ОБМЕН И ВОЗВРАТ</a>
+                            <li><a href="#">ОБМЕН И ВОЗВРАТ</a></li>
         
-                        <a href="#">УХОД ЗА ИЗДЕЛИЕМ</a>
+                            <li><a href="#">УХОД ЗА ИЗДЕЛИЕМ</a></li>
         
-                        <a href="#">ТЕХНОЛОГИЯ ПРОИЗВОДСТВА</a>
+                            <li><a href="#">ТЕХНОЛОГИЯ ПРОИЗВОДСТВА</a></li>
+                        </ul>
                     </div>
         
                     <div class="footer__middle-block">
                         <div class="footer__middle-title">КОМПАНИЯ</div>
         
-                        <a href="#">О БРЕНДЕ</a>
+                        <ul class="footer__middle-menu">
+                            <li><a href="#">О БРЕНДЕ</a></li>
         
-                        <a href="#">БЛОГ</a>
+                            <li><a href="#">БЛОГ</a></li>
         
-                        <a href="#">КОНТАКТЫ</a>
+                            <li><a href="#">КОНТАКТЫ</a></li>
+                        </ul>
                     </div>
         
                     <div class="footer__middle-block">
                         <div class="footer__middle-title">КОНТАКТЫ</div>
         
-                        <a href="mailto:info@larsenbjorn.ru">INFO@LARSENBJORN.RU</a>
+                        <ul class="footer__middle-menu">
+                            <li><a href="mailto:info@larsenbjorn.ru">INFO@LARSENBJORN.RU</a></li>
         
-                        <a href="tel:+78003007828">+7 (800) 300-78-28</a>
+                            <li><a href="tel:+78003007828">+7 (800) 300-78-28</a></li>
+                        </ul>
                     </div>
         
                     <div class="footer__middle-block">
                         <div class="footer__middle-title">СОЦИАЛЬНЫЕ СЕТИ</div>
         
-                        <a href="#" rel="nofollow noopener noreferrer">ВКОНТАКТЕ</a>
+                        <ul class="footer__middle-menu">
+                            <li><a href="#" rel="nofollow noopener noreferrer">ВКОНТАКТЕ</a></li>
         
-                        <a href="#" rel="nofollow noopener noreferrer">YOUTUBE</a>
+                            <li><a href="#" rel="nofollow noopener noreferrer">YOUTUBE</a></li>
+                        </ul>
                     </div>
                 </div>
         
@@ -157,6 +1343,16 @@
             </div>
         </footer>
 
+        <div id="cart_popup" class="popup popup--width_type_1 popup--right_to_left">
+            <button class="js-popup-close popup__closer" type="button" data-popup="cart_popup" title="Закрыть коризну">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#close_icon" />
+                </svg>
+            </button>
+        
+            <div class="popup__title h2">Корзина</div>
+        </div>
+
         <div class="page__shade"></div>
     </div>
 
@@ -169,6 +1365,10 @@
     <script src="js/cards-slider.js"></script>
     
     <script src="js/card.js"></script>
+    
+    <script src="js/inputs.js"></script>
+    
+    <script src="js/popups.js"></script>
     
     <script src="js/main.js"></script>
 </body>

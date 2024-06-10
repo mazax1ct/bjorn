@@ -9,10 +9,12 @@
     }
     @media(min-width: $lg) {
         font-size: 12px;
+        padding-top: 30px;
     }
     @media(min-width: $fhd) {
         font-size: 14px;
         padding-bottom: 63px;
+        padding-top: 36px;
     }
 
     &__logo {
@@ -44,7 +46,6 @@
             padding-bottom: 40px;
         }
         @media(min-width: $fhd) {
-            margin-bottom: 60px;
             padding-bottom: 60px;
         }
 
@@ -52,6 +53,7 @@
             display: inline-block;
             padding: 6px 10px;
             @media(min-width: $fhd) {
+                line-height: 1.21428;
                 padding: 8px 12px;
             }
         }
@@ -77,11 +79,8 @@
     }
 
     &__middle-block {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
         @media(max-width: $sm - 0.01px) {
-            align-items: center;
+            text-align: center;
         }
 
         &:not(:last-child) {
@@ -93,7 +92,20 @@
 
     &__middle-title {
         opacity: 0.4;
-        margin-bottom: 2px;
+        margin-bottom: 8px;
+        @media(min-width: $lg) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__middle-menu {
+        @include list-reset;
+
+        li {
+            &:not(:last-child) {
+                margin-bottom: 6px;
+            }
+        }
     }
 
     &__bottom {

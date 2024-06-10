@@ -12,7 +12,7 @@ function menuClose() {
   mainMenu.classList.remove('is-open');
 
   //скрываем подложку
-  fadeOut(shade, 300);
+  fadeOut(shade, 500);
   shadeIsShow = false;
 
   //снимаем классы со страницы
@@ -21,7 +21,7 @@ function menuClose() {
     header.classList.remove('header--menu-is-open');
     header.classList.remove('header--color-transition');
     shade.classList.remove('page__shade--menu-is-open');
-  }, 300);
+  }, 500);
 
   //снимаем обработчик события закрытия меню с подложки
   shade.removeEventListener('click', menuClose);
@@ -38,7 +38,7 @@ menuOpener.addEventListener('click', function (event) {
     page.classList.add('is-overflow');
 
     //показываем подложку
-    fadeIn(shade, 300, 'block');
+    fadeIn(shade, 500, 'block');
     shadeIsShow = true;
 
     //вешаем обработчик события закрытия меню на подложку
@@ -60,7 +60,7 @@ menuOpener.addEventListener('click', function (event) {
 
     //скрываем подложку
     shade.removeEventListener('click', menuClose);
-    fadeOut(shade, 300);
+    fadeOut(shade, 500);
     shadeIsShow = false;
 
     //возвращаем скролл старницы и убираем вспомогательный класс для открытия меню/поиска
@@ -69,7 +69,7 @@ menuOpener.addEventListener('click', function (event) {
       header.classList.remove('header--menu-is-open');
       header.classList.remove('header--color-transition');
       shade.classList.remove('page__shade--menu-is-open');
-    }, 300);
+    }, 500);
 
     //ставим отметку о том что меню закрыто
     menuIsOpen = false;
@@ -95,7 +95,7 @@ function searchClose() {
   //если меню НЕ открыто
   if(!menuIsOpen) {
     //скрываем подложку
-    fadeOut(shade, 300);
+    fadeOut(shade, 500);
     shadeIsShow = false;
 
     //снимаем классы со страницы
@@ -104,7 +104,7 @@ function searchClose() {
       header.classList.remove('header--menu-is-open');
       header.classList.remove('header--color-transition');
       shade.classList.remove('page__shade--menu-is-open');
-    }, 300);
+    }, 500);
   } else { //если меню открыто
     //снимаем обработчик события закрытия поиска с подложки
     shade.removeEventListener('click', searchClose);
@@ -122,7 +122,7 @@ searchOpener.addEventListener('click', function (event) {
     page.classList.add('is-overflow');
 
     //показываем подложку
-    fadeIn(shade, 300, 'block');
+    fadeIn(shade, 500, 'block');
     shadeIsShow = true;
 
     //вешаем обработчик события закрытия поиска на подложку
@@ -189,7 +189,7 @@ var searchLoader = document.querySelector('.js-search-loader');
 searchForm.addEventListener('submit', function (event) {
   event.preventDefault();
 
-  fadeIn(searchLoader, 300, 'flex');
+  fadeIn(searchLoader, 500, 'flex');
 
   setTimeout(() => {
     fadeOut(searchPopular, 0);
@@ -204,6 +204,6 @@ searchForm.addEventListener('submit', function (event) {
   }, 1000);
 
   setTimeout(() => {
-    fadeOut(searchLoader, 300);
-  }, 2300);
+    fadeOut(searchLoader, 500);
+  }, 2500);
 });

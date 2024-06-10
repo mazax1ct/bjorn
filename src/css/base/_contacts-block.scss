@@ -1,0 +1,40 @@
+.contacts-block {
+    @media(max-width: $lg - 0.01px) {
+        display: none;
+    }
+
+    h3 {
+        color: var(--black_gray);
+    }
+}
+
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.social-link {
+    @include active-area;
+    display: block;
+    height: 24px;
+    min-width: 24px;
+    position: relative;
+    width: 24px;
+    z-index: 1;
+
+    &::after {
+        height: 38px;
+        min-width: 38px;
+        @media(min-width: $sm) {
+            height: 38px;
+            min-width: 38px;
+        }
+    }
+
+    svg {
+        fill: currentColor;
+        height: 24px;
+        width: 24px;
+    }
+}

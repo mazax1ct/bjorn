@@ -1,3 +1,111 @@
 .popup {
+    background-color: #fff;
+    height: 100%;
+    position: fixed;
+    padding-left: var(--container_padding);
+    padding-right: var(--container_padding);
+    top: 0;
+    transition: transform 0.5s;
+    width: 100%;
     z-index: 12;
+    @media(min-width: $sm) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    @media(min-width: $lg) {
+        width: 500px;
+    }
+    @media(min-width: $fhd) {
+        width: 685px;
+    }
+
+    &--width_type_1 {
+        @media(min-width: $sm) {
+            width: 460px;
+        }
+        @media(min-width: $lg) {
+            width: 500px;
+        }
+        @media(min-width: $fhd) {
+            width: 645px;
+        }
+    }
+
+    &--width_type_2 {
+        @media(min-width: $lg) {
+            width: 500px;
+        }
+        @media(min-width: $fhd) {
+            width: 685px;
+        }
+    }
+
+    &--left {
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    &--right {
+        left: auto;
+        right: 0;
+        transform: translateX(100%);
+    }
+
+    &--right_to_left {
+        left: auto;
+        right: 0;
+        transform: translateX(100%);
+        @media(min-width: $lg) {
+            left: 0;
+            right: auto;
+            transform: translateX(-100%);
+        }
+    }
+
+    &.is-open {
+        transform: translateX(0);
+    }
+
+    &__title {
+        margin-top: 0 !important;
+        @media(max-width: $sm - 0.01px) {
+            align-items: center;
+            border-bottom: 1px solid var(--gray_white);
+            display: flex;
+            font-size: 11px;
+            font-weight: 400;
+            justify-content: center;
+            line-height: 1.3;
+            margin-left: calc(0.01px - var(--container_padding));
+            margin-right: calc(0.01px - var(--container_padding));
+            min-height: 45px;
+            padding: 16px 50px;
+        }
+    }
+
+    &__closer {
+        @include button-reset;
+        @include active-area;
+        cursor: pointer;
+        height: 24px;
+        left: auto;
+        position: absolute;
+        right: 16px;
+        top: 12px;
+        transition: color 0.3s;
+        width: 24px;
+        @include hover {
+            color: var(--ocher);
+        }
+        @media(min-width: $sm) {
+            right: 24px;
+            top: 38px;
+        }
+
+        svg {
+            fill: currentColor;
+            height: 24px;
+            width: 24px;
+        }
+    }
 }

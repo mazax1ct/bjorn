@@ -1,0 +1,58 @@
+.sizes-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.size-radio {
+    display: block;
+    font-size: 11px;
+    position: relative;
+    z-index: 1;
+    @media(min-width: $lg) {
+        font-size: 12px;
+    }
+    @media(min-width: $fhd) {
+        font-size: 14px;
+    }
+
+    input {
+        position: absolute;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        width: 1px;
+
+        &:checked ~ .size-radio__text {
+            border-color: var(--black_dark);
+        }
+
+        &:not(:checked) ~ .size-radio__text {
+            @include hover {
+                border-color: var(--gray);
+            }
+        }
+    }
+
+    &__text {
+        align-items: center;
+        border-radius: 4px;
+        border: 1px solid var(--gray_white);
+        cursor: pointer;
+        display: flex;
+        height: 30px;
+        min-width: 34px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 1px;
+        transition: border-color 0.3s;
+        @media(min-width: $lg) {
+            height: 32px;
+            min-width: 36px;
+        }
+        @media(min-width: $fhd) {
+            height: 34px;
+            min-width: 38px;
+        }
+    }
+}

@@ -9,22 +9,12 @@
     gap: 6px;
     justify-content: center;
     line-height: 1.3;
-    min-height: 44px;
-    padding: 14px 24px;
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
     transition: background-color 0.3s, color 0.3s;
-    @media(min-width: $lg) {
-        min-height: 48px;
-        padding-top: 16px;
-        padding-bottom: 16px;
-    }
     @media(min-width: $fhd) {
         font-size: 14px;
-        min-height: 56px;
-        padding-top: 19px;
-        padding-bottom: 19px;
     }
 
     &.disabled,
@@ -40,6 +30,28 @@
         width: 24px;
     }
 
+    &--s {
+        min-height: 38px;
+        padding: 11px 16px;
+        @media(min-width: $fhd) {
+            min-height: 42px;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    }
+
+    &--m {
+        min-height: 44px;
+        padding: 12px 24px;
+        @media(min-width: $lg) {
+            min-height: 48px;
+        }
+        @media(min-width: $fhd) {
+            min-height: 56px;
+            padding-top: 13px;
+        }
+    }
+
     &--primary {
         background-color: var(--black_blue);
         color: #fff;
@@ -53,37 +65,49 @@
             }
         }
     }
-
-    &--secondary {
+    /*&--secondary {
         background-color: var(--ocher);
         color: #fff;
 
         &:not(.disabled),
         &:not(:disabled),
         &:not([data-disabled]) {
-            @include hover {}
+            @include hover {
+                background-color: var(--ocher_dark);
+            }
         }
-    }
-
-    &--transparent {
-        background-color: transparent;
+    }*/
+    &--white {
+        background-color: #fff;
         color: var(--black_dark);
 
         &:not(.disabled),
         &:not(:disabled),
         &:not([data-disabled]) {
-            @include hover {}
+            @include hover {
+                background-color: var(--gray_white);
+                color: var(--black_dark);
+            }
         }
     }
 }
 
-a.button--primary,
-a.button--secondary {
+a.button--primary {
     &:not(.disabled),
     &:not(:disabled),
     &:not([data-disabled]) {
         @include hover {
             color: #fff;
+        }
+    }
+}
+
+a.button--white {
+    &:not(.disabled),
+    &:not(:disabled),
+    &:not([data-disabled]) {
+        @include hover {
+            color: var(--black_dark);
         }
     }
 }
