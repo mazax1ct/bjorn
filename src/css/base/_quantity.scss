@@ -1,0 +1,66 @@
+.quantity {
+    align-items: center;
+    display: flex;
+
+    &__button {
+        @include button-reset;
+        @include active-area;
+        height: 20px;
+        min-width: 20px;
+        transition: color 0.3s;
+        position: relative;
+        width: 20px;
+        z-index: 1;
+        @media(min-width: $fhd) {
+            height: 24px;
+            min-width: 24px;
+            width: 24px;
+        }
+
+        &:not(:disabled) {
+            @include hover {
+                color: var(--ocher);
+            }
+        }
+
+        &:disabled {
+            color: var(--gray);
+            cursor: default;
+        }
+
+        svg {
+            fill: currentColor;
+            height: 20px;
+            width: 20px;
+            @media(min-width: $fhd) {
+                height: 24px;
+                width: 24px;
+            }
+        }
+
+        &::after {
+            height: 30px;
+            width: 30px;
+            @media(min-width: $sm) {
+                height: 30px;
+                min-width: 30px;
+            }
+        }
+    }
+
+    &__input {
+        border: none;
+        background-color: #fff;
+        border-radius: 0;
+        box-shadow: none !important;
+        font-size: 12px;
+        height: 20px;
+        min-width: 28px;
+        padding: 0 2px;
+        text-align: center;
+        width: 28px;
+        @media(min-width: $fhd) {
+            font-size: 14px;
+        }
+    }
+}
