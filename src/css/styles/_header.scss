@@ -13,7 +13,7 @@
     }
 
     &--white {
-        border-bottom: 1px solid rgba(#000, 0.08);
+        border-bottom: 1px solid var(--gray_white);
         background-color: #fff;
         color: var(--black_dark);
 
@@ -40,7 +40,7 @@
 
     &--menu-is-open {
         background-color: #fff;
-        border-bottom: 1px solid rgba(#000, 0.08);
+        border-bottom: 1px solid var(--gray_white);
         color: var(--black_dark);
         mix-blend-mode: normal;
         @media(max-width: $lg - 0.01px) {
