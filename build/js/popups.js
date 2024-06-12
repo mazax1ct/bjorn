@@ -10,7 +10,7 @@ function popupClose(popup) {
 
   //скрываем подложку
   fadeOut(shade, 500);
-  shade.classList.remove('page__shade--popup-is-open');
+
   //снимаем обработчик события закрытия попапа с подложки
   shade.removeEventListener('click', popupClose);
   shadeIsShow = false;
@@ -18,6 +18,8 @@ function popupClose(popup) {
   //снимаем классы со страницы
   setTimeout(function() {
     page.classList.remove('is-overflow');
+
+    shade.classList.remove('page__shade--popup-is-open');
   }, 500);
 }
 
@@ -45,7 +47,6 @@ popupOpeners.forEach((opener) => {
       mainMenu.classList.remove('is-open');
 
       //снимаем классы со страницы
-
       shade.classList.remove('page__shade--menu-is-open');
       shade.classList.add('page__shade--popup-is-open');
 
