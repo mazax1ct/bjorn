@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if(currentScrollPos >= (catalogTopOffsetTop - headerHeight)) {
       catalogMenu.classList.add('is-fixed');
-      catalogMenu.style.top = headerHeight + 'px';
+      catalogMenu.style.top = Math.round(headerHeight) + 'px';
       catalogTopMenu.classList.add('menu-is-fixed');
     } else {
       catalogMenu.classList.remove('is-fixed');
