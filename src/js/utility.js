@@ -1,6 +1,6 @@
-//fadeIn fadeOut для подложки меню и попапов
-var shadeIsShow = false;
+const POPUPS_ANIMATION_DURATION = 500;
 
+//fadeIn fadeOut для подложки меню и попапов
 const fadeIn = (el, timeout, display) => {
   el.style.opacity = 0;
   el.style.display = display || 'block';

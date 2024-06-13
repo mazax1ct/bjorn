@@ -1,16 +1,11 @@
 .header {
     left: 0;
+    min-height: var(--header_min_height);
     position: sticky;
     top: 0;
-    transition: transform 0.3s;
+    transition: transform var(--header_animation_duration);
     will-change: transform;
     z-index: 10;
-    @media(min-width: $sm) {
-        min-height: 58px;
-    }
-    @media(min-width: $fhd) {
-        min-height: 66px;
-    }
 
     &--white {
         border-bottom: 1px solid var(--gray_white);

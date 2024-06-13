@@ -31,4 +31,13 @@ $fhd: 1600px;
     @media(min-width: $lg) {
         --container_padding: 40px;
     }
+    --popup_animation_duration: 0.5s;
+    --header_animation_duration: 0.3s;
+    --header_min_height: 66px;
+    @media(min-width: $sm) {
+        --header_min_height: 58px;
+    }
+    @media(min-width: $fhd) {
+        --header_min_height: 66px;
+    }
 }

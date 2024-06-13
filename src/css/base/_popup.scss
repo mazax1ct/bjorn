@@ -8,7 +8,7 @@
     padding-right: var(--container_padding);
     padding-bottom: 16px;
     top: 0;
-    transition: transform 0.5s;
+    transition: transform var(--popup_animation_duration);
     width: 100%;
     z-index: 12;
     @media(min-width: $sm) {

@@ -1,12 +1,13 @@
 .main-menu {
     background-color: #fff;
+    display: none;
     height: 100%;
     left: 0;
     overflow-y: auto;
     position: fixed;
     padding: 16px 24px;
     top: 0;
-    transition: transform 0.5s;
+    transition: transform var(--popup_animation_duration);
     transform: translateX(-100%);
     width: 100%;
     z-index: 10;
@@ -18,20 +19,21 @@
     @media(min-width: $lg) {
         height: auto;
         padding: 40px;
-        transition: transform 0.5s, top 0.5s;
+        transition: transform var(--popup_animation_duration), top var(--popup_animation_duration);
         transform: translateY(-100%);
         width: 100%;
         z-index: 9;
+    }
+
+    &.is-block {
+        display: block;
     }
 
     &.is-open {
         transform: translateX(0);
         @media(min-width: $lg) {
             transform: translateY(0);
-            top: 58px;
-        }
-        @media(min-width: $fhd) {
-            top: 66px;
+            top: var(--header_min_height);
         }
     }
 

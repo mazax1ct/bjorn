@@ -9,18 +9,17 @@ function popupClose(popup) {
   openedPopup.classList.remove('is-open');
 
   //скрываем подложку
-  fadeOut(shade, 500);
+  fadeOut(shade, POPUPS_ANIMATION_DURATION);
 
   //снимаем обработчик события закрытия попапа с подложки
   shade.removeEventListener('click', popupClose);
-  shadeIsShow = false;
 
   //снимаем классы со страницы
   setTimeout(function() {
     page.classList.remove('is-overflow');
 
     shade.classList.remove('page__shade--popup-is-open');
-  }, 500);
+  }, POPUPS_ANIMATION_DURATION);
 }
 
 popupOpeners.forEach((opener) => {
@@ -32,8 +31,7 @@ popupOpeners.forEach((opener) => {
       //убираем скролл страницы
       page.classList.add('is-overflow');
       //показываем подложку
-      fadeIn(shade, 500, 'block');
-      shadeIsShow = true;
+      fadeIn(shade, POPUPS_ANIMATION_DURATION, 'block');
 
       shade.classList.add('page__shade--popup-is-open');
 
@@ -65,7 +63,7 @@ popupOpeners.forEach((opener) => {
 
         //вешаем обработчик события закрытия попапа на подложку
         shade.addEventListener('click', popupClose);
-      }, 500);
+      }, POPUPS_ANIMATION_DURATION);
     }
   });
 });

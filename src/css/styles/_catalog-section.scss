@@ -28,7 +28,7 @@
         min-height: 54px;
         position: sticky;
         top: 0;
-        transition: top 0.3s;
+        transition: top var(--header_animation_duration);
         will-change: top;
         z-index: 1;
     }
@@ -38,10 +38,7 @@
 
     &.is-out {
         @media(min-width: $lg) {
-            top: 58px;
-        }
-        @media(min-width: $fhd) {
-            top: 66px;
+            top: var(--header_min_height);
         }
     }
 
@@ -53,38 +50,12 @@
             align-items: center;
             background-color: #fff;
             padding: 12px 0;
-            transition: transform 0.3s;
+            transition: transform var(--header_animation_duration);
         }
         @media(min-width: $fhd) {
             min-height: 65px;
             padding-top: 16px;
             padding-bottom: 16px;
-        }
-
-        &.is-fixed {
-            @media(min-width: $lg) {
-                left: 0;
-                position: fixed;
-                top: 0;
-                width: 100%;
-                z-index: 1;
-            }
-
-            .catalog-top__container {
-                @media(min-width: $lg) {
-                    padding-left: var(--container_padding);
-                    padding-right: var(--container_padding);
-                }
-            }
-        }
-
-        &.is-stucked {
-            @media(min-width: $lg) {
-                transform: translateY(59px);
-            }
-            @media(min-width: $fhd) {
-                transform: translateY(64px);
-            }
         }
     }
 

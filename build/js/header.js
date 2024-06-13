@@ -11,8 +11,12 @@ function menuClose() {
   //скрываем меню
   mainMenu.classList.remove('is-open');
 
+  setTimeout(() => {
+    mainMenu.classList.remove('is-block');
+  }, POPUPS_ANIMATION_DURATION);
+
   //скрываем подложку
-  fadeOut(shade, 500);
+  fadeOut(shade, POPUPS_ANIMATION_DURATION);
   shadeIsShow = false;
 
   //снимаем классы со страницы
@@ -21,7 +25,7 @@ function menuClose() {
     header.classList.remove('header--menu-is-open');
     header.classList.remove('header--color-transition');
     shade.classList.remove('page__shade--menu-is-open');
-  }, 500);
+  }, POPUPS_ANIMATION_DURATION);
 
   //снимаем обработчик события закрытия меню с подложки
   shade.removeEventListener('click', menuClose);
@@ -38,14 +42,17 @@ menuOpener.addEventListener('click', function (event) {
     page.classList.add('is-overflow');
 
     //показываем подложку
-    fadeIn(shade, 500, 'block');
+    fadeIn(shade, POPUPS_ANIMATION_DURATION, 'block');
     shadeIsShow = true;
 
     //вешаем обработчик события закрытия меню на подложку
     shade.addEventListener('click', menuClose);
 
     //показываем меню и вешаем вспомогательный класс для открытия меню/поиска
-    mainMenu.classList.add('is-open');
+    mainMenu.classList.add('is-block');
+    setTimeout(() => {
+      mainMenu.classList.add('is-open');
+    }, 10);
     header.classList.add('header--menu-is-open');
     setTimeout(() => {
       header.classList.add('header--color-transition');
@@ -57,10 +64,13 @@ menuOpener.addEventListener('click', function (event) {
   } else {
     //скрываем меню
     mainMenu.classList.remove('is-open');
+    setTimeout(() => {
+      mainMenu.classList.remove('is-block');
+    }, POPUPS_ANIMATION_DURATION);
 
     //скрываем подложку
     shade.removeEventListener('click', menuClose);
-    fadeOut(shade, 500);
+    fadeOut(shade, POPUPS_ANIMATION_DURATION);
     shadeIsShow = false;
 
     //возвращаем скролл старницы и убираем вспомогательный класс для открытия меню/поиска
@@ -69,7 +79,7 @@ menuOpener.addEventListener('click', function (event) {
       header.classList.remove('header--menu-is-open');
       header.classList.remove('header--color-transition');
       shade.classList.remove('page__shade--menu-is-open');
-    }, 500);
+    }, POPUPS_ANIMATION_DURATION);
 
     //ставим отметку о том что меню закрыто
     menuIsOpen = false;
@@ -91,11 +101,14 @@ var search = document.querySelector('.search');
 function searchClose() {
   //закрываем поиск
   search.classList.remove('is-open');
+  setTimeout(() => {
+    search.classList.remove('is-block');
+  }, POPUPS_ANIMATION_DURATION);
 
   //если меню НЕ открыто
   if(!menuIsOpen) {
     //скрываем подложку
-    fadeOut(shade, 500);
+    fadeOut(shade, POPUPS_ANIMATION_DURATION);
     shadeIsShow = false;
 
     //снимаем классы со страницы
@@ -104,7 +117,7 @@ function searchClose() {
       header.classList.remove('header--menu-is-open');
       header.classList.remove('header--color-transition');
       shade.classList.remove('page__shade--menu-is-open');
-    }, 500);
+    }, POPUPS_ANIMATION_DURATION);
   } else { //если меню открыто
     //снимаем обработчик события закрытия поиска с подложки
     shade.removeEventListener('click', searchClose);
@@ -122,14 +135,17 @@ searchOpener.addEventListener('click', function (event) {
     page.classList.add('is-overflow');
 
     //показываем подложку
-    fadeIn(shade, 500, 'block');
+    fadeIn(shade, POPUPS_ANIMATION_DURATION, 'block');
     shadeIsShow = true;
 
     //вешаем обработчик события закрытия поиска на подложку
     shade.addEventListener('click', searchClose);
 
     //показываем поиск
-    search.classList.add('is-open');
+    search.classList.add('is-block');
+    setTimeout(() => {
+      search.classList.add('is-open');
+    }, 10);
     header.classList.add('header--menu-is-open');
     shade.classList.add('page__shade--menu-is-open');
   } else {
@@ -189,7 +205,7 @@ var searchLoader = document.querySelector('.js-search-loader');
 searchForm.addEventListener('submit', function (event) {
   event.preventDefault();
 
-  fadeIn(searchLoader, 500, 'flex');
+  fadeIn(searchLoader, POPUPS_ANIMATION_DURATION, 'flex');
 
   setTimeout(() => {
     fadeOut(searchPopular, 0);
@@ -204,6 +220,6 @@ searchForm.addEventListener('submit', function (event) {
   }, 1000);
 
   setTimeout(() => {
-    fadeOut(searchLoader, 500);
+    fadeOut(searchLoader, POPUPS_ANIMATION_DURATION);
   }, 2500);
 });

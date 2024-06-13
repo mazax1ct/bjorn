@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', function() {
   var prevScrollpos = window.pageYOffset;
   var header = document.querySelector('.header');
   var headerHeight = header.offsetHeight;
+
   var catalogTop = document.querySelector('.catalog-top');
-  var catalogTopHeight = catalogTop.offsetHeight;
   var catalogTopOffsetTop = catalogTop.offsetTop;
-  var catalogTopInner = document.querySelector('.catalog-top__inner');
+
   var catalogTopMenu = document.querySelector('.catalog-top__menu');
   var catalogMenu = document.querySelector('.catalog-menu');
 

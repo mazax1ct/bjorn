@@ -1,17 +1,22 @@
 .search {
     background-color: #fff;
+    display: none;
     height: 100%;
     left: 0;
     overflow-y: auto;
     position: fixed;
     top: 0;
-    transition: transform 0.5s;
+    transition: transform var(--popup_animation_duration);
     transform: translateX(-100%);
     width: 100%;
     z-index: 10;
     @media(min-width: $lg) {
         height: auto;
         transform: translateY(-100%);
+    }
+
+    &.is-block {
+        display: block;
     }
 
     &.is-open {
