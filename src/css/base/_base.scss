@@ -164,8 +164,19 @@ textarea {
     line-height: inherit;
 }
 
+.color-black-gray {
+    color: var(--black_gray);
+}
+
 .responsive-table {
     overflow-x: auto;
+
+    &:not(:last-child) {
+        margin-bottom: 12px;
+        @media(min-width: $sm) {
+            margin-bottom: 16px;
+        }
+    }
 }
 
 .text-center {

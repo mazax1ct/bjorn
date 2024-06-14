@@ -7,6 +7,9 @@ function popupClose(popup) {
 
   //скрываем попап
   openedPopup.classList.remove('is-open');
+  setTimeout(() => {
+    openedPopup.classList.remove('is-block');
+  }, POPUPS_ANIMATION_DURATION);
 
   //скрываем подложку
   fadeOut(shade, POPUPS_ANIMATION_DURATION);
@@ -39,7 +42,10 @@ popupOpeners.forEach((opener) => {
       shade.addEventListener('click', popupClose);
 
       //показываем попап
-      popup.classList.add('is-open');
+      popup.classList.add('is-block');
+      setTimeout(() => {
+        popup.classList.add('is-open');
+      }, 10);
     } else {
       //скрываем меню
       mainMenu.classList.remove('is-open');
@@ -59,7 +65,10 @@ popupOpeners.forEach((opener) => {
         header.classList.remove('header--color-transition');
 
         //показываем попап
-        popup.classList.add('is-open');
+        popup.classList.add('is-block');
+        setTimeout(() => {
+          popup.classList.add('is-open');
+        }, 10);
 
         //вешаем обработчик события закрытия попапа на подложку
         shade.addEventListener('click', popupClose);

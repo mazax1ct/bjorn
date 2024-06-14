@@ -1,6 +1,7 @@
 .popup {
     @include scrollbar;
     background-color: #fff;
+    display: none;
     height: 100%;
     overflow-y: auto;
     position: fixed;
@@ -48,7 +49,38 @@
         transform: translateX(100%);
     }
 
-    &--right_to_left {
+    &--left_sm_to_right {
+        left: 0;
+        transform: translateX(-100%);
+        @media(min-width: $sm) {
+            left: auto;
+            right: 0;
+            transform: translateX(100%);
+        }
+    }
+
+    &--left_sm_to_right_lg_to_left {
+        left: 0;
+        transform: translateX(-100%);
+        @media(min-width: $sm) and (max-width: $lg - 0.01px) {
+            left: auto;
+            right: 0;
+            transform: translateX(100%);
+        }
+    }
+
+    &--sm_right_to_left {
+        left: auto;
+        right: 0;
+        transform: translateX(100%);
+        @media(min-width: $sm) {
+            left: 0;
+            right: auto;
+            transform: translateX(-100%);
+        }
+    }
+
+    &--lg_right_to_left {
         left: auto;
         right: 0;
         transform: translateX(100%);
@@ -63,6 +95,10 @@
         display: flex;
         flex-direction: column;
 
+        &.is-block {
+            display: flex;
+        }
+
         .cards-slider {
             margin-top: auto;
         }
@@ -70,6 +106,10 @@
 
     &.is-open {
         transform: translateX(0);
+    }
+
+    &.is-block {
+        display: block;
     }
 
     &__title {
@@ -95,6 +135,12 @@
         &--swap {
             @media(min-width: $sm) {
                 display: none;
+            }
+
+            & + * {
+                @media(min-width: $sm) {
+                    margin-top: 0;
+                }
             }
         }
     }
