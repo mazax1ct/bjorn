@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/common/favicon.html
+
+    //= template/common/fonts_preload.html
+
+    //= template/common/styles.html
+</head>
+
+<body class="page page--gray page--checkout">
+    <div id="app">
+        //= template/common/header--white.html
+
+        //= template/common/main-menu.html
+
+        //= template/common/search.html
+
+        <main class="page__content">
+            <div class="container">
+                <div class="checkout">
+                    <div class="checkout__left">
+                        <h2>øфøрмление заказа</h2>
+
+                        <div class="checkout__section">
+                            <h3><span>01</span> Получатель</h3>
+
+                            <div class="checkout__section-content">
+                                <div class="input-group">
+                                    <input id="checkout_name" class="input-group__input" type="text" name="" value="">
+                                    <label class="input-group__label" for="checkout_name">Ваше имя</label>
+                                </div>
+
+                                <div class="input-group">
+                                    <input id="checkout_phone" class="input-group__input" type="text" name="" value="">
+                                    <label class="input-group__label" for="checkout_phone">Ваш телефон</label>
+                                </div>
+
+                                <div class="input-group">
+                                    <input id="checkout_email" class="input-group__input" type="text" name="" value="">
+                                    <label class="input-group__label" for="checkout_email">Ваш e-mail</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="checkout__section">
+                            <h3><span>02</span> Доставка</h3>
+
+                            <div class="checkout__section-content">
+                                <div class="checkout__delivery-list">
+                                    <label class="checkout-option">
+                                        <input type="radio" name="checkout_delivery" value="courier" checked>
+                                        <span class="checkout-option__inner">
+                                            <svg class="checkout-option__check" aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#check_icon" />
+                                            </svg>
+
+                                            <span class="checkout-option__title-block">
+                                                <span class="checkout-option__title">Курьером</span>
+                                            </span>
+
+                                            <span class="checkout-option__description-block checkout-option__description-block--address">
+                                                <span>завтра, бесплатно</span>
+                                                <span>г. Мытищи, 1-Рупасовский переулок 17В</span>
+                                            </span>
+                                        </span>
+                                    </label>
+
+                                    <label class="checkout-option">
+                                        <input type="radio" name="checkout_delivery" value="self">
+                                        <span class="checkout-option__inner">
+                                            <svg class="checkout-option__check" aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#check_icon" />
+                                            </svg>
+
+                                            <span class="checkout-option__title-block">
+                                                <span class="checkout-option__title">самовывоз</span>
+                                            </span>
+
+                                            <span class="checkout-option__description-block">
+                                                сегодня, бесплатно
+                                            </span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="checkout__section">
+                            <h3><span>03</span> оплата</h3>
+
+                            <div class="checkout__section-content">
+                                <div class="checkout__payment-list">
+                                    <label class="checkout-option">
+                                        <input type="radio" name="checkout_payment" value="at_moment">
+                                        <span class="checkout-option__inner">
+                                            <svg class="checkout-option__check" aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#check_icon" />
+                                            </svg>
+
+                                            <span class="checkout-option__title-block">
+                                                <span class="checkout-option__title">При получении</span>
+                                            </span>
+
+                                            <span class="checkout-option__description-block">
+                                                <span class="checkout-option__description-title">Наличными или банковской картой</span>
+                                            </span>
+                                        </span>
+                                    </label>
+
+                                    <label class="checkout-option">
+                                        <input type="radio" name="checkout_payment" value="online">
+                                        <span class="checkout-option__inner">
+                                            <svg class="checkout-option__check" aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#check_icon" />
+                                            </svg>
+
+                                            <span class="checkout-option__title-block">
+                                                <span class="checkout-option__title">онлайн <span class="checkout-option__badge">-10%</span></span>
+                                            </span>
+
+                                            <span class="checkout-option__description-block">
+                                                <span class="checkout-option__description-title">МИР, Visa, Master Card, Yandex Pay</span>
+                                                <span class="checkout-option__description-images">
+                                                    <img class="image_13" src="images/content/payments/mir.svg" alt="МИР">
+                                                    <img class="image_13" src="images/content/payments/visa.svg" alt="VISA">
+                                                    <img class="image_13" src="images/content/payments/mc.svg" alt="MasterCard">
+                                                    <img class="image_13" src="images/content/payments/ya_pay.svg" alt="Я PAY">
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </label>
+
+                                    <label class="checkout-option">
+                                        <input type="radio" name="checkout_payment" value="dolyami">
+                                        <span class="checkout-option__inner">
+                                            <svg class="checkout-option__check" aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#check_icon" />
+                                            </svg>
+
+                                            <span class="checkout-option__title-block">
+                                                <span class="checkout-option__title">долями <span class="checkout-option__badge">-10%</span></span>
+                                            </span>
+
+                                            <span class="checkout-option__description-block">
+                                                <span class="checkout-option__description-title">4 платежа без комиссий и переплат</span>
+                                                <span class="checkout-option__description-images">
+                                                    <img class="image_14" src="images/content/payments/dolyami.svg" alt="ДОЛЯМИ">
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </label>
+
+                                    <label class="checkout-option">
+                                        <input type="radio" name="checkout_payment" value="dolyami">
+                                        <span class="checkout-option__inner">
+                                            <svg class="checkout-option__check" aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#check_icon" />
+                                            </svg>
+
+                                            <span class="checkout-option__title-block">
+                                                <span class="checkout-option__title">СБП <span class="checkout-option__badge">-10%</span></span>
+                                            </span>
+
+                                            <span class="checkout-option__description-block">
+                                                <span class="checkout-option__description-title">Система Быстрых Платежей</span>
+                                                <span class="checkout-option__description-images">
+                                                    <img class="image_26" src="images/content/payments/sbp.svg" alt="СБП">
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checkout__right">
+                        <div class="checkout__right-title">
+                            <h2>Ваш заказ</h2>
+
+                            <button class="checkout__change-button" type="button">Изменить</button>
+                        </div>
+
+                        <div class="cart">
+                            <div class="cart__list">
+                                <div class="cart-item">
+                                    <a class="cart-item__image" href="#"><img src="images/content/cart/img_1.jpg" srcset="images/content/cart/img_1@2x.jpg 2x" alt=""></a>
+
+                                    <div class="cart-item__body">
+                                        <div class="cart-item__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
+
+                                        <div class="cart-item__body-inner">
+                                            <div class="cart-item__props">
+                                                <div class="cart-item__prop">Размер: 54</div>
+                                                <div class="cart-item__prop">Цвет: Черный</div>
+                                                <div class="cart-item__prop">Кол-во: 1 шт.</div>
+                                            </div>
+
+                                            <div class="cart-item__bottom">
+                                                <div class="cart-item__price-block">
+                                                    <div class="cart-item__discount">-15%</div>
+                                                    <div class="cart-item__old-price">54 900 ₽</div>
+                                                    <div class="cart-item__price">34 900 ₽</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cart__total-block">
+                                <div class="cart__total-item">
+                                    <div class="cart__total-title">товары в заказе</div>
+
+                                    <div class="cart__total-price">34 900 ₽</div>
+                                </div>
+
+                                <div class="cart__total-item">
+                                    <div class="cart__total-title">скидка на товар</div>
+
+                                    <div class="cart__total-price cart__total-price--discount">20 000 ₽</div>
+                                </div>
+
+                                <div class="cart__total-item cart__total-item--result">
+                                    <div class="cart__total-title">Итого</div>
+
+                                    <div class="cart__total-price">20 000 ₽</div>
+                                </div>
+                            </div>
+
+                            <a class="buy-button buy-button--big" href="#">
+                                <span class="buy-button__title">Оформить заказ</span>
+
+                                <span class="buy-button__prices">
+                                    <span class="buy-button__price">39 900 ₽</span>
+                                    <span class="buy-button__total">64 900 ₽</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        //= template/common/footer.html
+
+        //= template/common/popups.html
+
+        <div class="page__shade"></div>
+    </div>
+
+    //= template/common/scripts.html
+</body>
+
+</html>

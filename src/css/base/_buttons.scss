@@ -90,6 +90,20 @@
             }
         }
     }
+
+    &--gray {
+        background-color: var(--gray_white);
+        color: var(--black_dark);
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--gray);
+                color: var(--black_dark);
+            }
+        }
+    }
 }
 
 a.button--primary {

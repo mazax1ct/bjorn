@@ -1,0 +1,28 @@
+.delivery-form {
+    width: 100%;
+    @media(max-width: $sm - 0.01px) {
+        height: 100%;
+    }
+    @media(min-width: $sm) {
+        margin: auto;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;
+    }
+
+    .button {
+        width: 100%;
+        @media(max-width: $sm - 0.01px) {
+            //bottom: 0;
+            position: sticky;
+            top: 100%;
+            z-index: 1;
+        }
+        @media(min-width: $sm) {
+            margin-top: 40px;
+        }
+    }
+}

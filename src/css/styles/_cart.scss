@@ -107,6 +107,16 @@
         z-index: 1;
     }
 
+    &__body-inner {
+        align-items: flex-end;
+        display: flex;
+        justify-content: space-between;
+
+        .quantity {
+            margin-top: 12px;
+        }
+    }
+
     &__delete {
         @include button-reset;
         @include active-area;
@@ -156,7 +166,6 @@
 
     &__props {
         font-size: 11px;
-        margin-bottom: 12px;
         @media(min-width: $lg) {
             font-size: 12px;
         }
@@ -184,6 +193,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 6px;
+        margin-top: 12px;
         white-space: nowrap;
         @media(min-width: $lg) {
             font-size: 12px;

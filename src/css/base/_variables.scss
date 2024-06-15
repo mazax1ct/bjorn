@@ -34,6 +34,17 @@ $fhd: 1600px;
     --popup_animation_duration: 0.5s;
     --header_animation_duration: 0.3s;
     --header_min_height: 66px;
+    --container_max_width: 1920px;
+    --page_content_padding_bottom: 60px;
+    @media(min-width: $sm) {
+        --page_content_padding_bottom: 80px;
+    }
+    @media(min-width: $lg) {
+        --page_content_padding_bottom: 80px;
+    }
+    @media(min-width: $fhd) {
+        --page_content_padding_bottom: 160px;
+    }
     @media(min-width: $sm) {
         --header_min_height: 58px;
     }

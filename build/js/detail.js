@@ -1,13 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  if(window.innerWidth < 1300) {
-    const detail = new Swiper('.js-detail-slider', {
-      loop: true,
-
-      pagination: {
-        el: '.swiper-pagination'
-      }
-    });
-  }
+  let prevScrollpos = window.pageYOffset;
 
   if(window.innerWidth >= 1300) {
     const thumbs = new Swiper('.js-detail-thumbs', {
@@ -15,7 +7,18 @@ document.addEventListener('DOMContentLoaded', function() {
       slidesPerView: 'auto',
       spaceBetween: 4
     });
+  }
 
+  if(window.innerWidth < 1300) {
+    const detailSlider = new Swiper('.js-detail-slider', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination'
+      },
+    });
+  }
+
+  if(window.innerWidth >= 1300) {
     var detail = document.querySelector('.detail');
     var detailHeight = detail.offsetHeight;
     var header = document.querySelector('.header');
@@ -29,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
           header.classList.add('header--white');
         }, 10);
-
       } else {
         header.classList.remove('header--color-transition');
         header.classList.remove('header--white');

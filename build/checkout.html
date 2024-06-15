@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-    <title>UI</title>
+    <title></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="page">
+<body class="page page--gray page--checkout">
     <div id="app">
         <header class="header header--white">
             <div class="header__inner container">
@@ -901,392 +901,233 @@
             </div>
         </div>
 
-        <div class="page__content">
+        <main class="page__content">
             <div class="container">
-                <ul class="breadcrumbs">
-                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
-                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Профиль</a></li>
-                    <li class="breadcrumbs__item">Мои данные</li>
-                </ul>
+                <div class="checkout">
+                    <div class="checkout__left">
+                        <h2>øфøрмление заказа</h2>
 
-                <div class="title-block title-block--text_centered">
-                    <h1>øптøвым пøкупателям</h1>
-                
-                    <p class="h2">Мы контролируем весь производственный процесс, поддерживая качество и сокращая издержки.</p>
-                
-                    <a class="button button--primary button--m" href="#">получить прайс-лист</a>
-                </div>
+                        <div class="checkout__section">
+                            <h3><span>01</span> Получатель</h3>
 
-                <div style="margin-bottom: 60px;">
-                    <h2>Чекбоксы</h2>
-                
-                    <label class="checkbox">
-                        <input type="checkbox" name="cb_1">
-                        <span class="checkbox__icon"></span>
-                        <span class="checkbox__text">ВЫБРАТЬ МАТЕРИАЛ <span class="qnt">3</span></span>
-                    </label>
-                
-                    <label class="checkbox">
-                        <input type="checkbox" name="cb_2" checked>
-                        <span class="checkbox__icon"></span>
-                        <span class="checkbox__text">ВЫБРАТЬ МАТЕРИАЛ <span class="qnt">3</span></span>
-                    </label>
-                
-                    <label class="checkbox">
-                        <input type="checkbox" name="cb_3" disabled>
-                        <span class="checkbox__icon"></span>
-                        <span class="checkbox__text">ВЫБРАТЬ МАТЕРИАЛ <span class="qnt">3</span></span>
-                    </label>
-                
-                    <label class="checkbox">
-                        <input type="checkbox" name="cb_4" disabled checked>
-                        <span class="checkbox__icon"></span>
-                        <span class="checkbox__text">ВЫБРАТЬ МАТЕРИАЛ <span class="qnt">3</span></span>
-                    </label>
-                
-                    <label class="checkbox checkbox--color">
-                        <input type="checkbox" name="cb_5">
-                        <span class="checkbox__icon"></span>
-                        <span class="checkbox__text"><span class="color"><span class="color__icon" style="background-color: #00487D"></span>Синий</span> <span class="qnt">3</span></span>
-                    </label>
-                
-                    <label class="checkbox checkbox--color">
-                        <input type="checkbox" name="cb_6" checked>
-                        <span class="checkbox__icon"></span>
-                        <span class="checkbox__text"><span class="color"><span class="color__icon" style="background-color: #00487D"></span>Синий</span> <span class="qnt">3</span></span>
-                    </label>
-                
-                    <label class="checkbox checkbox--color">
-                        <input type="checkbox" name="cb_7" disabled>
-                        <span class="checkbox__icon"></span>
-                        <span class="checkbox__text"><span class="color"><span class="color__icon" style="background-color: #00487D"></span>Синий</span> <span class="qnt">3</span></span>
-                    </label>
-                
-                    <label class="checkbox checkbox--color">
-                        <input type="checkbox" name="cb_8" checked disabled>
-                        <span class="checkbox__icon"></span>
-                        <span class="checkbox__text"><span class="color"><span class="color__icon" style="background-color: #00487D"></span>Синий</span> <span class="qnt">3</span></span>
-                    </label>
-                </div>
+                            <div class="checkout__section-content">
+                                <div class="input-group">
+                                    <input id="checkout_name" class="input-group__input" type="text" name="" value="">
+                                    <label class="input-group__label" for="checkout_name">Ваше имя</label>
+                                </div>
 
-                <div style="margin-bottom: 60px;">
-                    <h2>Радио-кнопки</h2>
-                
-                    <label class="radio">
-                        <input type="radio" name="r" value="1">
-                        <span class="radio__icon"></span>
-                        <span class="radio__text">По умолчанию</span>
-                    </label>
-                
-                    <label class="radio">
-                        <input type="radio" name="r" value="2" checked>
-                        <span class="radio__icon"></span>
-                        <span class="radio__text">По популярности</span>
-                    </label>
-                
-                    <label class="radio">
-                        <input type="radio" name="r" value="3" disabled>
-                        <span class="radio__icon"></span>
-                        <span class="radio__text">По возрастанию цены</span>
-                    </label>
-                
-                    <label class="radio">
-                        <input type="radio" name="r" value="5">
-                        <span class="radio__icon"></span>
-                        <span class="radio__text">По новизне</span>
-                    </label>
-                </div>
+                                <div class="input-group">
+                                    <input id="checkout_phone" class="input-group__input" type="text" name="" value="">
+                                    <label class="input-group__label" for="checkout_phone">Ваш телефон</label>
+                                </div>
 
-                <div style="margin-bottom: 60px;">
-                    <h2>Кнопки</h2>
-                
-                    <button class="button button--primary button--s" type="button">ОСНОВНАЯ КНОПКА</button>
-                
-                    <button class="button button--white button--s" type="button">БЕЛАЯ КНОПКА</button>
-                
-                    <br><br>
-                
-                    <button class="button button--primary button--m" type="button">ОСНОВНАЯ КНОПКА</button>
-                
-                    <button class="button button--white button--m" type="button">БЕЛАЯ КНОПКА</button>
-                
-                    <br><br>
-                
-                    <h2>Кнопки - ссылки</h2>
-                
-                    <a class="button button--primary button--s" href="#">ОСНОВНАЯ КНОПКА</a>
-                
-                    <a class="button button--white button--s" href="#">БЕЛАЯ КНОПКА</a>
-                
-                    <br><br>
-                
-                    <a class="button button--primary button--m" href="#">ОСНОВНАЯ КНОПКА</a>
-                
-                    <a class="button button--white button--m" href="#">БЕЛАЯ КНОПКА</a>
-                </div>
+                                <div class="input-group">
+                                    <input id="checkout_email" class="input-group__input" type="text" name="" value="">
+                                    <label class="input-group__label" for="checkout_email">Ваш e-mail</label>
+                                </div>
+                            </div>
+                        </div>
 
-                <div style="margin-bottom: 60px;">
-                    <h2>Поля ввода</h2>
-                
-                    <div class="input-group">
-                        <input id="inp_1" class="input-group__input" type="text" name="" value="">
-                        <label class="input-group__label" for="inp_1">Ваше имя</label>
+                        <div class="checkout__section">
+                            <h3><span>02</span> Доставка</h3>
+
+                            <div class="checkout__section-content">
+                                <div class="checkout__delivery-list">
+                                    <label class="checkout-option">
+                                        <input type="radio" name="checkout_delivery" value="courier" checked>
+                                        <span class="checkout-option__inner">
+                                            <svg class="checkout-option__check" aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#check_icon" />
+                                            </svg>
+
+                                            <span class="checkout-option__title-block">
+                                                <span class="checkout-option__title">Курьером</span>
+                                            </span>
+
+                                            <span class="checkout-option__description-block checkout-option__description-block--address">
+                                                <span>завтра, бесплатно</span>
+                                                <span>г. Мытищи, 1-Рупасовский переулок 17В</span>
+                                            </span>
+                                        </span>
+                                    </label>
+
+                                    <label class="checkout-option">
+                                        <input type="radio" name="checkout_delivery" value="self">
+                                        <span class="checkout-option__inner">
+                                            <svg class="checkout-option__check" aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#check_icon" />
+                                            </svg>
+
+                                            <span class="checkout-option__title-block">
+                                                <span class="checkout-option__title">самовывоз</span>
+                                            </span>
+
+                                            <span class="checkout-option__description-block">
+                                                сегодня, бесплатно
+                                            </span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="checkout__section">
+                            <h3><span>03</span> оплата</h3>
+
+                            <div class="checkout__section-content">
+                                <div class="checkout__payment-list">
+                                    <label class="checkout-option">
+                                        <input type="radio" name="checkout_payment" value="at_moment">
+                                        <span class="checkout-option__inner">
+                                            <svg class="checkout-option__check" aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#check_icon" />
+                                            </svg>
+
+                                            <span class="checkout-option__title-block">
+                                                <span class="checkout-option__title">При получении</span>
+                                            </span>
+
+                                            <span class="checkout-option__description-block">
+                                                <span class="checkout-option__description-title">Наличными или банковской картой</span>
+                                            </span>
+                                        </span>
+                                    </label>
+
+                                    <label class="checkout-option">
+                                        <input type="radio" name="checkout_payment" value="online">
+                                        <span class="checkout-option__inner">
+                                            <svg class="checkout-option__check" aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#check_icon" />
+                                            </svg>
+
+                                            <span class="checkout-option__title-block">
+                                                <span class="checkout-option__title">онлайн <span class="checkout-option__badge">-10%</span></span>
+                                            </span>
+
+                                            <span class="checkout-option__description-block">
+                                                <span class="checkout-option__description-title">МИР, Visa, Master Card, Yandex Pay</span>
+                                                <span class="checkout-option__description-images">
+                                                    <img class="image_13" src="images/content/payments/mir.svg" alt="МИР">
+                                                    <img class="image_13" src="images/content/payments/visa.svg" alt="VISA">
+                                                    <img class="image_13" src="images/content/payments/mc.svg" alt="MasterCard">
+                                                    <img class="image_13" src="images/content/payments/ya_pay.svg" alt="Я PAY">
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </label>
+
+                                    <label class="checkout-option">
+                                        <input type="radio" name="checkout_payment" value="dolyami">
+                                        <span class="checkout-option__inner">
+                                            <svg class="checkout-option__check" aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#check_icon" />
+                                            </svg>
+
+                                            <span class="checkout-option__title-block">
+                                                <span class="checkout-option__title">долями <span class="checkout-option__badge">-10%</span></span>
+                                            </span>
+
+                                            <span class="checkout-option__description-block">
+                                                <span class="checkout-option__description-title">4 платежа без комиссий и переплат</span>
+                                                <span class="checkout-option__description-images">
+                                                    <img class="image_14" src="images/content/payments/dolyami.svg" alt="ДОЛЯМИ">
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </label>
+
+                                    <label class="checkout-option">
+                                        <input type="radio" name="checkout_payment" value="dolyami">
+                                        <span class="checkout-option__inner">
+                                            <svg class="checkout-option__check" aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#check_icon" />
+                                            </svg>
+
+                                            <span class="checkout-option__title-block">
+                                                <span class="checkout-option__title">СБП <span class="checkout-option__badge">-10%</span></span>
+                                            </span>
+
+                                            <span class="checkout-option__description-block">
+                                                <span class="checkout-option__description-title">Система Быстрых Платежей</span>
+                                                <span class="checkout-option__description-images">
+                                                    <img class="image_26" src="images/content/payments/sbp.svg" alt="СБП">
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                
-                    <div class="input-group">
-                        <input id="inp_2" class="input-group__input is-filled" type="text" name="" value="Кригер Игорь">
-                        <label class="input-group__label" for="inp_2">Ваше имя</label>
-                    </div>
-                
-                    <div class="input-group">
-                        <input id="inp_3" class="input-group__input is-filled invalid" type="text" name="" value="Кригер Игорь">
-                        <label class="input-group__label" for="inp_3">Ваше имя</label>
-                    </div>
-                
-                    <div class="input-group">
-                        <input id="inp_4" class="input-group__input invalid" type="text" name="" value="">
-                        <label class="input-group__label" for="inp_4">Введите ваше имя</label>
-                    </div>
-                </div>
 
-                <div style="margin-bottom: 60px;">
-                    <h2>Радио-кнопки размеров</h2>
-                
-                    <div class="sizes-group">
-                        <label class="size-radio">
-                            <input type="radio" name="size" value="48" checked>
-                            <span class="size-radio__text">48</span>
-                        </label>
-                
-                        <label class="size-radio">
-                            <input type="radio" name="size" value="50">
-                            <span class="size-radio__text">50</span>
-                        </label>
-                
-                        <label class="size-radio">
-                            <input type="radio" name="size" value="52">
-                            <span class="size-radio__text">52</span>
-                        </label>
-                
-                        <label class="size-radio">
-                            <input type="radio" name="size" value="54">
-                            <span class="size-radio__text">54</span>
-                        </label>
-                
-                        <label class="size-radio">
-                            <input type="radio" name="size" value="56">
-                            <span class="size-radio__text">56</span>
-                        </label>
-                
-                        <label class="size-radio">
-                            <input type="radio" name="size" value="58">
-                            <span class="size-radio__text">58</span>
-                        </label>
+                    <div class="checkout__right">
+                        <div class="checkout__right-title">
+                            <h2>Ваш заказ</h2>
+
+                            <button class="checkout__change-button" type="button">Изменить</button>
+                        </div>
+
+                        <div class="cart">
+                            <div class="cart__list">
+                                <div class="cart-item">
+                                    <a class="cart-item__image" href="#"><img src="images/content/cart/img_1.jpg" srcset="images/content/cart/img_1@2x.jpg 2x" alt=""></a>
+
+                                    <div class="cart-item__body">
+                                        <div class="cart-item__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
+
+                                        <div class="cart-item__body-inner">
+                                            <div class="cart-item__props">
+                                                <div class="cart-item__prop">Размер: 54</div>
+                                                <div class="cart-item__prop">Цвет: Черный</div>
+                                                <div class="cart-item__prop">Кол-во: 1 шт.</div>
+                                            </div>
+
+                                            <div class="cart-item__bottom">
+                                                <div class="cart-item__price-block">
+                                                    <div class="cart-item__discount">-15%</div>
+                                                    <div class="cart-item__old-price">54 900 ₽</div>
+                                                    <div class="cart-item__price">34 900 ₽</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cart__total-block">
+                                <div class="cart__total-item">
+                                    <div class="cart__total-title">товары в заказе</div>
+
+                                    <div class="cart__total-price">34 900 ₽</div>
+                                </div>
+
+                                <div class="cart__total-item">
+                                    <div class="cart__total-title">скидка на товар</div>
+
+                                    <div class="cart__total-price cart__total-price--discount">20 000 ₽</div>
+                                </div>
+
+                                <div class="cart__total-item cart__total-item--result">
+                                    <div class="cart__total-title">Итого</div>
+
+                                    <div class="cart__total-price">20 000 ₽</div>
+                                </div>
+                            </div>
+
+                            <a class="buy-button buy-button--big" href="#">
+                                <span class="buy-button__title">Оформить заказ</span>
+
+                                <span class="buy-button__prices">
+                                    <span class="buy-button__price">39 900 ₽</span>
+                                    <span class="buy-button__total">64 900 ₽</span>
+                                </span>
+                            </a>
+                        </div>
                     </div>
-                </div>
-
-                <div style="margin-bottom: 60px;">
-                    <h2>Радио-кнопки размеров</h2>
-                
-                    <div class="colors-group">
-                        <label class="color-radio">
-                            <input type="radio" name="color" value="Синий" checked>
-                            <span class="color-radio__color" title="Синий" style="background-color:#00487D"></span>
-                        </label>
-                
-                        <label class="color-radio">
-                            <input type="radio" name="color" value="Зелёный">
-                            <span class="color-radio__color" title="Зелёный" style="background-color:#5A785A"></span>
-                        </label>
-                
-                        <label class="color-radio">
-                            <input type="radio" name="color" value="Красный">
-                            <span class="color-radio__color" title="Красный" style="background-color:#B52626"></span>
-                        </label>
-                
-                        <label class="color-radio">
-                            <input type="radio" name="color" value="Бежевый">
-                            <span class="color-radio__color" title="Бежевый" style="background-color:#B59B8A"></span>
-                        </label>
-                
-                        <label class="color-radio">
-                            <input type="radio" name="color" value="Тёмно-серый">
-                            <span class="color-radio__color" title="Тёмно-серый" style="background-color:#4A4A4D"></span>
-                        </label>
-                    </div>
-                </div>
-
-                <div style="margin-bottom: 60px;">
-                    <h2>Бейджи</h2>
-                
-                    <div class="badges">
-                        <div class="badge">Новинка</div>
-                        <div class="badge">Натуральный пух</div>
-                    </div>
-                </div>
-
-                <div class="content-block">
-                    <h1>Заголовок первого уровня</h1>
-                
-                    <h2>Заголовок второго уровня</h2>
-                
-                    <h3>Заголовок третьего уровня</h3>
-                
-                    <h4>Заголовок четвёртого уровня</h4>
-                
-                    <h4>Маркированный список</h4>
-                
-                    <ul>
-                        <li>Laudantium illo quasi, temporibus cum alias, sed adipisci rem.</li>
-                
-                        <li>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?
-                            <ul>
-                                <li>Laudantium illo quasi, temporibus cum alias, sed adipisci rem.</li>
-                
-                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?</li>
-                
-                                <li>Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?</li>
-                            </ul>
-                        </li>
-                
-                        <li>Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?</li>
-                    </ul>
-                
-                    <h4>Нумерованный список</h4>
-                
-                    <ol>
-                        <li>Laudantium illo quasi, temporibus cum alias, sed adipisci rem.</li>
-                
-                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?</li>
-                
-                        <li>
-                            Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?
-                
-                            <ol>
-                                <li>Laudantium illo quasi, temporibus cum alias, sed adipisci rem.</li>
-                
-                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?
-                
-                                    <ol>
-                                        <li>Laudantium illo quasi, temporibus cum alias, sed adipisci rem.</li>
-                
-                                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?</li>
-                
-                                        <li>Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?</li>
-                                    </ol>
-                                </li>
-                
-                                <li>Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?</li>
-                            </ol>
-                        </li>
-                
-                        <li>Laudantium illo quasi, temporibus cum alias, sed adipisci rem.</li>
-                
-                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur quia assumenda a impedit numquam quidem ut consectetur, tempora distinctio blanditiis?</li>
-                    </ol>
-                
-                    <h4>Таблица</h4>
-                
-                    <table>
-                        <tr>
-                            <th>INT</th>
-                            <th>RU</th>
-                            <th>Обхват груди</th>
-                            <th>Обхват талии</th>
-                            <th>Обхват бедер</th>
-                            <th>Рост</th>
-                        </tr>
-                        <tr>
-                            <td>S</td>
-                            <td>46</td>
-                            <td>92</td>
-                            <td>76</td>
-                            <td>96</td>
-                            <td>170-176</td>
-                        </tr>
-                        <tr>
-                            <td>M</td>
-                            <td>48</td>
-                            <td>96</td>
-                            <td>82</td>
-                            <td>100</td>
-                            <td>170-176</td>
-                        </tr>
-                        <tr>
-                            <td>L</td>
-                            <td>50</td>
-                            <td>100</td>
-                            <td>86</td>
-                            <td>104</td>
-                            <td>170-176</td>
-                        </tr>
-                        <tr>
-                            <td>XL</td>
-                            <td>52</td>
-                            <td>104</td>
-                            <td>90</td>
-                            <td>108</td>
-                            <td>176-182</td>
-                        </tr>
-                        <tr>
-                            <td>2XL</td>
-                            <td>54</td>
-                            <td>108</td>
-                            <td>94</td>
-                            <td>112</td>
-                            <td>176-182</td>
-                        </tr>
-                        <tr>
-                            <td>3XL</td>
-                            <td>56</td>
-                            <td>112</td>
-                            <td>98</td>
-                            <td>116</td>
-                            <td>176-182</td>
-                        </tr>
-                        <tr>
-                            <td>4XL</td>
-                            <td>58</td>
-                            <td>116</td>
-                            <td>102</td>
-                            <td>120</td>
-                            <td>176-182</td>
-                        </tr>
-                        <tr>
-                            <td>5XL</td>
-                            <td>60</td>
-                            <td>120</td>
-                            <td>104</td>
-                            <td>124</td>
-                            <td>176-182</td>
-                        </tr>
-                    </table>
-                </div>
-
-                <div style="margin-bottom: 60px; margin-top: 60px;">
-                    <h2>Попапы</h2>
-                
-                    <button class="js-popup-open button button--primary button--s" data-popup="cart_popup_empty" type="button">Пустая корзина</button>
-                
-                    <br><br>
-                
-                    <button class="js-popup-open button button--primary button--s" data-popup="add_to_cart" type="button">товар добавлен в корзину</button>
-                
-                    <br><br>
-                
-                    <button class="js-popup-open button button--primary button--s" data-popup="auth" type="button">Автøризация</button>
-                
-                    <br><br>
-                
-                    <button class="js-popup-open button button--primary button--s" data-popup="auth_code" type="button">Автøризация - ввод кода</button>
-                
-                    <br><br>
-                
-                    <button class="js-popup-open button button--primary button--s" data-popup="delivery" type="button">Доставка</button>
                 </div>
             </div>
-        </div>
+        </main>
 
         <footer class="footer">
             <div class="container">

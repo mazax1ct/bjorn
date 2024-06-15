@@ -35,7 +35,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
     @media(min-width: $lg) {
         font-size: 16px;
-        line-height: 1.4;
+        //line-height: 1.4;
     }
     @media(min-width: $fhd) {
         font-size: 18px;
@@ -43,6 +43,98 @@ html {
 
     &.is-overflow {
         overflow: hidden;
+    }
+
+    &--gray {
+        background-color: var(--gray_white);
+
+        .header--white {
+            @media(min-width: $lg) {
+                background-color: var(--gray_white);
+                border-bottom: 1px solid rgba(#000,0.08);
+            }
+        }
+    }
+
+    &--checkout {
+        .header {
+            &::after {
+                @media(min-width: $lg) {
+                    background-color: #fff;
+                    content: '';
+                    height: 100%;
+                    left: auto;
+                    min-width: var(--container_padding);
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: calc((100% - var(--container_max_width)) / 2 + var(--container_padding));
+                    z-index: -1;
+                }
+            }
+
+            .header__inner {
+                @media(min-width: $lg) {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                &::before {
+                    @media(min-width: $lg) {
+                        --magic_num: 0.78;
+                        background-color: #fff;
+                        content: '';
+                        height: 100%;
+                        left: auto;
+                        position: absolute;
+                        right: var(--container_padding);
+                        top: 0;
+                        width: calc((100% - var(--container_padding) * var(--magic_num)) - var(--checkout_left_width) - var(--checkout_gap));
+                        z-index: 1;
+                    }
+                    @media(min-width: $fhd) {
+                        --magic_num: 0.734;
+                    }
+                }
+            }
+        }
+
+        .page__content {
+            @media(min-width: $lg) {
+                position: relative;
+                z-index: 1;
+            }
+
+            &::after {
+                @media(min-width: $lg) {
+                    background-color: #fff;
+                    content: '';
+                    height: calc(100% - var(--page_content_padding_bottom));
+                    left: auto;
+                    min-width: var(--container_padding);
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: calc((100% - var(--container_max_width)) / 2 + var(--container_padding));
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    &--order_maked {
+        .page__content {
+            padding-top: 60px;
+            padding-bottom: 60px;
+
+            .container {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: center;
+            }
+        }
     }
 
     & > div {
@@ -53,16 +145,7 @@ html {
 
     &__content {
         flex: 1 0 auto;
-        padding-bottom: 60px;
-        @media(min-width: $sm) {
-            padding-bottom: 80px;
-        }
-        @media(min-width: $lg) {
-            padding-bottom: 80px;
-        }
-        @media(min-width: $fhd) {
-            padding-bottom: 160px;
-        }
+        padding-bottom: var(--page_content_padding_bottom);
     }
 
     &__shade {
@@ -126,7 +209,7 @@ html {
 }
 
 .container {
-    max-width: 1920px;
+    max-width: var(--container_max_width);
     margin-left: auto;
     margin-right: auto;
     padding-left: var(--container_padding);

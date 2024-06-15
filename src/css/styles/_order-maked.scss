@@ -1,0 +1,35 @@
+.order-maked {
+    text-align: center;
+
+    &__icon {
+        max-width: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 24px;
+        @media(min-width: $fhd) {
+            max-width: 100px;
+        }
+    }
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 8px;
+        @media(min-width: $fhd) {
+            margin-bottom: 16px;
+        }
+    }
+
+    h4 {
+        margin-top: 0;
+        margin-bottom: 24px;
+        @media(min-width: $fhd) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+    }
+}
