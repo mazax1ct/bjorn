@@ -72,15 +72,38 @@
                                     <h2>Мøй адрес</h2>
 
                                     <div class="user-data__block user-data__block--address">
-                                        <div class="no-items">
-                                            <img class="no-items__icon" src="images/content/personal/pin.svg" alt="">
-
-                                            <div class="no-items__text">У вас нет сохранённых адресов</div>
-
-                                            <div class="no-items__buttons">
-                                                <button class="button button--primary button--s" type="button">добавить адрес</button>
+                                        <form class="user-data__form" action="">
+                                            <div class="input-group">
+                                                <input id="user_city" class="input-group__input" type="text" name="" value="">
+                                                <label class="input-group__label" for="user_city">Ваш город</label>
                                             </div>
-                                        </div>
+
+                                            <div class="input-group">
+                                                <input id="user_street" class="input-group__input" type="text" name="" value="">
+                                                <label class="input-group__label" for="user_street">Ваш адрес: улица, дом</label>
+                                            </div>
+
+                                            <div class="user-data__form-row">
+                                                <div class="input-group">
+                                                    <input id="user_way" class="input-group__input" type="text" name="" value="">
+                                                    <label class="input-group__label" for="user_way">Подъезд</label>
+                                                </div>
+
+                                                <div class="input-group">
+                                                    <input id="user_floor" class="input-group__input" type="text" name="" value="">
+                                                    <label class="input-group__label" for="user_floor">Этаж</label>
+                                                </div>
+
+                                                <div class="input-group">
+                                                    <input id="user_apt" class="input-group__input" type="text" name="" value="">
+                                                    <label class="input-group__label" for="user_apt">Квартира</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="user-data__form-button">
+                                                <button class="button button--primary button--s" type="submit">Сохранить</button>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

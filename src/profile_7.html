@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/common/favicon.html
+
+    //= template/common/fonts_preload.html
+
+    //= template/common/styles.html
+</head>
+
+<body class="page">
+    <div id="app">
+        //= template/common/header--white.html
+
+        //= template/common/main-menu.html
+
+        //= template/common/search.html
+
+        <main class="page__content">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Профиль</a></li>
+                    <li class="breadcrumbs__item">Мои данные</li>
+                </ul>
+
+                <div class="page__columns">
+                    <div class="page__left-column">
+                        //= template/personal/personal-left-menu.html
+                    </div>
+
+                    <div class="page__right-column">
+                        <div class="user-data-block">
+                            <h2>Мøи заказы</h2>
+
+                            <div class="orders-list">
+                                <div class="order-item">
+                                    <div class="order-item__top">
+                                        <div class="order-item__top-item">
+                                            <a class="order-item__link" href="#">Заказ №1980</a>
+
+                                            <span class="order-item__top-separator">|</span>
+
+                                            <span class="order-item__cost">34 700 ₽</span>
+                                        </div>
+
+                                        <div class="order-item__top-item">
+                                            <span class="order-item__date">от 17 января</span>
+
+                                            <span class="order-item__top-separator">|</span>
+
+                                            <span class="order-item__status yellow">Ожидает оплаты</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="order-item__list">
+                                        <img src="images/content/personal/order-item.jpg" srcset="images/content/personal/order-item@2x.jpg 2x" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="order-item">
+                                    <div class="order-item__top">
+                                        <div class="order-item__top-item">
+                                            <a class="order-item__link" href="#">Заказ №2456</a>
+
+                                            <span class="order-item__top-separator">|</span>
+
+                                            <span class="order-item__cost">49 240 ₽</span>
+                                        </div>
+
+                                        <div class="order-item__top-item">
+                                            <span class="order-item__date">от 1 января</span>
+
+                                            <span class="order-item__top-separator">|</span>
+
+                                            <span class="order-item__status green">Доставлен</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="order-item__list">
+                                        <img src="images/content/personal/order-item.jpg" srcset="images/content/personal/order-item@2x.jpg 2x" alt="">
+                                        <img src="images/content/personal/order-item.jpg" srcset="images/content/personal/order-item@2x.jpg 2x" alt="">
+                                        <img src="images/content/personal/order-item.jpg" srcset="images/content/personal/order-item@2x.jpg 2x" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        //= template/personal/popular.html
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        //= template/common/footer.html
+
+        //= template/common/popups.html
+
+        <div class="page__shade"></div>
+    </div>
+
+    //= template/common/scripts.html
+</body>
+
+</html>

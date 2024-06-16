@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/common/favicon.html
+
+    //= template/common/fonts_preload.html
+
+    //= template/common/styles.html
+</head>
+
+<body class="page">
+    <div id="app">
+        //= template/common/header--white.html
+
+        //= template/common/main-menu.html
+
+        //= template/common/search.html
+
+        <main class="page__content">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Профиль</a></li>
+                    <li class="breadcrumbs__item">Мои данные</li>
+                </ul>
+
+                <div class="page__columns">
+                    <div class="page__left-column">
+                        //= template/personal/personal-left-menu.html
+                    </div>
+
+                    <div class="page__right-column">
+                        <div class="user-data-block">
+                            <h2>избраннøе</h2>
+
+                            <div class="no-items">
+                                <div class="no-items__text">Нажмите на <img width="18" height="18" src="images/icons/fav_icon.svg" alt=""> , чтобы добавить товар в&nbsp;избранное.</div>
+
+                                <div class="no-items__buttons">
+                                    <a class="button button--primary button--s" href="#">мужчинам</a>
+
+                                    <a class="button button--primary button--s" href="#">женщинам</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        //= template/personal/popular.html
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        //= template/common/footer.html
+
+        //= template/common/popups.html
+
+        <div class="page__shade"></div>
+    </div>
+
+    //= template/common/scripts.html
+</body>
+
+</html>
