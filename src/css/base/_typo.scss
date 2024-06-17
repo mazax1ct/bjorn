@@ -112,6 +112,16 @@ hr {
     }
 }
 
+ol,
+p,
+ul {
+    margin-top: 0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
 .title-block {
     margin-top: 40px;
     margin-bottom: 24px;
@@ -154,6 +164,15 @@ hr {
             margin-top: 0;
         }
     }
+
+    .h2,
+    h2 {
+        br {
+            @media(max-width: $sm - 0.01px) {
+                display: none;
+            }
+        }
+    }
 }
 
 .content-block {
@@ -169,10 +188,6 @@ hr {
         ol,
         ul {
             &:not([class]) {
-                @media(min-width: $fhd) {
-                    margin-bottom: 40px;
-                }
-
                 li {
                     &:not(:last-child) {
                         margin-bottom: 8px;
@@ -187,7 +202,6 @@ hr {
 
     p {
         &:not([class]) {
-            margin-top: 0;
             margin-bottom: 12px;
             @media(min-width: $sm) {
                 margin-bottom: 24px;
@@ -202,7 +216,6 @@ hr {
     ol,
     ul {
         &:not([class]) {
-            margin-top: 0;
             margin-bottom: 12px;
             padding: 0;
             @media(min-width: $sm) {

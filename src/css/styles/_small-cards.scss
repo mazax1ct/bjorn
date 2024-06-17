@@ -1,0 +1,85 @@
+.small-cards-grid {
+    display: grid;
+    gap: 24px 8px;
+    grid-template-columns: repeat(2, 1fr);
+    @media(min-width: $sm) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px 8px;
+    }
+    @media(min-width: $lg) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card__image {
+        img {
+            aspect-ratio: 3 / 4.1242;
+        }
+    }
+}
+
+.small-card {
+    display: block;
+    font-size: 11px;
+    text-decoration: none;
+    text-transform: uppercase;
+    @media(min-width: $lg) {
+        font-size: 12px;
+    }
+    @media(min-width: $fhd) {
+        font-size: 14px;
+    }
+    @include hover {
+        img {
+            transform: scale(1.02);
+        }
+    }
+
+    &__image {
+        border-radius: 4px;
+        display: block;
+        margin-bottom: 12px;
+        overflow: hidden;
+        @media(min-width: $lg) {
+            margin-bottom: 16px;
+        }
+        @media(min-width: $fhd) {
+            margin-bottom: 24px;
+        }
+
+        img {
+            display: block;
+            transition: transform 0.3s;
+            transform: scale(1);
+            width: 100%;
+        }
+    }
+}
+
+.small-card-advantage {
+    display: block;
+
+    &__inner {
+        aspect-ratio: 3/3.6365;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    img {
+        display: block;
+        max-width: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 16px;
+        @media(min-width: $lg) {
+            max-width: 56px;
+            margin-bottom: 24px;
+        }
+    }
+
+    .h4 {
+        margin-top: 0;
+    }
+}

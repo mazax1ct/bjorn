@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/common/favicon.html
+
+    //= template/common/fonts_preload.html
+
+    //= template/common/styles.html
+</head>
+
+<body class="page">
+    <div id="app">
+        //= template/common/header--white.html
+
+        //= template/common/main-menu.html
+
+        //= template/common/search.html
+
+        <main class="page__content">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Покупателям</a></li>
+                    <li class="breadcrumbs__item">Уход за изделиями</li>
+                </ul>
+
+                <div class="title-block">
+                    <h1>Ухøд за изделиями</h1>
+                    <p class="h2">Минимум химических обработок позволяет нам<br> сохранить материалы живыми — такими, какими<br> их создала природа.</p>
+                </div>
+
+
+                <div class="page__columns page__columns--border_top">
+                    <div class="page__left-column">
+                        //= template/customers/left-menu.html
+                    </div>
+
+                    <div class="page__right-column">
+                        <div class="small-cards-grid">
+                            <a class="js-popup-open small-card" href="javascript:void(0)" data-popup="care_1">
+                                <span class="small-card__image">
+                                    <img src="images/content/care/img_1.jpg" srcset="images/content/care/img_1@2x.jpg 2x" alt="">
+                                </span>
+                                <span class="small-card__title">Пуховики</span>
+                            </a>
+
+                            <a class="small-card" href="javascript:void(0)">
+                                <span class="small-card__image">
+                                    <img src="images/content/care/img_2.jpg" srcset="images/content/care/img_2@2x.jpg 2x" alt="">
+                                </span>
+                                <span class="small-card__title">Парки</span>
+                            </a>
+
+                            <div class="small-card-advantage">
+                                <div class="small-card-advantage__inner">
+                                    <img src="images/content/care/icon_1.svg" alt="">
+
+                                    <div class="h4">Соблюдайте<br> несложные правила<br> из нашей памятки</div>
+                                </div>
+                            </div>
+
+                            <a class="small-card" href="javascript:void(0)">
+                                <span class="small-card__image">
+                                    <img src="images/content/care/img_3.jpg" srcset="images/content/care/img_3@2x.jpg 2x" alt="">
+                                </span>
+                                <span class="small-card__title">Бомберы</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        //= template/common/footer.html
+
+        //= template/common/popups.html
+
+        <div class="page__shade"></div>
+    </div>
+
+    //= template/common/scripts.html
+</body>
+
+</html>
