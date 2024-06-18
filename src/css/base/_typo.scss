@@ -151,6 +151,16 @@ ul {
         }
     }
 
+    & + .page__columns {
+        .page__left-column {
+            h2 {
+                @media(max-width: $lg - 0.01px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
     .h1,
     h1 {
         margin-bottom: 16px;

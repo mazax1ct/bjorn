@@ -176,6 +176,11 @@
         @media(min-width: $fhd) {
             font-size: 16px;
         }
+
+        img {
+            margin-top: -2px;
+            vertical-align: middle;
+        }
     }
 
     &__buttons {
