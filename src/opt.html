@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/common/favicon.html
+
+    //= template/common/fonts_preload.html
+
+    //= template/common/styles.html
+</head>
+
+<body class="page">
+    <div id="app">
+        //= template/common/header--white.html
+
+        //= template/common/main-menu.html
+
+        //= template/common/search.html
+
+        <main class="page__content">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Покупателям</a></li>
+                    <li class="breadcrumbs__item">Оптовым покупателям</li>
+                </ul>
+
+                <div class="title-block">
+                    <h1>øптøвым пøкупателям</h1>
+                    <p class="h2">Мы контролируем весь производственный процесс,<br> поддерживая качество и сокращая издержки.</p>
+                    <a class="button button--primary button--m" href="#">получить прайс-лист</a>
+                </div>
+
+
+                <div class="page__columns page__columns--border_top">
+                    <div class="page__left-column">
+                        //= template/customers/left-menu.html
+                    </div>
+
+                    <div class="page__right-column">
+                        <div class="content-columns">
+                            <div class="content-columns__section">
+                                <div class="content-columns__section-title">
+                                    <h2>ø бренде</h2>
+                                </div>
+
+                                <div class="content-columns__section-content">
+                                    <p>Bjørn Larsen - молодой российский бренд верхней одежды, предназначенной для города и активного отдыха. При изготовлении наших изделий мы с особым вниманием подходим к выбору материалов и используем для
+                                        производства самые современные и проверенные технологии.</p>
+
+                                    <p>Яркие, функциональные и практичные вещи BJORN LARSEN созданы, чтобы сделать жизнь российских покупателей комфортнее независимо от погодных условий, климата и сезона.</p>
+                                </div>
+                            </div>
+
+                            <div class="content-columns__section">
+                                <div class="content-columns__section-title">
+                                    <h2>Пøчему мы?</h2>
+                                    <p class="h3">Вещи Bjørn Larsen - это<br> всегда качественные ткани,<br> актуальный крой и<br> безупречный пошив.</p>
+                                </div>
+
+                                <div class="content-columns__section-content">
+                                    <div class="features-cards">
+                                        <div class="feature-card">
+                                            <h4>Опыт профессионалов</h4>
+
+                                            <p>В команде Bjørn Larsen работают профессионалы своего дела с многолетним опытом в фэшн-ритейле.</p>
+                                        </div>
+
+                                        <div class="feature-card">
+                                            <h4>Качество</h4>
+
+                                            <p>Мы изготавливаем вещи Bjørn Larsen, соблюдая норвежские стандарты в производстве верхней одежды.</p>
+                                        </div>
+
+                                        <div class="feature-card">
+                                            <h4>Персональный менеджер</h4>
+
+                                            <p>Персональный менеджер поможет с выбором изделий и оформлением заказа на любом этапе.</p>
+                                        </div>
+
+                                        <div class="feature-card">
+                                            <h4>Оперативная доставка</h4>
+
+                                            <p>Мы отправляем изделия Bjørn Larsen во все регионы страны. До терминала транспортной компании в Санкт‑Петербурге доставляем бесплатно.</p>
+                                        </div>
+
+                                        <div class="feature-card">
+                                            <h4>Сертификация</h4>
+
+                                            <p>Вся продукция имеет декларацию о соответствии, подтверждающую ее качество и безопасность, а также зарегистрирована в «Честном Знаке».</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        //= template/personal/popular.html
+
+                        <div class="form">
+                            <div class="form__inner">
+                                <h2>Пøлучить прайс–лист</h2>
+
+                                <form class="form__form" action="">
+                                    <div class="input-group">
+                                        <input id="get_price_name" class="input-group__input" type="text" name="" value="">
+                                        <label class="input-group__label" for="get_price_name">Ваше имя</label>
+                                    </div>
+
+                                    <div class="input-group">
+                                        <input id="get_price_phone" class="input-group__input" type="text" name="" value="">
+                                        <label class="input-group__label" for="get_price_phone">Ваш телефон</label>
+                                    </div>
+
+                                    <div class="input-group">
+                                        <input id="get_price_email" class="input-group__input" type="text" name="" value="">
+                                        <label class="input-group__label" for="get_price_email">Ваш e-mail</label>
+                                    </div>
+
+                                    <button class="button button--primary button--m" type="submit">Отправить</button>
+                                </form>
+
+                                <p class="form__note">Отправляя данную форму вы соглашаетесь с политикой конфиденциальности</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        //= template/common/footer.html
+
+        //= template/common/popups.html
+
+        <div class="page__shade"></div>
+    </div>
+
+    //= template/common/scripts.html
+</body>
+
+</html>

@@ -1,49 +1,6 @@
-.pay-delivery {
-    &__section {
-        --section_gap: 24px;
-        --section_content_width: 66.6666%;
-        font-size: 13px;
-        @media(min-width: $sm) {
-            display: flex;
-            gap: var(--section_gap);
-        }
-        @media(min-width: $lg) {
-            --section_content_width: 74.9180%;
-            font-size: 14px;
-        }
-        @media(min-width: $fhd) {
-            font-size: 16px;
-        }
-
-        &:not(:last-child) {
-            margin-bottom: 40px;
-            @media(min-width: $sm) {
-                margin-bottom: 60px;
-            }
-            @media(min-width: $fhd) {
-                margin-bottom: 120px;
-            }
-        }
-    }
-
-    &__section-title {
+.pd-list {
+    &:not(:last-child) {
         margin-bottom: 24px;
-        @media(min-width: $sm) {
-            margin-bottom: 0;
-            width: calc(100% - var(--section_gap) - var(--section_content_width));
-        }
-    }
-
-    &__section-content {
-        @media(min-width: $sm) {
-            width: var(--section_content_width);
-        }
-    }
-
-    &__list {
-        &:not(:last-child) {
-            margin-bottom: 24px;
-        }
     }
 }
 
