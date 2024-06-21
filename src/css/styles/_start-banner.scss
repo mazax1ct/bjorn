@@ -1,0 +1,79 @@
+.start-banner {
+    margin-bottom: 40px;
+    margin-left: calc(0.01px - var(--container_padding));
+    margin-right: calc(0.01px - var(--container_padding));
+    position: relative;
+    z-index: 1;
+    @media(min-width: $sm) {
+        margin-top: calc(0.01px - var(--header_min_height) * 2);
+        margin-bottom: 60px;
+    }
+    @media(min-width: $lg) {
+        height: calc(100dvh + var(--header_min_height));
+        margin-bottom: 100px;
+    }
+    @media(min-width: $fhd) {
+        margin-bottom: 140px;
+    }
+    @media(min-width: 1920px) {
+        margin-left: calc(-100vw / 2 + var(--container_max_width) / 2 - var(--container_padding));
+        margin-right: calc(-100vw / 2 + var(--container_max_width) / 2 - var(--container_padding));
+    }
+
+    &::after {
+        background: linear-gradient(180deg, rgba(13, 13, 13, 0) 0%, #0D0D0D 100%);
+        bottom: 0;
+        content: '';
+        height: 200px;
+        left: 0;
+        opacity: 0.4;
+        position: absolute;
+        top: auto;
+        width: 100%;
+        z-index: 1;
+        @media(min-width: $lg) {
+            height: 240px;
+        }
+        @media(min-width: $fhd) {
+            height: 335px;
+        }
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        @media(min-width: $lg) {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        left: 50%;
+        height: 100%;
+        position: absolute;
+        padding-bottom: 40px;
+        top: 0;
+        transform: translateX(-50%);
+        width: 100%;
+        z-index: 2;
+        @media(min-width: $sm) {
+            padding-top: calc(var(--header_min_height) * 2);
+        }
+        @media(min-width: $lg) {
+            padding-bottom: 60px;
+        }
+        @media(min-width: $fhd) {
+            padding-bottom: 80px;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 0;
+            margin-top: auto;
+            text-align: center;
+        }
+    }
+}

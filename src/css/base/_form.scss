@@ -14,6 +14,10 @@
         padding-bottom: 32px;
     }
 
+    &__anchor {
+        transform: translateY(calc(0.01px - var(--header_min_height) * 1.5));
+    }
+
     &__inner {
         margin-left: auto;
         margin-right: auto;

@@ -145,6 +145,20 @@ figure {
             margin-bottom: 80px;
         }
     }
+
+    img {
+        border-radius: 4px;
+        display: block;
+        width: 100%;
+    }
+
+    figcaption {
+        display: block;
+        margin-top: 16px;
+        @media(min-width: $sm) {
+            margin-top: 24px;
+        }
+    }
 }
 
 .h2 + figure,
@@ -221,6 +235,12 @@ h2 + figure {
         & + .h2,
         & + h2 {
             margin-top: 0;
+        }
+
+        br {
+            @media(max-width: $sm - 0.01px) {
+                display: none;
+            }
         }
     }
 
@@ -428,6 +448,11 @@ h2 + figure {
 }
 
 .article-block {
+    @media(min-width: $sm) and (max-width: $lg) {
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     @media(min-width: $lg) {
         min-width: 636px;
         max-width: 914px;

@@ -139,6 +139,12 @@ html {
         }
     }
 
+    &--contacts {
+        .page__content {
+            padding-bottom: 0;
+        }
+    }
+
     #app {
         display: flex;
         flex-direction: column;

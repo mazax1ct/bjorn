@@ -7,19 +7,6 @@
     will-change: transform;
     z-index: 10;
 
-    &--white {
-        border-bottom: 1px solid var(--gray_white);
-        background-color: #fff;
-        color: var(--black_dark);
-
-        .header__button {
-            transition: color 0.3s;
-            @include hover {
-                color: var(--ocher);
-            }
-        }
-    }
-
     &--transparent {
         border-bottom: 1px solid rgba(#fff, 0.08);
         color: #fff;
@@ -29,6 +16,27 @@
             transition: none;
             @include hover {
                 color: #fff;
+            }
+        }
+    }
+
+    &--white {
+        border-bottom: 1px solid var(--gray_white);
+        background-color: #fff;
+        color: var(--black_dark);
+        mix-blend-mode: normal;
+
+        a {
+            transition: color 0.3s;
+            @include hover {
+                color: var(--ocher);
+            }
+        }
+
+        .header__button {
+            transition: color 0.3s;
+            @include hover {
+                color: var(--ocher);
             }
         }
     }
@@ -74,18 +82,20 @@
     }
 
     &--color-transition {
+        color: var(--black_dark);
+
         a {
-            transition: color 0.3s;
-            @include hover {
+            //transition: color 0.3s;
+            /*@include hover {
                 color: var(--ocher);
-            }
+            }*/
         }
 
         .header__button {
-            transition: color 0.3s;
-            @include hover {
+            //transition: color 0.3s;
+            /*@include hover {
                 color: var(--ocher);
-            }
+            }*/
         }
     }
 

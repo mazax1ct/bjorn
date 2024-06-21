@@ -16,12 +16,21 @@
 
 .social-link {
     @include active-area;
-    display: block;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
     height: 24px;
     min-width: 24px;
     position: relative;
-    width: 24px;
+    text-transform: uppercase;
     z-index: 1;
+    @media(min-width: $lg) {
+        font-size: 13px;
+    }
+    @media(min-width: $fhd) {
+        font-size: 14px;
+    }
 
     &::after {
         height: 38px;
