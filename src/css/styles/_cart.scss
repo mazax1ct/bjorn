@@ -4,16 +4,29 @@
     }
 
     &__list {
-        margin-bottom: 16px;
-        @media(min-width: $lg) {
+        margin-bottom: 24px;
+        /*@media(min-width: $lg) {
             margin-bottom: 24px;
         }
         @media(min-width: $fhd) {
             margin-bottom: 40px;
-        }
+        }*/
+    }
+
+    &__promocode {
+        margin-bottom: 24px;
     }
 
     &__total-block {
+        & + .cart__list {
+            margin-top: 16px;
+            @media(min-width: $lg) {
+                margin-top: 24px;
+            }
+            @media(min-width: $fhd) {
+                margin-top: 40px;
+            }
+        }
         margin-bottom: 16px;
         @media(min-width: $lg) {
             margin-bottom: 24px;

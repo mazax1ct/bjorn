@@ -7,6 +7,7 @@
 
     &__top {
         margin-bottom: 8px;
+        overflow: hidden;
         position: relative;
         z-index: 1;
         @media(min-width: $fhd) {
@@ -17,11 +18,7 @@
     &__image {
         border-radius: 4px;
         display: block;
-        margin-bottom: 8px;
         overflow: hidden;
-        @media(min-width: $fhd) {
-            margin-bottom: 16px;
-        }
         @include hover {
             img {
                 transform: scale(1.02);
@@ -191,10 +188,43 @@
             bottom: 12px;
         }
         @media(max-width: $lg - 0.01px) {
-            display: none;
+            //display: none;
         }
         @include hover {
             color: #fff;
+        }
+    }
+
+    &__sizes {
+        background-color: #fff;
+        border: 1px solid var(--gray_white);
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+        bottom: 0;
+        left: 0;
+        padding: 12px;
+        position: absolute;
+        transition: transform 0.3s;
+        transform: translateY(100%);
+        top: auto;
+        width: 100%;
+        z-index: 2;
+
+        .sizes-group {
+            justify-content: center;
+        }
+    }
+
+    &__sizes-title {
+        font-size: 11px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        text-align: center;
+        @media(min-width: $lg) {
+            font-size: 12px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 16px;
         }
     }
 

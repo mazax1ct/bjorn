@@ -1125,6 +1125,38 @@
                     </div>
                 </div>
 
+                <div style="margin-bottom: 60px;">
+                    <h2>Помокод</h2>
+                
+                    <div class="promocode">
+                        <div class="promocode__inner">
+                            <input class="promocode__input" type="text" placeholder="Введите промокод">
+                
+                            <button class="promocode__submit" type="button" title="Применить промокод">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#arrow_right" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="promocode__note success">Промокод применен</div>
+                    </div>
+                
+                    <br><br>
+                
+                    <div class="promocode">
+                        <div class="promocode__inner">
+                            <input class="promocode__input" type="text" placeholder="Введите промокод">
+                
+                            <button class="promocode__submit" type="button" title="Применить промокод">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#arrow_right" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="promocode__note error">ой, у нас нет такого промокода</div>
+                    </div>
+                </div>
+
                 <div class="content-block">
                     <h1>Заголовок первого уровня</h1>
                 
@@ -2665,9 +2697,25 @@
             <div class="delivery-form">
                 <h3>Ваш адрес</h3>
         
-                <div class="input-group">
-                    <input id="checkout_city" class="input-group__input" type="text" name="" value="">
-                    <label class="input-group__label" for="checkout_city">Ваш город</label>
+                <div class="suggest">
+                    <div class="input-group">
+                        <input id="checkout_city" class="input-group__input" type="text" name="" value="">
+                        <label class="input-group__label" for="checkout_city">Ваш город</label>
+                    </div>
+        
+                    <div class="suggest__dropdown">
+                        <button class="suggest__option" type="button"><b>М</b>осква</button>
+                        <button class="suggest__option" type="button">Санкт-Петербург</button>
+                        <button class="suggest__option" type="button">Сызрань</button>
+                        <button class="suggest__option" type="button">Суздаль</button>
+                        <button class="suggest__option" type="button">Казань</button>
+                        <button class="suggest__option" type="button">Новосибирск</button>
+                        <button class="suggest__option" type="button">Санкт-Петербург</button>
+                        <button class="suggest__option" type="button">Сызрань</button>
+                        <button class="suggest__option" type="button">Суздаль</button>
+                        <button class="suggest__option" type="button">Казань</button>
+                        <button class="suggest__option" type="button">Новосибирск</button>
+                    </div>
                 </div>
         
                 <div class="input-group">

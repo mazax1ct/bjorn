@@ -1057,6 +1057,44 @@
                                     <use xlink:href="images/sprite.svg#cart_icon" />
                                 </svg>
                             </a>
+                
+                            <div class="card__sizes">
+                                <div class="card__sizes-title">выберите размер</div>
+                
+                                <div class="card__sizes-list">
+                                    <div class="sizes-group">
+                                        <label class="size-radio">
+                                            <input type="radio" name="size" value="48">
+                                            <span class="size-radio__text">48</span>
+                                        </label>
+                
+                                        <label class="size-radio">
+                                            <input type="radio" name="size" value="50">
+                                            <span class="size-radio__text">50</span>
+                                        </label>
+                
+                                        <label class="size-radio">
+                                            <input type="radio" name="size" value="52">
+                                            <span class="size-radio__text">52</span>
+                                        </label>
+                
+                                        <label class="size-radio">
+                                            <input type="radio" name="size" value="54">
+                                            <span class="size-radio__text">54</span>
+                                        </label>
+                
+                                        <label class="size-radio">
+                                            <input type="radio" name="size" value="56">
+                                            <span class="size-radio__text">56</span>
+                                        </label>
+                
+                                        <label class="size-radio">
+                                            <input type="radio" name="size" value="58">
+                                            <span class="size-radio__text">58</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                 
                         <div class="card__bottom">
@@ -3127,9 +3165,25 @@
             <div class="delivery-form">
                 <h3>Ваш адрес</h3>
         
-                <div class="input-group">
-                    <input id="checkout_city" class="input-group__input" type="text" name="" value="">
-                    <label class="input-group__label" for="checkout_city">Ваш город</label>
+                <div class="suggest">
+                    <div class="input-group">
+                        <input id="checkout_city" class="input-group__input" type="text" name="" value="">
+                        <label class="input-group__label" for="checkout_city">Ваш город</label>
+                    </div>
+        
+                    <div class="suggest__dropdown">
+                        <button class="suggest__option" type="button"><b>М</b>осква</button>
+                        <button class="suggest__option" type="button">Санкт-Петербург</button>
+                        <button class="suggest__option" type="button">Сызрань</button>
+                        <button class="suggest__option" type="button">Суздаль</button>
+                        <button class="suggest__option" type="button">Казань</button>
+                        <button class="suggest__option" type="button">Новосибирск</button>
+                        <button class="suggest__option" type="button">Санкт-Петербург</button>
+                        <button class="suggest__option" type="button">Сызрань</button>
+                        <button class="suggest__option" type="button">Суздаль</button>
+                        <button class="suggest__option" type="button">Казань</button>
+                        <button class="suggest__option" type="button">Новосибирск</button>
+                    </div>
                 </div>
         
                 <div class="input-group">
@@ -3205,6 +3259,10 @@
         </div>
 
         <div class="page__shade"></div>
+
+        <div class="global-error">
+            <div class="global-error__text">Произошла ошибка. Попробуйте позже</div>
+        </div>
     </div>
 
     <script src="js/swiper-bundle.min.js"></script>

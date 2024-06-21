@@ -1,0 +1,49 @@
+.suggest {
+    position: relative;
+    z-index: 2;
+
+    &__dropdown {
+        @include scrollbar;
+        background-color: #fff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        left: 0;
+        max-height: 218px;
+        overflow-y: auto;
+        padding: 10px 12px;
+        position: absolute;
+        top: calc(100% + 4px);
+        width: 100%;
+        z-index: 1;
+        @media(min-width: $lg) {
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+        @media(min-width: $fhd) {
+            min-height: 274px;
+            padding-right: 24px;
+            padding-left: 24px;
+        }
+    }
+
+    &__option {
+        @include button-reset;
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        min-height: 36px;
+        font-size: 11px;
+        text-align: left;
+        transition: color 0.3s;
+        width: 100%;
+        @media(min-width: $lg) {
+            font-size: 12px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 14px;
+        }
+        @include hover {
+            color: var(--ocher);
+        }
+    }
+}
