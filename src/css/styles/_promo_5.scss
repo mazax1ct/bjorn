@@ -1,0 +1,38 @@
+.promo_5 {
+    @media(min-width: $sm) {
+        display: flex;
+    }
+
+    &__block {
+        display: block;
+        position: relative;
+        z-index: 1;
+        @media(min-width: $sm) {
+            width: 50%;
+        }
+
+        img,
+        picture {
+            display: block;
+            width: 100%;
+        }
+
+        .h1 {
+            left: 0;
+            position: absolute;
+            top: 24px;
+            text-align: center;
+            width: 100%;
+            z-index: 1;
+            @media(min-width: $sm) {
+                top: 40px;
+            }
+            @media(min-width: $lg) {
+                top: 130px;
+            }
+            @media(min-width: $fhd) {
+                top: 185px;
+            }
+        }
+    }
+}

@@ -1,10 +1,9 @@
 .card {
-    @include hover {
+    /*@include hover {
         .card__buy {
             opacity: 1;
         }
-    }
-
+    }*/
     &__top {
         margin-bottom: 8px;
         overflow: hidden;
@@ -136,6 +135,7 @@
 
     &__buy,
     &__fav {
+        @include active-area;
         @include button-reset;
         color: #fff;
         height: 18px;
@@ -180,9 +180,9 @@
 
     &__buy {
         bottom: 6px;
-        opacity: 0;
+        //opacity: 0;
         top: auto;
-        transition: opacity 0.3s;
+        //transition: opacity 0.3s;
         z-index: 3;
         @media(min-width: $fhd) {
             bottom: 12px;
@@ -208,7 +208,11 @@
         transform: translateY(100%);
         top: auto;
         width: 100%;
-        z-index: 2;
+        z-index: 3;
+
+        &.is-open {
+            transform: translateY(0);
+        }
 
         .sizes-group {
             justify-content: center;

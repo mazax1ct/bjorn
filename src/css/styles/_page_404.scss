@@ -1,0 +1,15 @@
+.page_404 {
+    text-align: center;
+
+    h1 {
+        color: var(--black_blue);
+        font-size: 100px;
+        margin-bottom: 20px;
+        @media(min-width: $lg) {
+            font-size: 200px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 300px;
+        }
+    }
+}

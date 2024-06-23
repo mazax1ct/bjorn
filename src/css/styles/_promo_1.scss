@@ -1,0 +1,117 @@
+.promo_1 {
+    background-color: var(--gray_white);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @media(min-width: $sm) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        text-align: center;
+    }
+    @media(min-width: $lg) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    @media(min-width: $fhd) {
+        padding-top: 190px;
+        padding-bottom: 230px;
+    }
+
+    .h1,
+    h1 {
+        margin-bottom: 16px;
+        @media(min-width: $lg) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__images {
+        margin: 60px auto;
+        max-width: 520px;
+        position: relative;
+        z-index: 1;
+        @media(min-width: $sm) {
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+        @media(min-width: $lg) {
+            max-width: 850px;
+        }
+        @media(min-width: $fhd) {
+            max-width: 1220px;
+        }
+    }
+
+    &__image-2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 52.32558%;
+        @media(min-width: $lg) {
+            width: 44%;
+        }
+        @media(min-width: $fhd) {
+            width: 42.86885%;
+        }
+    }
+
+    &__image-1,
+    &__image-3 {
+        background-color: #fff;
+        border-radius: 6px;
+        padding: 3px;
+        position: absolute;
+        width: 29.06976%;
+        z-index: 1;
+        @media(min-width: $lg) {
+            padding: 8px;
+            width: 24.23529%;
+        }
+        @media(min-width: $fhd) {
+            padding: 12px;
+        }
+
+        img {
+            border-radius: 4px;
+            display: block;
+            width: 100%;
+        }
+    }
+
+    &__image-1 {
+        left: 0;
+        top: 20.37735%;
+        @media(min-width: $lg) {
+            top: 35%;
+        }
+        @media(min-width: $fhd) {
+            top: 28%;
+        }
+    }
+
+    &__image-3 {
+        bottom: -4.52830%;
+        left: auto;
+        right: 0;
+        top: auto;
+        @media(min-width: $lg) {
+            bottom: -5.5%;
+        }
+        @media(min-width: $fhd) {
+            bottom: -4.1%;
+        }
+    }
+
+    &__text {
+        @media(min-width: $sm) {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 480px;
+        }
+        @media(min-width: $lg) {
+            max-width: 600px;
+        }
+        @media(min-width: $fhd) {
+            max-width: 770px;
+        }
+    }
+}

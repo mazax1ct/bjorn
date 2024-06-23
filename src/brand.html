@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/common/favicon.html
+
+    //= template/common/fonts_preload.html
+
+    //= template/common/styles.html
+</head>
+
+<body class="page page--no_padding_bottom">
+    <div id="app">
+        //= template/common/header--transparent.html
+
+        //= template/common/main-menu.html
+
+        //= template/common/search.html
+
+        <main class="page__content">
+            <div class="container">
+                <div class="start-banner start-banner--type_2 full-width">
+                    <picture>
+                        <source srcset="images/content/brand/banner/fhd.jpg, images/content/brand/banner/fhd@2x.jpg 2x" media="(min-width: 1600px)">
+                        <source srcset="images/content/brand/banner/lg.jpg, images/content/brand/banner/lg@2x.jpg 2x" media="(min-width: 1300px)">
+                        <source srcset="images/content/brand/banner/sm.jpg, images/content/brand/banner/sm@2x.jpg 2x" media="(min-width: 768px)">
+                        <img src="images/content/brand/banner/mob.jpg" srcset="images/content/brand/banner/mob@2x.jpg 2x" alt="">
+                    </picture>
+
+                    <div class="start-banner__inner container">
+                        <ul class="breadcrumbs">
+                            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+                            <li class="breadcrumbs__item">О бренде</li>
+                        </ul>
+
+                        <p class="h2">Практичнøе решение<br> для кøмфортнøй жизни</p>
+
+                        <img class="start-banner__logo" src="images/content/brand/banner/logo.svg" alt="">
+                    </div>
+                </div>
+
+                //= template/brand/promo_1.html
+
+                //= template/brand/promo_2.html
+
+                //= template/brand/promo_3.html
+
+                //= template/brand/promo_4.html
+
+                //= template/brand/promo_5.html
+            </div>
+        </main>
+
+        //= template/common/footer.html
+
+        //= template/common/popups.html
+
+        <div class="page__shade"></div>
+    </div>
+
+    //= template/common/scripts.html
+
+    <script src="js/start-banner.js"></script>
+
+    <script src="js/cards-slider-free.js"></script>
+</body>
+
+</html>

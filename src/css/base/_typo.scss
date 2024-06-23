@@ -519,3 +519,18 @@ h2 + figure {
         }
     }
 }
+
+.start-banner {
+    & + .article-block {
+        margin-top: 40px;
+        @media(min-width: $sm) {
+            margin-top: 60px;
+        }
+        @media(min-width: $lg) {
+            margin-top: 100px;
+        }
+        @media(min-width: $fhd) {
+            margin-top: 140px;
+        }
+    }
+}

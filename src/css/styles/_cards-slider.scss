@@ -34,3 +34,15 @@
         }
     }
 }
+
+.cards-slider-free {
+    .swiper-slide {
+        width: 200px;
+        @media(min-width: $lg) {
+            width: 260px;
+        }
+        @media(min-width: $fhd) {
+            width: 296px;
+        }
+    }
+}

@@ -1,23 +1,11 @@
 .start-banner {
-    margin-bottom: 40px;
-    margin-left: calc(0.01px - var(--container_padding));
-    margin-right: calc(0.01px - var(--container_padding));
     position: relative;
     z-index: 1;
     @media(min-width: $sm) {
         margin-top: calc(0.01px - var(--header_min_height) * 2);
-        margin-bottom: 60px;
     }
     @media(min-width: $lg) {
         height: calc(100dvh + var(--header_min_height));
-        margin-bottom: 100px;
-    }
-    @media(min-width: $fhd) {
-        margin-bottom: 140px;
-    }
-    @media(min-width: 1920px) {
-        margin-left: calc(-100vw / 2 + var(--container_max_width) / 2 - var(--container_padding));
-        margin-right: calc(-100vw / 2 + var(--container_max_width) / 2 - var(--container_padding));
     }
 
     &::after {
@@ -39,12 +27,68 @@
         }
     }
 
-    img {
+    img,
+    picture {
         display: block;
         width: 100%;
+    }
+
+    picture {
         @media(min-width: $lg) {
             height: 100%;
-            object-fit: cover;
+        }
+
+        img {
+            @media(min-width: $lg) {
+                object-fit: cover;
+                height: 100%;
+            }
+        }
+    }
+
+    &--type_1 {
+        h1 {
+            margin-top: auto;
+        }
+    }
+
+    &--type_2 {
+        .start-banner__inner {
+            @media(max-width: $sm - 0.01px) {
+                padding-top: 24px;
+            }
+        }
+
+        .breadcrumbs {
+            @media(max-width: $sm - 0.01px) {
+                display: none;
+            }
+        }
+
+        .start-banner__logo {
+            @media(max-width: $sm - 0.01px) {
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+        }
+
+        .h2,
+        h2 {
+            @media(min-width: $sm) {
+                margin-top: auto;
+            }
+
+            br {
+                @media(min-width: $sm) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &--type_3 {
+        .start-banner__inner {
+            padding-top: 24px;
         }
     }
 
@@ -69,11 +113,19 @@
             padding-bottom: 80px;
         }
 
-        h1 {
+        .h1,
+        .h2,
+        h1,
+        h2 {
             color: #fff;
             margin-bottom: 0;
-            margin-top: auto;
             text-align: center;
+        }
+
+        .h2,
+        h2 {
+            margin-top: 0;
+            margin-bottom: 16px;
         }
     }
 }

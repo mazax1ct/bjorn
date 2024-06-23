@@ -1,0 +1,185 @@
+.promo_2 {
+    background-color: var(--gray_white);
+    position: relative;
+    z-index: 1;
+    @media(max-width: $sm - 0.01px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    img,
+    picture {
+        display: block;
+        width: 100%;
+    }
+
+    picture {
+        @media(max-width: $sm - 0.01px) {
+            display: none;
+        }
+    }
+
+    .container {
+        @media(min-width: $sm) {
+            left: 50%;
+            height: 100%;
+            position: absolute;
+            padding-top: 100px;
+            top: 0;
+            transform: translateX(-50%);
+            width: 100%;
+            z-index: 1;
+        }
+        @media(min-width: $lg) {
+            padding-top: 180px;
+        }
+        @media(min-width: $fhd) {
+            padding-top: 245px;
+        }
+    }
+
+    &__mobile-image {
+        display: block;
+        margin-left: calc(0.01px - var(--container_padding));
+        margin-right: calc(0.01px - var(--container_padding));
+        @media(min-width: $sm) {
+            display: none;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    &__text {
+        margin-bottom: 40px;
+        @media(min-width: $sm) {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 480px;
+            text-align: center;
+        }
+        @media(min-width: $lg) {
+            max-width: 550px;
+        }
+        @media(min-width: $fhd) {
+            max-width: 650px;
+        }
+
+        .h1,
+        h1 {
+            margin-bottom: 16px;
+            @media(min-width: $lg) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    &__cards {
+        @media(max-width: $sm - 0.01px) {
+            display: flex;
+            gap: 4px;
+            margin-top: -70px;
+            margin-left: calc(0.01px - var(--container_padding));
+            margin-right: calc(0.01px - var(--container_padding));
+            overflow-x: auto;
+            padding-left: 8px;
+            padding-right: 8px;
+            scrollbar-width: none;
+        }
+    }
+
+    &__card {
+        background-color: #fff;
+        border-radius: 6px;
+        font-size: 11px;
+        min-width: 192px;
+        padding: 4px;
+        width: 192px;
+        @media(min-width: $sm) {
+            position: absolute;
+            z-index: 1;
+        }
+        @media(min-width: $lg) {
+            font-size: 12px;
+            min-width: 226px;
+            padding: 8px;
+            width: 226px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 14px;
+            min-width: 298px;
+            padding: 12px;
+            width: 298px;
+        }
+
+        &:nth-child(1) {
+            @media(min-width: $sm) {
+                left: 3.125%;
+                top: 30.43478%;
+            }
+            @media(min-width: $lg) {
+                left: 10.80882%;
+                top: 40.96963%;
+            }
+            @media(min-width: $fhd) {
+                left: 10.10416%;
+                top: 38.96457%;
+            }
+        }
+
+        &:nth-child(2) {
+            @media(min-width: $sm) {
+                left: auto;
+                right: 3.125%;
+                top: 48.53593%;
+            }
+            @media(min-width: $lg) {
+                right: 10.80882%;
+                top: 51.03889%;
+            }
+            @media(min-width: $lg) {
+                right: 10.10416%;
+                top: 48.97476%;
+            }
+        }
+
+        &:nth-child(3) {
+            @media(min-width: $sm) {
+                left: 18.88020%;
+                top: 66.63708%;
+            }
+            @media(min-width: $lg) {
+                left: 26.83823%;
+                top: 71.92328%;
+            }
+            @media(min-width: $fhd) {
+                left: 26.19791%;
+                top: 69.87381%;
+            }
+        }
+
+        .h4,
+        h4 {
+            margin-top: 0;
+            margin-bottom: 6px;
+            @media(min-width: $lg) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &__card-image {
+        margin-bottom: 8px;
+        @media(min-width: $lg) {
+            margin-bottom: 12px;
+        }
+
+        img {
+            border-radius: 4px;
+            display: block;
+            width: 100%;
+        }
+    }
+}

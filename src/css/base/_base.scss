@@ -139,9 +139,20 @@ html {
         }
     }
 
-    &--contacts {
+    &--no_padding_bottom {
         .page__content {
             padding-bottom: 0;
+        }
+    }
+
+    &--404 {
+        .page__content {
+            align-items: center;
+            display: flex;
+            height: calc(100dvh - var(--header_min_height));
+            justify-content: center;
+            padding-top: 80px;
+            padding-bottom: 80px;
         }
     }
 
@@ -222,6 +233,15 @@ html {
                 }
             }
         }
+    }
+}
+
+.full-width {
+    margin-left: calc(0.01px - var(--container_padding));
+    margin-right: calc(0.01px - var(--container_padding));
+    @media(min-width: 1920px) {
+        margin-left: calc(-100vw / 2 + var(--container_max_width) / 2 - var(--container_padding));
+        margin-right: calc(-100vw / 2 + var(--container_max_width) / 2 - var(--container_padding));
     }
 }
 

@@ -5,6 +5,9 @@
     gap: 8px;
     line-height: 1.28571;
     text-transform: uppercase;
+    @media(max-width: $lg - 0.01px) {
+        min-height: 36px;
+    }
     @media(min-width: $lg) {
         font-size: 12px;
     }
@@ -14,6 +17,9 @@
 
     &:not(:last-child) {
         margin-bottom: 8px;
+        @media(max-width: $lg - 0.01px) {
+            margin-bottom: 0;
+        }
         @media(min-width: $fhd) {
             margin-bottom: 12px;
         }
@@ -126,6 +132,9 @@
     gap: 8px;
     line-height: 1.28571;
     text-transform: uppercase;
+    @media(max-width: $lg - 0.01px) {
+        min-height: 36px;
+    }
     @media(min-width: $lg) {
         font-size: 12px;
     }
@@ -135,6 +144,9 @@
 
     &:not(:last-child) {
         margin-bottom: 8px;
+        @media(max-width: $lg - 0.01px) {
+            margin-bottom: 0;
+        }
         @media(min-width: $fhd) {
             margin-bottom: 12px;
         }

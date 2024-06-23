@@ -1,0 +1,60 @@
+.promo_4 {
+    background-color: var(--gray_white);
+    padding-top: 60px;
+    @media(min-width: $sm) {
+        padding-top: 100px;
+    }
+    @media(min-width: $lg) {
+        padding-top: 0;
+    }
+
+    &__inner {
+        @media(min-width: $lg) {
+            align-items: center;
+            display: flex;
+        }
+    }
+
+    &__text {
+        @media(max-width: $lg - 0.01px) {
+            margin-bottom: 40px;
+        }
+        @media(min-width: $lg) {
+            min-width: calc(50% + var(--container_padding));
+            margin-left: calc(0.01px - var(--container_padding));
+            padding-right: 8%;
+            padding-left: 11%;
+            width: calc(50% + var(--container_padding));
+        }
+        @media(min-width: $fhd) {
+            padding-right: 12.3%;
+            padding-left: 10.1%;
+        }
+
+        .h1,
+        h1 {
+            margin-bottom: 16px;
+            @media(min-width: $lg) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    picture {
+        display: block;
+        @media(max-width: $lg - 0.01px) {
+            margin-left: calc(0.01px - var(--container_padding));
+            margin-right: calc(0.01px - var(--container_padding));
+        }
+        @media(min-width: $lg) {
+            min-width: calc(50% + var(--container_padding));
+            margin-right: calc(0.01px - var(--container_padding));
+            width: calc(50% + var(--container_padding));
+        }
+    }
+}
