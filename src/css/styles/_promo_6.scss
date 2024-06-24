@@ -1,0 +1,23 @@
+.promo_6 {
+    &__inner {
+        @media(min-width: $lg) {
+            display: flex;
+        }
+    }
+
+    h2 {
+        @media(min-width: $lg) {
+            margin-bottom: 0;
+            padding-left: 16.66666%;
+            padding-right: 8.4375%;
+            width: 50%;
+        }
+    }
+
+    &__text {
+        @media(min-width: $lg) {
+            padding-right: 8.4375%;
+            width: 50%;
+        }
+    }
+}

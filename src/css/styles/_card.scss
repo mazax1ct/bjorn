@@ -24,6 +24,10 @@
             }
         }
 
+        picture {
+            display: block;
+        }
+
         img {
             aspect-ratio: 3/4.3886;
             display: block;
@@ -309,5 +313,42 @@
         height: 12px;
         min-width: 12px;
         width: 12px;
+    }
+
+    &--collection {
+        .card__top {
+            margin-bottom: 16px;
+        }
+
+        .card__image {
+            img {
+                aspect-ratio: auto;
+            }
+        }
+
+        .card__title {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            @media(min-width: $lg) {
+                font-size: 18px;
+            }
+            @media(min-width: $fhd) {
+                font-size: 24px;
+            }
+        }
+
+        .card__bottom {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &--big {
+        .card__top {
+            @media(min-width: $lg) {
+                margin-bottom: 24px;
+            }
+        }
     }
 }

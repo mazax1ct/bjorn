@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   let prevScrollpos = window.pageYOffset;
 
-  var startBanner = document.querySelector('.start-banner');
+  var startBanner = document.querySelector('.banner--start');
   var startBannerHeight = startBanner.offsetHeight;
   var header = document.querySelector('.header');
   var headerHeight = header.offsetHeight;

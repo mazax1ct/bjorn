@@ -520,7 +520,7 @@ h2 + figure {
     }
 }
 
-.start-banner {
+.banner {
     & + .article-block {
         margin-top: 40px;
         @media(min-width: $sm) {

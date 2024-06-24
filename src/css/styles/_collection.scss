@@ -1,0 +1,16 @@
+.collection {
+    & > * {
+        &:not(:last-child) {
+            margin-bottom: 40px;
+            @media(min-width: $sm) {
+                margin-bottom: 60px;
+            }
+            @media(min-width: $lg) {
+                margin-bottom: 120px;
+            }
+            @media(min-width: $fhd) {
+                margin-bottom: 200px;
+            }
+        }
+    }
+}
