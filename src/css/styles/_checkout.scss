@@ -146,6 +146,15 @@
     display: block;
     position: relative;
     z-index: 1;
+    @include hover {
+        input {
+            &:not(:checked) {
+                & + .checkout-option__inner {
+                    border-color: var(--ocher);
+                }
+            }
+        }
+    }
 
     input {
         position: absolute;
@@ -174,6 +183,7 @@
         min-height: 100px;
         padding: 12px 44px 12px 12px;
         position: relative;
+        transition: border-color 0.3s;
         z-index: 1;
         @media(min-width: $lg) {
             flex-direction: row;

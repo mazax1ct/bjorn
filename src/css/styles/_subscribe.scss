@@ -1,0 +1,146 @@
+.subscribe {
+    position: relative;
+    z-index: 1;
+
+    img,
+    picture {
+        display: block;
+        width: 100%;
+    }
+
+    &__form-block {
+        bottom: 24px;
+        left: 50%;
+        max-width: 460px;
+        position: absolute;
+        top: auto;
+        transform: translateX(-50%);
+        width: 75.55555%;
+        z-index: 1;
+        @media(min-width: $sm) {
+            bottom: 60px;
+        }
+        @media(min-width: $lg) {
+            bottom: 80px;
+            max-width: 480px;
+        }
+        @media(min-width: $fhd) {
+            bottom: 110px;
+            max-width: 596px;
+        }
+
+        h2 {
+            margin-bottom: 12px;
+            text-align: center;
+            @media(min-width: $fhd) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    &__form {
+        position: relative;
+        z-index: 1;
+
+        &:not(:last-child) {
+            margin-bottom: 8px;
+            @media(min-width: $lg) {
+                margin-bottom: 12px;
+            }
+            @media(min-width: $fhd) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    &__input {
+        background-color: #fff;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2.25' y='4.75' width='20.5' height='14.5' rx='1.25' stroke='%23A4A4A4' stroke-width='1.5'/%3E%3Cpath d='M2.5 5L9.67158 12.1716C11.2337 13.7337 13.7663 13.7337 15.3284 12.1716L22.5 5' stroke='%23A4A4A4' stroke-width='1.5'/%3E%3Cpath d='M2.5 19L10.5 12M22.5 19L14.5 12' stroke='%23A4A4A4' stroke-width='1.5'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-size: 20px auto;
+        background-position: 16px 50%;
+        border: 1px solid var(--gray_white);
+        border-radius: 4px;
+        font-size: 12px;
+        height: 44px;
+        padding: 0 56px 0 44px;
+        transition: border-color 0.3s;
+        width: 100%;
+        @media(min-width: $lg) {
+            height: 48px;
+        }
+        @media(min-width: $fhd) {
+            background-size: 24px auto;
+            font-size: 14px;
+            height: 56px;
+            padding: 0 56px 0 48px;
+        }
+
+        &:focus {
+            border-color: var(--gray);
+        }
+
+        &::-webkit-input-placeholder {
+            color: var(--gray_black);
+            opacity: 1;
+        }
+
+        &::-moz-placeholder {
+            color: var(--gray_black);
+            opacity: 1;
+        }
+
+        &:-ms-input-placeholder {
+            color: var(--gray_black);
+            opacity: 1;
+        }
+    }
+
+    &__submit {
+        @include button-reset;
+        align-items: center;
+        color: var(--gray_black);
+        cursor: pointer;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        left: auto;
+        position: absolute;
+        right: 0;
+        transition: color 0.3s;
+        top: 0;
+        width: 44px;
+        z-index: 1;
+        @media(min-width: $lg) {
+            width: 48px;
+        }
+        @media(min-width: $fhd) {
+            width: 56px;
+        }
+        @include hover {
+            color: var(--black_dark);
+        }
+
+        svg {
+            fill: currentColor;
+            height: 20px;
+            width: 20px;
+            @media(min-width: $fhd) {
+                height: 24px;
+                width: 24px;
+            }
+        }
+    }
+
+    &__note {
+        color: var(--black_gray);
+        font-size: 11px;
+        text-align: center;
+        @media(min-width: $lg) {
+            font-size: 12px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 14px;
+        }
+    }
+}

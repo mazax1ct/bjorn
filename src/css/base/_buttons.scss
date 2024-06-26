@@ -20,6 +20,8 @@
     &.disabled,
     &:disabled,
     &[data-disabled] {
+        background-color: var(--gray_white);
+        color: var(--gray_black);
         cursor: default;
         pointer-events: none;
     }

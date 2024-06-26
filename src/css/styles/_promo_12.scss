@@ -1,0 +1,74 @@
+.promo_12 {
+    &:not(:first-child) {
+        margin-top: 60px;
+        @media(min-width: $sm) {
+            margin-top: 100px;
+        }
+        @media(min-width: $lg) {
+            margin-top: 120px;
+        }
+        @media(min-width: $fhd) {
+            margin-top: 200px;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 60px;
+        @media(min-width: $sm) {
+            margin-bottom: 100px;
+        }
+        @media(min-width: $lg) {
+            margin-bottom: 120px;
+        }
+        @media(min-width: $fhd) {
+            margin-bottom: 200px;
+        }
+    }
+
+    .h1,
+    h2 {
+        margin-bottom: 16px;
+        text-align: center;
+        @media(min-width: $sm) {
+            margin-bottom: 24px;
+        }
+        @media(min-width: $lg) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__all {
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        @media(min-width: $sm) {
+            margin-bottom: 24px;
+        }
+        @media(min-width: $lg) {
+            font-size: 18px;
+            margin-top: 40px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 24px;
+            margin-top: 60px;
+        }
+
+        a {
+            align-items: center;
+            display: inline-flex;
+            gap: 2px;
+
+            svg {
+                fill: currentColor;
+                height: 20px;
+                width: 20px;
+                @media(min-width: $fhd) {
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+        }
+    }
+}

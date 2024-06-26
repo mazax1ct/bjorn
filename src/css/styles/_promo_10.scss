@@ -1,0 +1,77 @@
+.promo_10 {
+    @media(min-width: $lg) {
+        height: 100dvh;
+    }
+
+    .swiper {
+        @media(min-width: $lg) {
+            height: 100%;
+        }
+
+        .banner {
+            @media(min-width: $lg) {
+                height: 100%;
+            }
+        }
+    }
+
+    .swiper-slide {
+        overflow: hidden;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #fff;
+        height: 40px;
+        mix-blend-mode: difference;
+        position: absolute;
+        top: 50%;
+        width: 40px;
+        z-index: 2;
+        @media(max-width: $lg - 0.01px) {
+            display: none;
+        }
+        @include hover {
+            color: #fff;
+        }
+
+        svg {
+            fill: currentColor;
+            height: 24px;
+            width: 24px;
+        }
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: 16px;
+        display: flex;
+        justify-content: center;
+        gap: 4px;
+        height: 2px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0;
+    }
+
+    .swiper-pagination-bullet {
+        border-radius: 4px;
+        background-color: #fff;
+        flex-grow: 1;
+        height: 2px;
+        margin: 0;
+        max-width: 70px;
+        opacity: 0.3;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #fff;
+        opacity: 1;
+    }
+}

@@ -68,5 +68,14 @@
                 gap: 12px;
             }
         }
+
+        .card {
+            @media(min-width: $sm) {
+                width: calc(100% / 2 - 8px / 2);
+            }
+            @media(min-width: $fhd) {
+                width: calc(100% / 2 - 12px / 2);
+            }
+        }
     }
 }

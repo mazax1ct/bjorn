@@ -17,7 +17,7 @@
     //= template/common/styles.html
 </head>
 
-<body class="page">
+<body class="page page--no_padding_bottom">
     <div id="app">
         //= template/common/header--transparent.html
 
@@ -26,7 +26,54 @@
         //= template/common/search.html
 
         <main class="page__content">
+            <div class="container">
+                <div class="banner banner--start banner--type_4 banner--shadow_bottom banner--lg_full_height full-width">
+                    <picture>
+                        <source srcset="images/content/main/banner/fhd.jpg, images/content/main/banner/fhd@2x.jpg 2x" media="(min-width: 1600px)">
+                        <source srcset="images/content/main/banner/lg.jpg, images/content/main/banner/lg@2x.jpg 2x" media="(min-width: 1300px)">
+                        <source srcset="images/content/main/banner/sm.jpg, images/content/main/banner/sm@2x.jpg 2x" media="(min-width: 768px)">
+                        <img src="images/content/main/banner/mob.jpg" srcset="images/content/main/banner/mob@2x.jpg 2x" alt="">
+                    </picture>
 
+                    <div class="banner__inner container">
+                        <div class="main-banner">
+                            <p class="h2">функциøнальная<br> верхняя øдежда</p>
+
+                            <img class="banner__logo" src="images/content/brand/banner/logo.svg" alt="">
+
+                            <div class="main-banner__links">
+                                <a href="#">
+                                    для мужчин
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#chevron_right" />
+                                    </svg>
+                                </a>
+
+                                <a href="#">
+                                    для женщин
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#chevron_right" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                //= template/main/promo_9.html
+
+                //= template/main/promo_9_1.html
+
+                //= template/main/promo_10.html
+
+                //= template/main/promo_11.html
+
+                //= template/main/promo_12.html
+
+                //= template/main/promo_12_1.html
+
+                //= template/main/subscribe.html
+            </div>
         </main>
 
         //= template/common/footer.html
@@ -37,6 +84,8 @@
     </div>
 
     //= template/common/scripts.html
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>

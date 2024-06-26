@@ -138,6 +138,21 @@
         }
     }
 
+    &--type_4 {
+        .banner__inner {
+            padding-bottom: 24px;
+            @media(max-width: $sm - 0.01px) {
+                padding-top: 24px;
+            }
+            @media(min-width: $sm) {
+                padding-bottom: 40px;
+            }
+            @media(min-width: $fhd) {
+                padding-bottom: 80px;
+            }
+        }
+    }
+
     &__inner {
         display: flex;
         flex-direction: column;
