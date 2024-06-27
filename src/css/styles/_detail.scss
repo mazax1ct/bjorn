@@ -42,6 +42,8 @@
             color: #fff;
             mix-blend-mode: difference;
             margin-bottom: -25px;
+            position: relative;
+            z-index: 2;
         }
         @media(min-width: $lg) {
             flex-wrap: wrap;
@@ -76,14 +78,17 @@
         }
 
         & > .swiper {
-            /*@media(min-width: $lg) {
+            @media(min-width: $sm) and (max-width: $lg - 0.01px) {
+                height: calc(100dvh - var(--header_min_height));
+            }
+            @media(min-width: $lg) {
                 height: 100dvh;
-            }*/
-            .swiper-wrapper {
+            }
+            /*.swiper-wrapper {
                 @media(min-width: $lg) {
                     display: block;
                 }
-            }
+            }*/
         }
 
         .swiper-horizontal > .swiper-pagination-bullets,
@@ -96,6 +101,9 @@
             left: 0;
             padding-left: 8px;
             padding-right: 8px;
+            @media(min-width: $lg) {
+                display: none;
+            }
         }
 
         .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -118,6 +126,9 @@
     }
 
     &__image {
+        @media(min-width: $sm) and (max-width: $lg - 0.01px) {
+            height: calc(100dvh - var(--header_min_height));
+        }
         @media(min-width: $lg) {
             height: 100dvh;
         }
@@ -125,7 +136,7 @@
         img {
             display: block;
             width: 100%;
-            @media(min-width: $lg) {
+            @media(min-width: $sm) {
                 height: 100%;
                 object-position: 50% 0;
                 object-fit: cover;
@@ -188,6 +199,7 @@
 
     &__thumb {
         border-radius: 4px;
+        cursor: pointer;
         display: block;
         overflow: hidden;
         position: relative;
