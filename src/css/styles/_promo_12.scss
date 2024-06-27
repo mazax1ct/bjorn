@@ -72,3 +72,264 @@
         }
     }
 }
+
+.heroes-slider {
+    --gap: 4px;
+    position: relative;
+    z-index: 1;
+    @media(min-width: $sm) {
+        --gap: 8px;
+    }
+    @media(min-width: $fhd) {
+        --gap: 12px;
+    }
+
+    &__middle {
+        margin-bottom: 16px;
+        @media(min-width: $sm) {
+            margin-bottom: 24px;
+        }
+        @media(min-width: $lg) {
+            align-items: center;
+            background-color: var(--gray_white);
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-between;
+            left: 50%;
+            margin-bottom: 0;
+            padding: 40px 0 24px;
+            position: absolute;
+            top: 0;
+            transform: translateX(-50%);
+            width: calc(100% / 3 - var(--gap) * 2 / 3);
+            z-index: 2;
+        }
+        @media(min-width: $fhd) {
+            padding-bottom: 40px;
+        }
+    }
+
+    &__text {
+        font-size: 13px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px;
+        text-align: center;
+        @media(min-width: $lg) {
+            font-size: 14px;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 16px;
+            max-width: 480px;
+        }
+    }
+
+    &__logo-block {
+        text-align: center;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        @media(max-width: $lg - 0.01px) {
+            display: none;
+        }
+    }
+
+    &__logo {
+        fill: var(--black_blue);
+        height: 80px;
+        width: 80px;
+        @media(min-width: $fhd) {
+            height: 140px;
+            width: 140px;
+        }
+    }
+
+    &__button {
+        @media(max-width: $lg - 0.01px) {
+            display: none;
+        }
+    }
+
+    &__next,
+    &__prev {
+        @include button-reset;
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: color 0.3s;
+        width: 40px;
+        @media(max-width: $lg - 0.01px) {
+            display: none;
+        }
+        @include hover {
+            color: var(--ocher);
+        }
+
+        svg {
+            fill: currentColor;
+            height: 24px;
+            width: 24px;
+        }
+    }
+
+    &__prev {
+        left: 8px;
+        @media(min-width: $fhd) {
+            left: 12px;
+        }
+    }
+
+    &__next {
+        left: auto;
+        right: 8px;
+        @media(min-width: $fhd) {
+            right: 12px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: var(--gap);
+        @media(min-width: $sm) {
+            overflow: hidden;
+        }
+        @media(max-width: $lg - 0.01px) {
+            margin-left: calc(0.01px - var(--container_padding));
+            margin-right: calc(0.01px - var(--container_padding));
+            overflow-x: auto;
+            padding-left: var(--container_padding);
+            padding-right: var(--container_padding);
+            position: relative;
+            z-index: 2;
+            scrollbar-width: none;
+        }
+    }
+
+    &__slide {
+        min-width: 256px;
+        width: 256px;
+        @media(min-width: $sm) {
+            min-width: 356px;
+            width: 356px;
+        }
+        @media(min-width: $lg) {
+            min-width: calc(100% / 3 - var(--gap) * 2 / 3);
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            transition: opacity 0.5s;
+            width: calc(100% / 3 - var(--gap) * 2 / 3);
+        }
+
+        &.is-active {
+            @media(min-width: $lg) {
+                opacity: 1;
+            }
+        }
+
+        &:nth-child(odd) {
+            @media(min-width: $lg) {
+                left: 0;
+            }
+        }
+
+        &:nth-child(even) {
+            @media(min-width: $lg) {
+                left: auto;
+                right: 0;
+            }
+        }
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            @media(min-width: $lg) {
+                left: auto;
+                position: relative !important;
+                top: auto;
+            }
+        }
+
+        &:nth-child(1) {
+            @media(min-width: $lg) {
+                margin-right: calc(100% / 3 + var(--gap) / 4);
+            }
+        }
+    }
+
+    &__slide-link {
+        border-radius: 4px;
+        display: block;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        @media(min-width: $lg) {
+            color: #fff;
+        }
+        @include hover {
+            img {
+                transform: scale(1.02);
+            }
+        }
+
+        &::after {
+            @media(min-width: $lg) {
+                background: linear-gradient(180deg, rgba(13, 13, 13, 0) 0%, #0D0D0D 100%);
+                bottom: 0;
+                content: '';
+                height: 230px;
+                left: 0;
+                opacity: 0.4;
+                position: absolute;
+                top: auto;
+                width: 100%;
+                z-index: 1;
+            }
+            @media(min-width: $fhd) {
+                height: 335px;
+            }
+        }
+    }
+
+    &__slide-image {
+        border-radius: 4px;
+        display: block;
+        overflow: hidden;
+
+        img {
+            display: block;
+            transform: scale(1);
+            transition: transform 0.3s;
+            width: 100%;
+        }
+    }
+
+    &__slide-title {
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 16px;
+        text-transform: uppercase;
+        @media(min-width: $lg) {
+            bottom: 0;
+            font-size: 18px;
+            left: 0;
+            padding: 24px;
+            position: absolute;
+            top: auto;
+            width: 100%;
+            z-index: 2;
+        }
+        @media(min-width: $fhd) {
+            font-size: 24px;
+        }
+    }
+}
