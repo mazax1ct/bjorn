@@ -46,3 +46,19 @@
         }
     }
 }
+
+a.color-radio {
+    &:not(.is-active) {
+        .color-radio__color {
+            @include hover {
+                outline-color: var(--gray);
+            }
+        }
+    }
+
+    &.is-active {
+        .color-radio__color {
+            outline-color: var(--black_dark);
+        }
+    }
+}

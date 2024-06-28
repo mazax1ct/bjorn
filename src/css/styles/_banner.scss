@@ -3,7 +3,8 @@
     z-index: 1;
 
     img,
-    picture {
+    picture,
+    video {
         display: block;
         width: 100%;
     }
@@ -37,7 +38,8 @@
         height: 100dvh;
 
         img,
-        picture {
+        picture,
+        video {
             height: 100%;
         }
 
@@ -45,6 +47,10 @@
             img {
                 object-fit: cover;
             }
+        }
+
+        video {
+            object-fit: cover;
         }
     }
 

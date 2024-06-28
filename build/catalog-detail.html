@@ -913,10 +913,13 @@
 
                     <div class="detail__images">
                         <div class="js-detail-slider swiper">
-                            <div class="js-slides swiper-wrapper">
-                                <div class="js-detail-image swiper-slide">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
                                     <div class="detail__image">
-                                        <img src="images/content/detail/video.jpg" alt="">
+                                        <video autoplay loop muted playsinline>
+                                            <source src="images/content/main/banner/1.webm" type="video/webm" media="(min-width: 768px)" />
+                                            <source src="images/content/main/banner/2.webm" type="video/webm" />
+                                        </video>
                                     </div>
                                 </div>
 
@@ -1025,10 +1028,6 @@
                                         <div class="swiper-slide">
                                             <div class="detail__thumb">
                                                 <img src="images/content/detail/thumb_1.jpg" srcset="images/content/detail/thumb_1@2x.jpg 2x" alt="">
-
-                                                <svg aria-hidden="true">
-                                                    <use xlink:href="images/sprite.svg#play_icon" />
-                                                </svg>
                                             </div>
                                         </div>
 
@@ -1053,10 +1052,6 @@
                                         <div class="swiper-slide">
                                             <div class="detail__thumb">
                                                 <img src="images/content/detail/thumb_1.jpg" srcset="images/content/detail/thumb_1@2x.jpg 2x" alt="">
-
-                                                <svg aria-hidden="true">
-                                                    <use xlink:href="images/sprite.svg#play_icon" />
-                                                </svg>
                                             </div>
                                         </div>
 
@@ -1147,10 +1142,9 @@
                                     <span class="color-radio__color" title="Бежевый" style="background-color:#B59B8A"></span>
                                 </label>
 
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="Тёмно-серый">
+                                <a class="color-radio is-active" href="#">
                                     <span class="color-radio__color" title="Тёмно-серый" style="background-color:#4A4A4D"></span>
-                                </label>
+                                </a>
                             </div>
                         </div>
 
