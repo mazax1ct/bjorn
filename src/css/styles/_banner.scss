@@ -12,13 +12,78 @@
         @media(min-width: $sm) {
             margin-top: calc(0.01px - var(--header_min_height) * 2);
         }
-        @media(min-width: $lg) {
-            height: calc(100dvh + var(--header_min_height));
-        }
 
         .banner__inner {
             @media(min-width: $sm) {
                 padding-top: calc(var(--header_min_height) * 2);
+            }
+        }
+
+        &.banner--full_height {
+            height: calc(100dvh - var(--header_min_height));
+            @media(min-width: $sm) {
+                height: calc(100dvh + var(--header_min_height));
+            }
+        }
+
+        &.banner--lg_full_height {
+            @media(min-width: $lg) {
+                height: calc(100dvh + var(--header_min_height));
+            }
+        }
+    }
+
+    &--full_height {
+        height: 100dvh;
+
+        img,
+        picture {
+            height: 100%;
+        }
+
+        picture {
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+
+    &--mob_full_height {
+        @media(max-width: $sm - 0.01px) {
+            height: calc(100dvh - var(--header_min_height));
+        }
+
+        img,
+        picture {
+            @media(max-width: $sm - 0.01px) {
+                height: 100%;
+            }
+        }
+
+        picture {
+            img {
+                @media(max-width: $sm - 0.01px) {
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    &--lg_full_height {
+        @media(min-width: $lg) {
+            height: 100dvh;
+        }
+
+        picture {
+            @media(min-width: $lg) {
+                height: 100%;
+            }
+
+            img {
+                @media(min-width: $lg) {
+                    object-fit: cover;
+                    height: 100%;
+                }
             }
         }
     }
@@ -60,21 +125,6 @@
             }
             @media(min-width: $fhd) {
                 height: 335px;
-            }
-        }
-    }
-
-    &--lg_full_height {
-        picture {
-            @media(min-width: $lg) {
-                height: 100%;
-            }
-
-            img {
-                @media(min-width: $lg) {
-                    object-fit: cover;
-                    height: 100%;
-                }
             }
         }
     }

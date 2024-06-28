@@ -27,7 +27,7 @@
 
         <main class="page__content">
             <div class="container">
-                <div class="banner banner--start banner--type_4 banner--shadow_bottom banner--lg_full_height full-width">
+                <div class="banner banner--start banner--type_4 banner--shadow_bottom banner--full_height full-width">
                     <picture>
                         <source srcset="images/content/main/banner/fhd.jpg, images/content/main/banner/fhd@2x.jpg 2x" media="(min-width: 1600px)">
                         <source srcset="images/content/main/banner/lg.jpg, images/content/main/banner/lg@2x.jpg 2x" media="(min-width: 1300px)">
@@ -81,6 +81,16 @@
         //= template/common/popups.html
 
         <div class="page__shade"></div>
+
+        <div class="js-page-loader loader loader--fixed">
+            <div class="loader__logo">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#logo_icon" />
+                </svg>
+
+                <div class="loader__logo-shade"></div>
+            </div>
+        </div>
     </div>
 
     //= template/common/scripts.html

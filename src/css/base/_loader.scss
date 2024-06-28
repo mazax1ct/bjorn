@@ -12,6 +12,7 @@
 
     &--fixed {
         position: fixed;
+        z-index: 11;
     }
 
     &__logo {

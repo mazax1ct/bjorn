@@ -74,4 +74,10 @@
         background-color: #fff;
         opacity: 1;
     }
+
+    .banner__inner {
+        & > div {
+            margin-top: auto;
+        }
+    }
 }

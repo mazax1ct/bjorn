@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
   let promo9Sliders = document.querySelectorAll('.js-promo-9-slider');
   let promo9Thumbs = document.querySelectorAll('.js-promo-9-thumbs');
+  let pageLoader = document.querySelector('.js-page-loader');
+
+  setTimeout(() => {
+    fadeOut(pageLoader, 500);
+  }, 1000);
 
   promo9Thumbs.forEach((promo9Thumb, index) => {
     new Swiper(promo9Thumb, {
@@ -38,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   promo10Sliders.forEach((promo10Slider) => {
     new Swiper(promo10Slider, {
+      effect: 'fade',
       loop: true,
       pagination: {
         el: '.swiper-pagination[data-pager="'+promo10Slider.dataset.pager+'"]',
@@ -55,6 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let prev = document.querySelector('.heroes-slider__prev');
     let next = document.querySelector('.heroes-slider__next');
     let currIndex = 0;
+
+    if(slides.length < 4) {
+      prev.style.display = 'none';
+      next.style.display = 'none';
+    }
 
     slides[currIndex].classList.add('is-active');
     slides[currIndex + 1].classList.add('is-active');
@@ -100,5 +111,29 @@ document.addEventListener('DOMContentLoaded', function() {
         slides[currIndex + 1].classList.add('is-active');
       }
     });
+  }
+
+  if(window.innerWidth >= 1300) {
+    let allEntries = document.querySelectorAll('.promo_9__image, .promo_9__button, .promo_9__sections, .promo_9__text, .promo_9__text-block .h1, .promo_10 .banner__inner div, .promo_11__card, .promo_11__text-block .h1, .promo_11__text-block .button, .promo_12');
+
+    let callback = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+
+          entry.target.classList.add('animate');
+
+          observer.unobserve(entry.target);
+        }
+      });
+    }
+
+    const options = {
+      rootMargin: '0px 0px 0px 0px',
+      threshold: 0.55,
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    allEntries.forEach((entry) => observer.observe(entry));
   }
 });

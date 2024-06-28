@@ -4,3 +4,49 @@
         margin-top: 100px;
     }
 }
+
+.promo_10 + .promo_11 {
+    margin-top: 60px;
+    @media(min-width: $sm) {
+        margin-top: 100px;
+    }
+    @media(min-width: $lg) {
+        margin-top: 0;
+    }
+}
+
+.promo_10 .banner__inner div,
+.promo_11__card,
+.promo_11__text-block .button,
+.promo_11__text-block .h1,
+.promo_12,
+.promo_9__button,
+.promo_9__sections,
+.promo_9__text,
+.promo_9__text-block .h1 {
+    @media(min-width: $lg) {
+        opacity: 0;
+        transition: opacity 1s, transform 1s;
+        transform: translateY(100px);
+    }
+
+    &.animate {
+        @media(min-width: $lg) {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+.promo_9__image {
+    @media(min-width: $lg) {
+        opacity: 0;
+        transition: opacity 1s;
+    }
+
+    &.animate {
+        @media(min-width: $lg) {
+            opacity: 1;
+        }
+    }
+}
