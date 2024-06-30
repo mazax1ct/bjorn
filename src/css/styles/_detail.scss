@@ -150,6 +150,10 @@
             object-position: 50% 0;
             object-fit: cover;
         }
+
+        video {
+            pointer-events: none;
+        }
     }
 
     &__thumbs {
