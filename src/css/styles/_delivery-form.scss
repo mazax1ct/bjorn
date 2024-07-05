@@ -1,6 +1,6 @@
 .delivery-form {
     width: 100%;
-    @media(max-width: $sm - 0.01px) {
+    @media(max-width: $sm - 0.02px) {
         height: 100%;
     }
     @media(min-width: $sm) {
@@ -15,7 +15,7 @@
 
     .button {
         width: 100%;
-        @media(max-width: $sm - 0.01px) {
+        @media(max-width: $sm - 0.02px) {
             //bottom: 0;
             position: sticky;
             top: 100%;

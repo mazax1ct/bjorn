@@ -16,7 +16,7 @@
     }
 
     .blog-item {
-        @media(min-width: $sm) and (max-width: $lg - 0.01px) {
+        @media(min-width: $sm) and (max-width: $lg - 0.02px) {
             width: calc(100% / 2 - var(--column_gap) / 2);
         }
         @media(min-width: $lg) {
@@ -49,7 +49,7 @@
     z-index: 1;
 
     &:not(:last-child) {
-        @media(max-width: $sm - 0.01px) {
+        @media(max-width: $sm - 0.02px) {
             margin-bottom: 24px;
         }
     }
@@ -111,7 +111,7 @@
             transition: transform 0.3s;
             transform: scale(1);
             width: 100%;
-            @media(max-width: $lg - 0.01px) {
+            @media(max-width: $lg - 0.02px) {
                 aspect-ratio: 1.14666 / 1;
                 object-fit: cover;
                 object-position: center;

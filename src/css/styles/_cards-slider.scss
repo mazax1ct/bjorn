@@ -28,9 +28,9 @@
 
     &__slider {
         padding-bottom: 1px;
-        @media(max-width: $sm - 0.01px) {
-            margin-left: calc(0.01px - var(--container_padding));
-            margin-right: calc(0.01px - var(--container_padding));
+        @media(max-width: $sm - 0.02px) {
+            margin-left: calc(0.02px - var(--container_padding));
+            margin-right: calc(0.02px - var(--container_padding));
         }
     }
 }

@@ -34,7 +34,7 @@
     }
 
     &__text {
-        @media(max-width: $sm - 0.01px) {
+        @media(max-width: $sm - 0.02px) {
             margin-bottom: 24px;
         }
         @media(min-width: $sm) {

@@ -80,12 +80,12 @@
     }
 
     &__middle-block {
-        @media(max-width: $sm - 0.01px) {
+        @media(max-width: $sm - 0.02px) {
             text-align: center;
         }
 
         &:not(:last-child) {
-            @media(max-width: $sm - 0.01px) {
+            @media(max-width: $sm - 0.02px) {
                 margin-bottom: 32px;
             }
         }

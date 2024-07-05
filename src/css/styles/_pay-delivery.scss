@@ -13,7 +13,7 @@
     flex-direction: column;
     font-size: 11px;
     padding: 12px;
-    @media(max-width: $lg - 0.01px) {
+    @media(max-width: $lg - 0.02px) {
         min-height: 100px;
     }
     @media(min-width: $lg) {
@@ -39,7 +39,7 @@
         align-items: center;
         display: flex;
         gap: 4px;
-        @media(max-width: $lg - 0.01px) {
+        @media(max-width: $lg - 0.02px) {
             margin-bottom: 16px;
         }
         @media(min-width: $lg) {
@@ -58,7 +58,7 @@
     }
 
     &__content {
-        @media(max-width: $lg - 0.01px) {
+        @media(max-width: $lg - 0.02px) {
             margin-top: auto;
         }
         @media(min-width: $lg) {
@@ -86,19 +86,19 @@
         }
 
         .image_13 {
-            @media(max-width: $fhd - 0.01px) {
+            @media(max-width: $fhd - 0.02px) {
                 height: 13px;
             }
         }
 
         .image_14 {
-            @media(max-width: $fhd - 0.01px) {
+            @media(max-width: $fhd - 0.02px) {
                 height: 14px;
             }
         }
 
         .image_26 {
-            @media(max-width: $fhd - 0.01px) {
+            @media(max-width: $fhd - 0.02px) {
                 height: 26px;
             }
         }

@@ -8,7 +8,7 @@
     }
 
     .card {
-        @media(max-width: $sm - 0.01px) {
+        @media(max-width: $sm - 0.02px) {
             margin-bottom: 40px;
         }
         @media(min-width: $sm) {

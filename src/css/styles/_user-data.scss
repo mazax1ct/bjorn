@@ -238,14 +238,14 @@
         }
 
         &:not(:last-child) {
-            @media(max-width: $lg - 0.01px) {
+            @media(max-width: $lg - 0.02px) {
                 margin-bottom: 6px;
             }
         }
     }
 
     &__top-separator {
-        @media(max-width: $lg - 0.01px) {
+        @media(max-width: $lg - 0.02px) {
             display: none;
         }
     }

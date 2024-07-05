@@ -31,7 +31,7 @@
 
 <body class="page">
     <div id="app">
-        <header class="header header--white">
+        <header class="header">
             <div class="header__inner container">
                 <div class="header__menu-block">
                     <button class="js-main-menu-opener header__button" type="button" title="Открыть меню">
@@ -150,9 +150,9 @@
                 <div class="search__title">ПОИСК</div>
         
                 <div class="search__form-block">
-                    <form class="search__form" action="">
+                    <form class="search__form" method="get" action="" autocomplete="off">
                         <div class="search__input-container">
-                            <input class="js-search-input search__input" type="text" name="q" placeholder="НАЙТИ ТОВАР" autocomplete="off">
+                            <input class="js-search-input search__input" type="search" name="q" value="" placeholder="НАЙТИ ТОВАР" autocomplete="off">
         
                             <button class="js-search-input-cleaner search__input-cleaner" type="button" title="Очистить">
                                 <svg aria-hidden="true">
@@ -885,7 +885,7 @@
                     <a class="search__result-all button button--primary button--m" href="#">Перейти в каталог</a>
                 </div>
         
-                <div class="js-search-result-empty search__result" style="display: none">
+                <div class="js-search-result-empty search__result search__result--empty" style="display: none">
                     <div class="h2">ПО ЗАПРОСУ «ФУТБОЛКА ДЛЯ ЧУВАКА» ТОВАРОВ НЕ НАЙДЕНО.<br> ПОПРОБУЙТЕ ИЗМЕНИТЬ ВАШ ЗАПРОС</div>
                 </div>
         
@@ -2292,7 +2292,7 @@
                 </svg>
             </button>
         
-            <div class="popup__title h2">Подобрать размер</div>
+            <div class="popup__title h2">Состав и уход</div>
         
             <div class="content-block mid-size">
                 <h3>СОСТАВ</h3>

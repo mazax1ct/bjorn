@@ -1,7 +1,7 @@
 .promo_8 {
     @media(min-width: $sm) {
-        margin-left: calc(0.01px - var(--container_padding));
-        margin-right: calc(0.01px - var(--container_padding));
+        margin-left: calc(0.02px - var(--container_padding));
+        margin-right: calc(0.02px - var(--container_padding));
     }
     @media(min-width: 1920px) {
         margin-left: calc(-100vw / 2 + var(--container_max_width) / 2 - var(--container_padding));

@@ -49,6 +49,7 @@
         @media(min-width: $lg) {
             align-items: center;
             background-color: #fff;
+            min-height: 54px;
             padding: 12px 0;
             transition: transform var(--header_animation_duration);
         }
@@ -60,12 +61,12 @@
     }
 
     &__menu {
-        @media(max-width: $lg - 0.01px) {
+        @media(max-width: $lg - 0.02px) {
             border-bottom: 1px solid var(--gray_white);
             min-height: 54px;
-            min-width: calc(100% + var(--container_padding) * 2 - 0.01px * 2);
-            margin-left: calc(0.01px - var(--container_padding));
-            margin-right: calc(0.01px - var(--container_padding));
+            min-width: calc(100% + var(--container_padding) * 2 - 0.02px * 2);
+            margin-left: calc(0.02px - var(--container_padding));
+            margin-right: calc(0.02px - var(--container_padding));
             margin-bottom: 16px;
             padding-bottom: 8px;
         }
@@ -77,7 +78,7 @@
         }
 
         &.menu-is-fixed {
-            @media(max-width: $lg - 0.01px) {
+            @media(max-width: $lg - 0.02px) {
                 border-bottom-color: transparent;
             }
         }
@@ -104,7 +105,7 @@
     &::-webkit-scrollbar {
         display: none;
     }
-    @media(max-width: $lg - 0.01px) {
+    @media(max-width: $lg - 0.02px) {
         min-height: 44px;
         overflow-x: auto;
         padding: 8px var(--container_padding);
@@ -117,7 +118,7 @@
     }
 
     &.is-fixed {
-        @media(max-width: $lg - 0.01px) {
+        @media(max-width: $lg - 0.02px) {
             background-color: #fff;
             border-bottom: 1px solid var(--gray_white);
             left: 0;
@@ -259,9 +260,9 @@
     grid-template-columns: repeat(2, 1fr);
     position: relative;
     z-index: 0;
-    @media(max-width: $sm - 0.01px) {
-        margin-left: calc(0.01px - var(--container_padding));
-        margin-right: calc(0.01px - var(--container_padding));
+    @media(max-width: $sm - 0.02px) {
+        margin-left: calc(0.02px - var(--container_padding));
+        margin-right: calc(0.02px - var(--container_padding));
     }
     @media(min-width: $sm) {
         grid-template-columns: repeat(3, 1fr);
@@ -275,7 +276,7 @@
     }
 
     .catalog-advantage {
-        @media(max-width: $sm - 0.01px) {
+        @media(max-width: $sm - 0.02px) {
             display: none;
         }
     }
@@ -360,8 +361,8 @@
         display: flex;
         gap: 16px;
         margin-top: auto;
-        margin-left: calc(0.01px - var(--container_padding));
-        margin-right: calc(0.01px - var(--container_padding));
+        margin-left: calc(0.02px - var(--container_padding));
+        margin-right: calc(0.02px - var(--container_padding));
         padding: 12px var(--container_padding);
         position: sticky;
         top: auto;

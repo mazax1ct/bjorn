@@ -191,7 +191,7 @@
         @media(min-width: $fhd) {
             bottom: 12px;
         }
-        @media(max-width: $lg - 0.01px) {
+        @media(max-width: $lg - 0.02px) {
             //display: none;
         }
         @include hover {
@@ -237,7 +237,7 @@
     }
 
     &__bottom {
-        @media(max-width: $sm - 0.01px) {
+        @media(max-width: $sm - 0.02px) {
             padding-left: var(--container_padding);
             padding-right: var(--container_padding);
         }

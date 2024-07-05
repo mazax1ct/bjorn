@@ -16,7 +16,7 @@
 
     &__left {
         padding-top: 40px;
-        @media(max-width: $lg - 0.01px) {
+        @media(max-width: $lg - 0.02px) {
             margin-bottom: 40px;
         }
         @media(min-width: $lg) {
@@ -24,7 +24,7 @@
         }
 
         h2 {
-            @media(max-width: $lg - 0.01px) {
+            @media(max-width: $lg - 0.02px) {
                 text-align: center;
             }
         }
@@ -73,7 +73,7 @@
         display: flex;
         flex-direction: column;
         gap: 8px;
-        @media(min-width: $sm) and (max-width: $lg - 0.01px) {
+        @media(min-width: $sm) and (max-width: $lg - 0.02px) {
             display: grid;
             gap: 8px;
             grid-template-columns: 1fr 1fr;
@@ -100,9 +100,9 @@
             width: calc(100% - var(--checkout_left_width) - var(--checkout_gap));
             z-index: 1;
         }
-        @media(max-width: $lg - 0.01px) {
-            margin-left: calc(0.01px - var(--container_padding));
-            margin-right: calc(0.01px - var(--container_padding));
+        @media(max-width: $lg - 0.02px) {
+            margin-left: calc(0.02px - var(--container_padding));
+            margin-right: calc(0.02px - var(--container_padding));
         }
     }
 
@@ -227,7 +227,7 @@
         @media(min-width: $lg) {
             width: 36.22047%;
         }
-        @media(max-width: $lg - 0.01px) {
+        @media(max-width: $lg - 0.02px) {
             margin-bottom: 16px;
         }
     }
@@ -269,12 +269,12 @@
 
         &--address {
             span {
-                @media(max-width: $fhd - 0.01px) {
+                @media(max-width: $fhd - 0.02px) {
                     display: block;
                 }
 
                 &:not(:last-child) {
-                    @media(max-width: $fhd - 0.01px) {
+                    @media(max-width: $fhd - 0.02px) {
                         margin-bottom: 6px;
                     }
 
@@ -307,19 +307,19 @@
         }
 
         .image_13 {
-            @media(max-width: $fhd - 0.01px) {
+            @media(max-width: $fhd - 0.02px) {
                 height: 13px;
             }
         }
 
         .image_14 {
-            @media(max-width: $fhd - 0.01px) {
+            @media(max-width: $fhd - 0.02px) {
                 height: 14px;
             }
         }
 
         .image_26 {
-            @media(max-width: $fhd - 0.01px) {
+            @media(max-width: $fhd - 0.02px) {
                 height: 26px;
             }
         }

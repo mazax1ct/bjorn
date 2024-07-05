@@ -2,7 +2,7 @@
     & > .promo_13 {
         &:first-child {
             @media(min-width: $sm) {
-                margin-top: calc(0.01px - var(--header_min_height));
+                margin-top: calc(0.02px - var(--header_min_height));
             }
 
             .container {
@@ -19,7 +19,7 @@
 .promo_13 {
     position: relative;
     z-index: 1;
-    @media(max-width: $sm - 0.01px) {
+    @media(max-width: $sm - 0.02px) {
         padding-top: 30px;
     }
     @media(min-width: $sm) {
@@ -54,7 +54,7 @@
     }
 
     .breadcrumbs {
-        @media(max-width: $sm - 0.01px) {
+        @media(max-width: $sm - 0.02px) {
             display: none;
         }
     }
@@ -66,8 +66,8 @@
 
     &__image {
         display: block;
-        margin-left: calc(0.01px - var(--container_padding));
-        margin-right: calc(0.01px - var(--container_padding));
+        margin-left: calc(0.02px - var(--container_padding));
+        margin-right: calc(0.02px - var(--container_padding));
 
         img,
         picture {
@@ -104,16 +104,16 @@
     }
 
     &__cards {
-        @media(max-width: $sm - 0.01px) {
+        @media(max-width: $sm - 0.02px) {
             bottom: 30px;
             display: flex;
             gap: 4px;
-            left: calc(0.01px - var(--container_padding));
+            left: calc(0.02px - var(--container_padding));
             overflow-x: auto;
             position: absolute;
             padding-left: 8px;
             padding-right: 8px;
-            right: calc(0.01px - var(--container_padding));
+            right: calc(0.02px - var(--container_padding));
             top: auto;
             scrollbar-width: none;
             z-index: 1;

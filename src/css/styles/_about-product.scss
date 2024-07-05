@@ -39,10 +39,10 @@
             grid-row: span 3;
             margin-left: auto;
         }
-        @media(max-width: $sm - 0.01px) {
+        @media(max-width: $sm - 0.02px) {
             margin-bottom: 24px;
         }
-        @media(max-width: $fhd - 0.01px) {
+        @media(max-width: $fhd - 0.02px) {
             max-width: 314px;
         }
 

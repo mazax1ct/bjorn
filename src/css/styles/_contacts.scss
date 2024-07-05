@@ -19,7 +19,7 @@
         flex-wrap: wrap;
         gap: 12px;
         justify-content: center;
-        @media(max-width: $sm - 0.01px) {
+        @media(max-width: $sm - 0.02px) {
             margin-left: auto;
             margin-right: auto;
             max-width: 300px;
@@ -35,7 +35,7 @@
     .h1 {
         margin-bottom: 16px;
         text-align: center;
-        @media(max-width: $sm - 0.01px) {
+        @media(max-width: $sm - 0.02px) {
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
@@ -50,7 +50,7 @@
         }
 
         span {
-            @media(max-width: $sm - 0.01px) {
+            @media(max-width: $sm - 0.02px) {
                 display: none;
             }
         }
@@ -64,8 +64,8 @@
 .contacts-map {
     background-color: var(--gray_white);
     height: 300px;
-    margin-left: calc(0.01px - var(--container_padding));
-    margin-right: calc(0.01px - var(--container_padding));
+    margin-left: calc(0.02px - var(--container_padding));
+    margin-right: calc(0.02px - var(--container_padding));
     @media(min-width: $lg) {
         height: 390px;
     }

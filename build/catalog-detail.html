@@ -150,9 +150,9 @@
                 <div class="search__title">ПОИСК</div>
         
                 <div class="search__form-block">
-                    <form class="search__form" action="">
+                    <form class="search__form" method="get" action="" autocomplete="off">
                         <div class="search__input-container">
-                            <input class="js-search-input search__input" type="text" name="q" placeholder="НАЙТИ ТОВАР" autocomplete="off">
+                            <input class="js-search-input search__input" type="search" name="q" value="" placeholder="НАЙТИ ТОВАР" autocomplete="off">
         
                             <button class="js-search-input-cleaner search__input-cleaner" type="button" title="Очистить">
                                 <svg aria-hidden="true">
@@ -885,7 +885,7 @@
                     <a class="search__result-all button button--primary button--m" href="#">Перейти в каталог</a>
                 </div>
         
-                <div class="js-search-result-empty search__result" style="display: none">
+                <div class="js-search-result-empty search__result search__result--empty" style="display: none">
                     <div class="h2">ПО ЗАПРОСУ «ФУТБОЛКА ДЛЯ ЧУВАКА» ТОВАРОВ НЕ НАЙДЕНО.<br> ПОПРОБУЙТЕ ИЗМЕНИТЬ ВАШ ЗАПРОС</div>
                 </div>
         
@@ -1142,7 +1142,7 @@
                                     <span class="color-radio__color" title="Бежевый" style="background-color:#B59B8A"></span>
                                 </label>
 
-                                <a class="color-radio is-active" href="#">
+                                <a class="color-radio is-active" href="javascript:void(0)">
                                     <span class="color-radio__color" title="Тёмно-серый" style="background-color:#4A4A4D"></span>
                                 </a>
                             </div>
@@ -1198,7 +1198,7 @@
                         </div>
 
                         <div class="detail__buy-button-block">
-                            <a class="detail__buy-button buy-button" href="#">
+                            <a class="detail__buy-button buy-button" href="javascript:void(0)">
                                 <span class="buy-button__title">Оформить заказ</span>
 
                                 <span class="buy-button__prices">
@@ -3051,7 +3051,7 @@
                 </svg>
             </button>
         
-            <div class="popup__title h2">Подобрать размер</div>
+            <div class="popup__title h2">Состав и уход</div>
         
             <div class="content-block mid-size">
                 <h3>СОСТАВ</h3>

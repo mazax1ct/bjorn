@@ -31,59 +31,28 @@ document.addEventListener('DOMContentLoaded', function() {
       var currentScrollPos = window.pageYOffset;
 
       if(currentScrollPos >= (detailHeight - headerHeight)) {
-        header.classList.add('header--color-transition');
+        header.classList.add('header--no_color_transition');
+
         setTimeout(() => {
           header.classList.add('header--white');
         }, 10);
+
+        setTimeout(() => {
+          header.classList.remove('header--no_color_transition');
+        }, 10);
       } else {
-        header.classList.remove('header--color-transition');
-        header.classList.remove('header--white');
+        header.classList.add('header--no_color_transition');
+        
+        setTimeout(() => {
+          header.classList.remove('header--white');
+        }, 10);
+
+        setTimeout(() => {
+          header.classList.remove('header--no_color_transition');
+        }, 10);
       }
 
       prevScrollpos = currentScrollPos;
     }
-
-    /*document.addEventListener('wheel', (e) => {
-      e.preventDefault();
-    	if (e.wheelDeltaY < 0) {
-        if(currentThumbIndex <= thumbsAll.length - 1 && thumbsAll[currentThumbIndex + 1] != undefined) {
-          thumbsAll[currentThumbIndex].classList.remove('is-active');
-          thumbsAll[currentThumbIndex + 1].click();
-          thumbsAll[currentThumbIndex + 1].classList.add('is-active');
-          currentThumbIndex = currentThumbIndex + 1;
-          scrollImages = true;
-        } else {
-          scrollImages = false;
-        }
-      } else {
-        if(!scrollImages) {
-          thumbsAll[currentThumbIndex].classList.remove('is-active');
-          thumbsAll[thumbsAll.length - 1].click();
-          thumbsAll[thumbsAll.length - 1].classList.add('is-active');
-          currentThumbIndex = thumbsAll.length - 1;
-          scrollImages = true;
-        } else {
-          if(currentThumbIndex <= thumbsAll.length && thumbsAll[currentThumbIndex - 1] != undefined) {
-            thumbsAll[currentThumbIndex].classList.remove('is-active');
-            thumbsAll[currentThumbIndex - 1].click();
-            thumbsAll[currentThumbIndex - 1].classList.add('is-active');
-            currentThumbIndex = currentThumbIndex - 1;
-            scrollImages = true;
-          }
-        }
-      }
-    });*/
   }
-
-  /*let thumbs = document.querySelectorAll('.detail__thumb');
-
-  thumbs.forEach((thumb, index) => {
-    thumb.addEventListener('click', function (event) {
-      thumbs.forEach((thumb) => {
-        thumb.classList.remove('is-active');
-      });
-
-      thumbs[index].classList.add('is-active');
-    });
-  });*/
 });

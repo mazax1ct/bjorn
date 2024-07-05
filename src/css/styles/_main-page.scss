@@ -1,6 +1,6 @@
 .banner + .promo_9,
 .promo_10 + .promo_11 {
-    @media(min-width: $sm) and (max-width: $lg - 0.01px) {
+    @media(min-width: $sm) and (max-width: $lg - 0.02px) {
         margin-top: 100px;
     }
 }

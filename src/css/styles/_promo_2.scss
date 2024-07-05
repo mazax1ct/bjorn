@@ -2,7 +2,7 @@
     background-color: var(--gray_white);
     position: relative;
     z-index: 1;
-    @media(max-width: $sm - 0.01px) {
+    @media(max-width: $sm - 0.02px) {
         padding-top: 40px;
     }
     @media(min-width: $sm) {
@@ -29,8 +29,8 @@
     &__image {
         display: block;
         min-height: 640px;
-        margin-left: calc(0.01px - var(--container_padding));
-        margin-right: calc(0.01px - var(--container_padding));
+        margin-left: calc(0.02px - var(--container_padding));
+        margin-right: calc(0.02px - var(--container_padding));
 
         img,
         picture {
@@ -66,16 +66,16 @@
     }
 
     &__cards {
-        @media(max-width: $sm - 0.01px) {
+        @media(max-width: $sm - 0.02px) {
             bottom: 30px;
             display: flex;
             gap: 4px;
-            left: calc(0.01px - var(--container_padding));
+            left: calc(0.02px - var(--container_padding));
             overflow-x: auto;
             position: absolute;
             padding-left: 8px;
             padding-right: 8px;
-            right: calc(0.01px - var(--container_padding));
+            right: calc(0.02px - var(--container_padding));
             top: auto;
             scrollbar-width: none;
             z-index: 1;

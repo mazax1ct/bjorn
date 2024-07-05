@@ -36,7 +36,7 @@
             top: 50%;
             width: 40px;
             z-index: 2;
-            @media(max-width: $lg - 0.01px) {
+            @media(max-width: $lg - 0.02px) {
                 display: none;
             }
 
@@ -56,7 +56,7 @@
             flex-direction: column;
             min-height: 440px;
             min-width: calc(50% + var(--container_padding));
-            margin-left: calc(0.01px - var(--container_padding));
+            margin-left: calc(0.02px - var(--container_padding));
             padding-right: 15.625%;
             padding-left: 11.5625%;
             width: calc(50% + var(--container_padding));
@@ -73,7 +73,7 @@
             @media(min-width: $sm) {
                 margin-bottom: 16px;
             }
-            @media(max-width: $lg - 0.01px) {
+            @media(max-width: $lg - 0.02px) {
                 color: #fff;
                 text-align: center;
             }
@@ -81,10 +81,10 @@
     }
 
     &__text {
-        @media(max-width: $sm - 0.01px) {
+        @media(max-width: $sm - 0.02px) {
             display: none;
         }
-        @media(max-width: $lg - 0.01px) {
+        @media(max-width: $lg - 0.02px) {
             color: #fff;
             margin-bottom: 24px;
             margin-left: auto;
@@ -177,7 +177,7 @@
         flex-wrap: wrap;
         justify-content: center;
         margin-bottom: 24px;
-        @media(max-width: $sm - 0.01px) {
+        @media(max-width: $sm - 0.02px) {
             display: none;
         }
         @media(min-width: $lg) {
@@ -205,7 +205,7 @@
     }
 
     &__button {
-        @media(max-width: $lg - 0.01px) {
+        @media(max-width: $lg - 0.02px) {
             text-align: center;
         }
 
@@ -218,7 +218,7 @@
     }
 
     &__image {
-        @media(max-width: $lg - 0.01px) {
+        @media(max-width: $lg - 0.02px) {
             left: 0;
             position: absolute;
             top: 0;
@@ -227,13 +227,13 @@
         }
         @media(min-width: $lg) {
             min-width: calc(50% + var(--container_padding));
-            margin-right: calc(0.01px - var(--container_padding));
+            margin-right: calc(0.02px - var(--container_padding));
             width: calc(50% + var(--container_padding));
             z-index: 0;
         }
 
         &::after {
-            @media(max-width: $lg - 0.01px) {
+            @media(max-width: $lg - 0.02px) {
                 background: linear-gradient(0deg, rgba(13, 13, 13, 0) 0%, #0D0D0D 100%);
                 content: '';
                 height: 140px;
@@ -253,7 +253,7 @@
         }
 
         img {
-            @media(max-width: $lg - 0.01px) {
+            @media(max-width: $lg - 0.02px) {
                 object-position: center 0;
                 object-fit: cover;
                 max-height: 450px;

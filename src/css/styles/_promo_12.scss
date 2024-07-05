@@ -133,7 +133,7 @@
         position: relative;
         width: 100%;
         z-index: 1;
-        @media(max-width: $lg - 0.01px) {
+        @media(max-width: $lg - 0.02px) {
             display: none;
         }
     }
@@ -149,7 +149,7 @@
     }
 
     &__button {
-        @media(max-width: $lg - 0.01px) {
+        @media(max-width: $lg - 0.02px) {
             display: none;
         }
     }
@@ -167,7 +167,7 @@
         transform: translateY(-50%);
         transition: color 0.3s;
         width: 40px;
-        @media(max-width: $lg - 0.01px) {
+        @media(max-width: $lg - 0.02px) {
             display: none;
         }
         @include hover {
@@ -202,9 +202,9 @@
         @media(min-width: $sm) {
             overflow: hidden;
         }
-        @media(max-width: $lg - 0.01px) {
-            margin-left: calc(0.01px - var(--container_padding));
-            margin-right: calc(0.01px - var(--container_padding));
+        @media(max-width: $lg - 0.02px) {
+            margin-left: calc(0.02px - var(--container_padding));
+            margin-right: calc(0.02px - var(--container_padding));
             overflow-x: auto;
             padding-left: var(--container_padding);
             padding-right: var(--container_padding);

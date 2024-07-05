@@ -11,7 +11,7 @@
 
     &--start {
         @media(min-width: $sm) {
-            margin-top: calc(0.01px - var(--header_min_height) * 2);
+            margin-top: calc(0.02px - var(--header_min_height) * 2);
         }
 
         .banner__inner {
@@ -55,20 +55,20 @@
     }
 
     &--mob_full_height {
-        @media(max-width: $sm - 0.01px) {
+        @media(max-width: $sm - 0.02px) {
             height: calc(100dvh - var(--header_min_height));
         }
 
         img,
         picture {
-            @media(max-width: $sm - 0.01px) {
+            @media(max-width: $sm - 0.02px) {
                 height: 100%;
             }
         }
 
         picture {
             img {
-                @media(max-width: $sm - 0.01px) {
+                @media(max-width: $sm - 0.02px) {
                     object-fit: cover;
                 }
             }
@@ -143,7 +143,7 @@
 
     &--type_2 {
         .banner__inner {
-            @media(max-width: $sm - 0.01px) {
+            @media(max-width: $sm - 0.02px) {
                 padding-top: 24px;
             }
 
@@ -163,13 +163,13 @@
         }
 
         .breadcrumbs {
-            @media(max-width: $sm - 0.01px) {
+            @media(max-width: $sm - 0.02px) {
                 display: none;
             }
         }
 
         .banner__logo {
-            @media(max-width: $sm - 0.01px) {
+            @media(max-width: $sm - 0.02px) {
                 margin-top: auto;
                 margin-bottom: auto;
             }
@@ -197,7 +197,7 @@
     &--type_4 {
         .banner__inner {
             padding-bottom: 24px;
-            @media(max-width: $sm - 0.01px) {
+            @media(max-width: $sm - 0.02px) {
                 padding-top: 24px;
             }
             @media(min-width: $sm) {

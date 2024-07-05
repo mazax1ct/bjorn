@@ -2,9 +2,9 @@
     background-color: var(--gray_white);
     padding-top: 24px;
     padding-bottom: 24px;
-    @media(max-width: $sm - 0.01px) {
-        margin-left: calc(0.01px - var(--container_padding));
-        margin-right: calc(0.01px - var(--container_padding));
+    @media(max-width: $sm - 0.02px) {
+        margin-left: calc(0.02px - var(--container_padding));
+        margin-right: calc(0.02px - var(--container_padding));
         padding-left: 8px;
         padding-right: 8px;
     }
@@ -15,7 +15,7 @@
     }
 
     &__anchor {
-        transform: translateY(calc(0.01px - var(--header_min_height) * 1.5));
+        transform: translateY(calc(0.02px - var(--header_min_height) * 1.5));
     }
 
     &__inner {

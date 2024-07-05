@@ -23,7 +23,7 @@ function menuClose() {
   setTimeout(function() {
     page.classList.remove('is-overflow');
     header.classList.remove('header--menu-is-open');
-    header.classList.remove('header--color-transition');
+    //header.classList.remove('header--color-transition');
     shade.classList.remove('page__shade--menu-is-open');
   }, POPUPS_ANIMATION_DURATION);
 
@@ -50,13 +50,19 @@ menuOpener.addEventListener('click', function (event) {
 
     //показываем меню и вешаем вспомогательный класс для открытия меню/поиска
     mainMenu.classList.add('is-block');
+
     setTimeout(() => {
       mainMenu.classList.add('is-open');
     }, 10);
+
+    header.classList.add('header--no_color_transition');
+
     header.classList.add('header--menu-is-open');
+
     setTimeout(() => {
-      header.classList.add('header--color-transition');
+      header.classList.remove('header--no_color_transition');
     }, 10);
+
     shade.classList.add('page__shade--menu-is-open');
 
     //ставим отметку о том что меню открыто
@@ -77,7 +83,7 @@ menuOpener.addEventListener('click', function (event) {
     setTimeout(function() {
       page.classList.remove('is-overflow');
       header.classList.remove('header--menu-is-open');
-      header.classList.remove('header--color-transition');
+      //header.classList.remove('header--color-transition');
       shade.classList.remove('page__shade--menu-is-open');
     }, POPUPS_ANIMATION_DURATION);
 
@@ -115,7 +121,7 @@ function searchClose() {
     setTimeout(function() {
       page.classList.remove('is-overflow');
       header.classList.remove('header--menu-is-open');
-      header.classList.remove('header--color-transition');
+      //header.classList.remove('header--color-transition');
       shade.classList.remove('page__shade--menu-is-open');
     }, POPUPS_ANIMATION_DURATION);
   } else { //если меню открыто
@@ -156,7 +162,10 @@ searchOpener.addEventListener('click', function (event) {
     shade.addEventListener('click', searchClose);
 
     //показываем поиск
-    search.classList.add('is-open');
+    search.classList.add('is-block');
+    setTimeout(() => {
+      search.classList.add('is-open');
+    }, 10);
     header.classList.add('header--menu-is-open');
     shade.classList.add('page__shade--menu-is-open');
   }

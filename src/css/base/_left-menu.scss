@@ -10,11 +10,11 @@
     @media(min-width: $lg) {
         font-size: 14px;
     }
-    @media(max-width: $lg - 0.01px) {
+    @media(max-width: $lg - 0.02px) {
         display: flex;
         gap: 2px;
-        margin-left: calc(0.01px - var(--container_padding));
-        margin-right: calc(0.01px - var(--container_padding));
+        margin-left: calc(0.02px - var(--container_padding));
+        margin-right: calc(0.02px - var(--container_padding));
         overflow-x: auto;
         padding-left: var(--container_padding);
         padding-right: var(--container_padding);
@@ -41,7 +41,7 @@
 
     &__link {
         text-transform: uppercase;
-        @media(max-width: $lg - 0.01px) {
+        @media(max-width: $lg - 0.02px) {
             border-radius: 4px;
             display: block;
             padding: 6px 10px;
@@ -60,7 +60,7 @@
         }
 
         &.is-active {
-            @media(max-width: $lg - 0.01px) {
+            @media(max-width: $lg - 0.02px) {
                 background-color: var(--black_blue);
                 color: #fff;
             }
