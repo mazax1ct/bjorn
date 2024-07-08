@@ -12,8 +12,6 @@ const thumbs = new Swiper(".js-gift-card-thumbs", {
       slidesPerView: 5,
       spaceBetween: 12
     }
-
-
   }
 });
 

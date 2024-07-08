@@ -71,6 +71,7 @@
     }
 
     &__input {
+        appearance: none;
         border: none;
         background-color: #fff;
         font-size: 11px;
@@ -89,6 +90,14 @@
         @media(min-width: $fhd) {
             font-size: 14px;
             height: 65px;
+        }
+
+        &::-webkit-clear-button {
+            appearance: none;
+        }
+
+        &::-ms-clear {
+            display: none;
         }
 
         &::-webkit-input-placeholder {

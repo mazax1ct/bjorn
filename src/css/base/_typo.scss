@@ -252,6 +252,12 @@ h2 + figure {
             }
         }
     }
+
+    .button {
+        @media(max-width: $sm - 0.02px) {
+            width: 100%;
+        }
+    }
 }
 
 .content-block {

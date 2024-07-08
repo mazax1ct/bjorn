@@ -38,14 +38,30 @@
 }
 
 .promo_9__image {
-    @media(min-width: $lg) {
-        opacity: 0;
-        transition: opacity 1s;
+    position: relative;
+    z-index: 1;
+
+    .swiper {
+        @media(min-width: $lg) {
+            opacity: 0;
+            transition: opacity 1s;
+        }
     }
 
-    &.animate {
-        @media(min-width: $lg) {
-            opacity: 1;
+    .promo_9__animate-trigger {
+        height: 50px;
+        left: 0;
+        position: absolute;
+        top: 300px;
+        z-index: 1;
+        width: 100%;
+
+        &.animate {
+            & + .swiper {
+                @media(min-width: $lg) {
+                    opacity: 1;
+                }
+            }
         }
     }
 }

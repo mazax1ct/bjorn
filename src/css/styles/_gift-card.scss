@@ -5,6 +5,16 @@
         gap: 8px;
     }
 
+    &:not(:last-child) {
+        margin-bottom: 40px;
+        @media(min-width: $sm) {
+            margin-bottom: 60px;
+        }
+        @media(min-width: $fhd) {
+            margin-bottom: 80px;
+        }
+    }
+
     &__block {
         @media(min-width: $md) {
             width: calc(100% / 2 - 8px / 2);

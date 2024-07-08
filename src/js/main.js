@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   if(window.innerWidth >= 1300) {
-    let allEntries = document.querySelectorAll('.promo_9__image, .promo_9__button, .promo_9__sections, .promo_9__text, .promo_9__text-block .h1, .promo_11__card, .promo_11__text-block .h1, .promo_11__text-block .button, .promo_12');
+    let allEntries = document.querySelectorAll('.promo_9__animate-trigger, .promo_9__button, .promo_9__sections, .promo_9__text, .promo_9__text-block .h1, .promo_11__card, .promo_11__text-block .h1, .promo_11__text-block .button, .promo_12');
 
     let callback = (entries, observer) => {
       entries.forEach((entry) => {
