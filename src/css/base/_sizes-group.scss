@@ -32,6 +32,16 @@
                 border-color: var(--gray);
             }
         }
+
+        &:disabled ~ .size-radio__text {
+            background-color: var(--gray_white);
+            border-color: var(--gray_white);
+            color: var(--gray);
+            cursor: default;
+            @include hover {
+                border-color: var(--gray_white);
+            }
+        }
     }
 
     &__text {

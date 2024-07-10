@@ -39,5 +39,10 @@
         & + & {
             margin-top: 8px;
         }
+
+        &--error {
+            background-color: rgba(#FFC7C7, 0.8);
+            color: var(--black_dark);
+        }
     }
 }

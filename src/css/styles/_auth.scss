@@ -1,12 +1,12 @@
 .auth {
     margin: auto;
     max-width: 445px;
+    text-align: center;
     width: 100%;
 
     &__text {
         font-size: 13px;
         margin-bottom: 24px;
-        text-align: center;
         @media(min-width: $lg) {
             font-size: 14px;
         }
@@ -25,6 +25,13 @@
             @media(min-width: $lg) {
                 margin-bottom: 40px;
             }
+
+            & + .auth__error {
+                margin-top: -22px;
+                @media(min-width: $lg) {
+                    margin-top: -30px;
+                }
+            }
         }
 
         .input-group__input {
@@ -36,16 +43,34 @@
                 font-size: 24px;
             }
         }
+    }
 
-        .button {
-            width: 100%;
+    &__error {
+        color: var(--error_color);
+        font-size: 11px;
+        margin-bottom: 24px;
+        @media(min-width: $lg) {
+            font-size: 12px;
         }
+        @media(min-width: $fhd) {
+            font-size: 14px;
+        }
+    }
+
+    &__recode {
+        margin-bottom: 32px;
+        @media(min-width: $lg) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__submit {
+        width: 100%;
     }
 
     &__note {
         color: var(--black_gray);
         font-size: 11px;
-        text-align: center;
         @media(min-width: $lg) {
             font-size: 12px;
         }

@@ -976,8 +976,10 @@
                                             </div>
 
                                             <div class="input-group">
-                                                <input id="user_phone" class="input-group__input" type="text" name="" value="">
+                                                <input id="user_phone" class="input-group__input" type="text" name="" value="+7 (919) 969-66-55">
                                                 <label class="input-group__label" for="user_phone">Ваш телефон</label>
+
+                                                <button class="js-popup-open input-group__button" type="button" data-popup="phone_change">Изменить</button>
                                             </div>
 
                                             <div class="input-group">
@@ -1002,7 +1004,9 @@
                                                     <div class="address-item__title-block">
                                                         <div class="address-item__title">адрес 1</div>
 
-                                                        <button class="address-item__delete" type="button">удалить</button>
+                                                        <button class="js-popup-open address-item__button" type="button" data-popup="address_edit">Редактировать</button>
+
+                                                        <button class="address-item__button" type="button">удалить</button>
                                                     </div>
 
                                                     <div class="address-item__value">г. Мытищи, 1-Рупасовский переулок 14А</div>
@@ -1010,9 +1014,11 @@
 
                                                 <div class="address-item">
                                                     <div class="address-item__title-block">
-                                                        <div class="address-item__title">адрес 1</div>
+                                                        <div class="address-item__title">адрес 2</div>
 
-                                                        <button class="address-item__delete" type="button">удалить</button>
+                                                        <button class="js-popup-open address-item__button" type="button" data-popup="address_edit">Редактировать</button>
+
+                                                        <button class="address-item__button" type="button">удалить</button>
                                                     </div>
 
                                                     <div class="address-item__value">г. Мытищи, 1-Рупасовский переулок 14А</div>
@@ -1590,6 +1596,40 @@
                                     <div class="cart-item__price">1200 ₽</div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+        
+                    <div class="cart-item cart-item--not_available">
+                        <a class="cart-item__image" href="#"><img src="images/content/cart/img_2.jpg" srcset="images/content/cart/img_2@2x.jpg 2x" alt=""></a>
+        
+                        <div class="cart-item__body">
+                            <div class="cart-item__title">Мужская шапка</div>
+        
+                            <div class="cart-item__body-inner">
+                                <div class="cart-item__props">
+                                    <div class="cart-item__prop">Цвет: Голубой</div>
+        
+                                    <div class="quantity">
+                                        <button class="quantity__button" type="button" disabled title="Уменьшить">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#minus_icon" />
+                                            </svg>
+                                        </button>
+                                        <input class="quantity__input" type="text" value="1" readonly>
+                                        <button class="quantity__button" type="button" disabled title="Увеличить">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#plus_icon" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+        
+                                <div class="cart-item__price-block">
+                                    <div class="cart-item__price">1200 ₽</div>
+                                </div>
+                            </div>
+        
+                            <div class="cart-item__available-text">Товар больше недоступен</div>
                         </div>
                     </div>
                 </div>
@@ -2356,7 +2396,7 @@
                         <input id="auth_phone" class="input-group__input" type="text" name="auth_phone" value="" placeholder="+7">
                     </div>
         
-                    <button class="button button--primary button--m" type="submit">отправить код</button>
+                    <button class="auth__submit button button--primary button--m" type="submit">отправить код</button>
                 </form>
         
                 <div class="auth__note">Вы соглашаетесь с условиями оферты и политикой конфиденциальности</div>
@@ -2380,7 +2420,11 @@
                         <input id="auth_code" class="input-group__input input-group__input--code" type="text" name="auth_code" value="" placeholder="••••">
                     </div>
         
-                    <button class="button button--primary button--m" type="submit">Подтвердить</button>
+                    <div class="auth__error">Неверный код. Попробуйте еще раз</div>
+        
+                    <button class="auth__recode button button--white button--s" type="button">отправить новый код</button>
+        
+                    <button class="auth__submit button button--primary button--m" type="submit">Подтвердить</button>
                 </form>
         
                 <div class="auth__note">Вы соглашаетесь с условиями оферты и политикой конфиденциальности</div>
@@ -2800,7 +2844,7 @@
                         <label class="input-group__label" for="checkout_city">Ваш город</label>
                     </div>
         
-                    <div class="suggest__dropdown">
+                    <div class="suggest__dropdown" style="display: none">
                         <button class="suggest__option" type="button"><b>М</b>осква</button>
                         <button class="suggest__option" type="button">Санкт-Петербург</button>
                         <button class="suggest__option" type="button">Сызрань</button>
@@ -2836,6 +2880,91 @@
                         <label class="input-group__label" for="checkout_apt">Квартира</label>
                     </div>
                 </div>
+        
+                <label class="delivery-form__save checkbox">
+                    <input type="checkbox" name="save">
+                    <span class="checkbox__icon"></span>
+                    <span class="checkbox__text">Сохранить адрес</span>
+                </label>
+        
+                <button class="button button--primary button--m" type="submit">Привезти сюда</button>
+            </div>
+        </div>
+        
+        <div id="delivery_2" class="popup popup--flex_column popup--width_type_2 popup--right">
+            <button class="js-popup-close popup__closer" type="button" title="Закрыть попап">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#close_icon" />
+                </svg>
+            </button>
+        
+            <div class="popup__title h2">доставка курьером</div>
+        
+            <div class="delivery-form delivery-form--mt_0">
+                <h3>Мои адреса</h3>
+        
+                <div class="my-addresses">
+                    <button class="my-address">
+                        <span class="my-address__title">г. Мытищи, 1-Рупасовский переулок 14А</span>
+                        <span class="my-address__button">Выбрать</span>
+                    </button>
+        
+                    <button class="my-address">
+                        <span class="my-address__title">г. Москва, Дубовская улица 45</span>
+                        <span class="my-address__button">Выбрать</span>
+                    </button>
+                </div>
+        
+                <h3>Новый адрес доставки</h3>
+        
+                <div class="suggest">
+                    <div class="input-group">
+                        <input id="checkout_city" class="input-group__input" type="text" name="" value="">
+                        <label class="input-group__label" for="checkout_city">Ваш город</label>
+                    </div>
+        
+                    <div class="suggest__dropdown" style="display: none">
+                        <button class="suggest__option" type="button"><b>М</b>осква</button>
+                        <button class="suggest__option" type="button">Санкт-Петербург</button>
+                        <button class="suggest__option" type="button">Сызрань</button>
+                        <button class="suggest__option" type="button">Суздаль</button>
+                        <button class="suggest__option" type="button">Казань</button>
+                        <button class="suggest__option" type="button">Новосибирск</button>
+                        <button class="suggest__option" type="button">Санкт-Петербург</button>
+                        <button class="suggest__option" type="button">Сызрань</button>
+                        <button class="suggest__option" type="button">Суздаль</button>
+                        <button class="suggest__option" type="button">Казань</button>
+                        <button class="suggest__option" type="button">Новосибирск</button>
+                    </div>
+                </div>
+        
+                <div class="input-group">
+                    <input id="checkout_street" class="input-group__input" type="text" name="" value="">
+                    <label class="input-group__label" for="checkout_street">Ваш адрес: улица, дом</label>
+                </div>
+        
+                <div class="delivery-form__row">
+                    <div class="input-group">
+                        <input id="checkout_way" class="input-group__input" type="text" name="" value="">
+                        <label class="input-group__label" for="checkout_way">Подъезд</label>
+                    </div>
+        
+                    <div class="input-group">
+                        <input id="checkout_floor" class="input-group__input" type="text" name="" value="">
+                        <label class="input-group__label" for="checkout_floor">Этаж</label>
+                    </div>
+        
+                    <div class="input-group">
+                        <input id="checkout_apt" class="input-group__input" type="text" name="" value="">
+                        <label class="input-group__label" for="checkout_apt">Квартира</label>
+                    </div>
+                </div>
+        
+                <label class="delivery-form__save checkbox">
+                    <input type="checkbox" name="save">
+                    <span class="checkbox__icon"></span>
+                    <span class="checkbox__text">Сохранить адрес</span>
+                </label>
         
                 <button class="button button--primary button--m" type="submit">Привезти сюда</button>
             </div>
@@ -2884,6 +3013,123 @@
                 <p>В качестве основного материала для верха мы используем мембранную ткань CONFIDENCE с водоотталкивающей пропиткой и с уровнем паропроницаемости и водонепроницаемости - 3.000/3.000 мм. Это означает, что ткань отлично отводит пар и влагу
                     изнутри, но при этом не пропускает холодный ветер внутрь, защищает от дождя и влаги. Куртка из такой ткани обеспечивает максимально-комфортный микроклимат внутри без создания парникового эффекта: в ней не будет слишком жарко и в то же
                     время она отлично защитит от холода. Ткань устойчива к загрязнениям и легко стирается. Благодаря диагональному переплетению обладает оригинальной фактурной поверхностью.</p>
+            </div>
+        </div>
+        
+        <div id="phone_change" class="popup popup--flex_column popup--width_type_2 popup--right">
+            <button class="js-popup-close popup__closer" type="button" title="Закрыть попап">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#close_icon" />
+                </svg>
+            </button>
+        
+            <div class="popup__title h2">Смена телефона</div>
+        
+            <div class="auth">
+                <div class="auth__text">Введите номер телефона, мы отправим<br> на него смс с кодом подтверждения</div>
+        
+                <form class="auth__form" action="">
+                    <div class="input-group">
+                        <input id="auth_phone" class="input-group__input" type="text" name="auth_phone" value="" placeholder="+7">
+                    </div>
+        
+                    <button class="auth__submit button button--primary button--m" type="submit">отправить код</button>
+                </form>
+        
+                <div class="auth__note">Вы соглашаетесь с условиями оферты и политикой конфиденциальности</div>
+            </div>
+        </div>
+        
+        <div id="phone_change_code" class="popup popup--flex_column popup--width_type_2 popup--right">
+            <button class="js-popup-close popup__closer" type="button" title="Закрыть попап">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#close_icon" />
+                </svg>
+            </button>
+        
+            <div class="popup__title h2">Смена телефона</div>
+        
+            <div class="auth">
+                <div class="auth__text">Введите код подтверждения из смс</div>
+        
+                <form class="auth__form" action="">
+                    <div class="input-group">
+                        <input id="auth_code" class="input-group__input input-group__input--code" type="text" name="auth_code" value="" placeholder="••••">
+                    </div>
+        
+                    <div class="auth__error">Неверный код. Попробуйте еще раз</div>
+        
+                    <button class="auth__recode button button--white button--s" type="button">отправить новый код</button>
+        
+                    <button class="auth__submit button button--primary button--m" type="submit">Подтвердить</button>
+                </form>
+        
+                <div class="auth__note">Вы соглашаетесь с условиями оферты и политикой конфиденциальности</div>
+            </div>
+        </div>
+        
+        <div id="address_edit" class="popup popup--flex_column popup--width_type_2 popup--right">
+            <button class="js-popup-close popup__closer" type="button" title="Закрыть попап">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#close_icon" />
+                </svg>
+            </button>
+        
+            <div class="popup__title h2">Редактировать адрес</div>
+        
+            <div class="delivery-form">
+                <h3>Ваш адрес</h3>
+        
+                <div class="suggest">
+                    <div class="input-group">
+                        <input id="checkout_city" class="input-group__input" type="text" name="" value="Москва">
+                        <label class="input-group__label" for="checkout_city">Ваш город</label>
+                    </div>
+        
+                    <div class="suggest__dropdown" style="display: none">
+                        <button class="suggest__option" type="button"><b>М</b>осква</button>
+                        <button class="suggest__option" type="button">Санкт-Петербург</button>
+                        <button class="suggest__option" type="button">Сызрань</button>
+                        <button class="suggest__option" type="button">Суздаль</button>
+                        <button class="suggest__option" type="button">Казань</button>
+                        <button class="suggest__option" type="button">Новосибирск</button>
+                        <button class="suggest__option" type="button">Санкт-Петербург</button>
+                        <button class="suggest__option" type="button">Сызрань</button>
+                        <button class="suggest__option" type="button">Суздаль</button>
+                        <button class="suggest__option" type="button">Казань</button>
+                        <button class="suggest__option" type="button">Новосибирск</button>
+                    </div>
+                </div>
+        
+                <div class="input-group">
+                    <input id="checkout_street" class="input-group__input" type="text" name="" value="1-й Рупасовский переулок 23">
+                    <label class="input-group__label" for="checkout_street">Ваш адрес: улица, дом</label>
+                </div>
+        
+                <div class="delivery-form__row">
+                    <div class="input-group">
+                        <input id="checkout_way" class="input-group__input" type="text" name="" value="1">
+                        <label class="input-group__label" for="checkout_way">Подъезд</label>
+                    </div>
+        
+                    <div class="input-group">
+                        <input id="checkout_floor" class="input-group__input" type="text" name="" value="2">
+                        <label class="input-group__label" for="checkout_floor">Этаж</label>
+                    </div>
+        
+                    <div class="input-group">
+                        <input id="checkout_apt" class="input-group__input" type="text" name="" value="56">
+                        <label class="input-group__label" for="checkout_apt">Квартира</label>
+                    </div>
+                </div>
+        
+                <label class="delivery-form__save checkbox">
+                    <input type="checkbox" name="save">
+                    <span class="checkbox__icon"></span>
+                    <span class="checkbox__text">Адрес по умолчанию</span>
+                </label>
+        
+                <button class="button button--primary button--m" type="submit">Сохранить</button>
             </div>
         </div>
 

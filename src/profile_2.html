@@ -52,8 +52,10 @@
                                             </div>
 
                                             <div class="input-group">
-                                                <input id="user_phone" class="input-group__input" type="text" name="" value="">
+                                                <input id="user_phone" class="input-group__input" type="text" name="" value="+7 (919) 969-66-55">
                                                 <label class="input-group__label" for="user_phone">Ваш телефон</label>
+
+                                                <button class="js-popup-open input-group__button" type="button" data-popup="phone_change">Изменить</button>
                                             </div>
 
                                             <div class="input-group">
@@ -73,6 +75,12 @@
 
                                     <div class="user-data__block user-data__block--address">
                                         <form class="user-data__form" action="">
+                                            <button class="user-data__cancel" type="button" title="Отменить">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="images/sprite.svg#close_icon" />
+                                                </svg>
+                                            </button>
+
                                             <div class="input-group">
                                                 <input id="user_city" class="input-group__input" type="text" name="" value="">
                                                 <label class="input-group__label" for="user_city">Ваш город</label>
