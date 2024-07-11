@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
   let buyButtons = document.querySelectorAll('.js-buy-button');
 
   cardsImages.forEach((cardImages) => {
-    var handlers = cardImages.querySelectorAll('.js-card-image-handler');
-    var images = cardImages.querySelectorAll('.js-card-image');
-    var pager = cardImages.querySelectorAll('.js-card-image-num');
+    let handlers = cardImages.querySelectorAll('.js-card-image-handler');
+    let images = cardImages.querySelectorAll('.js-card-image');
+    let pager = cardImages.querySelectorAll('.js-card-image-num');
 
     handlers.forEach((handler, index) => {
       handler.addEventListener('mouseover', function (event) {

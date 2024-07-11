@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var inputs = document.querySelectorAll('.input-group__input');
+  let inputs = document.querySelectorAll('.input-group__input');
 
   inputs.forEach((input) => {
     if(input.value.length > 0) {

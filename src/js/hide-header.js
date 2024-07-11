@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var prevScrollpos = window.pageYOffset;
-  var header = document.querySelector('.header');
-  var headerHeight = header.offsetHeight;
+  let prevScrollpos = window.pageYOffset;
+  let header = document.querySelector('.header');
+  let headerHeight = header.offsetHeight;
 
-  var catalogTop = document.querySelector('.catalog-top');
-  var catalogTopOffsetTop = catalogTop.offsetTop;
+  let catalogTop = document.querySelector('.catalog-top');
+  let catalogTopOffsetTop = catalogTop.offsetTop;
 
-  var catalogTopMenu = document.querySelector('.catalog-top__menu');
-  var catalogMenu = document.querySelector('.catalog-menu');
+  let catalogTopMenu = document.querySelector('.catalog-top__menu');
+  let catalogMenu = document.querySelector('.catalog-menu');
 
   window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
+    let currentScrollPos = window.pageYOffset;
 
     if(currentScrollPos >= (catalogTopOffsetTop - headerHeight)) {
       catalogMenu.classList.add('is-fixed');

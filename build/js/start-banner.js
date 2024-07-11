@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
   let prevScrollpos = window.pageYOffset;
 
-  var startBanner = document.querySelector('.banner--start');
-  var startBannerHeight = startBanner.offsetHeight;
-  var header = document.querySelector('.header');
-  var headerHeight = header.offsetHeight;
+  let startBanner = document.querySelector('.banner--start');
+  let startBannerHeight = startBanner.offsetHeight;
+  let header = document.querySelector('.header');
+  let headerHeight = header.offsetHeight;
 
   window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
+    let currentScrollPos = window.pageYOffset;
 
     if(currentScrollPos >= (startBannerHeight - headerHeight)) {
       header.classList.add('header--no_color_transition');

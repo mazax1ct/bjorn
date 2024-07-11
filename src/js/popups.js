@@ -1,9 +1,9 @@
-var popupOpeners = document.querySelectorAll('.js-popup-open');
-var popupClosers = document.querySelectorAll('.js-popup-close');
+let popupOpeners = document.querySelectorAll('.js-popup-open');
+let popupClosers = document.querySelectorAll('.js-popup-close');
 
 //функция закрытия попапа
 function popupClose(popup) {
-  var openedPopup = document.querySelector('.popup.is-open');
+  let openedPopup = document.querySelector('.popup.is-open');
 
   //скрываем попап
   openedPopup.classList.remove('is-open');
@@ -27,8 +27,8 @@ function popupClose(popup) {
 
 popupOpeners.forEach((opener) => {
   opener.addEventListener('click', function (event) {
-    var popupId = opener.dataset.popup;
-    var popup = document.querySelector('#' + popupId);
+    let popupId = opener.dataset.popup;
+    let popup = document.querySelector('#' + popupId);
 
     if(!menuIsOpen) {
       //убираем скролл страницы
@@ -78,8 +78,8 @@ popupOpeners.forEach((opener) => {
 });
 
 popupClosers.forEach((closer) => {
-  var popupId = closer.dataset.popup;
-  var popup = document.querySelector('#' + popupId);
+  let popupId = closer.dataset.popup;
+  let popup = document.querySelector('#' + popupId);
 
   closer.addEventListener('click', popupClose);
 });

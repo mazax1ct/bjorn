@@ -1,10 +1,10 @@
-var page = document.querySelector('.page');
-var header = document.querySelector('.header');
-var mainMenu = document.querySelector('.main-menu');
-var menuOpener = document.querySelector('.js-main-menu-opener');
-var menuCloser = document.querySelector('.js-main-menu-closer');
-var shade = document.querySelector('.page__shade');
-var menuIsOpen = false;
+let page = document.querySelector('.page');
+let header = document.querySelector('.header');
+let mainMenu = document.querySelector('.main-menu');
+let menuOpener = document.querySelector('.js-main-menu-opener');
+let menuCloser = document.querySelector('.js-main-menu-closer');
+let shade = document.querySelector('.page__shade');
+let menuIsOpen = false;
 
 //функция закрытия меню
 function menuClose() {
@@ -99,9 +99,9 @@ menuCloser.addEventListener('click', function (event) {
 
 /***************************************************************************************************/
 
-var searchOpener = document.querySelector('.js-search-opener');
-var searchCloser = document.querySelector('.js-search-closer');
-var search = document.querySelector('.search');
+let searchOpener = document.querySelector('.js-search-opener');
+let searchCloser = document.querySelector('.js-search-closer');
+let search = document.querySelector('.search');
 
 //функция закрытие поиска
 function searchClose() {
@@ -177,9 +177,9 @@ searchCloser.addEventListener('click', function (event) {
 });
 
 /***************************************************************************************************/
-var searchInput = document.querySelector('.js-search-input');
-var searchInputCleaner = document.querySelector('.js-search-input-cleaner');
-var searchTags = document.querySelectorAll('.js-search-tag');
+let searchInput = document.querySelector('.js-search-input');
+let searchInputCleaner = document.querySelector('.js-search-input-cleaner');
+let searchTags = document.querySelectorAll('.js-search-tag');
 
 //обработчик события ввода текста в поле поиска
 searchInput.addEventListener('input', function (event) {
@@ -205,11 +205,11 @@ searchTags.forEach((tag) => {
 });
 
 /***************************************************************************************************/
-var searchForm = document.querySelector('.search__form');
-var searchPopular = document.querySelector('.search__popular');
-var searchResult = document.querySelector('.js-search-result');
-var searchResultEmpty = document.querySelector('.js-search-result-empty');
-var searchLoader = document.querySelector('.js-search-loader');
+let searchForm = document.querySelector('.search__form');
+let searchPopular = document.querySelector('.search__popular');
+let searchResult = document.querySelector('.js-search-result');
+let searchResultEmpty = document.querySelector('.js-search-result-empty');
+let searchLoader = document.querySelector('.js-search-loader');
 
 searchForm.addEventListener('submit', function (event) {
   event.preventDefault();
@@ -231,4 +231,36 @@ searchForm.addEventListener('submit', function (event) {
   setTimeout(() => {
     fadeOut(searchLoader, POPUPS_ANIMATION_DURATION);
   }, 2500);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const header = document.querySelector('.header--transparent');
+
+  if(header !== null) {
+    window.addEventListener('scroll', function() {
+      if (pageYOffset > 50) {
+        header.classList.add('header--no_color_transition');
+
+        setTimeout(() => {
+          header.classList.add('header--white');
+          header.classList.remove('header--transparent');
+        }, 10);
+
+        setTimeout(() => {
+          header.classList.remove('header--no_color_transition');
+        }, 10);
+      } else {
+        header.classList.add('header--no_color_transition');
+
+        setTimeout(() => {
+          header.classList.remove('header--white');
+          header.classList.add('header--transparent');
+        }, 10);
+
+        setTimeout(() => {
+          header.classList.remove('header--no_color_transition');
+        }, 10);
+      }
+    });
+  }
 });

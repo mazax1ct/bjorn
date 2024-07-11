@@ -61,6 +61,13 @@ html {
 
     &--checkout {
         .header {
+            background-color: var(--gray_white);
+            border-bottom-color: rgba(#000, 0.08);
+            @media(max-width: $lg - 0.02px) {
+                background-color: var(--gray_white) !important;
+                border-bottom-color: rgba(#000, 0.08) !important;
+            }
+
             &::after {
                 @media(min-width: $lg) {
                     background-color: #fff;

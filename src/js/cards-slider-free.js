@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var sliders = document.querySelectorAll('.js-cards-slider-free');
+  let sliders = document.querySelectorAll('.js-cards-slider-free');
 
   sliders.forEach((slider) => {
     new Swiper(slider, {

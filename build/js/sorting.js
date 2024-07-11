@@ -1,5 +1,5 @@
-var sortingOpener = document.querySelector('.sorting__opener');
-var sortingDropdown = document.querySelector('.sorting__dropdown');
+let sortingOpener = document.querySelector('.sorting__opener');
+let sortingDropdown = document.querySelector('.sorting__dropdown');
 
 sortingOpener.addEventListener('click', function (event) {
   if(!sortingDropdown.classList.contains('is-open')) {
