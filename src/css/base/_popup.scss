@@ -2,6 +2,10 @@
     @include scrollbar;
     background-color: #fff;
     display: none;
+    height: 100vh;
+    /* For browsers that don't support CSS variables */
+    height: calc(var(--1dvh, 1vh) * 100);
+    /* This is the "polyfill" */
     height: 100dvh;
     overflow-y: auto;
     position: fixed;
@@ -16,7 +20,9 @@
         padding-top: 40px;
         padding-bottom: 40px;
     }
-
+    /*@supports (height: 100dvh) {
+        height: 100dvh;
+    }*/
     &--width_type_1 {
         @media(min-width: $sm) {
             width: 460px;
