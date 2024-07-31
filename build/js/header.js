@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if(header !== null) {
     window.addEventListener('scroll', function() {
-      if (pageYOffset > 50) {
+      if (pageYOffset > 0) {
         header.classList.add('header--no_color_transition');
 
         setTimeout(() => {

@@ -12,16 +12,18 @@
     z-index: 10;
 
     &--transparent {
-        border-bottom: 1px solid rgba(#fff, 0.08);
-        background-color: transparent;
-        color: #fff;
-        mix-blend-mode: difference;
+        @media(min-width: $sm) {
+            border-bottom: 1px solid rgba(#fff, 0.08);
+            background-color: transparent;
+            color: #fff;
+            mix-blend-mode: difference;
 
-        .header__button,
-        a {
-            transition: none;
-            @include hover {
-                color: #fff;
+            .header__button,
+            a {
+                transition: none;
+                @include hover {
+                    color: #fff;
+                }
             }
         }
     }
