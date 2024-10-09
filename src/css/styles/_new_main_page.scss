@@ -1,0 +1,45 @@
+
+.page--new_main {
+  @media(max-width: $md - 0.02px) {
+    height: 100%;
+  }
+
+  .header {
+      left: 0;
+      position: fixed;
+      right: 0;
+  }
+
+  .footer {
+    @media(max-width: $md - 0.02px) {
+    display: none;
+  }
+  }
+
+  #app,
+  .page__content {
+    @media(max-width: $md - 0.02px) {
+    height: 100%
+  }
+  }
+
+  .page__content {
+    .container {
+      @media(max-width: $md - 0.02px) {
+      height: 100%;
+    }
+
+      .vms {
+        @media(max-width: $md - 0.02px) {
+        height: 100%;
+      }
+
+      .vms__inner {
+        @media(min-width: $md) {
+          display: block;
+        }
+      }
+      }
+    }
+  }
+}
