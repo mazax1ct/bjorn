@@ -1,10 +1,12 @@
-
 .page--new_main {
   @media(max-width: $md - 0.02px) {
     height: 100%;
   }
 
   .header {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(#fff, 0.12);
+    color: #fff;
       left: 0;
       position: fixed;
       right: 0;
@@ -29,16 +31,128 @@
       height: 100%;
     }
 
-      .vms {
-        @media(max-width: $md - 0.02px) {
-        height: 100%;
+
+    }
+  }
+}
+
+.vms {
+  @media(max-width: $md - 0.02px) {
+  height: 100%;
+}
+  &__inner {
+    @media(min-width: $md) {
+      display: block;
+    }
+  }
+
+  &__pagination {
+    &.swiper-pagination-vertical.swiper-pagination-bullets {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      left: 8px;
+      right: auto;
+
+      .swiper-pagination-bullet {
+        background-color: #fff;
+        height: 4px;
+        margin: 0;
+        width: 4px;
+      }
+    }
+
+
+  }
+}
+
+.hs {
+  &__pagination {
+    align-items: center;
+
+    display: flex;
+    gap: 3px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+
+    &.swiper-pagination-horizontal {
+      bottom: 32px;
+
+      @media(min-width: $lg) {
+        bottom: 60px;
+      }
+    }
+
+    .swiper-pagination-bullet {
+      background-color: #fff;
+      border-radius: 0;
+      height: 2px;
+      margin: 0 !important;
+      width: 40px;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: #fff;
+      opacity: 1;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+      color: #fff;
+      height: 40px;
+      mix-blend-mode: difference;
+      position: absolute;
+      top: 50%;
+      width: 40px;
+      z-index: 3;
+      @media(max-width: $lg - 0.02px) {
+          display: none;
+      }
+      @include hover {
+          color: #fff;
       }
 
-      .vms__inner {
-        @media(min-width: $md) {
-          display: block;
-        }
+      svg {
+          fill: currentColor;
+          height: 24px;
+          width: 24px;
       }
+  }
+
+  .swiper-button-prev {
+    left: 40px;
+  }
+
+  .swiper-button-next {
+    left: auto;
+    right: 40px;
+  }
+}
+
+.banner {
+  &--type_5 {
+    .banner__inner {
+      justify-content: flex-end;
+      padding-top: var(--header_min_height);
+      padding-bottom: 50px;
+
+      @media(min-width: $lg) {
+        padding-bottom: 125px
+      }
+    }
+
+    .banner__title {
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
+      @media(min-width: $lg) {
+          font-size: 44px;
       }
     }
   }
