@@ -38,14 +38,13 @@ document.addEventListener('DOMContentLoaded', function() {
         on: {
           afterInit: function () {
             setTimeout(() => {
-              let video = slider.querySelectorAll(".swiper-slide-active video");
-
-              if(video.length) {
+              let video = slider.querySelector(".swiper-slide-active video");
+              if(video != null) {
                 sliderInst.autoplay.stop();
-                video[0].play();
-                video[0].addEventListener('ended', () => {
+                video.play();
+                video.addEventListener('ended', () => {
                   setTimeout(() => {
-                    video[0].currentTime = 0;
+                    video.currentTime = 0;
                     sliderInst.slideNext();
                     sliderInst.autoplay.start();
                   }, 500);
@@ -64,14 +63,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
           slideChangeTransitionEnd: function () {
             setTimeout(() => {
-              let video = slider.querySelectorAll(".swiper-slide-active video");
-
-              if(video.length) {
+              let video = sliderInst.slides[sliderInst.activeIndex].querySelector("video");
+              if(video != null) {
                 sliderInst.autoplay.stop();
-                video[0].play();
-                video[0].addEventListener('ended', () => {
+                video.play();
+                video.addEventListener('ended', () => {
                   setTimeout(() => {
-                    video[0].currentTime = 0;
+                    video.currentTime = 0;
                     sliderInst.slideNext();
                     sliderInst.autoplay.start();
                   }, 500);
@@ -81,5 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         },
     });
+
+
   })
 });
