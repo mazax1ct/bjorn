@@ -20,11 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
   horizontalSliders.forEach((slider, index) => {
     let sliderInst = new Swiper(slider, {
       loop: true,
-      autoplay: {
+      /*autoplay: {
         enabled: true,
         delay: 5000,
         disableOnInteraction: false
-      },
+      },*/
       speed: 400,
       observer: true,
       observeParents: true,
@@ -95,11 +95,11 @@ document.addEventListener('DOMContentLoaded', function() {
   storiesSliders.forEach((slider, index) => {
     sliderInst = new Swiper(slider.querySelector('.swiper'), {
       loop: true,
-      autoplay: {
+      /*autoplay: {
         enabled: true,
         delay: 5000,
         disableOnInteraction: false
-      },
+      },*/
       speed: 400,
       observer: true,
       observeParents: true,
@@ -116,9 +116,9 @@ document.addEventListener('DOMContentLoaded', function() {
           loop: false,
           slidesPerView: 'auto',
           spaceBetween: 12,
-          autoplay: {
+          /*autoplay: {
             enabled: false
-          },
+          },*/
           pagination: {
             enabled: false
           },
@@ -129,9 +129,9 @@ document.addEventListener('DOMContentLoaded', function() {
           loop: false,
           slidesPerView: 'auto',
           spaceBetween: 12,
-          autoplay: {
+          /*autoplay: {
             enabled: false
-          },
+          },*/
           pagination: {
             enabled: false
           },
@@ -142,9 +142,9 @@ document.addEventListener('DOMContentLoaded', function() {
           loop: false,
           slidesPerView: 'auto',
           spaceBetween: 12,
-          autoplay: {
+          /*autoplay: {
             enabled: false
-          },
+          },*/
           pagination: {
             enabled: false
           },
@@ -158,12 +158,38 @@ document.addEventListener('DOMContentLoaded', function() {
             sliderSideOffset = (window.innerWidth - 1920) / 2 + 40;
             sliderInst.params.slidesOffsetAfter = sliderSideOffset;
             sliderInst.params.slidesOffsetBefore = sliderSideOffset;
-
-              sliderInst.update();
-
+            sliderInst.update();
           }
         },
       }
     });
   });
+
+  const header = document.querySelector('.header');
+
+  if(header !== null) {
+    window.addEventListener('scroll', function() {
+      if (pageYOffset > 0) {
+        header.classList.add('header--no_color_transition');
+
+        setTimeout(() => {
+          header.classList.add('header--white');
+        }, 10);
+
+        setTimeout(() => {
+          header.classList.remove('header--no_color_transition');
+        }, 10);
+      } else {
+        header.classList.add('header--no_color_transition');
+
+        setTimeout(() => {
+          header.classList.remove('header--white');
+        }, 10);
+
+        setTimeout(() => {
+          header.classList.remove('header--no_color_transition');
+        }, 10);
+      }
+    });
+  }
 });
