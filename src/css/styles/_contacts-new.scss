@@ -1,0 +1,136 @@
+.contacts-new {
+    @media(min-width: $hd) {
+        display: flex;
+        margin-top: -65px;
+    }
+    @media(min-width: $lg) {
+        margin-top: -90px;
+    }
+    @media(min-width: $fhd) {
+        margin-top: -100px;
+    }
+
+    &__contacts {
+        padding-bottom: 40px;
+        text-align: center;
+        @media(min-width: $sm) {
+            padding-top: 20px;
+            padding-bottom: 80px;
+        }
+        @media(min-width: $hd) {
+            margin-top: 55px;
+            padding-top: 80px;
+            padding-right: 80px;
+            padding-bottom: 80px;
+            text-align: left;
+            width: 50%;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+        justify-content: center;
+        margin-bottom: 18px;
+        @media(min-width: $sm) {
+            margin-bottom: 20px;
+        }
+        @media(min-width: $hd) {
+            gap: 24px;
+            justify-content: flex-start;
+            margin-bottom: 24px;
+        }
+
+        .social-link {
+            justify-content: center;
+            height: 28px;
+            @media(max-width: $hd - 0.02px) {
+                height: 32px;
+                width: 28px;
+            }
+
+            span {
+                @media(max-width: $hd - 0.02px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .h1 {
+        margin-bottom: 24px;
+        @media(min-width: $sm) {
+            margin-bottom: 32px;
+        }
+        @media(min-width: $hd) {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        br {
+            @media(min-width: $sm) {
+                display: none;
+            }
+        }
+    }
+
+    .h2 {
+        margin-top: 0;
+        margin-bottom: 18px;
+        @media(min-width: $sm) {
+            margin-bottom: 20px;
+        }
+        @media(min-width: $hd) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__note {
+        border: 1px solid var(--gray_white);
+        border-radius: 4px;
+        font-size: 13px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 18px;
+        max-width: 307px;
+        padding: 12px;
+        @media(min-width: $sm) {
+            margin-bottom: 20px;
+        }
+        @media(min-width: $hd) {
+            font-size: 16px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 24px;
+            max-width: 480px;
+            padding: 24px;
+        }
+
+        .h4 {
+            margin-bottom: 6px;
+            @media(min-width: $hd) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    &__map {
+        background-color: var(--gray_white);
+        min-height: 335px;
+        margin-left: calc(0.02px - var(--container_padding));
+        margin-right: calc(0.02px - var(--container_padding));
+        @media(min-width: $sm) {
+            min-height: 400px;
+        }
+        @media(min-width: $hd) {
+            min-height: 600px;
+            margin-left: 0;
+            margin-right: calc(0.01px - var(--container_padding));
+            width: calc(50% + var(--container_padding));
+        }
+        @media(min-width: $fhd) {
+            height: 885px;
+        }
+    }
+}
