@@ -1016,7 +1016,7 @@
                                         </span>
                                     </label>
 
-                                    <label class="checkout-option">
+                                    <!--<label class="checkout-option">
                                         <input type="radio" name="checkout_payment" value="dolyami">
                                         <span class="checkout-option__inner">
                                             <svg class="checkout-option__check" aria-hidden="true">
@@ -1032,6 +1032,49 @@
                                                 <span class="checkout-option__description-images">
                                                     <img class="image_14" src="images/content/payments/dolyami.svg" alt="ДОЛЯМИ">
                                                 </span>
+                                            </span>
+                                        </span>
+                                    </label>-->
+
+                                    <label class="checkout-option">
+                                        <input type="radio" name="checkout_payment" value="plait">
+                                        <span class="checkout-option__inner">
+                                            <svg class="checkout-option__check" aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#check_icon" />
+                                            </svg>
+
+                                            <span class="checkout-option__title-block">
+                                                <span class="checkout-option__title">Плайт <span class="checkout-option__badge">-10%</span></span>
+                                            </span>
+
+                                            <span class="checkout-option__description-block">
+                                                <span class="checkout-option__description-title">Поделите оплату на 6 платежей</span>
+                                                <div class="plait">
+                                                    <p class="plait__cost">31 810 ₽</p>
+
+                                                    <div class="plait__parts">
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+
+                                                    <div class="plait__conditions">
+                                                        <div class="plait__now">
+                                                            <div class="plait__conditions-title">Сегодня</div>
+                                                            <div class="plait__conditions-value">25 %</div>
+                                                        </div>
+
+                                                        <div>
+                                                            <div class="plait__conditions-title">еще 5 платежей раз в 2 недели</div>
+                                                            <div class="plait__conditions-value">5 495 ₽</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="plait__logo"><img src="images/content/detail/plait.png" alt="Плайт"></div>
+                                                </div>
                                             </span>
                                         </span>
                                     </label>
@@ -2920,6 +2963,20 @@
                     *с 1.11 по 4.11 включительно<br>
                     **скидка не суммируется с другими промокодами
                 </p>
+            </div>
+        </div>
+        
+        <div id="plait" class="popup popup--width_type_1 popup--left">
+            <button class="js-popup-close popup__closer" type="button" title="Закрыть попап">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#close_icon" />
+                </svg>
+            </button>
+        
+            <div class="popup__title h2">Поделите оплату на 6 платежей</div>
+        
+            <div class="plait-info">
+                <div class="plait-info__payments-block"></div>
             </div>
         </div>
 
