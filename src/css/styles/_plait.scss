@@ -1,7 +1,9 @@
 .plait {
+    --now_width: 25%;
     color: var(--black_dark);
     font-size: 11px;
     @media(min-width: $fhd) {
+        --now_width: 33%;
         font-size: 14px;
     }
 
@@ -12,22 +14,16 @@
         @media(min-width: $fhd) {
             padding: 16px;
         }
+    }
 
-        .plait__parts {
-            --gap: 4px;
+    &--parts_4 {
+        --gaps: 3;
+        --parts: 4;
+    }
 
-            & > div {
-                &:first-child {
-                    --width: 25%;
-                    background-color: var(--black_dark);
-                    max-width: calc(var(--width) - var(--gap) * 5 / 4);
-                    width: calc(var(--width) - var(--gap) * 5 / 4);
-                    @media(min-width: 1900px) {
-                        --width: 33%;
-                    }
-                }
-            }
-        }
+    &--parts_6 {
+        --gaps: 5;
+        --parts: 6;
     }
 
     &:not(:last-child) {
@@ -102,10 +98,9 @@
             height: 2px;
 
             &:first-child {
-                --width: 25%;
                 background-color: var(--black_dark);
-                max-width: calc(var(--width) - var(--gap) * 5 / 4);
-                width: calc(var(--width) - var(--gap) * 5 / 4);
+                max-width: calc(var(--now_width) - var(--gap) * var(--gaps) / var(--parts));
+                width: calc(var(--now_width) - var(--gap) * var(--gaps) / var(--parts));
             }
         }
     }
@@ -128,12 +123,8 @@
     }
 
     &__now {
-        --width: 25%;
-        max-width: calc(var(--width) - var(--gap) * 5 / 4);
-        width: calc(var(--width) - var(--gap) * 5 / 4);
-        @media(min-width: 1900px) {
-            --width: 33%;
-        }
+        max-width: calc(var(--now_width) - var(--gap) * var(--gaps) / var(--parts));
+        width: calc(var(--now_width) - var(--gap) * var(--gaps) / var(--parts));
     }
 
     &__conditions-title {
@@ -155,12 +146,161 @@
         margin-right: -32px;
     }
 }
-/*.plait-info {
-    &__payments-block {
-        border: 1px solid #F1F1F1;
-        box-shadow: 0 14px 14px rgba(116, 116, 116, 0.09);
-        border-radius: 16px;
-        margin-bottom: 24px;
-        padding: 24px 16px;
+
+.plait-info {
+    --gap: 12px;
+    --now_width: 25%;
+    @media(max-width: $fhd - 0.02px) {
+        padding-left: 8px;
+        padding-right: 8px;
     }
-}*/
+    @media(min-width: $fhd) {
+        padding-top: 24px;
+    }
+
+    &--parts_4 {
+        --gaps: 3;
+        --parts: 4;
+    }
+
+    &--parts_6 {
+        --gaps: 5;
+        --parts: 6;
+    }
+
+    &__title {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        @media(min-width: $fhd) {
+            font-size: 18px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__parts {
+        display: flex;
+        gap: var(--gap);
+        margin-bottom: 16px;
+
+        & > div {
+            background-color: #F1F1F1;
+            border-radius: 3px;
+            flex-grow: 1;
+            height: 6px;
+
+            &:first-child {
+                background-color: #6969FF;
+                max-width: calc(var(--now_width) - var(--gap) * var(--gaps) / var(--parts));
+                width: calc(var(--now_width) - var(--gap) * var(--gaps) / var(--parts));
+            }
+        }
+    }
+
+    &__conditions {
+        display: flex;
+        gap: var(--gap);
+        margin-bottom: 24px;
+    }
+
+    &__now {
+        max-width: calc(var(--now_width) - var(--gap) * var(--gaps) / var(--parts));
+        width: calc(var(--now_width) - var(--gap) * var(--gaps) / var(--parts));
+    }
+
+    &__conditions-title {
+        color: #808080;
+        font-size: 13px;
+        margin-bottom: 4px;
+        @media(min-width: $fhd) {
+            font-size: 16px;
+        }
+    }
+
+    &__conditions-value {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.2;
+        @media(min-width: $fhd) {
+            font-size: 18px;
+        }
+    }
+
+    &__features {
+        margin-bottom: 40px;
+    }
+
+    &__feature {
+        align-items: center;
+        border-top: 1px solid #F1F1F1;
+        color: #333;
+        display: flex;
+        font-size: 13px;
+        gap: 24px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        @media(min-width: $fhd) {
+            font-size: 16px;
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    &__feature-icon {
+        align-items: center;
+        background-color: #F3F3F3;
+        border-radius: 8px;
+        display: flex;
+        height: 32px;
+        justify-content: center;
+        min-width: 32px;
+        width: 32px;
+        @media(min-width: $fhd) {
+            border-radius: 12px;
+            height: 44px;
+            min-width: 44px;
+            width: 44px;
+        }
+
+        svg {
+            fill: #334A55;
+            height: 16px;
+            width: 16px;
+            @media(min-width: $fhd) {
+                height: 24px;
+                width: 24px;
+            }
+        }
+    }
+
+    &__more {
+        align-items: center;
+        border: 1px solid #F1F1F1;
+        border-radius: 4px;
+        display: flex;
+        font-size: 12px;
+        font-weight: 700;
+        gap: 24px;
+        justify-content: space-between;
+        line-height: 1.2;
+        padding: 16px;
+        text-transform: uppercase;
+        @media(min-width: $fhd) {
+            font-size: 18px;
+            padding: 30px 24px;
+        }
+
+        svg {
+            width: 24px;
+            min-width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+    }
+}
