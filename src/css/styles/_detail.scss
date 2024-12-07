@@ -422,6 +422,28 @@
         }
     }
 
+    &__size-subscribe {
+        margin-bottom: 32px;
+        @media(min-width: $fhd) {
+            margin-bottom: 24px;
+        }
+
+        .button {
+            width: 100%;
+        }
+    }
+
+    &__size-subscribe-note {
+        background-color: var(--gray_white);
+        border-radius: 4px;
+        font-size: 11px;
+        margin-bottom: 8px;
+        padding: 12px;
+        @media(min-width: $fhd) {
+            font-size: 14px;
+        }
+    }
+
     &__preview-block {
         margin-bottom: 22px;
         @media(min-width: $lg) {
