@@ -134,6 +134,7 @@ ul {
 }
 
 figure {
+    margin-top: 0;
     margin-left: 0;
     margin-right: 0;
 
@@ -460,6 +461,47 @@ h2 + figure {
         td {
             border: none;
             border-bottom: 1px solid var(--gray_white);
+        }
+    }
+}
+
+.article-title-block {
+    margin-top: 40px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    @media(min-width: $sm) {
+        margin: 60px auto;
+        text-align: center;
+    }
+
+    &__date,
+    &__reading-time {
+        font-size: 11px;
+        @media(min-width: $fhd) {
+            font-size: 14px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+            @media(min-width: $fhd) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    h1 {
+        @media(min-width: $lg) {
+            font-size: 40px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 40px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+            @media(min-width: $fhd) {
+                margin-bottom: 24px;
+            }
         }
     }
 }
