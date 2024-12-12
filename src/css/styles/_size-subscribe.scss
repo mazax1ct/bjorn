@@ -1,0 +1,70 @@
+.size-subscribe {
+    @media(min-width: $fhd) {
+        padding-top: 16px;
+    }
+
+    &__text {
+        font-size: 14px;
+        margin-bottom: 24px;
+        @media(min-width: $fhd) {
+            font-size: 18px;
+            margin-bottom: 32px;
+        }
+    }
+
+    &__form {
+        margin-bottom: 16px;
+
+        .input-group {
+            margin-bottom: 24px;
+            @media(min-width: $fhd) {
+                margin-bottom: 32px;
+            }
+        }
+
+        .button {
+            width: 100%;
+        }
+    }
+
+    &__form-note {
+        font-size: 11px;
+        @media(min-width: $fhd) {
+            font-size: 14px;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+.size-subscribe-thx {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+
+    &__title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        @media(min-width: $fhd) {
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        margin-bottom: 24px;
+        @media(min-width: $fhd) {
+            font-size: 18px;
+        }
+    }
+
+    .button {
+        width: 100%;
+    }
+}

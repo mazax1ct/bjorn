@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/common/favicon.html
+
+    //= template/common/fonts_preload.html
+
+    //= template/common/styles.html
+
+    <script src="https://api-maps.yandex.ru/v3/?apikey=a90c4839-0442-4e0b-a012-26ce3d52190d&lang=ru_RU"></script>
+    <script src="js/contacts.js"></script>
+</head>
+
+<body class="page page--no_padding_bottom">
+    <div id="app">
+        //= template/common/header--white.html
+
+        //= template/common/main-menu.html
+
+        //= template/common/search.html
+
+        <main class="page__content">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+                    <li class="breadcrumbs__item">Контакты</li>
+                </ul>
+
+                <div class="contacts-new">
+                    <div class="contacts-new__contacts">
+                        <p class="h1">Контакты<br> Bjørn Larsen</p>
+                        <p class="h2"><a href="tel:+78003007828">+7 (800) 300-78-28</a> <span>/</span> <a href="tel:+78126297828">+7 (812) 629-78-28</a></p>
+                        <p class="h2"><a href="mailto:info@larsenbjorn.ru">info@larsenbjorn.ru</a></p>
+
+                        <div class="contacts-new__socials">
+                            <a class="social-link" href="#" rel="nofollow noreferrer" title="Мы на Youtube">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#yt_icon" />
+                                </svg>
+                                <span>Youtube</span>
+                            </a>
+
+                            <a class="social-link" href="#" rel="nofollow noreferrer" title="Мы во Вконтакте">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#vk_icon" />
+                                </svg>
+                                <span>Вконтакте</span>
+                            </a>
+
+                            <a class="social-link" href="#" rel="nofollow noreferrer" title="Мы в Telegram">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#tg_icon" />
+                                </svg>
+                                <span>Telegram</span>
+                            </a>
+
+                            <a class="social-link" href="#" rel="nofollow noreferrer" title="Наш Whatsapp">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#whatsapp_icon" />
+                                </svg>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+
+                        <div class="contacts-new__note">
+                            <p class="h4">BJORN LARSEN (скоро открытие)<br> в ТРЦ Галерея</p>
+                            <p>3 этаж</p>
+                        </div>
+
+                        <button class="js-popup-open button button--primary button--s" type="button" data-popup="contacts_reqs">Реквизиты</button>
+                    </div>
+
+                    <div id="contacts_map" class="contacts-new__map"></div>
+                </div>
+            </div>
+        </main>
+
+        //= template/common/footer.html
+
+        //= template/common/popups.html
+
+        <div class="page__shade"></div>
+    </div>
+
+    //= template/common/scripts.html
+</body>
+
+</html>

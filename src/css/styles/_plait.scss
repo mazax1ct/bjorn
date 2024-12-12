@@ -1,0 +1,306 @@
+.plait {
+    --now_width: 25%;
+    color: var(--black_dark);
+    font-size: 11px;
+    @media(min-width: $fhd) {
+        --now_width: 33%;
+        font-size: 14px;
+    }
+
+    &--bordered {
+        border-radius: 4px;
+        border: 1px solid var(--gray_white);
+        padding: 12px;
+        @media(min-width: $fhd) {
+            padding: 16px;
+        }
+    }
+
+    &--parts_4 {
+        --gaps: 3;
+        --parts: 4;
+    }
+
+    &--parts_6 {
+        --gaps: 5;
+        --parts: 6;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    &__title-block {
+        align-items: center;
+        display: flex;
+        gap: 16px;
+        justify-content: space-between;
+        margin-bottom: 16px;
+
+        .plait__logo {
+            height: 16px;
+            width: 94px;
+        }
+    }
+
+    &__title {
+        color: var(--black_gray);
+        margin: 0;
+    }
+
+    &__logo-block {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__logo {
+        img {
+            display: block;
+        }
+    }
+
+    &__info-button {
+        @include button-reset;
+        @include active-area;
+        background-color: var(--gray_white);
+        border-radius: 50%;
+        color: var(--gray_black);
+        height: 18px;
+        transition: color 0.3s;
+        width: 18px;
+        @include hover {
+            color: var(--ocher);
+        }
+
+        svg {
+            fill: currentColor;
+            height: 18px;
+            width: 18px;
+        }
+    }
+
+    &__cost {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 16px;
+    }
+
+    &__parts {
+        --gap: 2px;
+        display: flex;
+        gap: var(--gap);
+        margin-bottom: 12px;
+
+        & > div {
+            background-color: var(--gray);
+            flex-grow: 1;
+            height: 2px;
+
+            &:first-child {
+                background-color: var(--black_dark);
+                max-width: calc(var(--now_width) - var(--gap) * var(--gaps) / var(--parts));
+                width: calc(var(--now_width) - var(--gap) * var(--gaps) / var(--parts));
+            }
+        }
+    }
+
+    &__conditions {
+        --gap: 4px;
+        display: flex;
+        gap: var(--gap);
+
+        & + .plait__logo {
+            height: 16px;
+            width: 94px;
+            margin-top: 16px;
+            @media(min-width: $fhd) {
+                height: 22px;
+                margin-top: 24px;
+                width: 128px;
+            }
+        }
+    }
+
+    &__now {
+        max-width: calc(var(--now_width) - var(--gap) * var(--gaps) / var(--parts));
+        width: calc(var(--now_width) - var(--gap) * var(--gaps) / var(--parts));
+    }
+
+    &__conditions-title {
+        margin-bottom: 2px;
+    }
+
+    &__conditions-value {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.2;
+        @media(min-width: $fhd) {
+            font-size: 24px;
+        }
+    }
+}
+
+.checkout-option__description-block {
+    .plait {
+        margin-right: -32px;
+    }
+}
+
+.plait-info {
+    --gap: 12px;
+    --now_width: 25%;
+    @media(max-width: $fhd - 0.02px) {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    @media(min-width: $fhd) {
+        padding-top: 16px;
+    }
+
+    &--parts_4 {
+        --gaps: 3;
+        --parts: 4;
+    }
+
+    &--parts_6 {
+        --gaps: 5;
+        --parts: 6;
+    }
+
+    &__title {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        @media(min-width: $fhd) {
+            font-size: 18px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__parts {
+        display: flex;
+        gap: var(--gap);
+        margin-bottom: 16px;
+
+        & > div {
+            background-color: #F1F1F1;
+            border-radius: 3px;
+            flex-grow: 1;
+            height: 6px;
+
+            &:first-child {
+                background-color: #6969FF;
+                max-width: calc(var(--now_width) - var(--gap) * var(--gaps) / var(--parts));
+                width: calc(var(--now_width) - var(--gap) * var(--gaps) / var(--parts));
+            }
+        }
+    }
+
+    &__conditions {
+        display: flex;
+        gap: var(--gap);
+        margin-bottom: 24px;
+    }
+
+    &__now {
+        max-width: calc(var(--now_width) - var(--gap) * var(--gaps) / var(--parts));
+        width: calc(var(--now_width) - var(--gap) * var(--gaps) / var(--parts));
+    }
+
+    &__conditions-title {
+        color: #808080;
+        font-size: 13px;
+        margin-bottom: 4px;
+        @media(min-width: $fhd) {
+            font-size: 16px;
+        }
+    }
+
+    &__conditions-value {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.2;
+        @media(min-width: $fhd) {
+            font-size: 18px;
+        }
+    }
+
+    &__features {
+        margin-bottom: 40px;
+    }
+
+    &__feature {
+        align-items: center;
+        border-top: 1px solid #F1F1F1;
+        color: #333;
+        display: flex;
+        font-size: 13px;
+        gap: 24px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        @media(min-width: $fhd) {
+            font-size: 16px;
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    &__feature-icon {
+        align-items: center;
+        background-color: #F3F3F3;
+        border-radius: 8px;
+        display: flex;
+        height: 32px;
+        justify-content: center;
+        min-width: 32px;
+        width: 32px;
+        @media(min-width: $fhd) {
+            border-radius: 12px;
+            height: 44px;
+            min-width: 44px;
+            width: 44px;
+        }
+
+        svg {
+            fill: #334A55;
+            height: 16px;
+            width: 16px;
+            @media(min-width: $fhd) {
+                height: 24px;
+                width: 24px;
+            }
+        }
+    }
+
+    &__more {
+        align-items: center;
+        border: 1px solid #F1F1F1;
+        border-radius: 4px;
+        display: flex;
+        font-size: 12px;
+        font-weight: 700;
+        gap: 24px;
+        justify-content: space-between;
+        line-height: 1.2;
+        padding: 16px;
+        text-transform: uppercase;
+        @media(min-width: $fhd) {
+            font-size: 18px;
+            padding: 30px 24px;
+        }
+
+        svg {
+            width: 24px;
+            min-width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+    }
+}

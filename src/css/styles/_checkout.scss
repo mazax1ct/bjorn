@@ -258,6 +258,7 @@
     &__description-block {
         color: var(--black_gray);
         display: block;
+        flex-grow: 1;
         font-size: 11px;
         margin-top: auto;
         @media(min-width: $lg) {
