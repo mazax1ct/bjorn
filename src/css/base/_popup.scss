@@ -149,6 +149,26 @@
                 }
             }
         }
+
+        &--back {
+            align-items: center;
+            display: flex;
+            gap: 16px;
+            position: relative;
+
+            svg {
+                fill: var(--black_dark);
+                height: 24px;
+                min-width: 24px;
+                width: 24px;
+                @media(max-width: $sm - 0.02px) {
+                    left: 16px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
     }
 
     &__closer {

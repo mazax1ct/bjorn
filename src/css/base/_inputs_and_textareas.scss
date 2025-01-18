@@ -6,7 +6,12 @@
         margin-bottom: 12px;
     }
 
-    &--textarea {}
+    &--textarea {
+        padding-top: 22px;
+        @media(min-width: $fhd) {
+            padding-top: 26px;
+        }
+    }
 
     &__input {
         border-radius: 0;
@@ -120,75 +125,65 @@
         @include scrollbar;
         background: none;
         border: none;
-        border-radius: 0 0 7px 7px;
-        height: 118px;
-        left: 0;
-        margin: 0;
-        padding: 0 16px 16px;
-        position: absolute;
+        border-bottom: 1px solid var(--gray);
+        border-radius: 0;
+        height: 120px;
+        padding: 0 0 10px;
         resize: none;
-        top: 32px;
+        transition: border-color 0.3s;
         width: 100%;
 
         &::-webkit-input-placeholder {
-            color: var(--grey_6);
-            opacity: 0;
+            color: var(--gray_black);
+            opacity: 1;
         }
 
         &::-moz-placeholder {
-            color: var(--grey_6);
-            opacity: 0;
+            color: var(--gray_black);
+            opacity: 1;
         }
 
         &:-ms-input-placeholder {
-            color: var(--grey_6);
-            opacity: 0;
+            color: var(--gray_black);
+            opacity: 1;
+        }
+        @include hover {
+            border-color: var(--gray_black);
         }
 
         &:focus {
-            border-color: var(--blue_1) !important;
+            border-bottom-color: var(--gray_black);
 
-            &::-webkit-input-placeholder {
-                opacity: 1;
-            }
-
-            &::-moz-placeholder {
-                opacity: 1;
-            }
-
-            &:-ms-input-placeholder {
-                opacity: 1;
-            }
-
-            & ~ .input-group__label {
-                font-size: 12px;
+            & + .input-group__label {
+                font-size: 11px;
+                top: 8px;
+                @media(min-width: $lg) {
+                    font-size: 12px;
+                    top: 6px;
+                }
+                @media(min-width: $fhd) {
+                    font-size: 14px;
+                }
             }
         }
 
-        &:disabled {
-            /*background-color: var(--grey_1);
-            border-color: var(--grey_7);*/
-            color: var(--grey_7);
-
-            &::-webkit-input-placeholder {
-                opacity: 0;
-            }
-
-            &::-moz-placeholder {
-                opacity: 0;
-            }
-
-            &:-ms-input-placeholder {
-                opacity: 0;
-            }
-
-            & ~ .input-group__label {
-                color: var(--grey_7);
-
-                .req,
-                .required {
-                    color: var(--grey_7);
+        &.is-filled {
+            & + .input-group__label {
+                font-size: 11px;
+                top: 8px;
+                @media(min-width: $lg) {
+                    font-size: 12px;
+                    top: 6px;
                 }
+                @media(min-width: $fhd) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &.invalid {
+            & + .input-group__label {
+                color: var(--error_color);
             }
         }
     }
