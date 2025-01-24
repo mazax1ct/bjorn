@@ -67,6 +67,10 @@
         @media(min-width: $lg) {
             width: 73.97260%;
         }
+
+        .input-group + .switch {
+            margin-top: 24px;
+        }
     }
 
     &__delivery-list {
