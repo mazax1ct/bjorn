@@ -1,0 +1,15 @@
+.rub {
+    white-space: nowrap;
+    overflow: hidden;
+    text-indent: -9999px;
+    position: relative;
+    display: inline-flex;
+    text-align: left;
+
+    &::after {
+        display: flex;
+        content: '₽';
+        text-indent: 0;
+        color: inherit;
+    }
+}

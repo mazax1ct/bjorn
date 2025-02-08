@@ -30,7 +30,7 @@
                 <div class="js-vertical-mobile-slider vms swiper swiper-v">
                     <div class="vms__inner swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="js-horizontal-slider hs swiper swiper-h" data-pager="1" data-arrows="1">
+                            <div class="js-horizontal-slider hs hs--marquee swiper swiper-h" data-pager="1" data-arrows="1">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="banner banner--type_5 banner--full_height">
@@ -97,9 +97,13 @@
                                     </svg>
                                 </button>
                             </div>
+
+                            <div class="marquee">
+                                <div class="js-marquee marquee__inner" style="--duration: 5s"><span>бесплатная доставка от 15 000 ₽</span></div>
+                            </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="js-horizontal-slider hs swiper swiper-h" data-pager="2" data-arrows="2">
+                            <div class="js-horizontal-slider hs hs--marquee swiper swiper-h" data-pager="2" data-arrows="2">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="banner banner--type_5 banner--full_height">
@@ -199,9 +203,13 @@
                                     </svg>
                                 </button>
                             </div>
+
+                            <div class="marquee">
+                                <div class="js-marquee marquee__inner"><span>Другой текст для проверки работоспособности блока</span></div>
+                            </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="js-horizontal-slider hs swiper swiper-h" data-pager="3" data-arrows="3">
+                            <div class="js-horizontal-slider hs hs--marquee swiper swiper-h" data-pager="3" data-arrows="3">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="banner banner--type_5 banner--full_height">
@@ -284,6 +292,10 @@
                                     </svg>
                                 </button>
                             </div>
+
+                            <div class="marquee">
+                                <div class="js-marquee marquee__inner" style="--duration: 5s"><span>текст покороче</span></div>
+                            </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="js-stories-slider stories-slider" data-pager="1" data-arrows="1">
@@ -324,8 +336,8 @@
                                                                 </svg>
                                                             </p>
                                                             <div class="stories-banner__price-block">
-                                                                <div class="stories-banner__price">34 900 ₽</div>
-                                                                <div class="stories-banner__old-price">54 900 ₽</div>
+                                                                <div class="stories-banner__price">34 900 <span class="rub">руб</span></div>
+                                                                <div class="stories-banner__old-price">54 900 <span class="rub">руб</span></div>
                                                                 <div class="stories-banner__discount">-15%</div>
                                                             </div>
                                                             <div class="stories-banner__colors">
@@ -358,8 +370,8 @@
                                                                 </svg>
                                                             </p>
                                                             <div class="stories-banner__price-block">
-                                                                <div class="stories-banner__price">34 900 ₽</div>
-                                                                <div class="stories-banner__old-price">54 900 ₽</div>
+                                                                <div class="stories-banner__price">34 900 <span class="rub">руб</span></div>
+                                                                <div class="stories-banner__old-price">54 900 <span class="rub">руб</span></div>
                                                                 <div class="stories-banner__discount">-15%</div>
                                                             </div>
                                                             <div class="stories-banner__colors">
@@ -392,8 +404,8 @@
                                                                 </svg>
                                                             </p>
                                                             <div class="stories-banner__price-block">
-                                                                <div class="stories-banner__price">34 900 ₽</div>
-                                                                <div class="stories-banner__old-price">54 900 ₽</div>
+                                                                <div class="stories-banner__price">34 900 <span class="rub">руб</span></div>
+                                                                <div class="stories-banner__old-price">54 900 <span class="rub">руб</span></div>
                                                                 <div class="stories-banner__discount">-15%</div>
                                                             </div>
                                                             <div class="stories-banner__colors">
@@ -426,8 +438,8 @@
                                                                 </svg>
                                                             </p>
                                                             <div class="stories-banner__price-block">
-                                                                <div class="stories-banner__price">34 900 ₽</div>
-                                                                <div class="stories-banner__old-price">54 900 ₽</div>
+                                                                <div class="stories-banner__price">34 900 <span class="rub">руб</span></div>
+                                                                <div class="stories-banner__old-price">54 900 <span class="rub">руб</span></div>
                                                                 <div class="stories-banner__discount">-15%</div>
                                                             </div>
                                                             <div class="stories-banner__colors">
@@ -460,8 +472,8 @@
                                                                 </svg>
                                                             </p>
                                                             <div class="stories-banner__price-block">
-                                                                <div class="stories-banner__price">34 900 ₽</div>
-                                                                <div class="stories-banner__old-price">54 900 ₽</div>
+                                                                <div class="stories-banner__price">34 900 <span class="rub">руб</span></div>
+                                                                <div class="stories-banner__old-price">54 900 <span class="rub">руб</span></div>
                                                                 <div class="stories-banner__discount">-15%</div>
                                                             </div>
                                                             <div class="stories-banner__colors">
@@ -513,6 +525,8 @@
     <script src="js/main.js"></script>
 
     <script src="js/new_main_page.js"></script>
+
+    <script src="js/marquee.js"></script>
 </body>
 
 </html>

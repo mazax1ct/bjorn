@@ -56,6 +56,28 @@
         @media(min-width: $md) {
             display: block;
         }
+
+        & > .swiper-slide {
+            position: relative;
+            z-index: 1;
+
+            .marquee {
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: auto;
+                z-index: 1;
+                @media(min-width: $md) {
+                    right: calc(.02px - var(--container_padding));
+                    left: calc(.02px - var(--container_padding));
+                }
+                @media(min-width: $fhd) {
+                    right: calc(-100vw / 2 + var(--container_max_width)/ 2 - var(--container_padding));
+                    left: calc(-100vw / 2 + var(--container_max_width)/ 2 - var(--container_padding));
+                }
+            }
+        }
     }
 
     &__pagination {
@@ -143,6 +165,69 @@
     .swiper-button-next {
         left: auto;
         right: var(--container_padding);
+    }
+
+    &--marquee {
+        .banner--type_5 {
+            .banner__inner {
+                padding-bottom: 130px;
+            }
+        }
+
+        .hs__pagination {
+            &.swiper-pagination-horizontal {
+                bottom: 90px;
+            }
+        }
+    }
+}
+
+.marquee {
+    background-color: rgba(#101010, 0.4);
+    color: #fff;
+    font-size: 14px;
+    height: 48px;
+    line-height: 1.3;
+    overflow: hidden;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    &__inner {
+        --el_width: -50%;
+        --duration: 10s;
+        align-items: center;
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        animation: marquee var(--duration) linear infinite;
+        will-change: transform;
+
+        span {
+            align-items: center;
+            display: flex;
+            gap: 16px;
+
+            &::after {
+                background-color: #fff;
+                border-radius: 50%;
+                content: '';
+                display: block;
+                height: 4px;
+                width: 4px;
+            }
+        }
+    }
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(var(--el_width));
     }
 }
 
