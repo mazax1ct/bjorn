@@ -322,6 +322,14 @@
             @media(min-width: $lg) {
                 font-size: 40px;
             }
+
+            &--countdown {
+                font-size: 48px;
+                font-weight: 600;
+                @media(min-width: $lg) {
+                    font-size: 80px;
+                }
+            }
         }
     }
 }
