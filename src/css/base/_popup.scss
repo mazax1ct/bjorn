@@ -44,6 +44,12 @@
         }
     }
 
+    &--width_type_3 {
+        @media(min-width: $lg) {
+            width: 954px;
+        }
+    }
+
     &--left {
         left: 0;
         transform: translateX(-100%);
@@ -155,6 +161,27 @@
             display: flex;
             gap: 16px;
             position: relative;
+
+            button {
+                @include button-reset;
+                @include active-area;
+                display: block;
+                height: 24px;
+                position: relative;
+                width: 24px;
+                z-index: 1;
+                @media(max-width: $sm - 0.02px) {
+                    left: 16px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                & > svg {
+                    position: static;
+                    transform: none;
+                }
+            }
 
             svg {
                 fill: var(--black_dark);

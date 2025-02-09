@@ -68,8 +68,29 @@
             width: 73.97260%;
         }
 
-        .input-group + .switch {
-            margin-top: 24px;
+        .input-group {
+            & + .switch {
+                margin-top: -6px;
+                @media(min-width: $lg) {
+                    margin-top: -12px;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 16px;
+                @media(min-width: $lg) {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+
+        .switch {
+            &:not(:last-child) {
+                margin-bottom: 16px;
+                @media(min-width: $lg) {
+                    margin-bottom: 24px;
+                }
+            }
         }
     }
 
@@ -232,7 +253,7 @@
             width: 36.22047%;
         }
         @media(max-width: $lg - 0.02px) {
-            margin-bottom: 16px;
+            margin-bottom: 6px;
         }
     }
 
@@ -260,13 +281,14 @@
     }
 
     &__description-block {
-        color: var(--black_gray);
-        display: block;
-        flex-grow: 1;
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
         font-size: 11px;
         margin-top: auto;
         @media(min-width: $lg) {
             font-size: 12px;
+            width: calc(100% - 36.22047% - 16px);
         }
         @media(min-width: $fhd) {
             font-size: 14px;
@@ -291,9 +313,43 @@
                 }
             }
         }
+
+        &--delivery {
+            gap: 16px;
+            @media(min-width: $lg) {
+                gap: 8px;
+            }
+
+            .checkout-option__description-title {
+                @media(min-width: $lg) {
+                    order: 1;
+                }
+            }
+
+            .checkout-option__description-text {
+                @media(min-width: $lg) {
+                    margin-bottom: 8px;
+                    order: 2;
+                }
+            }
+
+            .checkout-option__description-address {
+                @media(min-width: $lg) {
+                    margin-bottom: 8px;
+                    order: 3;
+                }
+            }
+
+            .button {
+                @media(min-width: $lg) {
+                    order: 4;
+                }
+            }
+        }
     }
 
     &__description-title {
+        color: var(--black_gray);
         display: block;
 
         &:not(:last-child) {
@@ -301,6 +357,20 @@
             @media(min-width: $fhd) {
                 margin-bottom: 16px;
             }
+        }
+    }
+
+    &__description-text {
+        display: block;
+    }
+
+    &__description-address {
+        font-size: 13px;
+        @media(min-width: $lg) {
+            font-size: 14px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 16px;
         }
     }
 

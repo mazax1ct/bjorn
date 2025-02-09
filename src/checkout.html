@@ -45,16 +45,21 @@
                                     <label class="input-group__label" for="checkout_phone">Ваш телефон</label>
                                 </div>
 
-                                <div class="input-group">
-                                    <input id="checkout_email" class="input-group__input" type="text" name="" value="">
-                                    <label class="input-group__label" for="checkout_email">Ваш e-mail</label>
-                                </div>
-
                                 <label class="switch">
                                     <input type="checkbox" name="call_me" checked>
                                     <span class="switch__icon"></span>
                                     <span class="switch__text">Позвонить мне для подтверждения&nbsp;заказа</span>
                                 </label>
+
+                                <div class="input-group">
+                                    <input id="checkout_email" class="input-group__input" type="text" name="" value="">
+                                    <label class="input-group__label" for="checkout_email">Ваш e-mail</label>
+                                </div>
+
+                                <div class="input-group">
+                                    <input id="checkout_city" class="input-group__input" type="text" name="" value="">
+                                    <label class="input-group__label" for="checkout_city">Мой город</label>
+                                </div>
                             </div>
                         </div>
 
@@ -64,19 +69,21 @@
                             <div class="checkout__section-content">
                                 <div class="checkout__delivery-list">
                                     <label class="checkout-option">
-                                        <input type="radio" name="checkout_delivery" value="courier" checked>
+                                        <input type="radio" name="checkout_delivery" value="pvz" checked>
                                         <span class="checkout-option__inner">
                                             <svg class="checkout-option__check" aria-hidden="true">
                                                 <use xlink:href="images/sprite.svg#check_icon" />
                                             </svg>
 
                                             <span class="checkout-option__title-block">
-                                                <span class="checkout-option__title">Курьером</span>
+                                                <span class="checkout-option__title">Доставка до ПВЗ СДЭК</span>
                                             </span>
 
-                                            <span class="checkout-option__description-block checkout-option__description-block--address">
-                                                <span>завтра, бесплатно</span>
-                                                <span>г. Мытищи, 1-Рупасовский переулок 17В</span>
+                                            <span class="checkout-option__description-block checkout-option__description-block--delivery">
+                                                <span class="checkout-option__description-text">Сервис менеджер свяжется с Вами для подтверждения заказа с 9.00 до 21.00 по Московскому времени</span>
+                                                <span class="checkout-option__description-address">141109, Щёлково г, Комсомольская ул, д.3б</span>
+                                                <button class="js-popup-open button button--s button--primary" type="button" data-popup="pvz">Выбрать адрес пвз</button>
+                                                <span class="checkout-option__description-title">от 3 до 20 дней, Бесплатно</span>
                                             </span>
                                         </span>
                                     </label>
@@ -92,8 +99,9 @@
                                                 <span class="checkout-option__title">самовывоз</span>
                                             </span>
 
-                                            <span class="checkout-option__description-block">
-                                                сегодня, бесплатно
+                                            <span class="checkout-option__description-block checkout-option__description-block--delivery">
+                                                <span class="checkout-option__description-text">Сервис менеджер свяжется с Вами для подтверждения заказа с 9.00 до 21.00 по Московскому времени</span>
+                                                <span class="checkout-option__description-title">от 3 до 20 дней, Бесплатно</span>
                                             </span>
                                         </span>
                                     </label>
@@ -345,6 +353,8 @@
     </div>
 
     //= template/common/scripts.html
+
+    <script src="js/pvz.js"></script>
 </body>
 
 </html>
