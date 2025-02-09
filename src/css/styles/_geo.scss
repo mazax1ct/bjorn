@@ -1,0 +1,262 @@
+.geo-confirm {
+    background-color: var(--black_dark);
+    color: #fff;
+    font-size: 14px;
+    left: auto;
+    position: absolute;
+    right: var(--container_padding);
+    text-transform: uppercase;
+    top: calc(100% + 8px);
+    z-index: 1;
+    @media(max-width: $lg - 0.02px) {
+        display: none !important;
+    }
+
+    &__inner {
+        align-items: center;
+        display: flex;
+        gap: 24px;
+        padding: 12px;
+    }
+
+    &__text {
+        margin-bottom: 0;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 6px;
+    }
+
+    &__button {
+        align-items: center;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-flex;
+        font-size: 14px;
+        font-weight: 400;
+        height: 42px;
+        justify-content: center;
+        line-height: 1.3;
+        padding-left: 24px;
+        padding-right: 24px;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        transition: background-color 0.3s, color 0.3s;
+
+        &--type_1 {
+            background-color: var(--black_dark);
+        }
+
+        &--type_2 {
+            background-color: #fff;
+            color: var(--black_dark);
+        }
+    }
+}
+
+.geo-search {
+    position: relative;
+    z-index: 1;
+
+    &:not(:last-child) {
+        margin-bottom: 16px;
+        @media(min-width: $lg) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__input {
+        border-radius: 4px;
+        border: 1px solid var(--gray_white);
+        background-color: #fff;
+        font-size: 13px;
+        height: 56px;
+        padding: 20px 56px 20px 44px;
+        transition: border-color 0.3s;
+        width: 100%;
+        @media(min-width: $lg) {
+            font-size: 14px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 16px;
+        }
+
+        &:focus {
+            & + .geo-search__submit {
+                color: var(--black_dark);
+            }
+        }
+
+        &::-webkit-input-placeholder {
+            color: var(--gray_black);
+            opacity: 1;
+        }
+
+        &::-moz-placeholder {
+            color: var(--gray_black);
+            opacity: 1;
+        }
+
+        &:-ms-input-placeholder {
+            color: var(--gray_black);
+            opacity: 1;
+        }
+    }
+
+    &__submit {
+        @include button-reset;
+        align-items: center;
+        color: var(--gray_black);
+        cursor: pointer;
+        display: flex;
+        height: 56px;
+        justify-content: center;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transition: color 0.3s;
+        width: 44px;
+        z-index: 1;
+        @include hover {
+            color: var(--black_dark);
+        }
+
+        svg {
+            fill: currentColor;
+            height: 24px;
+            width: 24px;
+        }
+    }
+
+    &__reset {
+        @include button-reset;
+        @include active-area;
+        align-items: center;
+        background-color: var(--gray_white);
+        border-radius: 50%;
+        color: var(--gray_black);
+        cursor: pointer;
+        display: none;
+        height: 24px;
+        justify-content: center;
+        left: auto;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: color 0.3s;
+        width: 24px;
+        @include hover {
+            color: var(--black_dark);
+        }
+
+        &.is-active {
+            display: flex;
+        }
+
+        svg {
+            fill: currentColor;
+            height: 14px;
+            width: 14px;
+        }
+    }
+
+    &__dropdown {
+        background-color: #fff;
+        box-shadow: 0 4px 15px 0 rgba(0,0,0,0.1);
+        border-radius: 4px;
+        display: none;
+        left: 0;
+        position: absolute;
+        padding: 12px;
+        top: calc(100% + 4px);
+        width: 100%;
+        z-index: 1;
+        @media(min-width: $lg) {
+            top: calc(100% + 8px);
+        }
+
+        &.is-open {
+            display: block;
+        }
+    }
+
+    &__list {
+        @include scrollbar;
+        overflow-y: auto;
+        max-height: 210px;
+        @media(min-width: $fhd) {
+            max-height: 238px;
+        }
+    }
+
+    &__list-item {
+        @include button-reset;
+        border-radius: 4px;
+        cursor: pointer;
+        display: block;
+        font-size: 11px;
+        height: 30px;
+        padding-left: 8px;
+        padding-right: 8px;
+        transition: background-color 0.3s;
+        text-align: left;
+        width: 100%;
+        @media(min-width: $lg) {
+            font-size: 12px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 14px;
+            height: 34px;
+        }
+        @include hover {
+            background-color: var(--gray_white);
+        }
+    }
+}
+
+.geo-current {
+    margin-top: 0;
+    margin-bottom: 16px;
+    @media(min-width: $lg) {
+        margin-bottom: 40px;
+        margin-top: -18px;
+    }
+}
+
+.geo-list {
+    @include scrollbar;
+    overflow-y: auto;
+    flex-grow: 1;
+    margin-bottom: -16px;
+    @media(min-width: $sm) {
+        margin-bottom: -40px;
+    }
+
+    &__item {
+        @include button-reset;
+        border-radius: 4px;
+        cursor: pointer;
+        display: block;
+        font-size: 13px;
+        height: 33px;
+        padding-left: 8px;
+        padding-right: 8px;
+        text-align: left;
+        transition: background-color 0.3s;
+        width: 100%;
+        @media(min-width: $lg) {
+            font-size: 14px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 16px;
+            height: 37px;
+        }
+        @include hover {
+            background-color: var(--gray_white);
+        }
+    }
+}

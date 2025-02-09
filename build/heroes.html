@@ -62,6 +62,13 @@
                     </svg>
                 </a>
         
+                <button class="header__button header__button--geo" type="button" title="Выбор города">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#pin_icon" />
+                    </svg>
+                    <span>Санкт-Петербург</span>
+                </button>
+        
                 <a class="header__button header__button--personal" href="#" title="Личный кабинет">
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#personal_icon" />
@@ -79,6 +86,16 @@
                         <use xlink:href="images/sprite.svg#cart_icon" />
                     </svg>
                 </button>
+        
+                <div class="geo-confirm">
+                    <div class="geo-confirm__inner">
+                        <p class="geo-confirm__text">Санкт-Петербург<br> Это ваш город?</p>
+                        <div class="geo-confirm__buttons">
+                            <button class="geo-confirm__button geo-confirm__button--type_1" type="button">сменить</button>
+                            <button class="geo-confirm__button geo-confirm__button--type_2" type="button">Верно</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -88,6 +105,13 @@
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#close_icon" />
                     </svg>
+                </button>
+        
+                <button class="geo" type="button">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#pin_icon" />
+                    </svg>
+                    <span>мой город</span>
                 </button>
         
                 <nav class="main-menu__nav">
@@ -3281,7 +3305,7 @@
         
                 <p class="review-add-thx__text">Он будет опубликован, как только<br> пройдет проверку</p>
         
-                <button class="js-popup-close button button--primary button--m" type="button">закрыть</button>
+                <button class="js-popup-close button button--primary button--m" type="button">закры��ь</button>
             </div>
         </div>
         
@@ -3572,6 +3596,128 @@
         
                 <button class="button button--primary button--m" type="button">Выбрать этот пункт выдачи</button>
             </div>
+        </div>
+        
+        <div id="geo" class="popup popup--flex_column popup--width_type_3 popup--left_sm_to_right">
+            <button class="js-popup-close popup__closer" type="button" title="Закрыть попап">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#close_icon" />
+                </svg>
+            </button>
+        
+            <div class="popup__title h2">Ваш населенный пункт</div>
+        
+            <h4 class="geo-current">Санкт-Петербург</h4>
+        
+            <form class="geo-search">
+                <input class="geo-search__input" type="text" name="geo_search" value="" placeholder="Введите название населенного пункта">
+        
+                <button class="geo-search__submit" type="submit" title="Искать">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#search_icon" />
+                    </svg>
+                </button>
+        
+                <button class="geo-search__reset" type="button" title="Очистить">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#close_icon" />
+                    </svg>
+                </button>
+        
+                <div class="geo-search__dropdown is-open">
+                    <div class="geo-search__list">
+                        <button class="geo-search__list-item" type="button"><b>М</b>осква</button>
+                        <button class="geo-search__list-item" type="button">Санкт-Петербург</button>
+                        <button class="geo-search__list-item" type="button">Сызрань</button>
+                        <button class="geo-search__list-item" type="button">Суздаль</button>
+                        <button class="geo-search__list-item" type="button">Казань</button>
+                        <button class="geo-search__list-item" type="button"><b>М</b>осква</button>
+                        <button class="geo-search__list-item" type="button">Санкт-Петербург</button>
+                        <button class="geo-search__list-item" type="button">Сызрань</button>
+                        <button class="geo-search__list-item" type="button">Суздаль</button>
+                        <button class="geo-search__list-item" type="button">Казань</button>
+                    </div>
+                </div>
+            </form>
+        
+            <div class="geo-list">
+                <button class="geo-list__item" type="button">Москва</button>
+                <button class="geo-list__item" type="button">Санкт-Петербург</button>
+                <button class="geo-list__item" type="button">Пермь</button>
+                <button class="geo-list__item" type="button">Ростов-на-Дону</button>
+                <button class="geo-list__item" type="button">Хабаровск</button>
+                <button class="geo-list__item" type="button">Казань</button>
+                <button class="geo-list__item" type="button">Саратов</button>
+                <button class="geo-list__item" type="button">Екатеринбург</button>
+                <button class="geo-list__item" type="button">Челябинск</button>
+                <button class="geo-list__item" type="button">Нижний Новгород</button>
+                <button class="geo-list__item" type="button">Сочи</button>
+                <button class="geo-list__item" type="button">Москва</button>
+                <button class="geo-list__item" type="button">Санкт-Петербург</button>
+                <button class="geo-list__item" type="button">Пермь</button>
+                <button class="geo-list__item" type="button">Ростов-на-Дону</button>
+                <button class="geo-list__item" type="button">Хабаровск</button>
+                <button class="geo-list__item" type="button">Казань</button>
+                <button class="geo-list__item" type="button">Саратов</button>
+                <button class="geo-list__item" type="button">Екатеринбург</button>
+                <button class="geo-list__item" type="button">Челябинск</button>
+                <button class="geo-list__item" type="button">Нижний Новгород</button>
+                <button class="geo-list__item" type="button">Сочи</button>
+                <button class="geo-list__item" type="button">Москва</button>
+                <button class="geo-list__item" type="button">Санкт-Петербург</button>
+                <button class="geo-list__item" type="button">Пермь</button>
+                <button class="geo-list__item" type="button">Ростов-на-Дону</button>
+                <button class="geo-list__item" type="button">Хабаровск</button>
+                <button class="geo-list__item" type="button">Казань</button>
+                <button class="geo-list__item" type="button">Саратов</button>
+                <button class="geo-list__item" type="button">Екатеринбург</button>
+                <button class="geo-list__item" type="button">Челябинск</button>
+                <button class="geo-list__item" type="button">Нижний Новгород</button>
+                <button class="geo-list__item" type="button">Сочи</button>
+            </div>
+        </div>
+        
+        <div id="geo_no_results" class="popup popup--flex_column popup--width_type_3 popup--left_sm_to_right">
+            <button class="js-popup-close popup__closer" type="button" title="Закрыть попап">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#close_icon" />
+                </svg>
+            </button>
+        
+            <div class="popup__title h2">Ваш населенный пункт</div>
+        
+            <form class="geo-search">
+                <input class="geo-search__input" type="text" name="geo_search" value="d dfs gsdf gsdf g" placeholder="Введите название населенного пункта">
+        
+                <button class="geo-search__submit" type="submit" title="Искать">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#search_icon" />
+                    </svg>
+                </button>
+        
+                <button class="geo-search__reset is-active" type="button" title="Очистить">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#close_icon" />
+                    </svg>
+                </button>
+        
+                <div class="geo-search__dropdown">
+                    <div class="geo-search__list">
+                        <button class="geo-search__list-item" type="button"><b>М</b>осква</button>
+                        <button class="geo-search__list-item" type="button">Санкт-Петербург</button>
+                        <button class="geo-search__list-item" type="button">Сызрань</button>
+                        <button class="geo-search__list-item" type="button">Суздаль</button>
+                        <button class="geo-search__list-item" type="button">Казань</button>
+                        <button class="geo-search__list-item" type="button"><b>М</b>осква</button>
+                        <button class="geo-search__list-item" type="button">Санкт-Петербург</button>
+                        <button class="geo-search__list-item" type="button">Сызрань</button>
+                        <button class="geo-search__list-item" type="button">Суздаль</button>
+                        <button class="geo-search__list-item" type="button">Казань</button>
+                    </div>
+                </div>
+            </form>
+        
+            <p class="geo-no-results">к сожалению, ничего не найдено</p>
         </div>
 
         <div class="page__shade"></div>
