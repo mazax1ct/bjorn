@@ -233,6 +233,12 @@ html {
             width: 75.39062%;
         }
 
+        &--no_pr {
+            @media(min-width: $lg) {
+                padding-right: 0;
+            }
+        }
+
         .cards-slider {
             &:not(:last-child) {
                 margin-bottom: 40px;

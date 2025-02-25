@@ -31,7 +31,7 @@
 
 <body class="page">
     <div id="app">
-        <header class="header header--transparent">
+        <header class="header">
             <div class="header__inner container">
                 <div class="header__menu-block">
                     <button class="js-main-menu-opener header__button" type="button" title="Открыть меню">
@@ -62,6 +62,13 @@
                     </svg>
                 </a>
         
+                <button class="header__button header__button--geo" type="button" title="Выбор города">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#pin_icon" />
+                    </svg>
+                    <span>Санкт-Петербург</span>
+                </button>
+        
                 <a class="header__button header__button--personal" href="#" title="Личный кабинет">
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#personal_icon" />
@@ -79,6 +86,16 @@
                         <use xlink:href="images/sprite.svg#cart_icon" />
                     </svg>
                 </button>
+        
+                <div class="geo-confirm">
+                    <div class="geo-confirm__inner">
+                        <p class="geo-confirm__text">Санкт-Петербург<br> Это ваш город?</p>
+                        <div class="geo-confirm__buttons">
+                            <button class="geo-confirm__button geo-confirm__button--type_1" type="button">сменить</button>
+                            <button class="geo-confirm__button geo-confirm__button--type_2" type="button">Верно</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -910,507 +927,550 @@
 
         <main class="page__content">
             <div class="container">
-                <div class="banner banner--start banner--type_1 banner--shadow_bottom banner--lg_full_height full-width">
-                    <picture>
-                        <source srcset="images/content/heroes/banner/fhd.jpg, images/content/heroes/banner/fhd@2x.jpg 2x" media="(min-width: 1600px)">
-                        <source srcset="images/content/heroes/banner/lg.jpg, images/content/heroes/banner/lg@2x.jpg 2x" media="(min-width: 1300px)">
-                        <source srcset="images/content/heroes/banner/sm.jpg, images/content/heroes/banner/sm@2x.jpg 2x" media="(min-width: 768px)">
-                        <img src="images/content/heroes/banner/mob.jpg" srcset="images/content/heroes/banner/mob@2x.jpg 2x" alt="">
-                    </picture>
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Покупателям</a></li>
+                    <li class="breadcrumbs__item">Оптовым покупателям</li>
+                </ul>
 
-                    <div class="banner__inner container">
-                        <ul class="breadcrumbs">
-                            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
-                            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Герои</a></li>
-                            <li class="breadcrumbs__item">Kristin Erikson</li>
-                        </ul>
-
-                        <h1>KRISTIN ERIKSON</h1>
-                    </div>
+                <div class="title-block">
+                    <h1>øптøвым пøкупателям</h1>
+                    <p class="h2">Мы контролируем весь производственный процесс,<br> поддерживая качество и сокращая издержки.</p>
+                    <a class="button button--primary button--m" href="#get_price_form">получить прайс-лист</a>
                 </div>
 
-                <div class="content-block article-block">
-                    <p>Просто спросите Джейсона Робертса, уроженца Австралии и одного из старожилов Норвежского архипелага. После того, как он прибыл сюда 30 лет назад, вкус к приключениям был тем, что первоначально привлекло производителя
-                        документальных фильмов к Ледяному побережью.</p>
 
-                    <p>Проработав в рамках основных проектов, связанных с дикой природой в регионах Арктики и Антарктики, Джейсон теперь увлечен образовательной стороной своей работы. В частности, возможностью сотрудничать в рамках проектов,
-                        направленных на повышение осведомленности и знаний о роли природы, дикой природы и ее сохранении.</p>
-
-                    <figure>
-                        <img src="images/content/heroes/img_4.jpg" srcset="images/content/heroes/img_4@2x.jpg 2x" alt="">
-
-                        <figcaption>
-                            <h2>«Причиной, по которой я остался надолго, в первое время, большей частью, была возможность оказаться в абсолютно дикой природе и исследовать одно из самых удивительных мест на планете».</h2>
-                        </figcaption>
-                    </figure>
-
-                    <figure>
-                        <img src="images/content/heroes/img_5.jpg" srcset="images/content/heroes/img_5@2x.jpg 2x" alt="">
-
-                        <figcaption>
-                            <p>И для Джейсона жизнь на холодном севере полна незабываемых моментов, включая работу над дебютным фильмом большого документального цикла о сохранении природы - «Планета Земля» BBC. «Однажды из берлоги впервые появилась
-                                белая медведица с двумя маленькими медвежатами. И они покатились из берлоги по склону вниз, – говорит он нам, – и я помню, что видел ту же сцену несколько лет спустя на экранах Таймс-сквера и говорил: «О, я знаю этого
-                                медведя!».</p>
-                        </figcaption>
-                    </figure>
-
-                    <img src="images/content/heroes/img_6.jpg" srcset="images/content/heroes/img_6@2x.jpg 2x" alt="">
-
-                    <div class="about-product">
-                        <h2>Зимняя куртка аляска<br> Tromsø тёмно-синяя</h2>
-
-                        <div class="card">
-                            <div class="card__top">
-                                <a class="js-card-images card__image" href="#">
-                                    <span class="card__images">
-                                        <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_6.jpg" srcset="images/content/cards/img_6@2x.jpg 2x" alt=""></span>
-                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_7.jpg" srcset="images/content/cards/img_7@2x.jpg 2x" alt=""></span>
-                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_8.jpg" srcset="images/content/cards/img_8@2x.jpg 2x" alt=""></span>
-                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_9.jpg" srcset="images/content/cards/img_9@2x.jpg 2x" alt=""></span>
-                                    </span>
-
-                                    <span class="card__images-pagination">
-                                        <span class="js-card-image-num is-active"></span>
-                                        <span class="js-card-image-num"></span>
-                                        <span class="js-card-image-num"></span>
-                                        <span class="js-card-image-num"></span>
-                                    </span>
-
-                                    <span class="card__images-handlers">
-                                        <span class="js-card-image-handler card__image-handler"></span>
-                                        <span class="js-card-image-handler card__image-handler"></span>
-                                        <span class="js-card-image-handler card__image-handler"></span>
-                                        <span class="js-card-image-handler card__image-handler"></span>
-                                    </span>
-                                </a>
-
-                                <div class="card__badges badges">
-                                    <div class="badge">мембрана</div>
-                                </div>
-
-                                <button class="card__fav" type="button" title="Добавить в избранное">
+                <div class="page__columns page__columns--border_top">
+                    <div class="page__left-column">
+                        <h2>Пøкупателям</h2>
+                        
+                        <ul class="left-menu">
+                            <li class="left-menu__item">
+                                <a class="left-menu__link is-active" href="#">оптовым покупателям</a>
+                            </li>
+                        
+                            <li class="left-menu__item">
+                                <a class="left-menu__link" href="#">Доставка и оплата</a>
+                            </li>
+                        
+                            <li class="left-menu__item">
+                                <a class="left-menu__link" href="#">Обмен и возврат</a>
+                            </li>
+                        
+                            <li class="left-menu__item">
+                                <a class="left-menu__link" href="#">уход за изделием</a>
+                            </li>
+                        
+                            <li class="left-menu__item">
+                                <a class="left-menu__link" href="#">Подарочный сертификат</a>
+                            </li>
+                        
+                            <li class="left-menu__item">
+                                <a class="left-menu__link" href="#">технологии</a>
+                            </li>
+                        
+                        
+                        </ul>
+                        
+                        <div class="contacts-block">
+                            <h3>У ВАС ОСТАЛИСЬ ВОПРОСЫ?</h3>
+                        
+                            <div class="socials">
+                                <a class="social-link" href="#" rel="nofollow noreferrer" title="Мы в Telegram">
                                     <svg aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#fav_icon" />
+                                        <use xlink:href="images/sprite.svg#tg_icon" />
                                     </svg>
-                                </button>
-
-                                <a class="card__buy" href="#" title="Добавить в корзину">
+                                </a>
+                        
+                                <a class="social-link" href="#" rel="nofollow noreferrer" title="Наш Whatsapp">
                                     <svg aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#cart_icon" />
+                                        <use xlink:href="images/sprite.svg#whatsapp_icon" />
+                                    </svg>
+                                </a>
+                        
+                                <a class="social-link" href="mailto:info@larsenbjorn.ru" rel="nofollow noreferrer" title="Написать нам">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#envelope_icon" />
+                                    </svg>
+                                </a>
+                        
+                                <a class="social-link" href="tel:+78003007828" rel="nofollow noreferrer" title="Позвонить нам">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#phone_icon" />
                                     </svg>
                                 </a>
                             </div>
-
-                            <div class="card__bottom">
-                                <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
-
-                                <div class="card__price-block">
-                                    <div class="card__price">34 900 <span class="rub">руб</span></div>
-                                    <div class="card__old-price">54 900 <span class="rub">руб</span></div>
-                                    <div class="card__discount">-15%</div>
-                                </div>
-
-                                <div class="card__colors">
-                                    <div class="card__color" style="background-color: #5A785A" title="Зелёный"></div>
-                                    <div class="card__color" style="background-color: #00487D" title="Синий"></div>
-                                    <div class="card__color" style="background-color: #B52626" title="Красный"></div>
-                                    <div class="card__color" style="background-color: #B59B8A" title="Бежевый"></div>
-                                    <div class="card__color" style="background-color: #4A4A4D" title="Тёмно-серый"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="about-product__text-block">
-                            <p>Мембранные ткани CONFIDENCE  обеспечивают максимальный комфорт и уверенность в самых экстремальных погодных условиях. Температурный режим до -55 °C и встроенный климат контроль подходит для разных погодных условий.</p>
-
-                            <p>Рукава парки обработаны утепленной резинкой для защиты от поддувания холодного воздуха. Вместительные утепленные мехом Velboa внутренние карманы с молниями: 7 внешних и 2 внутренних. Двухзамковая центральная молния с
-                                внутренней ветрозащитной планкой.</p>
-
-                            <a class="button button--primary button--s" href="#">Подробнее</a>
                         </div>
                     </div>
 
-                    <div class="cards-slider">
-                        <div class="cards-slider__title">
-                            <div class="h2">Вам может понравиться</div>
+                    <div class="page__right-column">
+                        <div class="content-columns">
+                            <div class="content-columns__section">
+                                <div class="content-columns__section-title">
+                                    <h2>ø бренде</h2>
+                                </div>
 
-                            <div class="cards-slider__arrows">
-                                <button class="swiper-button-prev" type="button" title="Назад" data-arrows="arrows_7">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#chevron_left" />
-                                    </svg>
-                                </button>
+                                <div class="content-columns__section-content">
+                                    <p>Bjørn Larsen - молодой российский бренд верхней одежды, предназначенной для города и активного отдыха. При изготовлении наших изделий мы с особым вниманием подходим к выбору материалов и используем для
+                                        производства самые современные и проверенные технологии.</p>
 
-                                <button class="swiper-button-next" type="button" title="Вперёд" data-arrows="arrows_7">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#chevron_right" />
-                                    </svg>
-                                </button>
+                                    <p>Яркие, функциональные и практичные вещи BJORN LARSEN созданы, чтобы сделать жизнь российских покупателей комфортнее независимо от погодных условий, климата и сезона.</p>
+                                </div>
+                            </div>
+
+                            <div class="content-columns__section">
+                                <div class="content-columns__section-title">
+                                    <h2>Пøчему мы?</h2>
+                                    <p class="h3">Вещи Bjørn Larsen - это<br> всегда качественные ткани,<br> актуальный крой и<br> безупречный пошив.</p>
+                                </div>
+
+                                <div class="content-columns__section-content">
+                                    <div class="features-cards">
+                                        <div class="feature-card">
+                                            <h4>Опыт профессионалов</h4>
+
+                                            <p>В команде Bjørn Larsen работают профессионалы своего дела с многолетним опытом в фэшн-ритейле.</p>
+                                        </div>
+
+                                        <div class="feature-card">
+                                            <h4>Качество</h4>
+
+                                            <p>Мы изготавливаем вещи Bjørn Larsen, соблюдая норвежские стандарты в производстве верхней одежды.</p>
+                                        </div>
+
+                                        <div class="feature-card">
+                                            <h4>Персональный менеджер</h4>
+
+                                            <p>Персональный менеджер поможет с выбором изделий и оформлением заказа на любом этапе.</p>
+                                        </div>
+
+                                        <div class="feature-card">
+                                            <h4>Оперативная доставка</h4>
+
+                                            <p>Мы отправляем изделия Bjørn Larsen во все регионы страны. До терминала транспортной компании в Санкт‑Петербурге доставляем бесплатно.</p>
+                                        </div>
+
+                                        <div class="feature-card">
+                                            <h4>Сертификация</h4>
+
+                                            <p>Вся продукция имеет декларацию о соответствии, подтверждающую ее качество и безопасность, а также зарегистрирована в «Честном Знаке».</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="js-cards-slider cards-slider__slider swiper" data-s-qnt="2" data-sm-qnt="3" data-lg-qnt="3" data-fhd-qnt="3" data-arrows="arrows_7">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <div class="card__top">
-                                            <a class="js-card-images card__image" href="#">
-                                                <span class="card__images">
-                                                    <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
-                                                </span>
-
-                                                <span class="card__images-pagination">
-                                                    <span class="js-card-image-num is-active"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                </span>
-
-                                                <span class="card__images-handlers">
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                </span>
-                                            </a>
-
-                                            <div class="card__badges badges">
-                                                <div class="badge">мембрана</div>
+                        <div class="cards-slider">
+                            <div class="cards-slider__title">
+                                <div class="h2">ПØПУЛЯРНЫЕ ТØВАРЫ</div>
+                        
+                                <div class="cards-slider__arrows">
+                                    <button class="swiper-button-prev" type="button" title="Назад" data-arrows="arrows_4">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#chevron_left" />
+                                        </svg>
+                                    </button>
+                        
+                                    <button class="swiper-button-next" type="button" title="Вперёд" data-arrows="arrows_4">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#chevron_right" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        
+                            <div class="js-cards-slider cards-slider__slider swiper" data-s-qnt="2" data-sm-qnt="3" data-lg-qnt="4" data-fhd-qnt="4" data-arrows="arrows_4">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card__top">
+                                                <a class="js-card-images card__image" href="#">
+                                                    <span class="card__images">
+                                                        <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
+                                                    </span>
+                        
+                                                    <span class="card__images-pagination">
+                                                        <span class="js-card-image-num is-active"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                    </span>
+                        
+                                                    <span class="card__images-handlers">
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                    </span>
+                                                </a>
+                        
+                                                <div class="card__badges badges">
+                                                    <div class="badge">мембрана</div>
+                                                </div>
+                        
+                                                <button class="card__fav" type="button" title="Добавить в избранное">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="images/sprite.svg#fav_icon" />
+                                                    </svg>
+                                                </button>
+                        
+                                                <a class="card__buy" href="#" title="Добавить в корзину">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="images/sprite.svg#cart_icon" />
+                                                    </svg>
+                                                </a>
                                             </div>
-
-                                            <button class="card__fav" type="button" title="Добавить в избранное">
-                                                <svg aria-hidden="true">
-                                                    <use xlink:href="images/sprite.svg#fav_icon" />
-                                                </svg>
-                                            </button>
-
-                                            <a class="card__buy" href="#" title="Добавить в корзину">
-                                                <svg aria-hidden="true">
-                                                    <use xlink:href="images/sprite.svg#cart_icon" />
-                                                </svg>
-                                            </a>
+                        
+                                            <div class="card__bottom">
+                                                <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
+                        
+                                                <div class="card__price-block">
+                                                    <div class="card__price">34 900 <span class="rub">руб</span></div>
+                                                    <div class="card__old-price">54 900 <span class="rub">руб</span></div>
+                                                    <div class="card__discount">-15%</div>
+                                                </div>
+                        
+                                                <div class="card__colors">
+                                                    <div class="card__color" style="background-color: #5A785A" title="Зелёный"></div>
+                                                    <div class="card__color" style="background-color: #00487D" title="Синий"></div>
+                                                    <div class="card__color" style="background-color: #B52626" title="Красный"></div>
+                                                    <div class="card__color" style="background-color: #B59B8A" title="Бежевый"></div>
+                                                    <div class="card__color" style="background-color: #4A4A4D" title="Тёмно-серый"></div>
+                                                </div>
+                                            </div>
                                         </div>
-
-                                        <div class="card__bottom">
-                                            <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
-
-                                            <div class="card__price-block">
-                                                <div class="card__price">34 900 <span class="rub">руб</span></div>
-                                                <div class="card__old-price">54 900 <span class="rub">руб</span></div>
-                                                <div class="card__discount">-15%</div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card__top">
+                                                <a class="js-card-images card__image" href="#">
+                                                    <span class="card__images">
+                                                        <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
+                                                    </span>
+                        
+                                                    <span class="card__images-pagination">
+                                                        <span class="js-card-image-num is-active"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                    </span>
+                        
+                                                    <span class="card__images-handlers">
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                    </span>
+                                                </a>
+                        
+                                                <div class="card__badges badges">
+                                                    <div class="badge">натуральный пух</div>
+                                                </div>
+                        
+                                                <button class="card__fav" type="button" title="Убрать из избранного">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="images/sprite.svg#fav_filled_icon" />
+                                                    </svg>
+                                                </button>
+                        
+                                                <a class="card__buy" href="#" title="Добавить в корзину">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="images/sprite.svg#cart_icon" />
+                                                    </svg>
+                                                </a>
                                             </div>
-
-                                            <div class="card__colors">
-                                                <div class="card__color" style="background-color: #5A785A" title="Зелёный"></div>
-                                                <div class="card__color" style="background-color: #00487D" title="Синий"></div>
-                                                <div class="card__color" style="background-color: #B52626" title="Красный"></div>
-                                                <div class="card__color" style="background-color: #B59B8A" title="Бежевый"></div>
-                                                <div class="card__color" style="background-color: #4A4A4D" title="Тёмно-серый"></div>
+                        
+                                            <div class="card__bottom">
+                                                <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
+                        
+                                                <div class="card__price-block">
+                                                    <div class="card__price">34 900 <span class="rub">руб</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card__top">
+                                                <a class="js-card-images card__image" href="#">
+                                                    <span class="card__images">
+                                                        <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
+                                                    </span>
+                        
+                                                    <span class="card__images-pagination">
+                                                        <span class="js-card-image-num is-active"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                    </span>
+                        
+                                                    <span class="card__images-handlers">
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                    </span>
+                                                </a>
+                        
+                                                <div class="card__badges badges">
+                                                    <div class="badge">мембрана</div>
+                                                </div>
+                        
+                                                <button class="card__fav" type="button" title="Добавить в избранное">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="images/sprite.svg#fav_icon" />
+                                                    </svg>
+                                                </button>
+                        
+                                                <a class="card__buy" href="#" title="Добавить в корзину">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="images/sprite.svg#cart_icon" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                        
+                                            <div class="card__bottom">
+                                                <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
+                        
+                                                <div class="card__price-block">
+                                                    <div class="card__price">34 900 <span class="rub">руб</span></div>
+                                                    <div class="card__old-price">54 900 <span class="rub">руб</span></div>
+                                                    <div class="card__discount">-15%</div>
+                                                </div>
+                        
+                                                <div class="card__colors">
+                                                    <div class="card__color" style="background-color: #5A785A" title="Зелёный"></div>
+                                                    <div class="card__color" style="background-color: #00487D" title="Синий"></div>
+                                                    <div class="card__color" style="background-color: #B52626" title="Красный"></div>
+                                                    <div class="card__color" style="background-color: #B59B8A" title="Бежевый"></div>
+                                                    <div class="card__color" style="background-color: #4A4A4D" title="Тёмно-серый"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card__top">
+                                                <a class="js-card-images card__image" href="#">
+                                                    <span class="card__images">
+                                                        <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
+                                                    </span>
+                        
+                                                    <span class="card__images-pagination">
+                                                        <span class="js-card-image-num is-active"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                    </span>
+                        
+                                                    <span class="card__images-handlers">
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                    </span>
+                                                </a>
+                        
+                                                <div class="card__badges badges">
+                                                    <div class="badge">натуральный пух</div>
+                                                </div>
+                        
+                                                <button class="card__fav" type="button" title="Убрать из избранного">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="images/sprite.svg#fav_filled_icon" />
+                                                    </svg>
+                                                </button>
+                        
+                                                <a class="card__buy" href="#" title="Добавить в корзину">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="images/sprite.svg#cart_icon" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                        
+                                            <div class="card__bottom">
+                                                <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
+                        
+                                                <div class="card__price-block">
+                                                    <div class="card__price">34 900 <span class="rub">руб</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card__top">
+                                                <a class="js-card-images card__image" href="#">
+                                                    <span class="card__images">
+                                                        <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
+                                                    </span>
+                        
+                                                    <span class="card__images-pagination">
+                                                        <span class="js-card-image-num is-active"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                    </span>
+                        
+                                                    <span class="card__images-handlers">
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                    </span>
+                                                </a>
+                        
+                                                <div class="card__badges badges">
+                                                    <div class="badge">натуральный пух</div>
+                                                </div>
+                        
+                                                <button class="card__fav" type="button" title="Добавить в избранное">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="images/sprite.svg#fav_icon" />
+                                                    </svg>
+                                                </button>
+                        
+                                                <a class="card__buy" href="#" title="Добавить в корзину">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="images/sprite.svg#cart_icon" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                        
+                                            <div class="card__bottom">
+                                                <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
+                        
+                                                <div class="card__price-block">
+                                                    <div class="card__price">34 900 <span class="rub">руб</span></div>
+                                                    <div class="card__old-price">54 900 <span class="rub">руб</span></div>
+                                                    <div class="card__discount">-15%</div>
+                                                </div>
+                        
+                                                <div class="card__colors">
+                                                    <div class="card__color" style="background-color: #5A785A" title="Зелёный"></div>
+                                                    <div class="card__color" style="background-color: #00487D" title="Синий"></div>
+                                                    <div class="card__color" style="background-color: #B52626" title="Красный"></div>
+                                                    <div class="card__color" style="background-color: #B59B8A" title="Бежевый"></div>
+                                                    <div class="card__color" style="background-color: #4A4A4D" title="Тёмно-серый"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card__top">
+                                                <a class="js-card-images card__image" href="#">
+                                                    <span class="card__images">
+                                                        <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
+                                                        <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
+                                                    </span>
+                        
+                                                    <span class="card__images-pagination">
+                                                        <span class="js-card-image-num is-active"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                        <span class="js-card-image-num"></span>
+                                                    </span>
+                        
+                                                    <span class="card__images-handlers">
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                        <span class="js-card-image-handler card__image-handler"></span>
+                                                    </span>
+                                                </a>
+                        
+                                                <div class="card__badges badges">
+                                                    <div class="badge">мембрана</div>
+                                                </div>
+                        
+                                                <button class="card__fav" type="button" title="Убрать из избранного">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="images/sprite.svg#fav_filled_icon" />
+                                                    </svg>
+                                                </button>
+                        
+                                                <a class="card__buy" href="#" title="Добавить в корзину">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="images/sprite.svg#cart_icon" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                        
+                                            <div class="card__bottom">
+                                                <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
+                        
+                                                <div class="card__price-block">
+                                                    <div class="card__price">34 900 <span class="rub">руб</span></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <div class="card__top">
-                                            <a class="js-card-images card__image" href="#">
-                                                <span class="card__images">
-                                                    <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
-                                                </span>
+                            </div>
+                        </div>
 
-                                                <span class="card__images-pagination">
-                                                    <span class="js-card-image-num is-active"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                </span>
+                        <div class="form">
+                            <div id="get_price_form" class="form__anchor"></div>
 
-                                                <span class="card__images-handlers">
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                </span>
-                                            </a>
+                            <div class="form__inner">
+                                <h2>Пøлучить прайс–лист</h2>
 
-                                            <div class="card__badges badges">
-                                                <div class="badge">натуральный пух</div>
-                                            </div>
-
-                                            <button class="card__fav" type="button" title="Убрать из избранного">
-                                                <svg aria-hidden="true">
-                                                    <use xlink:href="images/sprite.svg#fav_filled_icon" />
-                                                </svg>
-                                            </button>
-
-                                            <a class="card__buy" href="#" title="Добавить в корзину">
-                                                <svg aria-hidden="true">
-                                                    <use xlink:href="images/sprite.svg#cart_icon" />
-                                                </svg>
-                                            </a>
-                                        </div>
-
-                                        <div class="card__bottom">
-                                            <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
-
-                                            <div class="card__price-block">
-                                                <div class="card__price">34 900 <span class="rub">руб</span></div>
-                                            </div>
-                                        </div>
+                                <form class="form__form" action="">
+                                    <div class="input-group">
+                                        <input id="get_price_name" class="input-group__input" type="text" name="" value="">
+                                        <label class="input-group__label" for="get_price_name">Ваше имя</label>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <div class="card__top">
-                                            <a class="js-card-images card__image" href="#">
-                                                <span class="card__images">
-                                                    <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
-                                                </span>
 
-                                                <span class="card__images-pagination">
-                                                    <span class="js-card-image-num is-active"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                </span>
-
-                                                <span class="card__images-handlers">
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                </span>
-                                            </a>
-
-                                            <div class="card__badges badges">
-                                                <div class="badge">мембрана</div>
-                                            </div>
-
-                                            <button class="card__fav" type="button" title="Добавить в избранное">
-                                                <svg aria-hidden="true">
-                                                    <use xlink:href="images/sprite.svg#fav_icon" />
-                                                </svg>
-                                            </button>
-
-                                            <a class="card__buy" href="#" title="Добавить в корзину">
-                                                <svg aria-hidden="true">
-                                                    <use xlink:href="images/sprite.svg#cart_icon" />
-                                                </svg>
-                                            </a>
-                                        </div>
-
-                                        <div class="card__bottom">
-                                            <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
-
-                                            <div class="card__price-block">
-                                                <div class="card__price">34 900 <span class="rub">руб</span></div>
-                                                <div class="card__old-price">54 900 <span class="rub">руб</span></div>
-                                                <div class="card__discount">-15%</div>
-                                            </div>
-
-                                            <div class="card__colors">
-                                                <div class="card__color" style="background-color: #5A785A" title="Зелёный"></div>
-                                                <div class="card__color" style="background-color: #00487D" title="Синий"></div>
-                                                <div class="card__color" style="background-color: #B52626" title="Красный"></div>
-                                                <div class="card__color" style="background-color: #B59B8A" title="Бежевый"></div>
-                                                <div class="card__color" style="background-color: #4A4A4D" title="Тёмно-серый"></div>
-                                            </div>
-                                        </div>
+                                    <div class="input-group">
+                                        <input id="get_price_phone" class="input-group__input" type="text" name="" value="">
+                                        <label class="input-group__label" for="get_price_phone">Ваш телефон</label>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <div class="card__top">
-                                            <a class="js-card-images card__image" href="#">
-                                                <span class="card__images">
-                                                    <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
-                                                </span>
 
-                                                <span class="card__images-pagination">
-                                                    <span class="js-card-image-num is-active"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                </span>
-
-                                                <span class="card__images-handlers">
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                </span>
-                                            </a>
-
-                                            <div class="card__badges badges">
-                                                <div class="badge">натуральный пух</div>
-                                            </div>
-
-                                            <button class="card__fav" type="button" title="Убрать из избранного">
-                                                <svg aria-hidden="true">
-                                                    <use xlink:href="images/sprite.svg#fav_filled_icon" />
-                                                </svg>
-                                            </button>
-
-                                            <a class="card__buy" href="#" title="Добавить в корзину">
-                                                <svg aria-hidden="true">
-                                                    <use xlink:href="images/sprite.svg#cart_icon" />
-                                                </svg>
-                                            </a>
-                                        </div>
-
-                                        <div class="card__bottom">
-                                            <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
-
-                                            <div class="card__price-block">
-                                                <div class="card__price">34 900 <span class="rub">руб</span></div>
-                                            </div>
-                                        </div>
+                                    <div class="input-group">
+                                        <input id="get_price_email" class="input-group__input" type="text" name="" value="">
+                                        <label class="input-group__label" for="get_price_email">Ваш e-mail</label>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <div class="card__top">
-                                            <a class="js-card-images card__image" href="#">
-                                                <span class="card__images">
-                                                    <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
-                                                </span>
 
-                                                <span class="card__images-pagination">
-                                                    <span class="js-card-image-num is-active"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                </span>
+                                    <button class="button button--primary button--m" type="submit">Отправить</button>
+                                </form>
 
-                                                <span class="card__images-handlers">
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                </span>
-                                            </a>
-
-                                            <div class="card__badges badges">
-                                                <div class="badge">натуральный пух</div>
-                                            </div>
-
-                                            <button class="card__fav" type="button" title="Добавить в избранное">
-                                                <svg aria-hidden="true">
-                                                    <use xlink:href="images/sprite.svg#fav_icon" />
-                                                </svg>
-                                            </button>
-
-                                            <a class="card__buy" href="#" title="Добавить в корзину">
-                                                <svg aria-hidden="true">
-                                                    <use xlink:href="images/sprite.svg#cart_icon" />
-                                                </svg>
-                                            </a>
-                                        </div>
-
-                                        <div class="card__bottom">
-                                            <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
-
-                                            <div class="card__price-block">
-                                                <div class="card__price">34 900 <span class="rub">руб</span></div>
-                                                <div class="card__old-price">54 900 <span class="rub">руб</span></div>
-                                                <div class="card__discount">-15%</div>
-                                            </div>
-
-                                            <div class="card__colors">
-                                                <div class="card__color" style="background-color: #5A785A" title="Зелёный"></div>
-                                                <div class="card__color" style="background-color: #00487D" title="Синий"></div>
-                                                <div class="card__color" style="background-color: #B52626" title="Красный"></div>
-                                                <div class="card__color" style="background-color: #B59B8A" title="Бежевый"></div>
-                                                <div class="card__color" style="background-color: #4A4A4D" title="Тёмно-серый"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <div class="card__top">
-                                            <a class="js-card-images card__image" href="#">
-                                                <span class="card__images">
-                                                    <span class="js-card-image card__image-item is-active"><img src="images/content/cards/img_1.jpg" srcset="images/content/cards/img_1@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_2.jpg" srcset="images/content/cards/img_2@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_3.jpg" srcset="images/content/cards/img_3@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_4.jpg" srcset="images/content/cards/img_4@2x.jpg 2x" alt=""></span>
-                                                    <span class="js-card-image card__image-item"><img src="images/content/cards/img_5.jpg" srcset="images/content/cards/img_5@2x.jpg 2x" alt=""></span>
-                                                </span>
-
-                                                <span class="card__images-pagination">
-                                                    <span class="js-card-image-num is-active"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                    <span class="js-card-image-num"></span>
-                                                </span>
-
-                                                <span class="card__images-handlers">
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                    <span class="js-card-image-handler card__image-handler"></span>
-                                                </span>
-                                            </a>
-
-                                            <div class="card__badges badges">
-                                                <div class="badge">мембрана</div>
-                                            </div>
-
-                                            <button class="card__fav" type="button" title="Убрать из избранного">
-                                                <svg aria-hidden="true">
-                                                    <use xlink:href="images/sprite.svg#fav_filled_icon" />
-                                                </svg>
-                                            </button>
-
-                                            <a class="card__buy" href="#" title="Добавить в корзину">
-                                                <svg aria-hidden="true">
-                                                    <use xlink:href="images/sprite.svg#cart_icon" />
-                                                </svg>
-                                            </a>
-                                        </div>
-
-                                        <div class="card__bottom">
-                                            <div class="card__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
-
-                                            <div class="card__price-block">
-                                                <div class="card__price">34 900 <span class="rub">руб</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p class="form__note">Отправляя данную форму вы соглашаетесь с политикой конфиденциальности</p>
                             </div>
                         </div>
                     </div>
