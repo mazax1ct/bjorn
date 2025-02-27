@@ -72,7 +72,7 @@
                     right: calc(.02px - var(--container_padding));
                     left: calc(.02px - var(--container_padding));
                 }
-                @media(min-width: $fhd) {
+                @media(min-width: 1920px) {
                     right: calc(-100vw / 2 + var(--container_max_width)/ 2 - var(--container_padding));
                     left: calc(-100vw / 2 + var(--container_max_width)/ 2 - var(--container_padding));
                 }
