@@ -109,13 +109,16 @@
     }
 
     &__images-handlers {
-        display: flex;
+        display: none;
         left: 0;
         height: 100%;
         position: absolute;
         top: 0;
         width: 100%;
         z-index: 2;
+        @media (any-hover: hover) {
+            display: flex;
+        }
     }
 
     &__image-handler {
