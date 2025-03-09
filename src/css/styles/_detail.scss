@@ -422,6 +422,29 @@
         }
     }
 
+    &__stock {
+        align-items: center;
+        display: flex;
+        gap: 6px;
+        font-size: 11px;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        @media(min-width: $lg) {
+            font-size: 13px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 14px;
+        }
+    }
+
+    &__stock-icon {
+        border-radius: 50%;
+        background-color: #2ABC3B;
+        display: block;
+        height: 8px;
+        width: 8px;
+    }
+
     &__size-subscribe {
         margin-bottom: 32px;
         @media(min-width: $fhd) {

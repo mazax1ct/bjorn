@@ -11,6 +11,33 @@
         min-height: 176px;
     }
 
+    &--small {
+        margin-bottom: 32px;
+        @media(min-width: $lg) {
+            margin-bottom: 64px;
+            min-height: 0;
+            padding-top: 20px;
+        }
+        @media(min-width: $fhd) {
+            min-height: 0;
+        }
+
+        h1 {
+            font-size: 24px;
+            @media(min-width: $lg) {
+                font-size: 40px;
+            }
+
+            sup {
+                color: var(--gray_black);
+                font-size: 16px;
+                @media(min-width: $lg) {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
     h1 {
         margin-bottom: 0;
     }
