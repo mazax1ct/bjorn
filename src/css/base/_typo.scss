@@ -593,3 +593,43 @@ h2 + figure {
         }
     }
 }
+
+.note {
+    background-color: var(--gray_white);
+    padding: 32px 16px;
+    text-align: center;
+    @media(min-width: $lg) {
+        padding: 40px;
+    }
+
+    &:not(:first-child) {
+        margin-top: 32px;
+        @media(min-width: $lg) {
+            margin-top: 40px;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 32px;
+        @media(min-width: $lg) {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.typo-edit {
+    & > .h2,
+    & > h2 {
+        margin-bottom: 12px;
+        margin-top: 32px;
+        @media(min-width: $sm) {
+            margin-top: 32px;
+        }
+        @media(min-width: $lg) {
+            margin-bottom: 16px;
+        }
+        @media(min-width: $fhd) {
+            margin-top: 40px;
+        }
+    }
+}

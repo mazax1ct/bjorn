@@ -1,0 +1,45 @@
+.overflow-table {
+    margin-left: calc(0.01px - var(--container_padding));
+    margin-right: calc(0.01px - var(--container_padding));
+    padding-left: var(--container_padding);
+    padding-right: var(--container_padding);
+    overflow-x: auto;
+
+    &:not(:last-child) {
+        margin-bottom: 40px;
+        @media(min-width: $lg) {
+            margin-bottom: 60px;
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+        font-size: 13px;
+        white-space: nowrap;
+        width: 100%;
+        @media(min-width: $md) {
+            table-layout: fixed;
+        }
+        @media(min-width: $lg) {
+            font-size: 14px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 16px;
+        }
+
+        th {
+            font-weight: 400;
+            text-align: left;
+        }
+
+        td,
+        th {
+            border: 1px solid var(--gray);
+            min-width: 80px;
+            padding: 6px 12px;
+            @media(min-width: $fhd) {
+                padding: 8px 16px;
+            }
+        }
+    }
+}
