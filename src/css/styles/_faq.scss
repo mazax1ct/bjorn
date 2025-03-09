@@ -1,0 +1,14 @@
+.faq-section {
+    &:not(:last-child) {
+        margin-bottom: 40px;
+        @media(min-width: $lg) {
+            margin-bottom: 60px;
+        }
+    }
+
+    &:first-child {
+        .accordion__toggler {
+            border-top: none;
+        }
+    }
+}

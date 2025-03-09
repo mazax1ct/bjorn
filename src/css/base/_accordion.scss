@@ -38,6 +38,28 @@
             }
         }
 
+        &--plus {
+            font-size: 14px;
+            text-transform: none;
+            @media(min-width: $lg) {
+                font-size: 16px;
+            }
+            @media(min-width: $fhd) {
+                font-size: 18px;
+            }
+
+            svg {
+                transition: transform 0.3s;
+                will-change: transform;
+            }
+
+            &.is-open {
+                svg {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
         svg {
             fill: currentColor;
             height: 24px;
