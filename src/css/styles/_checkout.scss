@@ -69,6 +69,7 @@
         }
 
         .input-group {
+            & + .checkbox,
             & + .switch {
                 margin-top: -6px;
                 @media(min-width: $lg) {
@@ -91,6 +92,10 @@
                     margin-bottom: 24px;
                 }
             }
+        }
+
+        .checkbox {
+            text-transform: none;
         }
     }
 
