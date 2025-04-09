@@ -226,6 +226,17 @@ h2 + figure {
         }
     }
 
+    &--mid {
+        @media(min-width: $lg) {
+            margin-top: 120px;
+            margin-bottom: 120px;
+        }
+        @media(min-width: $fhd) {
+            margin-top: 120px;
+            margin-bottom: 120px;
+        }
+    }
+
     & + .page__columns {
         .page__left-column {
             h2 {

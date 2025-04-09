@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="page page--gray page--checkout">
+<body class="page">
     <div id="app">
         <header class="header">
             <div class="header__inner container">
@@ -927,322 +927,222 @@
 
         <main class="page__content">
             <div class="container">
-                <div class="checkout">
-                    <div class="checkout__left">
-                        <h2>øфøрмление заказа</h2>
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+                    <li class="breadcrumbs__item">Оферта</li>
+                </ul>
 
-                        <div class="checkout__section">
-                            <h3><span>01</span> Получатель</h3>
+                <div class="title-block title-block--mid">
+                    <h1>Øферта</h1>
+                </div>
 
-                            <div class="checkout__section-content">
-                                <div class="input-group">
-                                    <input id="checkout_name" class="input-group__input" type="text" name="" value="">
-                                    <label class="input-group__label" for="checkout_name">Ваше имя</label>
-                                </div>
-
-                                <div class="input-group">
-                                    <input id="checkout_city" class="input-group__input" type="text" name="" value="">
-                                    <label class="input-group__label" for="checkout_city">Мой город</label>
-                                </div>
-
-                                <div class="input-group">
-                                    <input id="checkout_phone" class="input-group__input" type="text" name="" value="">
-                                    <label class="input-group__label" for="checkout_phone">Ваш телефон</label>
-                                </div>
-
-                                <label class="checkbox">
-                                    <input type="checkbox" name="checout_call">
-                                    <span class="checkbox__icon"></span>
-                                    <span class="checkbox__text">Позвоните для подтверждения заказа</span>
-                                </label>
-
-                                <div class="input-group">
-                                    <input id="checkout_email" class="input-group__input" type="text" name="" value="">
-                                    <label class="input-group__label" for="checkout_email">Ваш e-mail</label>
-                                </div>
-
-                                <label class="checkbox">
-                                    <input type="checkbox" name="checout_call">
-                                    <span class="checkbox__icon"></span>
-                                    <span class="checkbox__text">Хочу получать информацию об акциях и скидках</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="checkout__section">
-                            <h3><span>02</span> Доставка</h3>
-
-                            <div class="checkout__section-content">
-                                <div class="checkout__delivery-list">
-                                    <label class="checkout-option">
-                                        <input type="radio" name="checkout_delivery" value="pvz" checked>
-                                        <span class="checkout-option__inner">
-                                            <svg class="checkout-option__check" aria-hidden="true">
-                                                <use xlink:href="images/sprite.svg#check_icon" />
-                                            </svg>
-
-                                            <span class="checkout-option__title-block">
-                                                <span class="checkout-option__title">Доставка до ПВЗ СДЭК</span>
-                                            </span>
-
-                                            <span class="checkout-option__description-block checkout-option__description-block--delivery">
-                                                <span class="checkout-option__description-text">Сервис менеджер свяжется с Вами для подтверждения заказа с 9.00 до 21.00 по Московскому времени</span>
-                                                <span class="checkout-option__description-address">141109, Щёлково г, Комсомольская ул, д.3б</span>
-                                                <button class="js-popup-open button button--s button--primary" type="button" data-popup="pvz">Выбрать адрес пвз</button>
-                                                <span class="checkout-option__description-title">от 3 до 20 дней, Бесплатно</span>
-                                            </span>
-                                        </span>
-                                    </label>
-
-                                    <label class="checkout-option">
-                                        <input type="radio" name="checkout_delivery" value="self">
-                                        <span class="checkout-option__inner">
-                                            <svg class="checkout-option__check" aria-hidden="true">
-                                                <use xlink:href="images/sprite.svg#check_icon" />
-                                            </svg>
-
-                                            <span class="checkout-option__title-block">
-                                                <span class="checkout-option__title">самовывоз</span>
-                                            </span>
-
-                                            <span class="checkout-option__description-block checkout-option__description-block--delivery">
-                                                <span class="checkout-option__description-text">Сервис менеджер свяжется с Вами для подтверждения заказа с 9.00 до 21.00 по Московскому времени</span>
-                                                <span class="checkout-option__description-title">от 3 до 20 дней, Бесплатно</span>
-                                            </span>
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="checkout__section">
-                            <h3><span>03</span> оплата</h3>
-
-                            <div class="checkout__section-content">
-                                <div class="checkout__payment-list">
-                                    <label class="checkout-option">
-                                        <input type="radio" name="checkout_payment" value="at_moment">
-                                        <span class="checkout-option__inner">
-                                            <svg class="checkout-option__check" aria-hidden="true">
-                                                <use xlink:href="images/sprite.svg#check_icon" />
-                                            </svg>
-
-                                            <span class="checkout-option__title-block">
-                                                <span class="checkout-option__title">При получении</span>
-                                            </span>
-
-                                            <span class="checkout-option__description-block">
-                                                <span class="checkout-option__description-title">Наличными или банковской картой</span>
-                                            </span>
-                                        </span>
-                                    </label>
-
-                                    <label class="checkout-option">
-                                        <input type="radio" name="checkout_payment" value="online">
-                                        <span class="checkout-option__inner">
-                                            <svg class="checkout-option__check" aria-hidden="true">
-                                                <use xlink:href="images/sprite.svg#check_icon" />
-                                            </svg>
-
-                                            <span class="checkout-option__title-block">
-                                                <span class="checkout-option__title">онлайн <span class="checkout-option__badge">-10%</span></span>
-                                            </span>
-
-                                            <span class="checkout-option__description-block">
-                                                <span class="checkout-option__description-title">МИР, Visa, Master Card, Yandex Pay</span>
-                                                <span class="checkout-option__description-images">
-                                                    <img class="image_13" src="images/content/payments/mir.svg" alt="МИР">
-                                                    <img class="image_13" src="images/content/payments/visa.svg" alt="VISA">
-                                                    <img class="image_13" src="images/content/payments/mc.svg" alt="MasterCard">
-                                                    <img class="image_13" src="images/content/payments/ya_pay.svg" alt="Я PAY">
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </label>
-
-                                    <!--<label class="checkout-option">
-                                        <input type="radio" name="checkout_payment" value="dolyami">
-                                        <span class="checkout-option__inner">
-                                            <svg class="checkout-option__check" aria-hidden="true">
-                                                <use xlink:href="images/sprite.svg#check_icon" />
-                                            </svg>
-
-                                            <span class="checkout-option__title-block">
-                                                <span class="checkout-option__title">долями <span class="checkout-option__badge">-10%</span></span>
-                                            </span>
-
-                                            <span class="checkout-option__description-block">
-                                                <span class="checkout-option__description-title">4 платежа без комиссий и переплат</span>
-                                                <span class="checkout-option__description-images">
-                                                    <img class="image_14" src="images/content/payments/dolyami.svg" alt="ДОЛЯМИ">
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </label>-->
-
-                                    <label class="checkout-option">
-                                        <input type="radio" name="checkout_payment" value="plait">
-                                        <span class="checkout-option__inner">
-                                            <svg class="checkout-option__check" aria-hidden="true">
-                                                <use xlink:href="images/sprite.svg#check_icon" />
-                                            </svg>
-
-                                            <span class="checkout-option__title-block">
-                                                <span class="checkout-option__title">Плайт <span class="checkout-option__badge">-10%</span></span>
-                                            </span>
-
-                                            <span class="checkout-option__description-block">
-                                                <span class="checkout-option__description-title">Поделите оплату на 6 платежей</span>
-                                                <div class="plait plait--parts_6">
-                                                    <p class="plait__cost">31 810 <span class="rub">руб</span></p>
-
-                                                    <div class="plait__parts">
-                                                        <div></div>
-                                                        <div></div>
-                                                        <div></div>
-                                                        <div></div>
-                                                        <div></div>
-                                                        <div></div>
-                                                    </div>
-
-                                                    <div class="plait__conditions">
-                                                        <div class="plait__now">
-                                                            <div class="plait__conditions-title">Сегодня</div>
-                                                            <div class="plait__conditions-value">25 %</div>
-                                                        </div>
-
-                                                        <div>
-                                                            <div class="plait__conditions-title">еще 5 платежей раз в 2 недели</div>
-                                                            <div class="plait__conditions-value">5 495 <span class="rub">руб</span></div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="plait__logo"><img src="images/content/detail/plait.png" alt="Плайт"></div>
-                                                </div>
-                                            </span>
-                                        </span>
-                                    </label>
-
-                                    <label class="checkout-option">
-                                        <input type="radio" name="checkout_payment" value="dolyami">
-                                        <span class="checkout-option__inner">
-                                            <svg class="checkout-option__check" aria-hidden="true">
-                                                <use xlink:href="images/sprite.svg#check_icon" />
-                                            </svg>
-
-                                            <span class="checkout-option__title-block">
-                                                <span class="checkout-option__title">СБП <span class="checkout-option__badge">-10%</span></span>
-                                            </span>
-
-                                            <span class="checkout-option__description-block">
-                                                <span class="checkout-option__description-title">Система Быстрых Платежей</span>
-                                                <span class="checkout-option__description-images">
-                                                    <img class="image_26" src="images/content/payments/sbp.svg" alt="СБП">
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+                <div class="offer">
+                    <div class="offer__section offer__prolog">
+                        <p>Данная публичная оферта (Оферта) является официальным предложением Индивидуального предпринимателя Левченко Алевтины Владимировны (Продавец) заключить договор купли-продажи в соответствии со ст. 437 ГК РФ.</p>
+                        <p>Оферта адресована любому дееспособному физическому лицу, приобретающему Товары для личных нужд, не связанных с предпринимательской деятельностью (Покупатель) на изложенных ниже условиях.</p>
+                        <p>Безусловным принятием (акцептом) условий Оферты считается оформление Заказа и/или оплата Товара.</p>
                     </div>
 
-                    <div class="checkout__right">
-                        <div class="checkout__right-title">
-                            <h2>Ваш заказ</h2>
+                    <div class="offer__section offer__definitions">
+                        <h2>Термины и определения</h2>
+                        <p><b>Сайт:</b> продавца по адресу <a href="https://bjornlarsen.ru/" target="_blank"><b>https://bjornlarsen.ru/</b></a>, предназначенный для приобретения Товаров</p>
+                        <p><b>Личный кабинет:</b> персональный раздел Покупателя на Сайте</p>
+                        <p><b>Заказ:</b> запрос Покупателя на покупку Товаров, направленный через Сайт</p>
+                        <p><b>Товар:</b> которые размещены на Сайте</p>
+                        <p><b>Служба доставки:</b> третье лицо, оказывающее услуги по доставке Товара Покупателю</p>
+                    </div>
 
-                            <button class="checkout__change-button" type="button">Изменить</button>
+                    <div class="offer__text">
+                        <div class="offer__section">
+                            <h2><span>1.</span> Предмет</h2>
+
+                            <p><span>1.1.</span> Продавец обязуется передать в собственность Покупателя Товар, а Покупатель обязуется принять и оплатить Товар в порядке и на условиях, предусмотренных Офертой.</p>
                         </div>
 
-                        <div class="cart">
-                            <div class="cart__list">
-                                <div class="cart-item">
-                                    <a class="cart-item__image" href="#"><img src="images/content/cart/img_1.jpg" srcset="images/content/cart/img_1@2x.jpg 2x" alt=""></a>
 
-                                    <div class="cart-item__body">
-                                        <div class="cart-item__title"><a href="#">Мужской демисезонный бомбер Hamar</a></div>
+                        <div class="offer__section">
+                            <h2><span>2.</span> Условия продажи товаров</h2>
 
-                                        <div class="cart-item__body-inner">
-                                            <div class="cart-item__props">
-                                                <div class="cart-item__prop">Размер: 54</div>
-                                                <div class="cart-item__prop">Цвет: Черный</div>
-                                                <div class="cart-item__prop">Кол-во: 1 шт.</div>
-                                            </div>
+                            <h3>Оформление Заказа</h3>
 
-                                            <div class="cart-item__bottom">
-                                                <div class="cart-item__price-block">
-                                                    <div class="cart-item__discount">-15%</div>
-                                                    <div class="cart-item__old-price">54 900 <span class="rub">руб</span></div>
-                                                    <div class="cart-item__price">34 900 <span class="rub">руб</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <p><span>2.1.</span> Покупатель вправе оформить Заказ путем добавления Товара в корзину на Сайте.</p>
 
-                                    </div>
-                                </div>
-                            </div>
+                            <p><span>2.2.1.</span> Желаемые Товары;</p>
+                            <p><span>2.2.2.</span> Имя и фамилию;</p>
+                            <p><span>2.2.3.</span> Телефон;</p>
+                            <p><span>2.2.4.</span> Электронную почту;</p>
+                            <p><span>2.2.5.</span> Адрес доставки;</p>
+                            <p><span>2.2.6.</span> Способ оплаты.</p>
+                            <p><span>2.3.</span> Вся представленная на Сайте информация, в том числе сведения о Товаре и его наличии носит справочный характер и не может в полной мере передавать полную информацию о свойствах Товара. Пользователь
+                                вправе
+                                обратиться к Продавцу перед оформлением Заказа для уточнения подробных характеристик Товара.</p>
+                            <p><span>2.4.</span> Покупатель, нажимая кнопку “оформить заказ” подтверждает, что ознакомлен с основными потребительскими свойствами Товара и местом нахождения Продавца, местом изготовления Товара, наименованием
+                                Продавца,
+                                ценой и условиями приобретения Товара, доставки, гарантийным сроком, порядком оплаты Товара.</p>
 
-                            <div class="cart__promocode">
-                                <div class="promocode">
-                                    <div class="promocode__inner">
-                                        <input class="promocode__input" type="text" placeholder="Введите промокод">
+                            <h3>Подтверждение Заказа</h3>
 
-                                        <button class="promocode__submit" type="button" title="Применить промокод">
-                                            <svg aria-hidden="true">
-                                                <use xlink:href="images/sprite.svg#arrow_right" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+                            <p><span>2.5.</span> Покупатель подтверждает регистрацию на Сайте и получение доступа к Личному кабинету по номеру телефона или адресу электронной почты, куда приходит код и/или ссылка подтверждения.</p>
+                            <p><span>2.6.</span> Продавец подтверждает оформление Заказа в Личном кабинете и по электронной почте, указанной Покупателем, и присваивает номер Заказу. Для уточнения деталей Заказа Продавец вправе связаться с Покупателем
+                                по
+                                номеру телефона, указанному в Личном кабинете.</p>
+                            <p><span>2.7.</span> Продавец вправе при необходимости запросить дополнительную информацию у Покупателя.</p>
+                            <p><span>2.8.</span> Покупатель вправе направить Продавцу запрос об изменении Заказа с помощью:</p>
+                            <p><span>2.8.1.</span> Электронной почты;</p>
+                            <p><span>2.8.2.</span> Мессенджер;</p>
+                            <p><span>2.8.3.</span> По телефону, указанному на Сайте.</p>
+                            <p><span>2.9.</span> Продавец по запросу Покупателя вправе внести изменения в данные, указанные им при оформлении Заказа. В таком случае Продавец направляет Покупателю уведомление с уточненными данными Заказа.</p>
+                            <p><span>2.10.</span> Продавец уведомляет Покупателя о невозможности выполнить Заказ или его часть в следующих случаях:</p>
+                            <p><span>2.10.1.</span> Наличие технической ошибки, из-за которой Товар отображается на Сайте с некорректной ценой;</p>
+                            <p><span>2.10.2.</span> Товар отсутствует на складе;</p>
+                            <p><span>2.10.3.</span> При проверке выявлен недостаток Товара.</p>
+                            <p><span>2.11.</span> После уведомления Продавца о невозможности выполнить Заказ или его часть, Покупатель вправе:</p>
+                            <p><span>2.11.1.</span> Полностью аннулировать Заказ;</p>
+                            <p><span>2.11.2.</span> Согласиться на частичное исполнение Заказа;</p>
+                            <p><span>2.11.3.</span> Согласиться на замену Товара.</p>
+                            <p><span>2.12.</span> Если Продавец аннулирует Заказ, то он возвращает денежные средства Покупателю в течение 10 календарных дней с момента аннулирования.</p>
+                            <p><span></span> </p>
+                            <p><span></span> </p>
+                            <p><span></span> </p>
+                        </div>
 
-                            <div class="cart__total-block">
-                                <div class="cart__total-item">
-                                    <div class="cart__total-title">товары в заказе</div>
+                        <div class="offer__section">
+                            <h2><span>3.</span> Условия доставки</h2>
+                            <p><span>3.1.</span> Способы и стоимость доставки размещены на Сайте.</p>
+                            <p><span>3.2.</span> При оформлении Заказа Покупатель указывает адрес доставки и выбирает один из способов доставки Товара.</p>
+                            <p><span>3.3.</span> При вводе адреса доставки Покупатель гарантирует его достоверность. Покупатель самостоятельно несет риск доставки Товара по неверному адресу.</p>
+                            <p><span>3.4.</span> Порядок доставки Службой доставки зависит от ее регламента.</p>
+                            <p><span>3.5.</span> Срок доставки согласуется Сторонами при подтверждении Заказа и зависит от времени оформления Заказа, адреса доставки и внутреннего регламента Службы доставки.</p>
+                            <p><span>3.6.</span> До передачи Товара Службе доставки Покупатель вправе изменить адрес доставки путём уведомления Продавца по электронной почте, в мессенджере или по телефону Продавца, указанному на Сайте. Новые условия
+                                доставки считаются согласованными с момента, когда Продавец направил Покупателю уведомление об этом на его электронную почту и/или в Личный кабинет.</p>
+                            <p><span>3.7.</span> Лицо, доставляющее Заказ, не является консультантом по использованию Товара. При возникновении вопросов по Товару Покупатель вправе обратиться к Продавцу.</p>
+                        </div>
 
-                                    <div class="cart__total-price">34 900 <span class="rub">руб</span></div>
-                                </div>
+                        <div class="offer__section">
+                            <h2><span>4.</span> Приемка Товара</h2>
+                            <p><span>4.1.</span> Товар вручается Покупателю при предъявлении им номера Заказа или трек-номера, присвоенного Службой доставки.</p>
+                            <p><span>4.2.</span> Служба доставки передает Заказ Покупателю при условии:</p>
+                            <p><span>4.2.1.</span> Оплаты Заказа, если Покупатель выбрал оплату при получении Заказа;</p>
+                            <p><span>4.2.2.</span> Предоставления Службе доставки сведений о Заказе (номер отправления, фамилия, имя получателя, документ, удостоверяющий личность).</p>
+                            <p><span>4.3.</span> Продавец вправе отказать в передаче Заказа лицу, которое не было помечено как получатель Товара при оформлении Заказа.</p>
+                            <p><span>4.4.</span> При получении Товара Покупатель проверяет:</p>
+                            <p><span>4.4.1.</span> Соответствие доставленного Товара Заказу по количеству, ассортименту, комплектности;</p>
+                            <p><span>4.4.2.</span> Отсутствие внешних повреждений упаковки и Товара.</p>
+                            <p><span>4.5.</span> С момента получения Товара Покупателем считается, что Продавец передал Товар, соответствующий Заказу, надлежащего качества, ассортимента, комплектности, вместе со всей сопроводительной документацией к
+                                Товару.</p>
+                            <p><span>4.6.</span> В случае несоответствия Товара Заказу или выявления недостатков Товара Покупатель вправе отказаться от Товара при его приемке.</p>
+                            <p><span>4.7.</span> Риск случайной гибели или случайного повреждения Товара переходит к Покупателю с момента передачи Товара. После получения Товара Покупатель самостоятельно несёт ответственность за количество,
+                                ассортимент и
+                                комплектность Товара.</p>
+                            <p><span>4.8.</span> Моментом исполнения обязанности Продавца передать Товар признается передача Товара перевозчику в случае его доставки Службой доставки.</p>
+                            <p><span>4.9.</span> Если Покупатель не получил Товар по своей вине, то Продавец аннулирует Заказ. Если к моменту аннулирования Заказа Покупатель оплатил Товар, то Продавец возвращает Покупателю денежные средства за
+                                вычетом стоимости доставки.</p>
+                        </div>
 
-                                <div class="cart__total-item">
-                                    <div class="cart__total-title">скидка на товар</div>
+                        <div class="offer__section">
+                            <h2><span>5.</span> Условия оплаты</h2>
+                            <h3>Стоимость Товара</h3>
+                            <p><span>5.1.</span> Стоимость Товара указана на Сайте в рублях РФ.</p>
+                            <p><span>5.2.</span> Продавец вправе в одностороннем порядке изменить стоимость Товара.</p>
+                            <p><span>5.3.</span> Общая стоимость Заказа складывается из суммарной стоимости всех выбранных Товаров.</p>
+                            <p><span>5.4.</span> Стоимость фиксируется в момент оформления Заказа и не меняется в процессе его выполнения.</p>
+                            <p><span>5.5.</span> Расходы по доставке:</p>
+                            <p><span>5.5.1.</span> Включены в стоимость Товара или</p>
+                            <p><span>5.5.2.</span> Отдельно оплачиваются Покупателем, кроме случаев, когда доставка бесплатна. Продавец предупреждает Покупателя об этом и о размере таких расходов при оформлении и подтверждении Заказа.</p>
+                            <p><span>5.6.</span> Стоимость Товара не включает возможные комиссии провайдеров платежей.</p>
+                            <h3>Порядок оплаты</h3>
+                            <p><span>5.7.</span> Способы оплаты Товара размещены на Сайте.</p>
+                            <p><span>5.8.</span> Покупатель получает чек об оплате на свою электронную почту или по номеру телефона.</p>
+                            <p><span>5.9.</span> При оплате банковской картой обязанность Покупателя по оплате считается выполненной с момента зачисления денежных средств на расчетный счет Продавца.</p>
+                            <p><span>5.10.</span> Покупатель вправе возложить обязанность оплаты Товара на третье лицо. Покупатель подтверждает, что платеж третьего лица, содержащий реквизиты счета или Заказа, выполнен по его поручению. Продавец
+                                принимает оплату от третьего лица, поступившую по Заказу.</p>
+                            <h3>Скидки</h3>
+                            <p><span>5.11.</span> Продавец вправе устанавливать скидки в целях продвижения того или иного способа оплаты или доставки Товара, проводить акции, снижающие стоимость Товара, или совместные акции со своими партнерами и
+                                устанавливать программу бонусов.</p>
+                            <p><span>5.12.</span> Виды скидок, бонусов, порядок и условия начисления указаны на Сайте и могут быть изменены Продавцом в одностороннем порядке.</p>
+                            <p><span>5.13.</span> При наличии у Покупателя права на скидку конечная стоимость Товара или доставки уменьшается на сумму скидки.</p>
+                        </div>
 
-                                    <div class="cart__total-price cart__total-price--discount">20 000 <span class="rub">руб</span></div>
-                                </div>
+                        <div class="offer__section">
+                            <h2><span>6.</span> Отказ от Товара</h2>
+                            <p><span>6.1.</span> Покупатель вправе отказаться от Товара в любое время до его передачи, а после передачи Товара – в течение 7 дней.</p>
+                            <p><span>6.2.</span> Отказ от Товара надлежащего качества возможен, если:</p>
+                            <p><span>6.2.1.</span> Товар не был в употреблении;</p>
+                            <p><span>6.2.2.</span> Сохранены его потребительские свойства, товарный вид, упаковка, полная комплектация, пломбы, ярлыки;</p>
+                            <p><span>6.2.3.</span> Сохранен документ, подтверждающий факт и условия покупки указанного Товара. Отсутствие у Покупателя указанного документа не лишает его возможности ссылаться на другие доказательства приобретения
+                                Товара у
+                                Продавца.</p>
+                            <p><span>6.3.</span> При отказе от Товара надлежащего качества:</p>
+                            <p><span>6.3.1.</span> Сумма за доставку Товара Покупателю не возвращается;</p>
+                            <p><span>6.3.2.</span> Расходы по отправке Товара Продавцу Покупатель оплачивает самостоятельно.</p>
+                            <p><span>6.4.</span> Покупатель вправе отказаться от Товара ненадлежащего качества в течение гарантийного срока. Гарантийный срок для всех Товаров составляет 1 месяц с момента покупки.</p>
+                            <p><span>6.5.</span> Не являются недостатками, которые дают Покупателю право отказаться от Товара:</p>
+                            <p><span>6.5.1.</span> Наличие загрязнений на упаковке Товара;</p>
+                            <p><span>6.5.2.</span> Наличие дефектов упаковки, возникших по вине Службы доставки;</p>
+                            <p><span>6.5.3.</span> Несоответствие упаковки Товара ожиданиям Покупателя;</p>
+                            <p><span>6.5.4.</span> Незначительное несовпадение оттенка и других внешних свойств Товара с изображениями на Сайте.</p>
+                            <p><span>6.6.</span> Для отказа от Товара после его получения Покупатель:</p>
+                            <p><span>6.6.1.</span> <span>Направляет письмо на электронную почту: <a href="mailto:info@bjornlarsen.ru" target="_blank">info@bjornlarsen.ru</a> или в мессенджере, сообщает номер Заказа и причину отказа от Товара,
+                                    предоставляет фото
+                                    Товара;</span></p>
+                            <p><span>6.6.2.</span> Аккуратно упаковывает товар в фирменную упаковку Продавца;</p>
+                            <p><span>6.6.3.</span> Заполняет и прикладывает письменное заявление на возврат Товара;</p>
+                            <p><span>6.6.4.</span> Направляет Продавцу упакованный Товар вместе с письменным заявлением по адресу: 196240, г. Санкт-Петербург, ул. Кубинская, д. 73 к.1Б.</p>
+                            <p><span>6.7.</span> Продавец вправе направить возвращаемый Товар на экспертизу на срок до 20 календарных дней.</p>
+                            <p><span>6.8.</span> Если экспертиза подтверждает, что Продавец не несет ответственность за недостатки Товара, то:</p>
+                            <p><span>6.8.1.</span> Покупатель обязан компенсировать расходы на экспертизу и транспортировку Товара;</p>
+                            <p><span>6.8.2.</span> Продавец не возвращает Покупателю сумму, уплаченную за Товар.</p>
+                            <p><span>6.9.</span> Если в процессе возврата Товар будет утрачен или поврежден, то требование Покупателя не будет удовлетворено. Покупатель предъявляет претензии, связанные с утратой или повреждением Товара в результате
+                                пересылки и/или доставки, тому лицу, которое доставляло Товар.</p>
+                            <p><span>6.10.</span> При отказе Покупателя от Товара, Продавец возвращает Покупателю сумму, уплаченную за Товар в течение 10 календарных дней с даты:</p>
+                            <p><span>6.10.1.</span> Получения письменного заявления от Покупателя или</p>
+                            <p><span>6.10.2.</span> С даты завершения экспертизы, если недостатки Товара возникли по вине Продавца.</p>
+                            <p><span>6.11.</span> Продавец возвращает Покупателю денежные средства исключительно по реквизитам банковской карты, с которой проводилась оплата Заказа.</p>
+                        </div>
 
-                                <div class="cart__total-item">
-                                    <div class="cart__total-title">Доставка</div>
+                        <div class="offer__section">
+                            <h2><span>7.</span> Ответственность</h2>
+                            <p><span>7.1.</span> Продавец не несет ответственность:</p>
+                            <p><span>7.1.1.</span> За ненадлежащее исполнение договора в связи с предоставлением Покупателем недостоверных данных;</p>
+                            <p><span>7.1.2.</span> Любые негативные для Покупателя или третьих лиц последствия, возникшие в случае ненадлежащей эксплуатации Товара;</p>
+                            <p><span>7.1.3.</span> Качество сервисов, необходимых для оформления Заказа.</p>
+                            <p><span>7.2.</span> Покупатель несет ответственность за:</p>
+                            <p><span>7.2.1.</span> Достоверность указанных в Заказе сведений;</p>
+                            <p><span>7.2.2.</span> Нарушение инструкции по эксплуатации;</p>
+                            <p><span>7.2.3.</span> Передачу информации о номере Заказа третьим лицам.</p>
+                        </div>
 
-                                    <div class="cart__total-price">бесплатно</div>
-                                </div>
+                        <div class="offer__section">
+                            <h2><span>8.</span> Разрешение споров</h2>
+                            <p><span>8.1.</span> Стороны разрешают возникшие споры путем переговоров в соответствии с законодательством Российской Федерации.</p>
+                            <p><span>8.2.</span> Стороны вправе использовать претензионный порядок разрешения споров. Срок для ответа на претензию составляет 5 рабочих дней с момента ее получения.</p>
+                            <p><span>8.3.</span> <span>Покупатель направляет претензию на электронную почту: <a href="mailto:info@bjornlarsen.ru" target="_blank">info@bjornlarsen.ru</a>.</span></p>
+                        </div>
 
-                                <div class="cart__total-item">
-                                    <div class="cart__total-title">Скидка за оплату</div>
+                        <div class="offer__section">
+                            <h2><span>9.</span> Заключительные положения</h2>
+                            <p><span>9.1.</span> <span>Продавец обрабатывает персональные данные Покупателя в соответствии с требованиями, установленными Федеральным законом "О персональных данных" от 27.07.2006 N 152-ФЗ, а также Политикой обработки
+                                    персональных данных, размещенной по адресу: <a href="https://bjornlarsen.ru/privacy-policy/" target="_blank">https://bjornlarsen.ru/privacy-policy/</a>.</span></p>
+                            <p><span>9.2.</span> Оферта может быть изменена или дополнена Продавцом в любое время. Новая редакция Оферты вступает в силу с момента ее размещения на Сайте.</p>
+                            <p><span>9.3.</span> Покупатель самостоятельно проверяет условия Оферты на предмет их изменения.</p>
+                            <p><span>9.4.</span> Продолжение использования Сайта и оформление Заказа после внесения изменений в Оферту означает согласие Покупателя с такими изменениями.</p>
+                            <p><span>9.5.</span> Признание по тем или иным причинам одного или нескольких положений Оферты недействительными или не имеющими юридической силы, не влияет на действительность или применимость остальных положений Оферты.
+                            </p>
+                        </div>
 
-                                    <div class="cart__total-price cart__total-price--discount">3 090 <span class="rub">руб</span></div>
-                                </div>
-
-                                <div class="cart__total-item cart__total-item--result">
-                                    <div class="cart__total-title">Итого</div>
-
-                                    <div class="cart__total-price">31 810 <span class="rub">руб</span></div>
-                                </div>
-                            </div>
-
-                            <a class="buy-button buy-button--big" href="#">
-                                <span class="buy-button__title">Оформить заказ</span>
-
-                                <span class="buy-button__prices">
-                                    <span class="buy-button__price">31 810 <span class="rub">руб</span></span>
+                        <div class="offer__section">
+                            <h2><span></span> Реквизиты</h2>
+                            <p>
+                                <span></span>
+                                <span>
+                                    ИП Левченко Алевтина Владимировна<br>
+                                    Адрес: 676470, Амурская область, г. Циолковский, ул Победы, д. 219<br>
+                                    ИНН: 280706253176<br>
+                                    ОГРНИП: 323280000021802<br>
+                                    Электронная почта: info@bjornlarsen.ru<br>
+                                    Телефон: +7 (800) 300-78-28, +7 (812) 629-78-28
                                 </span>
-                            </a>
-
-                            <div class="cart__errors">
-                                <div class="cart__error">Некорректный e-mail</div>
-
-                                <div class="cart__error">При попытке оформлении заказа - не достаточное количество товара</div>
-
-                                <div class="cart__error">Неверный телефон</div>
-                            </div>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -2806,7 +2706,7 @@
             <div class="popup__title h2">уход за пуховиками</div>
         
             <div class="content-block mid-size">
-                <p>Наши легкие и теплые пуховики созданы, чтобы радовать вас не одну зиму. Соблюдайте ��есложные правила из нашей памятки, и изделие не потеряет своих качеств.</p>
+                <p>Наши легкие и теплые пуховики созданы, чтобы радовать вас не одну зиму. Соблюдайте несложные правила из нашей памятки, и изделие не потеряет своих качеств.</p>
         
                 <ul>
                     <li>Изучите рекомендации на вшивном ярлыке — большинство наших пуховиков нуждается в сухой чистке углеводородными растворителями (F). Этот вид чистки относится к самым безопасным и не разрушает структуру волокон, сохраняя прочность и
@@ -3919,12 +3819,6 @@
         </div>
 
         <div class="page__shade"></div>
-
-        <!--<div class="global-error">
-            <div class="global-error__text global-error__text--error">Произошла ошибка. Попробуйте позже</div>
-        
-            <div class="global-error__text">Успешное оформление заказа</div>
-        </div>-->
     </div>
 
     <script src="js/large-small-dynamic-viewport-units-polyfill.min.js"></script>
@@ -3944,8 +3838,6 @@
     <script src="js/option.js"></script>
     
     <script src="js/popups.js"></script>
-
-    <script src="js/pvz.js"></script>
 </body>
 
 </html>

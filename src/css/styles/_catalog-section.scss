@@ -1,6 +1,12 @@
 .catalog-section-title-block {
+    align-items: flex-start;
+    display: flex;
+    gap: 0 0.5em;
+    flex-direction: column;
+    flex-wrap: wrap;
     margin-bottom: 16px;
     @media(min-width: $sm) {
+        align-items: center;
         margin-bottom: 24px;
         text-align: center;
     }
@@ -12,7 +18,13 @@
     }
 
     &--small {
+        flex-direction: row;
         margin-bottom: 32px;
+        @media(min-width: $sm) {
+            align-items: flex-start;
+            justify-content: center;
+            text-align: center;
+        }
         @media(min-width: $lg) {
             margin-bottom: 64px;
             min-height: 0;
@@ -27,19 +39,20 @@
             @media(min-width: $lg) {
                 font-size: 40px;
             }
-
-            sup {
-                color: var(--gray_black);
-                font-size: 16px;
-                @media(min-width: $lg) {
-                    font-size: 24px;
-                }
-            }
         }
     }
 
     h1 {
         margin-bottom: 0;
+    }
+
+    sup {
+        color: var(--gray_black);
+        font-size: 16px;
+        font-weight: 700;
+        @media(min-width: $lg) {
+            font-size: 24px;
+        }
     }
 
     .h2 {

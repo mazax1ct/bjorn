@@ -159,6 +159,9 @@
             position: relative;
             text-decoration: none;
             z-index: 1;
+            @include hover {
+                color: var(--ocher);
+            }
         }
     }
 
