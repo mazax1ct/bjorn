@@ -474,6 +474,53 @@ h2 + figure {
             border-bottom: 1px solid var(--gray_white);
         }
     }
+
+    .chars-table {
+        font-size: 13px;
+        text-align: left;
+        @media(min-width: $lg) {
+            font-size: 14px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 16px;
+        }
+
+        td {
+            border-bottom: none;
+            padding: 0 0 12px;
+            vertical-align: bottom;
+
+            &:nth-child(1) {
+                position: relative;
+                width: 60%;
+
+                span {
+                    background-color: #fff;
+                    padding-right: 8px;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                &::after {
+                    border-bottom: 1px solid var(--gray_white);
+                    bottom: 15.5px;
+                    content: '';
+                    left: 0;
+                    position: absolute;
+                    top: auto;
+                    width: 100%;
+                    @media(min-width: $fhd) {
+                        bottom: 17px;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                max-width: 50%;
+                padding-left: 8px;
+            }
+        }
+    }
 }
 
 .article-title-block {

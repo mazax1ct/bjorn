@@ -575,6 +575,18 @@
             top: 0;
         }
 
+        &--mobile_visible {
+            @media(max-width: $lg - 0.02px) {
+                display: block;
+            }
+
+            .detail__info-button--bordered {
+                @media(max-width: $lg - 0.02px) {
+                    border-top: none;
+                }
+            }
+        }
+
         & > * {
             @media(min-width: $lg) {
                 flex-shrink: 0;
@@ -800,5 +812,36 @@
                 width: 24px;
             }
         }
+    }
+}
+
+.detail-payments {
+    h3 {
+        font-size: 12px;
+        margin-bottom: 8px;
+        @media(min-width: $lg) {
+            font-size: 16px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 18px;
+        }
+
+        &:not(:first-child) {
+            @media(min-width: $fhd) {
+                margin-top: 32px;
+            }
+        }
+    }
+
+    p {
+        &:not([class]) {
+            @media(min-width: $fhd) {
+                margin-bottom: 32px;
+            }
+        }
+    }
+
+    .button {
+        width: 100%;
     }
 }
