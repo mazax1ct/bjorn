@@ -1,0 +1,111 @@
+.make-buy {
+    padding-top: 24px;
+    @media(min-width: $md) {
+        display: grid;
+        grid-template-columns: 32.85% 61.28%;
+        gap: 0 5.81%;
+        padding-top: 40px;
+    }
+
+    h1 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 16px;
+        text-align: center;
+        @media(min-width: $hd) {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        br {
+            @media(max-width: $md - 0.02px) {
+                display: none;
+            }
+        }
+    }
+
+    &__image {
+        grid-row: span 3;
+        max-height: 830px;
+        @media(max-width: $md - 0.02px) {
+            margin-left: calc(0.01px - var(--container_padding));
+            margin-right: calc(0.01px - var(--container_padding));
+            margin-bottom: 16px;
+        }
+
+        img,
+        picture {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    &__form-block {}
+
+    &__form-title {
+        margin-bottom: 40px;
+        text-align: center;
+        @media(min-width: $fhd) {
+            line-height: 1.4;
+        }
+
+        span {
+            display: block;
+            margin-top: 8px;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    &__form-note {
+        font-size: 11px;
+        margin-top: 12px;
+        margin-bottom: 24px;
+        @media(min-width: $lg) {
+            font-size: 13px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 14px;
+        }
+    }
+
+    .checkbox {
+        text-transform: none;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    .button {
+        margin-top: 12px;
+        width: 100%;
+    }
+
+    &__note {
+        background-color: var(--gray_white);
+        font-size: 12px;
+        margin-top: 24px;
+        padding: 16px 24px;
+        text-transform: uppercase;
+        text-align: center;
+        @media(min-width: $lg) {
+            font-size: 13px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 14px;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}

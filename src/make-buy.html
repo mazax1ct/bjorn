@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/common/favicon.html
+
+    //= template/common/fonts_preload.html
+
+    //= template/common/styles.html
+</head>
+
+<body class="page">
+    <div id="app">
+        //= template/common/header--white.html
+
+        //= template/common/main-menu.html
+
+        //= template/common/search.html
+
+        <main class="page__content">
+            <div class="container">
+                <div class="make-buy">
+                    <h1>Совершайте покупки<br> с 1 по 30 мая</h1>
+
+                    <div class="make-buy__image">
+                        <picture>
+                            <source srcset="images/content/make-buy/img_desk.jpg, images/content/make-buy/img_desk@2x.jpg 2x" media="(min-width: 1024px)">
+                            <img src="images/content/make-buy/img_mob.jpg" srcset="images/content/make-buy/img_mob@2x.jpg 2x" alt="">
+                        </picture>
+                    </div>
+
+                    <div class="make-buy__form-block">
+                        <p class="make-buy__form-title">
+                            Регистрируйте офлайн чеки и онлайн заказы.<br> Смотрите результаты розыгрыша 16&nbsp;июня
+                            <span>в&nbsp;TG&nbsp;канале <a href="#" target="_blank">@BjornLarsen_wear</a></span>
+                        </p>
+
+                        <form action="">
+                            <div class="input-group">
+                                <input id="name" class="input-group__input" type="text" name="name" value="">
+                                <label class="input-group__label" for="name">Ваше имя</label>
+                            </div>
+
+                            <div class="input-group">
+                                <input id="phone" class="input-group__input" type="text" name="phone" value="">
+                                <label class="input-group__label" for="phone">Ваш телефон</label>
+                            </div>
+
+                            <div class="input-group">
+                                <input id="email" class="input-group__input" type="text" name="email" value="">
+                                <label class="input-group__label" for="email">Ваша почта</label>
+                            </div>
+
+                            <div class="input-group">
+                                <input id="number" class="input-group__input" type="text" name="number" value="">
+                                <label class="input-group__label" for="number">Номер чека или заказа</label>
+                            </div>
+
+                            <p class="make-buy__form-note">*Все поля обязательны для заполнения</p>
+
+                            <label class="checkbox">
+                                <input type="checkbox" name="terms" checked>
+                                <span class="checkbox__icon"></span>
+                                <span class="checkbox__text">Подтверждаю согласие с правилами Акции и <a href="#">политикой обработки персональных данных</a></span>
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" name="terms_2">
+                                <span class="checkbox__icon"></span>
+                                <span class="checkbox__text">Подтверждаю согласие на получение рекламной рассылки Bjorn Larsen</span>
+                            </label>
+
+                            <button class="button button--primary button--m" type="button" disabled>Участвовать</button>
+                        </form>
+
+                        <div class="make-buy__note">
+                            <p>При возникновении вопросов свяжитесь<br> с нами удобным способом</p>
+
+                            <p>
+                                <a href="mailto:INFO@BJORNLARSEN.RU">INFO@BJORNLARSEN.RU</a><br>
+                                +7&nbsp;(800)&nbsp;300-78-28
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        //= template/common/footer.html
+
+        //= template/common/popups.html
+
+        <div class="page__shade"></div>
+    </div>
+
+    //= template/common/scripts.html
+</body>
+
+</html>
