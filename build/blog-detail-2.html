@@ -116,20 +116,87 @@
         
                 <nav class="main-menu__nav">
                     <ul class="main-menu__links main-menu__links--type_1">
-                        <li><a href="#">МУЖЧИНАМ</a></li>
-                        <li><a href="#">ЖЕНЩИНАМ</a></li>
+                        <li class="main-menu__item">
+                            <div class="main-menu__item-inner">
+                                <a href="#">МУЖЧИНАМ</a>
+                                <button class="js-submenu-toggler main-menu__item-toggler" type="button">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#chevron_down" />
+                                    </svg>
+                                </button>
+                            </div>
+        
+                            <div class="submenu">
+                                <ul class="submenu__list">
+                                    <li class="submenu__item submenu__item--all">
+                                        <a class="submenu__link" href="#">Смотреть все</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a class="submenu__link" href="#">Куртки</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a class="submenu__link" href="#">Аляски</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a class="submenu__link" href="#">бомберы</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a class="submenu__link" href="#">Демисезонные куртки</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a class="submenu__link" href="#">Зимние куртки</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a class="submenu__link" href="#">куртки с капюшоном</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a class="submenu__link" href="#">парки</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a class="submenu__link" href="#">Пуховики</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="main-menu__item">
+                            <div class="main-menu__item-inner">
+                                <a href="#">женщинам</a>
+                                <button class="js-submenu-toggler main-menu__item-toggler" type="button">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#chevron_down" />
+                                    </svg>
+                                </button>
+                            </div>
+        
+                            <div class="submenu">
+                                <ul class="submenu__list">
+                                    <li class="submenu__item submenu__item--all">
+                                        <a class="submenu__link" href="#">Смотреть все</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a class="submenu__link" href="#">Аляски</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a class="submenu__link" href="#">Демисезонные куртки</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a class="submenu__link" href="#">Зимние куртки</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a class="submenu__link" href="#">куртки с капюшоном</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a class="submenu__link" href="#">парки</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a class="submenu__link" href="#">Пуховики</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                         <li><a href="#">НØВИНКИ</a></li>
                         <li><a href="#">БЕСТСЕЛЛЕРЫ</a></li>
-                        <li><a href="#">РАСПРØДАЖА</a></li>
-                    </ul>
-        
-                    <ul class="main-menu__links main-menu__links--type_2">
-                        <li class="big"><a href="#">ПØКУПАТЕЛЯМ</a></li>
-                        <li><a href="#">ОПТОВЫМ ПОКУПАТЕЛЯМ</a></li>
-                        <li><a href="#">ДОСТАВКА И ОПЛАТА</a></li>
-                        <li><a href="#">ОБМЕН И ВОЗВРАТ</a></li>
-                        <li><a href="#">УХОД ЗА ИЗДЕЛИЕМ</a></li>
-                        <li><a href="#">ТЕХНОЛОГИЯ ПРОИЗВОДСТВА</a></li>
+                        <li><a href="#">распрøдажа</a></li>
                     </ul>
         
                     <ul class="main-menu__links main-menu__links--type_3">
@@ -157,6 +224,19 @@
                                 <span class="imaged-link__title">КØНТАКТЫ</span>
                             </a>
                         </li>
+                    </ul>
+        
+                    <ul class="main-menu__links main-menu__links--type_2">
+                        <li><a href="#">ПØКУПАТЕЛЯМ</a></li>
+                        <li><a href="#">ДОСТАВКА И ОПЛАТА</a></li>
+                        <li><a href="#">ОБМЕН И ВОЗВРАТ</a></li>
+                        <li><a href="#">вопросы и ответы</a></li>
+                        <li><a href="#">подобрать размер</a></li>
+                        <li><a href="#">УХОД ЗА ИЗДЕЛИЕМ</a></li>
+                        <li><a href="#">ТЕХНОЛОГИИ</a></li>
+                        <li><a href="#">оптовым клиентам</a></li>
+                        <li><a href="#">новости и акции</a></li>
+                        <li><a href="#">оферта</a></li>
                     </ul>
                 </nav>
         
@@ -3287,7 +3367,7 @@
                                         </svg>
                                     </button>
         
-                                    <a class="card__buy" href="#" title="Добавить в корзину">
+                                    <a class="card__buy" href="#" title="Добави��ь в корзину">
                                         <svg aria-hidden="true">
                                             <use xlink:href="images/sprite.svg#cart_icon" />
                                         </svg>
@@ -3530,7 +3610,7 @@
                     длины до середины бедра удобно регулируется по талии с помощью внутренней кулиски. Глубокий капюшон со съемной отделкой из меха енота регулируется по объему и обеспечивает необходимую степень прилегания, защищая от ветра и холода. Рукава
                     дополнены эластичными манжетами, которые сохранят все тепло внутри.</p>
         
-                <p>Ткань верха с диагональным переплетением обработана специальной водоотталкивающей пропиткой, которая защитит от дождя, грязи и мокрого снега. Для создания комфортного микроклимата внутри была использована мембранная ткань. Она спасает от
+                <p>Ткань верха с диагональным переплетением обработана специальной водоотталкивающей пропиткой, которая защитит от дождя, грязи и мокрого сне��а. Для создания комфортного микроклимата внутри была использована мембранная ткань. Она спасает от
                     переохлаждения и перегрева, не пропускает ветер и в то же время «дышит». Хорошо отводит пар и влагу, что особенно важно во время физической активности.</p>
         
                 <p>Благодаря глянцевому подкладу, парку удобно надевать поверх вещей из фактурных материалов: шерсти, флиса и т.д. Внутри парки - технологичный утеплитель из волокна DuPont Sorona. Этот теплый, легкий и гипоаллергенный наполнитель отлично
@@ -3827,7 +3907,7 @@
         
                     <li>Не сушить в сушильных машинах</li>
         
-                    <li>Сушить на горизонтальной плоскости, вдали от источников тепл��</li>
+                    <li>Сушить на горизонтальной плоскости, вдали от источников тепла</li>
         
                     <li>Отстегивать мех перед стиркой</li>
                 </ul>
@@ -5086,7 +5166,7 @@
                 <button class="geo-list__item" type="button">Москва</button>
                 <button class="geo-list__item" type="button">Санкт-Петербург</button>
                 <button class="geo-list__item" type="button">Пермь</button>
-                <button class="geo-list__item" type="button">Ростов-на-��ону</button>
+                <button class="geo-list__item" type="button">Ростов-на-Дону</button>
                 <button class="geo-list__item" type="button">Хабаровск</button>
                 <button class="geo-list__item" type="button">Казань</button>
                 <button class="geo-list__item" type="button">Саратов</button>
@@ -5172,6 +5252,8 @@
     <script src="js/utility.js"></script>
     
     <script src="js/header.js"></script>
+    
+    <script src="js/new-menu.js"></script>
     
     <script src="js/cards-slider.js"></script>
     
