@@ -1,0 +1,33 @@
+.chat-icon {
+    @include button-reset;
+    align-items: center;
+    bottom: 16px;
+    border-radius: 50%;
+    background-color: var(--black_blue);
+    color: #fff;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    left: auto;
+    position: fixed;
+    right: 8px;
+    top: auto;
+    transition: color 0.3s;
+    width: 48px;
+    z-index: 2;
+    @media(min-width: $fhd) {
+        height: 56px;
+        bottom: 20px;
+        right: 20px;
+        width: 56px;
+    }
+    @include hover {
+        color: var(--ocher);
+    }
+
+    svg {
+        fill: currentColor;
+        height: 22px;
+        width: 22px;
+    }
+}
