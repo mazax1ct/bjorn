@@ -149,13 +149,14 @@
 }
 
 .plait-info {
-    --gap: 12px;
+    --gap: 6px;
     --now_width: 25%;
     @media(max-width: $fhd - 0.02px) {
         padding-left: 8px;
         padding-right: 8px;
     }
     @media(min-width: $fhd) {
+        --gap: 8px;
         padding-top: 16px;
     }
 
@@ -194,8 +195,13 @@
 
             &:first-child {
                 background-color: #6969FF;
+                margin-right: var(--gap);
                 max-width: calc(var(--now_width) - var(--gap) * var(--gaps) / var(--parts));
                 width: calc(var(--now_width) - var(--gap) * var(--gaps) / var(--parts));
+            }
+
+            &.yandex {
+                background-color: #55D48E;
             }
         }
     }
@@ -244,8 +250,6 @@
         padding-bottom: 16px;
         @media(min-width: $fhd) {
             font-size: 16px;
-            padding-top: 24px;
-            padding-bottom: 24px;
         }
 
         p {

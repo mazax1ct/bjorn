@@ -299,6 +299,15 @@
                 flex-shrink: 0;
             }
         }
+
+        hr {
+            margin-top: 16px;
+            margin-bottom: 16px;
+            width: 100%;
+            @media(min-width: $fhd) {
+                margin-bottom: 24px;
+            }
+        }
     }
 
     &__title-block {
@@ -352,8 +361,19 @@
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
-        margin-bottom: 12px;
+        margin-bottom: 4px;
         white-space: nowrap;
+        @media(min-width: $lg) {
+            font-size: 16px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 18px;
+            gap: 12px;
+        }
+
+        .detail__stock {
+            margin: 0 0 0 auto;
+        }
     }
 
     &__price {
@@ -372,6 +392,76 @@
         font-weight: 600;
         line-height: 1.22222;
         padding: 2px 3px;
+        @media(min-width: $fhd) {
+            padding: 5px 3px;
+        }
+    }
+
+    &__points {
+        display: flex;
+        gap: 6px;
+        font-size: 13px;
+        margin-bottom: 12px;
+        @media(min-width: $lg) {
+            font-size: 14px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 16px;
+        }
+    }
+
+    &__points-value {
+        color: var(--black_blue);
+        display: flex;
+        font-weight: 600;
+        gap: 4px;
+
+        img {
+            height: 17px;
+            width: 17px;
+            @media(min-width: $fhd) {
+                height: 21px;
+                width: 21px;
+            }
+        }
+    }
+
+    &__payment {
+        @include active-area;
+        @include button-reset;
+        align-items: center;
+        display: flex;
+        gap: 2px;
+        font-size: 12px;
+        line-height: 1;
+        position: relative;
+        transition: color 0.3s;
+        text-transform: uppercase;
+        @include hover {
+            color: var(--ocher);
+        }
+
+        svg {
+            fill: currentColor;
+            height: 18px;
+            width: 18px;
+        }
+    }
+
+    &__colors-new {
+        margin-bottom: 24px;
+    }
+
+    &__colors-new-title {
+        font-size: 12px;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+    }
+
+    &__colors-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
     }
 
     .dolyami-button {
@@ -419,6 +509,31 @@
 
         .sizes-group {
             justify-content: flex-end;
+        }
+    }
+
+    &__sizes-new {
+        margin-bottom: 24px;
+    }
+
+    &__sizes-new-title {
+        font-size: 12px;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+    }
+
+    &__sizes-new-button {
+        @include active-area;
+        @include button-reset;
+        font-size: inherit;
+        font-weight: inherit;
+        position: relative;
+        transition: color 0.3s;
+        text-transform: inherit;
+        text-decoration: underline;
+        z-index: 1;
+        @include hover {
+            color: var(--ocher);
         }
     }
 
@@ -843,5 +958,53 @@
 
     .button {
         width: 100%;
+    }
+}
+
+.color-radio-new {
+    display: block;
+    position: relative;
+    z-index: 1;
+
+    input {
+        position: absolute;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        width: 1px;
+
+        &:checked ~ .color-radio-new__color {
+            border-color: var(--black_dark);
+        }
+
+        &:not(:checked) ~ .color-radio-new__color {
+            opacity: 0.5;
+        }
+    }
+
+    &__color {
+        border-radius: 4px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        display: block;
+        height: 80px;
+        min-width: 60px;
+        overflow: hidden;
+        transition: border-color 0.3s, opacity 0.3s;
+        width: 30px;
+        @media(min-width: $fhd) {
+            height: 109px;
+            min-width: 80px;
+            width: 80px;
+        }
+
+        img {
+            border-radius: 4px;
+            display: block;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+        }
     }
 }

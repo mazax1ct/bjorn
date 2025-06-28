@@ -2,6 +2,22 @@
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
+
+    &--type_2 {
+        gap: 5px;
+
+        .size-radio {
+            font-size: 14px;
+        }
+
+        .size-radio__text {
+            height: 34px;
+            justify-content: center;
+            min-width: 52px;
+            text-align: center;
+            width: 52px;
+        }
+    }
 }
 
 .size-radio {

@@ -287,7 +287,7 @@
                         <button class="js-search-tag search__tag" type="button">Аляски</button>
                         <button class="js-search-tag search__tag" type="button">парки</button>
                         <button class="js-search-tag search__tag" type="button">бомберы</button>
-                        <button class="js-search-tag search__tag" type="button">пуховики</button>
+                        <button class="js-search-tag search__tag" type="button">пух��вики</button>
                         <button class="js-search-tag search__tag" type="button">зимние куртки</button>
                         <button class="js-search-tag search__tag" type="button">демисезонные</button>
                         <button class="js-search-tag search__tag" type="button">кожаные куртки</button>
@@ -1209,9 +1209,14 @@
                             <div class="detail__price">34 900 <span class="rub">руб</span></div>
                             <div class="detail__old-price">54 900 <span class="rub">руб</span></div>
                             <div class="detail__discount">-15%</div>
+
+                            <div class="detail__stock">
+                                <span class="detail__stock-icon"></span>
+                                В наличии
+                            </div>
                         </div>
 
-                        <div class="plait plait--bordered plait--parts_6">
+                        <!--<div class="plait plait--bordered plait--parts_6">
                             <div class="plait__title-block">
                                 <p class="plait__title">Поделите оплату на&nbsp6&nbsp;платежей</p>
 
@@ -1245,9 +1250,23 @@
                                     <div class="plait__conditions-value">5 495 <span class="rub">руб</span></div>
                                 </div>
                             </div>
+                        </div>-->
+
+                        <div class="detail__points">
+                            <span class="detail__points-value"><img src="images/content/detail/points.svg" alt=""> +200</span>
+                            баллов за покупку
                         </div>
 
-                        <div class="detail__colors">
+                        <button class="js-popup-open detail__payment" type="button" data-popup="payment_choose">
+                            <span>4 платежа по 4 500 ₽</span>
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron_right"></use>
+                            </svg>
+                        </button>
+
+                        <hr>
+
+                        <!--<div class="detail__colors">
                             <div class="h3">цвет:</div>
 
                             <div class="colors-group">
@@ -1275,9 +1294,29 @@
                                     <span class="color-radio__color" title="Тёмно-серый" style="background-color:#4A4A4D"></span>
                                 </a>
                             </div>
+                        </div>-->
+
+                        <div class="detail__colors-new">
+                            <div class="detail__colors-new-title">цвет: <span>Черный</span></div>
+
+                            <div class="detail__colors-list">
+                                <label class="color-radio-new">
+                                    <input type="radio" name="color" value="Черный" checked>
+                                    <span class="color-radio-new__color" title="Черный">
+                                        <img src="images/content/detail/color_1.jpg" srcset="images/content/detail/color_1@2x.jpg 2x" alt="Черный">
+                                    </span>
+                                </label>
+
+                                <label class="color-radio-new">
+                                    <input type="radio" name="color" value="Зелёный">
+                                    <span class="color-radio-new__color" title="Зелёный">
+                                        <img src="images/content/detail/color_2.jpg" srcset="images/content/detail/color_2@2x.jpg 2x" alt="Зелёный">
+                                    </span>
+                                </label>
+                            </div>
                         </div>
 
-                        <div class="detail__sizes">
+                        <!--<div class="detail__sizes">
                             <div class="h3">размер:</div>
 
                             <div class="sizes-group">
@@ -1311,11 +1350,42 @@
                                     <span class="size-radio__text">58</span>
                                 </label>
                             </div>
-                        </div>
+                        </div>-->
 
-                        <div class="detail__stock">
-                            <span class="detail__stock-icon"></span>
-                            В наличии
+                        <div class="detail__sizes-new">
+                            <div class="detail__sizes-new-title">размер: <button class="js-popup-open detail__sizes-new-button" type="button" data-popup="fit_size">Подобрать свой размер</button></div>
+
+                            <div class="sizes-group sizes-group--type_2">
+                                <label class="size-radio">
+                                    <input type="radio" name="size" value="48" checked>
+                                    <span class="size-radio__text">48</span>
+                                </label>
+
+                                <label class="size-radio">
+                                    <input type="radio" name="size" value="50">
+                                    <span class="size-radio__text">50</span>
+                                </label>
+
+                                <label class="size-radio">
+                                    <input type="radio" name="size" value="52" disabled>
+                                    <span class="size-radio__text">52</span>
+                                </label>
+
+                                <label class="size-radio">
+                                    <input type="radio" name="size" value="54">
+                                    <span class="size-radio__text">54</span>
+                                </label>
+
+                                <label class="size-radio">
+                                    <input type="radio" name="size" value="56">
+                                    <span class="size-radio__text">56</span>
+                                </label>
+
+                                <label class="size-radio">
+                                    <input type="radio" name="size" value="58">
+                                    <span class="size-radio__text">58</span>
+                                </label>
+                            </div>
                         </div>
 
                         <div class="detail__buy-button-block">
@@ -1329,55 +1399,30 @@
                             </a>
                         </div>
 
-                        <div class="detail__info-buttons">
+                        <!--<div class="detail__info-buttons">
                             <button class="js-popup-open detail__info-button detail__info-button--bordered" type="button" data-popup="fit_size">
                                 <span>Подобрать свой размер</span>
                                 <svg aria-hidden="true">
                                     <use xlink:href="images/sprite.svg#chevron_right" />
                                 </svg>
                             </button>
+                        </div>-->
 
-                            <button class="js-popup-open detail__info-button detail__info-button--bordered" type="button" data-popup="care">
-                                <span>Состав и уход</span>
-                                <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#chevron_right" />
-                                </svg>
-                            </button>
-
-                            <button class="js-popup-open detail__info-button detail__info-button--bordered" type="button" data-popup="reviews_list">
-                                <span>Отзывы</span>
-
-                                <span class="detail__reviews-info-wrappwer">
-                                    <span class="detail__reviews-info">
-                                        <svg class="fill" aria-hidden="true">
-                                            <use xlink:href="images/sprite.svg#star_icon" />
-                                        </svg>
-                                        <svg class="fill" aria-hidden="true">
-                                            <use xlink:href="images/sprite.svg#star_icon" />
-                                        </svg>
-                                        <svg class="fill" aria-hidden="true">
-                                            <use xlink:href="images/sprite.svg#star_icon" />
-                                        </svg>
-                                        <svg class="fill" aria-hidden="true">
-                                            <use xlink:href="images/sprite.svg#star_icon" />
-                                        </svg>
-                                        <svg class="fill" aria-hidden="true">
-                                            <use xlink:href="images/sprite.svg#star_icon" />
-                                        </svg>
-                                        <span>5</span>
-                                    </span>
-
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#chevron_right" />
-                                    </svg>
-                                </span>
-                            </button>
+                        <div class="detail__params">
+                            Артикул: BL24_662/navy<br> Бренд: Bjorn Larsen<br> Температурный режим: от -0 до -15 °C<br> Параметры модели: 89-68-95, рост 182<br> Размер на модели: 52
                         </div>
                     </div>
 
                     <div class="detail__right detail__right--mobile_visible">
                         <button class="js-popup-open detail__info-button detail__info-button--bordered" type="button" data-popup="detail_description">
                             <span>Описание</span>
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron_right" />
+                            </svg>
+                        </button>
+
+                        <button class="js-popup-open detail__info-button detail__info-button--bordered" type="button" data-popup="care">
+                            <span>Состав и уход</span>
                             <svg aria-hidden="true">
                                 <use xlink:href="images/sprite.svg#chevron_right" />
                             </svg>
@@ -1391,10 +1436,39 @@
                         </button>
 
                         <button class="js-popup-open detail__info-button detail__info-button--bordered" type="button" data-popup="detail_payments">
-                            <span>Условия оплаты</span>
+                            <span>Доставка и оплата</span>
                             <svg aria-hidden="true">
                                 <use xlink:href="images/sprite.svg#chevron_right" />
                             </svg>
+                        </button>
+
+                        <button class="js-popup-open detail__info-button detail__info-button--bordered" type="button" data-popup="reviews_list">
+                            <span>Отзывы</span>
+
+                            <span class="detail__reviews-info-wrappwer">
+                                <span class="detail__reviews-info">
+                                    <svg class="fill" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#star_icon" />
+                                    </svg>
+                                    <svg class="fill" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#star_icon" />
+                                    </svg>
+                                    <svg class="fill" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#star_icon" />
+                                    </svg>
+                                    <svg class="fill" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#star_icon" />
+                                    </svg>
+                                    <svg class="fill" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#star_icon" />
+                                    </svg>
+                                    <span>5</span>
+                                </span>
+
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#chevron_right" />
+                                </svg>
+                            </span>
                         </button>
 
                         <div class="detail__features">
@@ -4732,6 +4806,167 @@
         
             <p class="geo-no-results">к сожалению, ничего не найдено</p>
         </div>
+        
+        <div id="payment_choose" class="popup popup--width_type_3 popup--left_sm_to_right">
+            <button class="js-popup-close popup__closer" type="button" title="Закрыть попап">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#close_icon" />
+                </svg>
+            </button>
+        
+            <div class="popup__title h2">Оплата частями</div>
+        
+            <div class="tabs">
+                <div class="tabs-nav tabs-nav--cnt_2">
+                    <button class="js-tab-nav tabs-nav__button is-active" type="button" data-target="ya">Яндекс.Сплит</button>
+                    <button class="js-tab-nav tabs-nav__button" type="button" data-target="plait">плайт</button>
+                </div>
+        
+                <div class="js-tab tab is-active" data-target="ya">
+                    <div class="plait-info plait-info--parts_4">
+                        <p class="plait-info__title">График платежей</p>
+        
+                        <div class="plait-info__parts">
+                            <div class="yandex"></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+        
+                        <div class="plait-info__conditions">
+                            <div class="plait-info__now">
+                                <div class="plait-info__conditions-title">Сегодня</div>
+                                <div class="plait-info__conditions-value">25 %</div>
+                            </div>
+        
+                            <div>
+                                <div class="plait-info__conditions-title">еще 3 платежа раз в 2 недели</div>
+                                <div class="plait-info__conditions-value">4 788 <span class="rub">руб</span></div>
+                            </div>
+                        </div>
+        
+                        <div class="plait-info__features">
+                            <div class="plait-info__feature">
+                                <div class="plait-info__feature-icon">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#plait_bag_icon" />
+                                    </svg>
+                                </div>
+                                <p>Добавляйте товары в корзину</p>
+                            </div>
+        
+                            <div class="plait-info__feature">
+                                <div class="plait-info__feature-icon">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#plait_card_icon" />
+                                    </svg>
+                                </div>
+                                <p>Оплачивайте сегодня только 25% картой любого банка</p>
+                            </div>
+        
+                            <div class="plait-info__feature">
+                                <div class="plait-info__feature-icon">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#plait_flash_icon" />
+                                    </svg>
+                                </div>
+                                <p>Получайте товар выбранным способом</p>
+                            </div>
+        
+                            <div class="plait-info__feature">
+                                <div class="plait-info__feature-icon">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#plait_coins_icon" />
+                                    </svg>
+                                </div>
+                                <p>Оставшиеся 75% будут списываться с вашей карты по 15% каждые 2 недели</p>
+                            </div>
+                        </div>
+        
+                        <a class="plait-info__more" href="#">
+                            <span>Подробнее об оплате яндекс.сплит</span>
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron_right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="js-tab tab" data-target="plait">
+                    <div class="plait-info plait-info--parts_6">
+                        <p class="plait-info__title">График платежей</p>
+        
+                        <div class="plait-info__parts">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+        
+                        <div class="plait-info__conditions">
+                            <div class="plait-info__now">
+                                <div class="plait-info__conditions-title">Сегодня</div>
+                                <div class="plait-info__conditions-value">25 %</div>
+                            </div>
+        
+                            <div>
+                                <div class="plait-info__conditions-title">еще 5 платежей раз в 2 недели</div>
+                                <div class="plait-info__conditions-value">5 495 <span class="rub">руб</span></div>
+                            </div>
+                        </div>
+        
+                        <div class="plait-info__features">
+                            <div class="plait-info__feature">
+                                <div class="plait-info__feature-icon">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#plait_bag_icon" />
+                                    </svg>
+                                </div>
+                                <p>Добавляйте товары в корзину</p>
+                            </div>
+        
+                            <div class="plait-info__feature">
+                                <div class="plait-info__feature-icon">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#plait_card_icon" />
+                                    </svg>
+                                </div>
+                                <p>Оплачивайте сегодня только 25% картой любого банка</p>
+                            </div>
+        
+                            <div class="plait-info__feature">
+                                <div class="plait-info__feature-icon">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#plait_flash_icon" />
+                                    </svg>
+                                </div>
+                                <p>Получайте товар выбранным способом</p>
+                            </div>
+        
+                            <div class="plait-info__feature">
+                                <div class="plait-info__feature-icon">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#plait_coins_icon" />
+                                    </svg>
+                                </div>
+                                <p>Оставшиеся 75% будут списываться с вашей карты по 15% каждые 2 недели</p>
+                            </div>
+                        </div>
+        
+                        <a class="plait-info__more" href="#">
+                            <span>Подробнее об оплате Плайтом</span>
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron_right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+        
+        </div>
 
         <div class="page__shade"></div>
     </div>
@@ -4757,6 +4992,9 @@
     <script src="js/popups.js"></script>
 
     <script src="js/detail.js"></script>
+
+    <script src="js/tabs.js"></script>
+
 </body>
 
 </html>

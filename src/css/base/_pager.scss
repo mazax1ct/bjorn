@@ -68,7 +68,7 @@
 .pager-count {
     font-size: 11px;
     text-transform: uppercase;
-    @media(min-width: $hd) {
+    @media(min-width: $lg) {
         font-size: 13px;
     }
     @media(min-width: $fhd) {
