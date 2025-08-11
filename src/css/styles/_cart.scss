@@ -11,6 +11,71 @@
         @media(min-width: $fhd) {
             margin-bottom: 40px;
         }*/
+        & + .cart__points {
+            margin-top: -8px;
+        }
+    }
+
+    &__points {
+        align-items: center;
+        display: flex;
+        font-size: 13px;
+        gap: 16px;
+        justify-content: space-between;
+        @media(min-width: $lg) {
+            font-size: 14px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 16px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__points-value {
+        color: var(--black_blue);
+        font-weight: 600;
+        vertical-align: baseline;
+
+        img {
+            height: 17px;
+            margin-top: -1px;
+            vertical-align: middle;
+            width: 17px;
+            @media(min-width: $fhd) {
+                height: 21px;
+                width: 21px;
+            }
+        }
+    }
+
+    &__auth-note {
+        border-radius: 4px;
+        background-color: var(--gray_white);
+        font-size: 13px;
+        padding: 12px;
+        @media(min-width: $lg) {
+            font-size: 14px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 16px;
+            padding: 16px;
+        }
+        @media(min-width: 1900px) {
+            padding-right: 90px;
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
     }
 
     &__promocode {

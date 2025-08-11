@@ -31,6 +31,7 @@
         height: 32px;
         min-width: 56px;
         position: relative;
+        transition: background-color 0.3s;
         width: 56px;
         z-index: 1;
 
@@ -41,14 +42,44 @@
             height: 24px;
             left: 4px;
             position: absolute;
-            top: 50%;
+            top: 0;
             transition: background-color 0.3s, left 0.3s;
-            transform: translateY(-50%);
             width: 24px;
         }
     }
 
     &__text {
         cursor: pointer;
+    }
+
+    &--type_2 {
+        input {
+            position: absolute;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            width: 1px;
+
+            &:checked ~ .switch__icon {
+                background-color: var(--black_blue);
+
+                &::after {
+                    background-color: #fff;
+                }
+            }
+        }
+
+        .switch__icon {
+            height: 28px;
+            min-width: 48px;
+            width: 48px;
+
+            &::after {
+                border: 2px solid var(--gray_black);
+                height: 28px;
+                left: 0;
+                width: 28px;
+            }
+        }
     }
 }

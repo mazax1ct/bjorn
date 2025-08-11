@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/common/favicon.html
+
+    //= template/common/fonts_preload.html
+
+    //= template/common/styles.html
+</head>
+
+<body class="page">
+    <div id="app">
+        //= template/common/header--white.html
+
+        //= template/common/main-menu.html
+
+        //= template/common/search.html
+
+        <main class="page__content">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Профиль</a></li>
+                    <li class="breadcrumbs__item">Шкала притяжения</li>
+                </ul>
+
+                <div class="page__columns">
+                    <div class="page__left-column">
+                        //= template/personal/personal-left-menu.html
+                    </div>
+
+                    <div class="page__right-column">
+                        <h1 class="h2">ШКАЛА ПРИТЯЖЕНИЯ</h1>
+
+                        <div class="loyality">
+                            <div class="loyality__intro">
+                                <div class="custom-banner">
+                                    <picture>
+                                        <source srcset="images/content/loyality/banner.jpg, images/content/loyality/banner@2x.jpg 2x" media="(min-width: 768px)">
+                                        <img src="images/content/loyality/banner_mob.jpg" srcset="images/content/loyality/banner_mob@2x.jpg 2x" alt="">
+                                    </picture>
+                                </div>
+
+                                <h2>Вступите в программу лояльности «ШКАЛА ПРИТЯЖЕНИЯ»</h2>
+
+                                <p class="loyality__intro-text">Получите 5 000 приветственных Бьёрн-Поинтов и дополнительные привилегии</p>
+
+                                <p><a class="button button--black button--m" href="#">Стать участником</a></p>
+
+                                <p class="loyality__intro-note">Нажимая на кнопку “Стать участником”, я соглашаюсь с правилами программы лояльности и даю согласие на обработку моих персональных данных</p>
+
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Даю согласие на получение рекламных и информационных рассылок</span>
+                                </label>
+
+                                <p class="loyality__intro-note"><a href="#" target="_blank">Узнать больше о программе лояльности</a></p>
+                            </div>
+                        </div>
+
+                        //= template/personal/popular.html
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        //= template/common/footer.html
+
+        //= template/common/popups.html
+
+        <div class="page__shade"></div>
+    </div>
+
+    //= template/common/scripts.html
+</body>
+
+</html>

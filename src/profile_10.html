@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/common/favicon.html
+
+    //= template/common/fonts_preload.html
+
+    //= template/common/styles.html
+</head>
+
+<body class="page">
+    <div id="app">
+        //= template/common/header--white.html
+
+        //= template/common/main-menu.html
+
+        //= template/common/search.html
+
+        <main class="page__content">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Профиль</a></li>
+                    <li class="breadcrumbs__item">Шкала притяжения</li>
+                </ul>
+
+                <div class="page__columns">
+                    <div class="page__left-column">
+                        //= template/personal/personal-left-menu.html
+                    </div>
+
+                    <div class="page__right-column">
+                        <h1 class="h2">ШКАЛА ПРИТЯЖЕНИЯ</h1>
+
+                        <div class="loyality">
+                            <div class="loyality-balance">
+                                <p class="loyality-balance__row">
+                                    <span class="loyality-balance__title">Ваш баланс</span>
+                                    <span><span class="loyality-balance__points-value"><img src="images/content/loyality/bjorn_points.svg" alt=""> 5 000</span></span>
+                                </p>
+
+                                <p class="loyality-balance__row">
+                                    <span class="loyality-balance__title">Скоро сгорят</span>
+                                    <span><span class="loyality-balance__points-value"><img src="images/content/loyality/bjorn_points.svg" alt=""> 100 000 000</span> <span class="loyality-balance__delimeter">|</span> 24.07.08</span>
+                                </p>
+                            </div>
+
+                            <div class="loyality-card loyality-card--blue">
+                                <p class="loyality-card__num">1</p>
+
+                                <div class="loyality-card__text-block">
+                                    <p class="loyality-card__title">ВЫ ТОЛЬКО НАЧАЛИ<br> ПУТЬ — И МЫ ЭТО ЦЕНИМ.</p>
+
+                                    <p class="loyality-card__text">
+                                        Между нами тает лёд.<br>
+                                        Начисляем первые 5 000 <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#bjorn_points_icon" /></svg>
+                                    </p>
+
+                                    <ul class="loyality-card__features">
+                                        <li>Кешбэк 10% </li>
+                                        <li><b>5 000</b> <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#bjorn_points_icon" /></svg> при регистрации</li>
+                                        <li><b>5 000</b> <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#bjorn_points_icon" /></svg> на день рождения</li>
+                                        <li>Ранний доступ к новинкам и распродажам</li>
+                                        <li>Участие в закрытых акциях</li>
+                                    </ul>
+                                </div>
+
+                                <div class="loyality-card__image">
+                                    <picture>
+                                        <source srcset="images/content/loyality/blue_desk.png, images/content/loyality/blue_desk@2x.png 2x" media="(min-width: 768px)">
+                                        <img src="images/content/loyality/blue_mob.png" srcset="images/content/loyality/blue_mob@2x.png 2x" alt="">
+                                    </picture>
+                                </div>
+
+                                <p class="loyality-card__bottom-title">Точка дружбы</p>
+                            </div>
+
+                            <div class="loyality-termometr">
+                                <div class="loyality-termometr__images">
+                                    <img src="images/content/loyality/lvl_1.png" alt="">
+                                    <img src="images/content/loyality/lvl_2.png" alt="">
+                                    <img src="images/content/loyality/lvl_3.png" alt="">
+                                </div>
+
+                                <div class="loyality-termometr__termometr">
+                                    <div class="loyality-termometr__termometr-value"></div>
+                                    <style>
+                                        @media(max-width: 767.8px) {
+                                            .loyality-termometr__termometr-value {
+                                                height: 40%;
+                                            }
+                                        }
+
+                                        @media(min-width: 768px) {
+                                            .loyality-termometr__termometr-value {
+                                                width: 40%;
+                                            }
+                                        }
+                                    </style>
+                                </div>
+
+                                <div class="loyality-termometr__values">
+                                    <div>0 ₽</div>
+                                    <div>50 000 ₽</div>
+                                    <div>100 000 ₽</div>
+                                </div>
+                            </div>
+
+                            <div class="loyality-lvl">
+                                <p>До следующего уровня осталось <b>10 000 ₽</b></p>
+                                <p><a href="#" target="_blank">Узнать больше о программе лояльности</a></p>
+                            </div>
+                        </div>
+
+                        //= template/personal/popular.html
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        //= template/common/footer.html
+
+        //= template/common/popups.html
+
+        <div class="page__shade"></div>
+    </div>
+
+    //= template/common/scripts.html
+</body>
+
+</html>

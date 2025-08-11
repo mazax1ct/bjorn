@@ -106,6 +106,20 @@
             }
         }
     }
+
+    &--black {
+        background-color: var(--button_black);
+        color: #fff;
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--black_blue);
+                color: #fff;
+            }
+        }
+    }
 }
 
 a.button--primary {
