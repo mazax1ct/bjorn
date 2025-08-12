@@ -126,6 +126,8 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: 0 0;
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 24px;
@@ -136,9 +138,13 @@
         max-width: 344px;
     }
     @media(min-width: $sm) {
-        display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
+    }
+    @media(min-width: $sm) and (max-width: $fhd) {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &::after,
@@ -216,6 +222,12 @@
                 background-image: url("data:image/svg+xml,%3Csvg width='1287' height='482' viewBox='0 0 1287 482' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 20.5614V406.433C1 408.967 1.49402 411.477 2.45389 413.819C3.41375 416.16 4.82066 418.288 6.59426 420.08C8.36786 421.873 10.4734 423.294 12.7907 424.264C15.108 425.234 17.5917 425.733 20.1 425.733L393.251 425.463C396.333 425.463 399.368 426.217 402.098 427.66C404.829 429.103 407.173 431.192 408.931 433.749L435.731 472.714C437.49 475.271 439.834 477.36 442.565 478.802C445.295 480.245 448.33 480.999 451.411 481L1266.9 481C1271.97 481 1276.82 478.966 1280.41 475.347C1283.99 471.727 1286 466.818 1286 461.699V96.5533C1286 91.4345 1283.99 86.5253 1280.41 82.9057C1276.82 79.2861 1271.97 77.2527 1266.9 77.2527H1217.45C1214.07 77.2527 1210.76 76.3484 1207.84 74.6319C1204.92 72.9154 1202.51 70.448 1200.84 67.4811L1168.97 10.7716C1167.3 7.80469 1164.89 5.3373 1161.97 3.62078C1159.05 1.90426 1155.74 0.999962 1152.36 1L20.07 1.27091C15.0113 1.27893 10.1623 3.31454 6.58718 6.93106C3.01201 10.5476 1.00264 15.4496 1 20.5614Z' fill='%23F9ECEC' stroke='%23AE1016' stroke-width='2' stroke-miterlimit='10'/%3E%3C/svg%3E%0A");
             }
         }
+
+        .loyality-card__bottom-title {
+            @media(max-width: $fhd - 0.02px) {
+                font-size: 15px;
+            }
+        }
     }
 
     &__num {
@@ -253,6 +265,9 @@
         text-transform: uppercase;
         z-index: 2;
         @media(min-width: $fhd) {
+            font-size: 28px;
+        }
+        @media(min-width: 1900px) {
             font-size: 32px;
         }
     }
@@ -276,10 +291,13 @@
         position: relative;
         text-transform: uppercase;
         z-index: 2;
-        @media(min-width: $md) {
+        @media(min-width: $sm) {
             font-size: 20px;
         }
         @media(min-width: $fhd) {
+            font-size: 26px;
+        }
+        @media(min-width: 1900px) {
             font-size: 32px;
         }
 
@@ -295,6 +313,9 @@
             font-size: 18px;
         }
         @media(min-width: $fhd) {
+            font-size: 20px;
+        }
+        @media(min-width: 1900px) {
             font-size: 26px;
         }
 
@@ -573,6 +594,202 @@
         }
         @media(min-width: $fhd) {
             font-size: 14px;
+        }
+    }
+}
+
+.loyality-promo {
+    &__intro {
+        margin-bottom: 60px;
+        @media(min-width: $fhd) {
+            margin-bottom: 90px;
+        }
+
+        .custom-banner {
+            @media(min-width: $lg) {
+                margin-bottom: 40px;
+            }
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            @media(min-width: $lg) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    &__text {
+        margin-bottom: 20px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        @media(min-width: $lg) {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.loyality-features {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1594px;
+    @media(min-width: $md) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 100px;
+    }
+}
+
+.loyality-feature {
+    font-size: 15px;
+    font-weight: 600;
+    flex-grow: 1;
+    line-height: 1.3;
+    max-width: 438px;
+    text-align: center;
+    @media(min-width: $md) {
+        width: calc(100% / 3 - 40px * 2 / 3);
+    }
+    @media(min-width: $lg) {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+        width: 200px;
+        @media(min-width: $lg) {
+            width: 280px;
+        }
+    }
+
+    &__title {
+        color: #044190;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        position: relative;
+        text-transform: uppercase;
+        z-index: 2;
+        @media(min-width: $sm) {
+            font-size: 20px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 26px;
+        }
+        @media(min-width: 1900px) {
+            font-size: 32px;
+        }
+
+        br {
+            @media(max-width: $md - 0.02px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.loyality-content {
+    &__inner {
+        margin-bottom: 40px;
+        @media(min-width: $md) {
+            align-items: center;
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 30px;
+        }
+        @media(min-width: $lg) {
+            gap: 130px;
+            margin-bottom: 80px;
+        }
+    }
+
+    &__levels {
+        text-align: center;
+
+        h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            @media(min-width: $lg) {
+                display: none;
+            }
+        }
+
+        img {
+            @media(max-width: $sm - 0.02px) {
+                max-width: 190px;
+            }
+        }
+    }
+
+    &__cards {
+        max-width: 1285px;
+    }
+}
+
+.loyality-cards {
+    display: flex;
+    @media(max-width: $sm - 0.02px) {
+        gap: 10px;
+        margin-left: calc(0.01px - var(--container_padding));
+        margin-right: calc(0.01px - var(--container_padding));
+        margin-bottom: 100px;
+        overflow-x: auto;
+        padding-left: var(--container_padding);
+        padding-right: var(--container_padding);
+        //scrollbar-width: none;
+    }
+    @media(min-width: $sm) {
+        flex-direction: column;
+        gap: 40px;
+    }
+    @media(min-width: $lg) {
+        gap: 60px;
+    }
+
+    .loyality-card {
+        margin-bottom: 0;
+        @media(max-width: $sm - 0.02px) {
+            min-width: 344px;
+            width: 344px;
+        }
+        @media(min-width: $sm) {
+            width: 100%;
+        }
+
+        .loyality-card__image {
+            @media(max-width: $sm - 0.02px) {
+                margin: auto auto 30px;
+                width: 100%;
+            }
+
+            img {
+                @media(max-width: $sm - 0.02px) {
+                    height: 160px;
+                    object-fit: contain;
+                    object-position: center;
+                    width: 100%;
+                }
+            }
         }
     }
 }
