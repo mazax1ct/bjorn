@@ -392,6 +392,8 @@
 
     &__image {
         max-width: 400px;
+        position: relative;
+        z-index: 2;
         @media(min-width: $sm) {
             align-items: center;
             display: flex;
@@ -599,6 +601,10 @@
 }
 
 .loyality-promo {
+    &:not(:last-child) {
+        margin-bottom: 100px;
+    }
+
     &__intro {
         margin-bottom: 60px;
         @media(min-width: $fhd) {
@@ -709,16 +715,21 @@
 
 .loyality-content {
     &__inner {
-        margin-bottom: 40px;
+        margin-bottom: 100px;
         @media(min-width: $md) {
             align-items: center;
             display: flex;
             flex-direction: row-reverse;
             gap: 30px;
+            justify-content: center;
+            margin-bottom: 60px;
         }
         @media(min-width: $lg) {
-            gap: 130px;
+            gap: 80px;
             margin-bottom: 80px;
+        }
+        @media(min-width: $fhd) {
+            gap: 130px;
         }
     }
 
@@ -729,13 +740,13 @@
             font-size: 16px;
             font-weight: 700;
             margin-bottom: 20px;
-            @media(min-width: $lg) {
+            @media(min-width: $md) {
                 display: none;
             }
         }
 
         img {
-            @media(max-width: $sm - 0.02px) {
+            @media(max-width: $md - 0.02px) {
                 max-width: 190px;
             }
         }
@@ -743,6 +754,9 @@
 
     &__cards {
         max-width: 1285px;
+        @media(max-width: $md - 0.02px) {
+            margin-bottom: 100px;
+        }
     }
 }
 
@@ -752,11 +766,10 @@
         gap: 10px;
         margin-left: calc(0.01px - var(--container_padding));
         margin-right: calc(0.01px - var(--container_padding));
-        margin-bottom: 100px;
         overflow-x: auto;
         padding-left: var(--container_padding);
         padding-right: var(--container_padding);
-        //scrollbar-width: none;
+        scrollbar-width: none;
     }
     @media(min-width: $sm) {
         flex-direction: column;
@@ -778,13 +791,13 @@
 
         .loyality-card__image {
             @media(max-width: $sm - 0.02px) {
-                margin: auto auto 30px;
+                margin: auto auto 45px;
                 width: 100%;
             }
 
             img {
                 @media(max-width: $sm - 0.02px) {
-                    height: 160px;
+                    height: 164px;
                     object-fit: contain;
                     object-position: center;
                     width: 100%;
