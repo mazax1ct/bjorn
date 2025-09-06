@@ -246,6 +246,64 @@
         }
     }
 
+    &__review-block {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 11px;
+        gap: 12px;
+        @media(min-width: $lg) {
+            font-size: 12px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 14px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 4px;
+            @media(min-width: $fhd) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &__review {
+        align-items: center;
+        display: flex;
+        gap: 3px;
+        text-decoration: none;
+
+        svg {
+            height: 12px;
+            min-width: 12px;
+            width: 12px;
+            @media(min-width: $fhd) {
+                height: 16px;
+                min-width: 16px;
+                width: 16px;
+            }
+        }
+
+        &--rating {
+            svg {
+                fill: #F09F32;
+            }
+        }
+
+        &--review {
+            color: #7C7C7C;
+
+            svg {
+                fill: #B3B3B3;
+                transition: fill 0.3s;
+            }
+            @include hover {
+                svg {
+                    fill: var(--ocher);
+                }
+            }
+        }
+    }
+
     &__title {
         font-size: 11px;
         margin-bottom: 4px;
