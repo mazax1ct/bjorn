@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/common/favicon.html
+
+    //= template/common/fonts_preload.html
+
+    //= template/common/styles.html
+</head>
+
+<body class="page">
+    <div id="app">
+        //= template/common/header--white.html
+
+        //= template/common/main-menu.html
+
+        //= template/common/search.html
+
+        <main class="page__content">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+                    <li class="breadcrumbs__item">Сравнение</li>
+                </ul>
+
+                <div class="compare-block">
+                    <h1>Сравнение товаров <sup>4</sup></h1>
+
+                    <div class="compare">
+                        <div class="compare__head">
+                            <div class="compare__controls">
+                                <label class="switch">
+                                    <input type="checkbox" name="diff">
+                                    <span class="switch__icon"></span>
+                                    <span class="switch__text">Только различия</span>
+                                </label>
+
+                                <div class="compare__controls-delimeter"></div>
+
+                                <button class="compare__control" type="button" title="Очистить">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#trash_icon" />
+                                    </svg>
+                                    <span>Очистить список</span>
+                                </button>
+
+                                <button class="compare__control" type="button" title="поделиться списком">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#share_icon" />
+                                    </svg>
+                                    <span>поделиться списком</span>
+                                </button>
+
+                                <div class="compare__arrows">
+                                    <button class="compare__arrow" type="button" title="Назад">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#chevron_left" />
+                                        </svg>
+                                    </button>
+
+                                    <button class="compare__arrow" type="button" title="Вперёд">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#chevron_right" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="compare__cards dragscroll">
+                                //= template/compare/compare_cards.html
+                            </div>
+                        </div>
+
+                        <h2>Сравнение товаров</h2>
+
+                        <div class="compare__body">
+                            <div class="compare__values-title">
+                                <div>Верхняя ткань:</div>
+                                <div>Мембрана:</div>
+                                <div>Внутренняя ткань:</div>
+                                <div>Сезон:</div>
+                                <div>Плотность утеплителя (г):</div>
+                                <div>Температурный режим:</div>
+                                <div>Капюшон:</div>
+                                <div>Вид застежки:</div>
+                                <div>Силуэт:</div>
+                                <div>Вид рукава:</div>
+                                <div>Наличие опушки:</div>
+                                <div>Внутренние карманы (кол-во):</div>
+                                <div>Внешние карманы (кол-во):</div>
+                                <div>Пол:</div>
+                            </div>
+
+                            <div class="compare__values small_qnt dragscroll">
+                                //= template/compare/compare_values.html
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        //= template/common/footer.html
+
+        //= template/common/popups.html
+
+        <div class="page__shade"></div>
+    </div>
+
+    //= template/common/scripts.html
+    <script src="js/compare.js"></script>
+    <script src="js/dragscroll.js"></script>
+</body>
+
+</html>

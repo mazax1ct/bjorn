@@ -127,6 +127,7 @@
 
     &__badges {
         left: 4px;
+        max-width: calc(100% - 56px);
         position: absolute;
         top: 4px;
         z-index: 3;
@@ -136,11 +137,13 @@
         }
         @media(min-width: $fhd) {
             left: 12px;
+            max-width: calc(100% - 92px);
             top: 12px;
         }
     }
 
     &__buy,
+    &__compare,
     &__fav {
         @include active-area;
         @include button-reset;
@@ -175,6 +178,15 @@
                 height: 24px;
                 width: 24px;
             }
+        }
+    }
+
+    &__compare {
+        right: 30px;
+        top: 6px;
+        @media(min-width: $fhd) {
+            right: 48px;
+            top: 12px;
         }
     }
 

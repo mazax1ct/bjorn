@@ -16,3 +16,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+let compare = document.querySelector('.js-add-to-compare');
+
+compare.addEventListener('click', function (event) {
+  let icon = compare.querySelector('use');
+  let text = compare.querySelector('span');
+  if(!compare.classList.contains('is-active')){
+    icon.setAttribute('xlink:href', 'images/sprite.svg#check_icon');
+    text.innerHTML = 'в сравнении';
+    compare.classList.add('is-active');
+  } else {
+    icon.setAttribute('xlink:href', 'images/sprite.svg#compare_icon');
+    text.innerHTML = 'Сравнить';
+    compare.classList.remove('is-active');
+  }
+});

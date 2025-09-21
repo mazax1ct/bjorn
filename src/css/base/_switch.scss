@@ -42,7 +42,7 @@
             height: 24px;
             left: 4px;
             position: absolute;
-            top: 0;
+            top: 4px;
             transition: background-color 0.3s, left 0.3s;
             width: 24px;
         }
@@ -78,6 +78,7 @@
                 border: 2px solid var(--gray_black);
                 height: 28px;
                 left: 0;
+                top: 0;
                 width: 28px;
             }
         }
