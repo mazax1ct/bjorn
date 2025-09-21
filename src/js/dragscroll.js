@@ -124,4 +124,5 @@ var compContentEl = $('.compare__values'),
       }
     };
 
+compHeaderEl.on('scroll', scrollChange);
 compContentEl.on('scroll', scrollChange);
