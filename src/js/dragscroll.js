@@ -7,8 +7,8 @@
  */
 
 
-let body = document.querySelector('.compare__values');
-let head = document.querySelector('.compare__cards');
+const body = document.querySelector('.compare__values');
+const head = document.querySelector('.compare__cards');
 
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
@@ -95,3 +95,55 @@ let head = document.querySelector('.compare__cards');
 
     exports.reset = reset;
 }));
+
+let startX;
+let isScrolling = false;
+let scrollX = 0; // Текущая позиция скролла
+
+body.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    isScrolling = true;
+});
+
+head.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    isScrolling = true;
+});
+
+body.addEventListener('touchmove', (e) => {
+    if (!isScrolling) {
+      return;
+    }
+
+    const currentX = e.touches[0].clientX;
+    const deltaX = currentX - startX;
+
+    // Определите направление и сместите элемент
+    // Этот пример очень упрощен, для более сложной логики понадобится
+    // хранить начальное значение scrollLeft и обновлять его
+    head.scrollLeft -= deltaX; // Смещение влево/вправо
+    startX = currentX; // Обновляем стартовую позицию для следующего шага
+});
+
+head.addEventListener('touchmove', (e) => {
+    if (!isScrolling) {
+      return;
+    }
+
+    const currentX = e.touches[0].clientX;
+    const deltaX = currentX - startX;
+
+    // Определите направление и сместите элемент
+    // Этот пример очень упрощен, для более сложной логики понадобится
+    // хранить начальное значение scrollLeft и обновлять его
+    body.scrollLeft -= deltaX; // Смещение влево/вправо
+    startX = currentX; // Обновляем стартовую позицию для следующего шага
+});
+
+body.addEventListener('touchend', () => {
+    isScrolling = false;
+});
+
+head.addEventListener('touchend', () => {
+    isScrolling = false;
+});
