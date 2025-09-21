@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
       compareHead.style.top = Math.round(headerHeight) - 1 + 'px';
     } else {
       compareHead.classList.remove('is-fixed');
+      compareHead.style.top = '0px';
     }
 
     prevScrollpos = currentScrollPos;

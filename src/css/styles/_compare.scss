@@ -56,9 +56,11 @@
             z-index: 1;
 
             .compare__controls {
-                padding-top: 16px;
                 @media(max-width: $sm - 0.02px) {
                     display: none;
+                }
+                @media(min-width: $sm) {
+                    padding-top: 16px;
                 }
             }
 
