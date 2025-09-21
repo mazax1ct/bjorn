@@ -4,13 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
   let headerHeight = header.offsetHeight;
 
   let compareHead = document.querySelector('.compare__head');
-  let compareCards = document.querySelector('.compare__cards');
-  let compareCardsOffsetTop = compareCards.offsetTop;
+  let compareHeadOffsetTop = compareHead.offsetTop;
 
   window.onscroll = function() {
     let currentScrollPos = window.pageYOffset;
 
-    if(currentScrollPos >= (compareCardsOffsetTop - headerHeight)) {
+    if(currentScrollPos >= (compareHeadOffsetTop - headerHeight)) {
       compareHead.classList.add('is-fixed');
       compareHead.style.top = Math.round(headerHeight) - 1 + 'px';
     } else {
