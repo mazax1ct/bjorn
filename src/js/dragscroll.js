@@ -96,54 +96,32 @@ const head = document.querySelector('.compare__cards');
     exports.reset = reset;
 }));
 
-let startX;
-let isScrolling = false;
-let scrollX = 0; // Текущая позиция скролла
+var compContentEl = $('.compare__values'),
+    compHeaderEl = $('.compare__cards'),
+    scrTimeout, scrollChange = function scrollChange() {
+      if (compHeaderEl[0].scrollLeft != this.scrollLeft) {
+        compHeaderEl.off('scroll');
+        compHeaderEl.on('touchstart', function(e) {
+          e.preventDefault()
+        });
+        compHeaderEl[0].scrollLeft = this.scrollLeft;
+        clearTimeout(scrTimeout);
+        scrTimeout = setTimeout(function() {
+          compHeaderEl.on('scroll', scrollChange);
+          compHeaderEl.off('touchstart')
+        }, 50)
+      } else if (compContentEl[0].scrollLeft != this.scrollLeft) {
+        compContentEl.off('scroll');
+        compContentEl.on('touchstart', function(e) {
+          e.preventDefault()
+        });
+        compContentEl[0].scrollLeft = this.scrollLeft;
+        clearTimeout(scrTimeout);
+        scrTimeout = setTimeout(function() {
+          compContentEl.on('scroll', scrollChange);
+          compContentEl.off('touchstart')
+        }, 50)
+      }
+    };
 
-body.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-    isScrolling = true;
-});
-
-head.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-    isScrolling = true;
-});
-
-body.addEventListener('touchmove', (e) => {
-    if (!isScrolling) {
-      return;
-    }
-
-    const currentX = e.touches[0].clientX;
-    const deltaX = currentX - startX;
-
-    // Определите направление и сместите элемент
-    // Этот пример очень упрощен, для более сложной логики понадобится
-    // хранить начальное значение scrollLeft и обновлять его
-    head.scrollLeft -= deltaX; // Смещение влево/вправо
-    startX = currentX; // Обновляем стартовую позицию для следующего шага
-});
-
-head.addEventListener('touchmove', (e) => {
-    if (!isScrolling) {
-      return;
-    }
-
-    const currentX = e.touches[0].clientX;
-    const deltaX = currentX - startX;
-
-    // Определите направление и сместите элемент
-    // Этот пример очень упрощен, для более сложной логики понадобится
-    // хранить начальное значение scrollLeft и обновлять его
-    body.scrollLeft -= deltaX; // Смещение влево/вправо
-    startX = currentX; // Обновляем стартовую позицию для следующего шага
-});
-
-body.addEventListener('touchend', () => {
-    isScrolling = false;
-});
-
-head.addEventListener('touchend', () => {
-    isScrolling = false;
-});
+compContentEl.on('scroll', scrollChange);
