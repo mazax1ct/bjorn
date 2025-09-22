@@ -32,6 +32,7 @@
 }
 
 .compare {
+    user-select: none;
     @media(max-width: $sm - 0.02px) {
         margin-left: calc(0.01px - var(--container_padding));
         margin-right: calc(0.01px - var(--container_padding));
@@ -226,8 +227,16 @@
         transition: color 0.3s;
         width: 24px;
         z-index: 0;
-        @include hover {
-            color: var(--ocher);
+
+        &:disabled {
+            cursor: default;
+            opacity: 0.2;
+        }
+
+        &:not(:disabled) {
+            @include hover {
+                color: var(--ocher);
+            }
         }
 
         svg {

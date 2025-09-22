@@ -6,7 +6,6 @@
  * @copyright 2015 asvd <heliosframework@gmail.com>
  */
 
-
 const body = document.querySelector('.compare__values');
 const head = document.querySelector('.compare__cards');
 
@@ -126,3 +125,33 @@ var compContentEl = $('.compare__values'),
 
 compHeaderEl.on('scroll', scrollChange);
 compContentEl.on('scroll', scrollChange);
+
+const prev = document.querySelector('.js-compare-prev');
+const next = document.querySelector('.js-compare-next');
+
+var comparisonItemWidth = $('.compare__cards .compare-card').eq(0).outerWidth() + 12,
+    btnScroll = function btnScroll(direction) {
+      var currScroll = Math.abs(Math.round(compContentEl[0].scrollLeft / comparisonItemWidth)),
+        scrollTo = {};
+      if (direction == 'next') {
+        scrollTo.scrollLeft = (currScroll + 1) * comparisonItemWidth;
+      } else {
+        scrollTo.scrollLeft = (currScroll - 1) * comparisonItemWidth;
+      }
+      compContentEl.add(compHeaderEl).off('scroll').on('touchstart', function(e) {
+        e.preventDefault()
+      }).animate(scrollTo, 400, function() {
+        clearTimeout(scrTimeout);
+        scrTimeout = setTimeout(function() {
+          compContentEl.add(compHeaderEl).on('scroll', scrollChange).off('touchstart')
+        }, 50)
+      })
+    };
+
+$(document).on('click', '.js-compare-prev', function() {
+  btnScroll('prev')
+});
+
+$(document).on('click', '.js-compare-next', function() {
+  btnScroll('next')
+});
