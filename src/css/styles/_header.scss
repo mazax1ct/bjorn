@@ -214,9 +214,16 @@
             }
         }
 
+        &--compare,
         &--fav {
             @media(min-width: $sm) {
                 order: 5;
+            }
+        }
+
+        &--compare {
+            @media(max-width: $sm - 0.02px) {
+                display: none;
             }
         }
 
